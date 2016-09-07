@@ -1,0 +1,25 @@
+.clubhouse-background {
+  background-color: #e6e6e6;
+}
+
+/* size is only based on assumption */
+
+.clubhouse-image-container {
+  width: 750px;
+  height: 700px;
+  position: absolute;
+  right: 0px;
+}
+
+.textbox {
+  background-color: #000033;
+  position: relative;
+  width: 40vw;
+  height: 580px;
+  padding: 20px;
+  margin: 40px auto 40px 40px;
+}
+
+.textbox span {
+  color: white;
+}

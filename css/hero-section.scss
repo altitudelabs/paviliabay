@@ -1,0 +1,23 @@
+#hero-section h1, h2, h3, h4, h5 {
+  color: black;
+}
+
+.video-container {
+  height: 90vh;
+}
+
+.title-description {
+  display: block;
+  vertical-align: middle;
+  background-color: transparent;
+  border-width: 1px;
+  border-color: white;
+  border-style: solid;
+  padding: 5px;
+  width: 40%;
+  margin: auto;
+}
+
+.title-description span {
+  color: white;
+}
