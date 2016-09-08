@@ -1,22 +1,13 @@
-#hero-section h1, h2, h3, h4, h5 {
-  color: black;
-  text-align: center;
-}
-
 .video-container {
+  background-color: gray;
   height: 90vh;
 }
 
-.title-description {
-  display: block;
-  vertical-align: middle;
-  background-color: transparent;
-  border-width: 1px solid white;
-  padding: 5px;
-  width: 40%;
-  margin: auto;
-}
-
-.title-description {
-  color: white;
+.hero-footer {
+  padding: 20px;
+  background-color: $dark-gray;
+  height: 10vh;
+  h3 {
+    text-align: left;
+  }
 }

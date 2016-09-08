@@ -16,6 +16,10 @@
  *        @include transition((margin 0.5s 1s));
  *        @include responsive(mobile){ ... }
  * * * * * * * * * * * * * * * * * * * * * * */
+* {
+  padding: 0;
+  margin: 0; }
+
 html, body {
   height: 100%;
   width: 100%;
@@ -26,8 +30,8 @@ div {
   box-sizing: border-box; }
 
 h1 {
-  line-height: 79px;
-  font-size: 57px;
+  line-height: 52px;
+  font-size: 36px;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
@@ -36,8 +40,8 @@ h1 {
   margin: 0; }
   @media only screen and (max-width: 1024px) {
     h1 {
-      line-height: 48px;
-      font-size: 34px; } }
+      line-height: 45px;
+      font-size: 25px; } }
 
 h2 {
   line-height: 36px;
@@ -55,7 +59,7 @@ h2 {
 h3 {
   line-height: 36px;
   font-size: 26px;
-  font-weight: bold;
+  font-weight: 100;
   text-align: left;
   width: 100%;
   box-sizing: border-box; }
@@ -65,19 +69,24 @@ h3 {
       font-size: 20px; } }
 
 h4 {
-  line-height: 48px;
-  font-size: 32px;
+  font-size: 24px;
+  line-height: 30px;
   font-weight: 100;
   text-align: center;
   width: 100%;
   box-sizing: border-box; }
+  @media only screen and (min-width: 1025px) and (max-width: 1279px) {
+    h4 {
+      font-size: 20px;
+      line-height: 25px; } }
   @media only screen and (max-width: 1024px) {
     h4 {
-      font-size: 23px;
-      line-height: 34px; } }
+      font-size: 14px;
+      line-height: 18px; } }
 
 span, p {
-  display: block;
+  display: inline;
+  position: relative;
   font-size: 17px;
   font-weight: 100;
   margin: 0;
@@ -92,43 +101,41 @@ span, p {
   border: 2px solid black;
   overflow: auto; }
 
-.footer {
-  background-color: gray;
-  height: 10vh;
-  bottom: 0;
-  width: 100%; }
-
-.title-text {
+.title-center {
   position: relative;
-  top: 40%;
+  top: 45%;
   background-color: transparent;
   text-align: center;
   margin: auto;
   width: 80%; }
+
+.transparent-button {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  border: 1px solid white;
+  padding: 5px 10px;
+  margin-top: 10px; }
+  @media only screen and (max-width: 1024px) {
+    .transparent-button {
+      width: 40%; } }
 
 .background-image {
   width: 100%;
   height: 90vh;
   position: absolute; }
 
-#hero-section h1, h2, h3, h4, h5 {
-  color: black;
-  text-align: center; }
-
 .video-container {
+  background-color: gray;
   height: 90vh; }
 
-.title-description {
-  display: block;
-  vertical-align: middle;
-  background-color: transparent;
-  border-width: 1px solid white;
-  padding: 5px;
-  width: 40%;
-  margin: auto; }
-
-.title-description {
-  color: white; }
+.hero-footer {
+  padding: 20px;
+  background-color: #999999;
+  height: 10vh; }
+  .hero-footer h3 {
+    text-align: left; }
 
 .clubhouse-background {
   background-color: #e6e6e6; }
@@ -209,11 +216,6 @@ span, p {
 
 #designerprofile-section .body-container {
   overflow: hidden; }
-
-#map-section h1, h3, h4, h5 {
-  text-align: left;
-  margin-top: 20px;
-  margin-bottom: 20px; }
 
 .map-container {
   background-color: green;
