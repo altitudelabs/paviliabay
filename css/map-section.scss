@@ -1,0 +1,22 @@
+#map-section h1, h2, h3, h4, h5 {
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.map-container {
+  background-color: green;
+  width: 750px;
+  height: 700px;
+  position: relative;
+  float: left;
+}
+
+.map-info {
+  margin: 0;
+  position: relative;
+  float: left;
+  height: 100%;
+  background-color: #000333;
+  padding-left: 30px;
+}

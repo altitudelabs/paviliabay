@@ -1,5 +1,9 @@
 * {margin: 0; padding: 0;}
 
+.body {
+  text-align: center;
+}
+
 h1, h2, h3, h4, h5 {
   margin: 5px;
   color: white;
@@ -8,6 +12,7 @@ h1, h2, h3, h4, h5 {
 .body-container {
   position: relative;
   border: 2px solid black;
+  overflow: auto;
 }
 
 .footer {
@@ -22,8 +27,8 @@ h1, h2, h3, h4, h5 {
   top: 40%;
   background-color: transparent;
   text-align: center;
-  width: 40%;
   margin: auto;
+  width: 30%;
 }
 
 .title-text h1, h2, h3, h4, h5 {
