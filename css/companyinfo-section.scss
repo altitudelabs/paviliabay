@@ -1,0 +1,28 @@
+#companyinfo-section h3, span{
+  text-align: center;
+  color: white;
+  margin: 5%;
+}
+
+.companyinfo-background {
+  background-color: #000333;
+  width: 90vw;
+  position: relative;
+  margin: 0 auto auto auto;
+  text-align: center;
+}
+
+.companylogo {
+  display: inline-block;
+  text-align: center;
+  margin: 20px;
+  width: 200px;
+}
+
+.companylogo:last-child {
+  right: 0;
+}
+
+.disclaimer {
+  text-align: center;
+}
