@@ -1,0 +1,44 @@
+.video-container {
+  height: 92vh;
+  width: 100%;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-footer {
+  padding: 20px;
+  background-color: $dark-gray;
+  height: 8vh;
+  h3 {
+    text-align: left;
+  }
+}
+
+.hero-logo {
+  display: inline-block;
+  position: absolute;
+  top: 5vh;
+  left: 5vw;
+  width: 15%;
+  height: auto;
+
+  @include responsive(mobile){
+    width: 20%;
+  }
+}
+
+.menu-nav {
+  display: inline-block;
+  position: absolute;
+  top: 5vh;
+  right: 5vw;
+  width: 15%;
+  height: auto;
+
+  @include responsive(mobile){
+    width: 20%;
+  }
+}

@@ -1,0 +1,21 @@
+.portfolio-header {
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  background-color: #000333
+}
+
+.portfolio-image {
+  width: 33.3%;
+  height: 60vw;
+  display: inline-block;
+}
+
+.portfolio-image:first-child {
+  left: 0;
+}
+
+.portfolio-image:last-child {
+  right: 0;
+}

@@ -1,0 +1,40 @@
+.description-textbox {
+  width: 80vw;
+  align-self: center;
+  background-color: #e6e6e6;
+  margin-top: 80vh;
+  margin-left: 10vw;
+  position: relative;
+  padding-right: 40px;
+}
+
+.profile-textbox {
+  overflow: visible;
+  position: relative;
+  top: -30px;
+  display: inline-block;
+  margin: auto 40px 40px 40px;
+  background-color: #000333;
+  padding: 40px;
+}
+
+.designerphoto {
+  position: relative;
+  width: 90%;
+  margin: auto;
+}
+
+.description-text {
+  margin-left: 40px;
+  margin-bottom: 40px;
+  display: inline-block;
+}
+
+#designerprofile-section h1, h2, h3, h4, h5 {
+  color: white;
+  text-align: center;
+}
+
+#designerprofile-section .body-container {
+  overflow: hidden;
+}
