@@ -1,23 +1,41 @@
 .clubhouse-background {
-  background-color: #e6e6e6;
+  background-color: $light-gray;
 }
 
 /* size is only based on assumption */
 
 .clubhouse-image-container {
-  width: 750px;
-  height: 700px;
+  width: 70%;
+  height: auto;
   position: absolute;
   right: 0px;
+  bottom: 0px;
+
+  @include responsive(transition){
+    width: 85%;
+  }
+
+  @include responsive(mobile){
+    width: 100%;
+  }
 }
 
-.textbox {
-  background-color: #000033;
+.clubhouse-textbox {
+  background-color: $dark-blue;
   position: relative;
   width: 40vw;
-  height: 580px;
+  height: 600px;
   padding: 20px;
-  margin: 40px auto 40px 40px;
+  margin: 70px auto 70px 40px;
+
+  @include responsive(transition){
+
+  }
+
+  @include responsive(mobile){
+    margin-left: 0px;
+    margin-top: 0px;
+  }
 }
 
 .textbox span {

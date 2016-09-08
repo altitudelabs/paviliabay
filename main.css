@@ -22,9 +22,7 @@
 
 html, body {
   height: 100%;
-  width: 100%;
-  padding: 0;
-  margin: 0; }
+  width: 100%; }
 
 div {
   box-sizing: border-box; }
@@ -62,11 +60,12 @@ h3 {
   font-weight: 100;
   text-align: left;
   width: 100%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  text-transform: uppercase; }
   @media only screen and (max-width: 1024px) {
     h3 {
-      line-height: 28px;
-      font-size: 20px; } }
+      line-height: 24px;
+      font-size: 18px; } }
 
 h4 {
   font-size: 24px;
@@ -98,15 +97,14 @@ span, p {
 
 .section-container {
   position: relative;
-  border: 2px solid black;
   overflow: auto; }
 
 .title-center {
-  position: relative;
+  position: absolute;
   top: 45%;
   background-color: transparent;
   text-align: center;
-  margin: auto;
+  left: 10%;
   width: 80%; }
 
 .transparent-button {
@@ -119,7 +117,7 @@ span, p {
   margin-top: 10px; }
   @media only screen and (max-width: 1024px) {
     .transparent-button {
-      width: 40%; } }
+      width: 45%; } }
 
 .background-image {
   width: 100%;
@@ -127,8 +125,12 @@ span, p {
   position: absolute; }
 
 .video-container {
-  background-color: gray;
-  height: 90vh; }
+  height: 90vh;
+  width: 100%; }
+
+.video {
+  width: 100%;
+  height: 100%; }
 
 .hero-footer {
   padding: 20px;
@@ -137,23 +139,56 @@ span, p {
   .hero-footer h3 {
     text-align: left; }
 
+.hero-logo {
+  display: inline-block;
+  position: absolute;
+  top: 5vh;
+  left: 5vw;
+  width: 15%;
+  height: auto; }
+  @media only screen and (max-width: 1024px) {
+    .hero-logo {
+      width: 20%; } }
+
+.menu-nav {
+  display: inline-block;
+  position: absolute;
+  top: 5vh;
+  right: 5vw;
+  width: 15%;
+  height: auto; }
+  @media only screen and (max-width: 1024px) {
+    .menu-nav {
+      width: 20%; } }
+
 .clubhouse-background {
   background-color: #e6e6e6; }
 
 /* size is only based on assumption */
 .clubhouse-image-container {
-  width: 750px;
-  height: 700px;
+  width: 70%;
+  height: auto;
   position: absolute;
-  right: 0px; }
+  right: 0px;
+  bottom: 0px; }
+  @media only screen and (min-width: 1025px) and (max-width: 1279px) {
+    .clubhouse-image-container {
+      width: 85%; } }
+  @media only screen and (max-width: 1024px) {
+    .clubhouse-image-container {
+      width: 100%; } }
 
-.textbox {
-  background-color: #000033;
+.clubhouse-textbox {
+  background-color: #000333;
   position: relative;
   width: 40vw;
-  height: 580px;
+  height: 600px;
   padding: 20px;
-  margin: 40px auto 40px 40px; }
+  margin: 70px auto 70px 40px; }
+  @media only screen and (max-width: 1024px) {
+    .clubhouse-textbox {
+      margin-left: 0px;
+      margin-top: 0px; } }
 
 .textbox span {
   color: white; }
