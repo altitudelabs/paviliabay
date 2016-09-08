@@ -125,7 +125,7 @@ span, p {
   position: absolute; }
 
 .video-container {
-  height: 90vh;
+  height: 92vh;
   width: 100%; }
 
 .video {
@@ -135,7 +135,7 @@ span, p {
 .hero-footer {
   padding: 20px;
   background-color: #999999;
-  height: 10vh; }
+  height: 8vh; }
   .hero-footer h3 {
     text-align: left; }
 
