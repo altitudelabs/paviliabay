@@ -1,15 +1,104 @@
-* {margin: 0; padding: 0;}
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
 
-.body {
+div {
+  box-sizing: border-box;
+}
+
+h1 {
+  line-height: 79px;
+  font-size: 57px;
+  font-weight: bold;
+  text-transform: uppercase;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+
+  @include responsive(mobile){
+    line-height: 48px;
+    font-size: 34px;
+  }
 }
 
-h1, h2, h3, h4, h5 {
-  margin: 5px;
-  color: white;
+h2 {
+  line-height: 36px;
+  font-size: 37px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  text-transform: uppercase;
+
+  @include responsive(mobile) {
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
-.body-container {
+h3 {
+  line-height: 36px;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+
+  @include responsive(mobile){
+    line-height: 28px;
+    font-size: 20px;
+  }
+}
+
+h4 {
+  line-height: 48px;
+  font-size: 32px;
+  font-weight: 100;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+
+  @include responsive(mobile){
+    font-size: 23px;
+    line-height: 34px;
+  }
+}
+
+span, p {
+  display: block;
+  font-size: 17px;
+  font-weight: 100;
+  margin: 0;
+  line-height: 11px;
+  letter-spacing: 0.007em;
+
+  @include responsive(mobile) {
+    font-size: 15px;
+  }
+}
+
+.desktop-only {
+  @include responsive(desktop){
+    //display: none;
+  }
+}
+
+.transition-only {
+  //display: none;
+  @include responsive(transition){
+    //display: inline-block;
+  }
+}
+
+.mobile-only {
+
+}
+
+.section-container {
   position: relative;
   border: 2px solid black;
   overflow: auto;
@@ -29,10 +118,6 @@ h1, h2, h3, h4, h5 {
   text-align: center;
   margin: auto;
   width: 80%;
-}
-
-.title-text h1, h2, h3, h4, h5 {
-  color: black;
 }
 
 .background-image {

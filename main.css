@@ -1,0 +1,289 @@
+/* * * * * * * * * * * * * * * * * * * * * * *
+ * Device screen size
+ * Usage: @include responsive(mobile) { ... }
+ *        @include responsive(transition){ ... }
+ *        @include responsive(desktop) { ... }
+ * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * *
+ * Colors
+ * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * *
+ * Helpers / Functions
+ * Usage:
+ *        @include transform(translateX(1px));
+ *        @include transform((translateX(1px) rotateY(5deg)));
+ *        @include opacity(0.5);
+ *        @include transition((margin 0.5s 1s));
+ *        @include responsive(mobile){ ... }
+ * * * * * * * * * * * * * * * * * * * * * * */
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0; }
+
+div {
+  box-sizing: border-box; }
+
+h1 {
+  line-height: 79px;
+  font-size: 57px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0; }
+  @media only screen and (max-width: 1024px) {
+    h1 {
+      line-height: 48px;
+      font-size: 34px; } }
+
+h2 {
+  line-height: 36px;
+  font-size: 37px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  text-transform: uppercase; }
+  @media only screen and (max-width: 1024px) {
+    h2 {
+      font-size: 30px;
+      line-height: 30px; } }
+
+h3 {
+  line-height: 36px;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box; }
+  @media only screen and (max-width: 1024px) {
+    h3 {
+      line-height: 28px;
+      font-size: 20px; } }
+
+h4 {
+  line-height: 48px;
+  font-size: 32px;
+  font-weight: 100;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box; }
+  @media only screen and (max-width: 1024px) {
+    h4 {
+      font-size: 23px;
+      line-height: 34px; } }
+
+span, p {
+  display: block;
+  font-size: 17px;
+  font-weight: 100;
+  margin: 0;
+  line-height: 11px;
+  letter-spacing: 0.007em; }
+  @media only screen and (max-width: 1024px) {
+    span, p {
+      font-size: 15px; } }
+
+.section-container {
+  position: relative;
+  border: 2px solid black;
+  overflow: auto; }
+
+.footer {
+  background-color: gray;
+  height: 10vh;
+  bottom: 0;
+  width: 100%; }
+
+.title-text {
+  position: relative;
+  top: 40%;
+  background-color: transparent;
+  text-align: center;
+  margin: auto;
+  width: 80%; }
+
+.background-image {
+  width: 100%;
+  height: 90vh;
+  position: absolute; }
+
+#hero-section h1, h2, h3, h4, h5 {
+  color: black;
+  text-align: center; }
+
+.video-container {
+  height: 90vh; }
+
+.title-description {
+  display: block;
+  vertical-align: middle;
+  background-color: transparent;
+  border-width: 1px solid white;
+  padding: 5px;
+  width: 40%;
+  margin: auto; }
+
+.title-description {
+  color: white; }
+
+.clubhouse-background {
+  background-color: #e6e6e6; }
+
+/* size is only based on assumption */
+.clubhouse-image-container {
+  width: 750px;
+  height: 700px;
+  position: absolute;
+  right: 0px; }
+
+.textbox {
+  background-color: #000033;
+  position: relative;
+  width: 40vw;
+  height: 580px;
+  padding: 20px;
+  margin: 40px auto 40px 40px; }
+
+.textbox span {
+  color: white; }
+
+#companyinfo-section h3, span {
+  text-align: center;
+  color: white;
+  margin: 5%; }
+
+.companyinfo-background {
+  background-color: #000333;
+  width: 90vw;
+  position: relative;
+  margin: 0 auto auto auto;
+  text-align: center; }
+
+.companylogo {
+  display: inline-block;
+  text-align: center;
+  margin: 20px;
+  width: 200px; }
+
+.companylogo:last-child {
+  right: 0; }
+
+.disclaimer {
+  text-align: center; }
+
+.description-textbox {
+  width: 80vw;
+  align-self: center;
+  background-color: #e6e6e6;
+  margin-top: 80vh;
+  margin-left: 10vw;
+  position: relative;
+  padding-right: 40px; }
+
+.profile-textbox {
+  overflow: visible;
+  position: relative;
+  top: -30px;
+  display: inline-block;
+  margin: auto 40px 40px 40px;
+  background-color: #000333;
+  padding: 40px; }
+
+.designerphoto {
+  position: relative;
+  width: 90%;
+  margin: auto; }
+
+.description-text {
+  margin-left: 40px;
+  margin-bottom: 40px;
+  display: inline-block; }
+
+#designerprofile-section h1, h2, h3, h4, h5 {
+  color: white;
+  text-align: center; }
+
+#designerprofile-section .body-container {
+  overflow: hidden; }
+
+#map-section h1, h3, h4, h5 {
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.map-container {
+  background-color: green;
+  width: 70%;
+  min-width: 400px;
+  height: 700px;
+  position: relative;
+  float: left; }
+
+.map-info {
+  margin: 0;
+  width: 400px;
+  position: relative;
+  float: left;
+  height: 100%;
+  background-color: #000333;
+  padding-left: 30px; }
+
+#panorama-section .background-image {
+  position: relative; }
+
+.panorama-content {
+  position: absolute;
+  width: 100%;
+  top: 40%; }
+
+.panorama-button-group {
+  position: relative;
+  text-align: center;
+  margin: auto; }
+
+.panorama-button {
+  display: inline-block;
+  width: 100px;
+  margin-left: 2%;
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  opacity: 0.5; }
+
+.portfolio-header {
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  background-color: #000333; }
+
+.portfolio-image {
+  width: 33.3%;
+  height: 60vw;
+  display: inline-block; }
+
+.portfolio-image:first-child {
+  left: 0; }
+
+.portfolio-image:last-child {
+  right: 0; }
+
+#register-section.body-container {
+  background-color: #e6e6e6; }
+
+#register-section h3 {
+  text-align: center; }
+
+.register-button {
+  border: 1px solid white;
+  padding: 10px 20px 10px 20px;
+  background-color: transparent;
+  width: 50%;
+  margin: auto auto 30px auto; }
+
+.register-button h3 {
+  color: #000333; }

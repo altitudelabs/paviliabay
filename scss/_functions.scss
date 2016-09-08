@@ -8,36 +8,36 @@
  *        @include responsive(mobile){ ... }
  * * * * * * * * * * * * * * * * * * * * * * */
 
-
-@mixin transform($tranform){
-  -webkit-transform: $tranform;
-  -moz-transform: $tranform;
-  -ms-transform: $tranform;
-  -o-transform: $tranform;
-  transform: $tranform;
-}
-
-@mixin opacity($o) {
-  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity="+($o * 100)+")";
-	filter: alpha(opacity= $o * 100);
-  -moz-opacity:$o;
-  -khtml-opacity: $o;
-  opacity: $o;
-}
-
-@mixin transition($t) {
-  -webkit-transition: $t;
-  -moz-transition: $t;
-  -o-transition: $t;
-  transition: $t;
-}
+//
+// @mixin transform($tranform){
+//   -webkit-transform: $tranform;
+//   -moz-transform: $tranform;
+//   -ms-transform: $tranform;
+//   -o-transform: $tranform;
+//   transform: $tranform;
+// }
+//
+// @mixin opacity($o) {
+//   -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity="+($o * 100)+")";
+// 	filter: alpha(opacity= $o * 100);
+//   -moz-opacity:$o;
+//   -khtml-opacity: $o;
+//   opacity: $o;
+// }
+//
+// @mixin transition($t) {
+//   -webkit-transition: $t;
+//   -moz-transition: $t;
+//   -o-transition: $t;
+//   transition: $t;
+// }
 
 @mixin responsive($media) {
   @if $media == mobile {
-    @media only screen and (min-width: $mobile-width) and (max-width: $mobile-desktop-transition-width) { @content; }
+    @media only screen and (max-width: $mobile-large-width) { @content; }
   }
   @if $media == transition {
-    @media only screen and (min-width: $mobile-desktop-transition-width + 1) and (max-width: $desktop-large-width - 1) { @content; }
+    @media only screen and (min-width: $mobile-large-width + 1) and (max-width: $desktop-large-width s - 1) { @content; }
   }
   @else if $media == desktop {
     @media only screen and (min-width: $desktop-large-width) { @content; }

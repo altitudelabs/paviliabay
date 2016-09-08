@@ -5,14 +5,13 @@
  *        @include responsive(desktop) { ... }
  * * * * * * * * * * * * * * * * * * * * * * */
 
-$mobile-width: 640px;
-$mobile-desktop-transition-width: 1024px;
+$mobile-large-width: 1024px;
 $desktop-large-width: 1280px;
 
 /* * * * * * * * * * * * * * * * * * * * * * *
  * Colors
  * * * * * * * * * * * * * * * * * * * * * * */
 
- $dark-blue: #000333
- $light-gray: #e6e6e6
- $dark-gray: #999999 
+ $dark-blue: #000333;
+ $light-gray: #e6e6e6;
+ $dark-gray: #999999;
