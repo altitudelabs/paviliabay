@@ -1,3 +1,9 @@
+#clubhouse-section {
+  h1, h4 {
+    text-align: left;
+  }
+}
+
 .clubhouse-background {
   background-color: $light-gray;
 }
@@ -21,20 +27,23 @@
 }
 
 .clubhouse-textbox {
-  background-color: $dark-blue;
-  position: relative;
+  @extend .description-box;
+  display: table;
   width: 40vw;
-  height: 600px;
-  padding: 20px;
-  margin: 70px auto 70px 40px;
+  min-height: 80vh;
+  margin: 10vh auto 10vw 10vh;
 
   @include responsive(transition){
-
+    width: 50vw;
+    margin-top: 7vh;
+    margin-left: 5vw;
   }
 
   @include responsive(mobile){
+    width: 65vw;
     margin-left: 0px;
     margin-top: 0px;
+
   }
 }
 

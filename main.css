@@ -83,6 +83,13 @@ h4 {
       font-size: 14px;
       line-height: 18px; } }
 
+hr {
+  display: block;
+  margin: 10px auto 10px 0;
+  left: 0;
+  color: white;
+  border-width: 1px; }
+
 span, p {
   display: inline;
   position: relative;
@@ -118,6 +125,10 @@ span, p {
   @media only screen and (max-width: 1024px) {
     .transparent-button {
       width: 45%; } }
+
+.description-box, .clubhouse-textbox {
+  background-color: #000333;
+  position: relative; }
 
 .background-image {
   width: 100%;
@@ -161,6 +172,12 @@ span, p {
     .menu-nav {
       width: 20%; } }
 
+#hero-section h3 {
+  color: #000333; }
+
+#clubhouse-section h1, #clubhouse-section h4 {
+  text-align: left; }
+
 .clubhouse-background {
   background-color: #e6e6e6; }
 
@@ -179,14 +196,18 @@ span, p {
       width: 100%; } }
 
 .clubhouse-textbox {
-  background-color: #000333;
-  position: relative;
+  display: table;
   width: 40vw;
-  height: 600px;
-  padding: 20px;
-  margin: 70px auto 70px 40px; }
+  min-height: 80vh;
+  margin: 10vh auto 10vw 10vh; }
+  @media only screen and (min-width: 1025px) and (max-width: 1279px) {
+    .clubhouse-textbox {
+      width: 50vw;
+      margin-top: 7vh;
+      margin-left: 5vw; } }
   @media only screen and (max-width: 1024px) {
     .clubhouse-textbox {
+      width: 65vw;
       margin-left: 0px;
       margin-top: 0px; } }
 
@@ -194,7 +215,6 @@ span, p {
   color: white; }
 
 #companyinfo-section h3, span {
-  text-align: center;
   color: white;
   margin: 5%; }
 

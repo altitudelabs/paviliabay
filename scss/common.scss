@@ -74,6 +74,15 @@ h4 {
   }
 }
 
+hr {
+  display: block;
+  margin: 10px auto 10px 0;
+  left: 0;
+  color: white;
+  border-width: 1px;
+
+}
+
 span, p {
   display: inline;
   position: relative;
@@ -131,6 +140,11 @@ span, p {
   @include responsive(mobile){
     width: 45%;
   }
+}
+
+.description-box {
+  background-color: $dark-blue;
+  position: relative;
 }
 
 .background-image {
