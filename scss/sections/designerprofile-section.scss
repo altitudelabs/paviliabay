@@ -19,6 +19,11 @@
   display: inline-block;
   margin: auto 40px 40px 40px;
   padding: 40px;
+
+  @include responsive(mobile){
+    margin-left: -40px;
+    top: -50vw;
+  }
 }
 
 .designerphoto {

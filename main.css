@@ -290,6 +290,10 @@ span, p {
   display: inline-block;
   margin: auto 40px 40px 40px;
   padding: 40px; }
+  @media only screen and (max-width: 1024px) {
+    .profile-blue-box {
+      margin-left: -40px;
+      top: -50vw; } }
 
 .designerphoto {
   position: relative;
