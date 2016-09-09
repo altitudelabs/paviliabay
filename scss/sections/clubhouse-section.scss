@@ -1,6 +1,8 @@
 #clubhouse-section {
   h1, h4 {
     text-align: left;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
   }
 }
 
@@ -23,9 +25,6 @@
   width: 70%;
 
   @include responsive(transition){
-    .image {
-
-    }
     top: 5vh;
     width: 80%;
   }
@@ -43,19 +42,26 @@
 
 .clubhouse-textbox {
   @extend .description-box;
+  padding: 4vh;
   position: absolute;
-  min-height: 70vh;
+  box-sizing: border-box;
+  min-height: 700px;
   display: table;
-  top: 0;
   width: 40vw;
   right: 50vw;
   margin: 10vh auto 10vw 10vh;
 
+  .white-line {
+    left: -18vh;
+  }
+
   @include responsive(transition){
     right: auto;
     width: 50vw;
+    min-height: 70vh;
     margin-top: 3vh;
     margin-left: 5vw;
+
   }
 
   @include responsive(mobile){
@@ -65,5 +71,9 @@
     margin-left: 0px;
     margin-top: 0px;
 
+    .white-line {
+      left: -4vh;
+      width: 80%;
+    }
   }
 }

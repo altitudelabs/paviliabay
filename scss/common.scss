@@ -74,15 +74,6 @@ h4 {
   }
 }
 
-hr {
-  display: block;
-  margin: 10px auto 10px 0;
-  left: 0;
-  color: white;
-  border-width: 1px;
-
-}
-
 span, p {
   display: inline;
   position: relative;
@@ -143,12 +134,22 @@ span, p {
 }
 
 .description-box {
+  h1, h2, h3, h4, h5 {
+    color: white;
+  }
   background-color: $dark-blue;
   position: relative;
 }
 
 .image {
   position: absolute;
+}
+
+.white-line {
+  height: 1px;
+  background-color: white;
+  //border: .5px solid white;
+  position: relative;
 }
 
 .background-image {
