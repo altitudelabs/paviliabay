@@ -85,14 +85,18 @@ h4 {
 
 span, p {
   position: relative;
-  line-height: 25px;
-  font-size: 20px;
+  line-height: 40px;
+  font-size: 25px;
   font-weight: 100;
   margin: 0;
   letter-spacing: 0.007em; }
   @media only screen and (max-width: 1024px) {
     span, p {
-      font-size: 15px; } }
+      line-height: 30px;
+      font-size: 20px; } }
+
+br {
+  line-height: 40px; }
 
 .section-container {
   position: relative;
@@ -290,8 +294,7 @@ span, p {
   @media only screen and (max-width: 1024px) {
     .description-gray-box {
       margin-top: 70vw;
-      margin-right: 0;
-      max-height: 60vh; } }
+      margin-right: 0; } }
 
 .profile-blue-box {
   align-content: center;
@@ -317,7 +320,7 @@ span, p {
   margin: 30px auto 30px auto; }
 
 .designer-description-text {
-  margin: 20px auto auto 40px;
+  margin: 60px auto auto 40px;
   vertical-align: top;
   position: relative;
   width: 40%;

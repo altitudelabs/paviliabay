@@ -76,32 +76,20 @@ h4 {
 
 span, p {
   position: relative;
-  line-height: 25px;
-  font-size: 20px;
+  line-height: 40px;
+  font-size: 25px;
   font-weight: 100;
   margin: 0;
   letter-spacing: 0.007em;
 
   @include responsive(mobile) {
-    font-size: 15px;
+    line-height: 30px;
+    font-size: 20px;
   }
 }
 
-.desktop-only {
-  @include responsive(desktop){
-    //display: none;
-  }
-}
-
-.transition-only {
-  //display: none;
-  @include responsive(transition){
-    //display: inline-block;
-  }
-}
-
-.mobile-only {
-
+br {
+  line-height: 40px;
 }
 
 .section-container {

@@ -20,7 +20,7 @@
   @include responsive(mobile){
     margin-top: 70vw;
     margin-right: 0;
-    max-height: 60vh;
+    //max-height: 80vh;
   }
 }
 
@@ -55,7 +55,7 @@
 }
 
 .designer-description-text {
-  margin: 20px auto auto 40px;
+  margin: 60px auto auto 40px;
   vertical-align: top;
   position: relative;
   width: 40%;
