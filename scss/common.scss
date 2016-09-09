@@ -116,7 +116,7 @@ span, p {
 
 .section-container {
   position: relative;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .title-center {
@@ -145,6 +145,10 @@ span, p {
 .description-box {
   background-color: $dark-blue;
   position: relative;
+}
+
+.image {
+  position: absolute;
 }
 
 .background-image {
