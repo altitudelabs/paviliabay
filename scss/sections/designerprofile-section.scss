@@ -1,20 +1,23 @@
-.description-textbox {
-  width: 80vw;
+.description-gray-box {
+  min-width: 80vw;
   align-self: center;
-  background-color: #e6e6e6;
-  margin-top: 80vh;
-  margin-left: 10vw;
+  background-color: $light-gray;
+  margin-top: 60vw;
+  margin-left: 40px;
+  margin-right: 40px;
   position: relative;
   padding-right: 40px;
+
+  @include responsive(mobile){
+    margin-right: 0;
+  }
 }
 
-.profile-textbox {
-  overflow: visible;
-  position: relative;
-  top: -30px;
+.profile-blue-box {
+  @extend .blue-box;
+  top: -70px;
   display: inline-block;
   margin: auto 40px 40px 40px;
-  background-color: #000333;
   padding: 40px;
 }
 
