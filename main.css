@@ -185,7 +185,7 @@ span, p {
   background-color: #e6e6e6; }
 
 .clubhouse-image-container {
-  text-align: right;
+  min-height: 1000px;
   height: 100vh;
   overflow: hidden;
   position: relative;
@@ -210,17 +210,21 @@ span, p {
 
 .clubhouse-textbox {
   position: absolute;
+  min-height: 70vh;
   display: table;
   top: 0;
   width: 40vw;
+  right: 50vw;
   margin: 10vh auto 10vw 10vh; }
   @media only screen and (min-width: 1025px) and (max-width: 1279px) {
     .clubhouse-textbox {
+      right: auto;
       width: 50vw;
       margin-top: 3vh;
       margin-left: 5vw; } }
   @media only screen and (max-width: 1024px) {
     .clubhouse-textbox {
+      right: auto;
       width: 65vw;
       min-height: 70vh;
       margin-left: 0px;

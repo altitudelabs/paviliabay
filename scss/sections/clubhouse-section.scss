@@ -6,15 +6,16 @@
 
 .clubhouse-background {
   background-color: $light-gray;
+
 }
 
 .clubhouse-image-container {
-  text-align: right;
   .image {
     right: 0;
     width: auto;
     height: 100%;
   }
+  min-height: 1000px;
   height: 100vh;
   overflow: hidden;
   position: relative;
@@ -43,18 +44,22 @@
 .clubhouse-textbox {
   @extend .description-box;
   position: absolute;
+  min-height: 70vh;
   display: table;
   top: 0;
   width: 40vw;
+  right: 50vw;
   margin: 10vh auto 10vw 10vh;
 
   @include responsive(transition){
+    right: auto;
     width: 50vw;
     margin-top: 3vh;
     margin-left: 5vw;
   }
 
   @include responsive(mobile){
+    right: auto;
     width: 65vw;
     min-height: 70vh;
     margin-left: 0px;
