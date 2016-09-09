@@ -26,9 +26,9 @@ h1 {
 }
 
 h2 {
-  line-height: 36px;
-  font-size: 37px;
-  font-weight: bold;
+  line-height: 30px;
+  font-size: 28px;
+  font-weight: 100;
   text-align: center;
   width: 100%;
   box-sizing: border-box;
@@ -57,7 +57,7 @@ h3 {
 
 h4 {
   font-size: 24px;
-  line-height: 30px;
+  line-height: 40px;
   font-weight: 100;
   text-align: center;
   width: 100%;
@@ -65,12 +65,12 @@ h4 {
 
   @include responsive(transition){
     font-size: 20px;
-    line-height: 25px;
+    line-height: 30px;
   }
 
   @include responsive(mobile){
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 28px;
   }
 }
 
@@ -107,7 +107,7 @@ span, p {
 
 .section-container {
   position: relative;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .title-center {
@@ -131,6 +131,34 @@ span, p {
   @include responsive(mobile){
     width: 45%;
   }
+}
+
+.description-box {
+  h1, h2, h3, h4, h5 {
+    color: white;
+  }
+  background-color: $dark-blue;
+  position: relative;
+}
+
+.image {
+  position: absolute;
+}
+
+.white-line {
+  height: 1px;
+  background-color: white;
+  position: relative;
+}
+
+.link-menu {
+  position: absolute;
+  border-bottom: 1px solid white;
+  background-color: black;
+  opacity: .5;
+  right: 0;
+  bottom: 50px;
+  padding: 8px;
 }
 
 .background-image {

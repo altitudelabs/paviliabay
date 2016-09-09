@@ -42,9 +42,9 @@ h1 {
       font-size: 25px; } }
 
 h2 {
-  line-height: 36px;
-  font-size: 37px;
-  font-weight: bold;
+  line-height: 30px;
+  font-size: 28px;
+  font-weight: 100;
   text-align: center;
   width: 100%;
   box-sizing: border-box;
@@ -69,7 +69,7 @@ h3 {
 
 h4 {
   font-size: 24px;
-  line-height: 30px;
+  line-height: 40px;
   font-weight: 100;
   text-align: center;
   width: 100%;
@@ -77,11 +77,11 @@ h4 {
   @media only screen and (min-width: 1025px) and (max-width: 1279px) {
     h4 {
       font-size: 20px;
-      line-height: 25px; } }
+      line-height: 30px; } }
   @media only screen and (max-width: 1024px) {
     h4 {
-      font-size: 14px;
-      line-height: 18px; } }
+      font-size: 16px;
+      line-height: 28px; } }
 
 span, p {
   display: inline;
@@ -97,7 +97,7 @@ span, p {
 
 .section-container {
   position: relative;
-  overflow: auto; }
+  overflow: hidden; }
 
 .title-center {
   position: absolute;
@@ -118,6 +118,29 @@ span, p {
   @media only screen and (max-width: 1024px) {
     .transparent-button {
       width: 45%; } }
+
+.description-box, .clubhouse-textbox {
+  background-color: #000333;
+  position: relative; }
+  .description-box h1, .clubhouse-textbox h1, .description-box h2, .clubhouse-textbox h2, .description-box h3, .clubhouse-textbox h3, .description-box h4, .clubhouse-textbox h4, .description-box h5, .clubhouse-textbox h5 {
+    color: white; }
+
+.image {
+  position: absolute; }
+
+.white-line {
+  height: 1px;
+  background-color: white;
+  position: relative; }
+
+.link-menu {
+  position: absolute;
+  border-bottom: 1px solid white;
+  background-color: black;
+  opacity: .5;
+  right: 0;
+  bottom: 50px;
+  padding: 8px; }
 
 .background-image {
   width: 100%;
@@ -161,40 +184,72 @@ span, p {
     .menu-nav {
       width: 20%; } }
 
+#hero-section h3 {
+  color: #000333; }
+
+#clubhouse-section h1, #clubhouse-section h4 {
+  text-align: left;
+  color: white;
+  margin-top: 1.5vh;
+  margin-bottom: 1.5vh; }
+
 .clubhouse-background {
   background-color: #e6e6e6; }
 
-/* size is only based on assumption */
 .clubhouse-image-container {
-  width: 70%;
-  height: auto;
-  position: absolute;
-  right: 0px;
-  bottom: 0px; }
+  min-height: 1000px;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  float: right;
+  width: 70%; }
+  .clubhouse-image-container .image {
+    right: 0;
+    width: auto;
+    height: 100%; }
   @media only screen and (min-width: 1025px) and (max-width: 1279px) {
     .clubhouse-image-container {
-      width: 85%; } }
+      top: 5vh;
+      width: 80%; } }
   @media only screen and (max-width: 1024px) {
     .clubhouse-image-container {
-      width: 100%; } }
+      top: 15vh;
+      height: 85vh;
+      width: 100%; }
+      .clubhouse-image-container .image {
+        height: 100%;
+        right: -45%; } }
 
 .clubhouse-textbox {
-  background-color: #000333;
-  position: relative;
+  padding: 40px;
+  position: absolute;
+  box-sizing: border-box;
+  min-height: 700px;
+  display: table;
   width: 40vw;
-  height: 600px;
-  padding: 20px;
-  margin: 70px auto 70px 40px; }
+  right: 50vw;
+  margin: 10vh auto 10vw 10vh; }
+  .clubhouse-textbox .white-line {
+    left: -15vw; }
+  @media only screen and (min-width: 1025px) and (max-width: 1279px) {
+    .clubhouse-textbox {
+      right: auto;
+      width: 50vw;
+      min-height: 70vh;
+      margin-top: 3vh;
+      margin-left: 5vw; } }
   @media only screen and (max-width: 1024px) {
     .clubhouse-textbox {
+      right: auto;
+      width: 65vw;
+      min-height: 70vh;
       margin-left: 0px;
-      margin-top: 0px; } }
-
-.textbox span {
-  color: white; }
+      margin-top: 0px; }
+      .clubhouse-textbox .white-line {
+        left: -10vw;
+        width: 90%; } }
 
 #companyinfo-section h3, span {
-  text-align: center;
   color: white;
   margin: 5%; }
 
