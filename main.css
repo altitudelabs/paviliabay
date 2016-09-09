@@ -119,10 +119,10 @@ span, p {
     .transparent-button {
       width: 45%; } }
 
-.description-box, .clubhouse-textbox {
+.blue-box, .clubhouse-blue-box {
   background-color: #000333;
   position: relative; }
-  .description-box h1, .clubhouse-textbox h1, .description-box h2, .clubhouse-textbox h2, .description-box h3, .clubhouse-textbox h3, .description-box h4, .clubhouse-textbox h4, .description-box h5, .clubhouse-textbox h5 {
+  .blue-box h1, .clubhouse-blue-box h1, .blue-box h2, .clubhouse-blue-box h2, .blue-box h3, .clubhouse-blue-box h3, .blue-box h4, .clubhouse-blue-box h4, .blue-box h5, .clubhouse-blue-box h5 {
     color: white; }
 
 .image {
@@ -220,7 +220,7 @@ span, p {
         height: 100%;
         right: -45%; } }
 
-.clubhouse-textbox {
+.clubhouse-blue-box {
   padding: 40px;
   position: absolute;
   box-sizing: border-box;
@@ -229,23 +229,23 @@ span, p {
   width: 40vw;
   right: 50vw;
   margin: 10vh auto 10vw 10vh; }
-  .clubhouse-textbox .white-line {
+  .clubhouse-blue-box .white-line {
     left: -15vw; }
   @media only screen and (min-width: 1025px) and (max-width: 1279px) {
-    .clubhouse-textbox {
+    .clubhouse-blue-box {
       right: auto;
       width: 50vw;
       min-height: 70vh;
       margin-top: 3vh;
       margin-left: 5vw; } }
   @media only screen and (max-width: 1024px) {
-    .clubhouse-textbox {
+    .clubhouse-blue-box {
       right: auto;
       width: 65vw;
       min-height: 70vh;
       margin-left: 0px;
       margin-top: 0px; }
-      .clubhouse-textbox .white-line {
+      .clubhouse-blue-box .white-line {
         left: -10vw;
         width: 90%; } }
 
