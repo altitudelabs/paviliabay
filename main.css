@@ -42,9 +42,9 @@ h1 {
       font-size: 25px; } }
 
 h2 {
-  line-height: 36px;
-  font-size: 37px;
-  font-weight: bold;
+  line-height: 30px;
+  font-size: 28px;
+  font-weight: 100;
   text-align: center;
   width: 100%;
   box-sizing: border-box;
@@ -133,6 +133,15 @@ span, p {
   background-color: white;
   position: relative; }
 
+.link-menu {
+  position: absolute;
+  border-bottom: 1px solid white;
+  background-color: black;
+  opacity: .5;
+  right: 0;
+  bottom: 50px;
+  padding: 8px; }
+
 .background-image {
   width: 100%;
   height: 90vh;
@@ -180,6 +189,7 @@ span, p {
 
 #clubhouse-section h1, #clubhouse-section h4 {
   text-align: left;
+  color: white;
   margin-top: 1.5vh;
   margin-bottom: 1.5vh; }
 
@@ -208,7 +218,7 @@ span, p {
       width: 100%; }
       .clubhouse-image-container .image {
         height: 100%;
-        right: -40%; } }
+        right: -45%; } }
 
 .clubhouse-textbox {
   padding: 40px;
@@ -220,7 +230,7 @@ span, p {
   right: 50vw;
   margin: 10vh auto 10vw 10vh; }
   .clubhouse-textbox .white-line {
-    left: -12vw; }
+    left: -15vw; }
   @media only screen and (min-width: 1025px) and (max-width: 1279px) {
     .clubhouse-textbox {
       right: auto;

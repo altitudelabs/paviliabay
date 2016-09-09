@@ -1,6 +1,7 @@
 #clubhouse-section {
   h1, h4 {
     text-align: left;
+    color: white;
     margin-top: 1.5vh;
     margin-bottom: 1.5vh;
   }
@@ -32,7 +33,7 @@
   @include responsive(mobile){
     .image {
       height: 100%;
-      right: -40%;
+      right: -45%;
     }
     top: 15vh;
     height: 85vh;
@@ -52,7 +53,7 @@
   margin: 10vh auto 10vw 10vh;
 
   .white-line {
-    left: -12vw;
+    left: -15vw;
   }
 
   @include responsive(transition){

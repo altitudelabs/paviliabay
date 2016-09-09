@@ -26,9 +26,9 @@ h1 {
 }
 
 h2 {
-  line-height: 36px;
-  font-size: 37px;
-  font-weight: bold;
+  line-height: 30px;
+  font-size: 28px;
+  font-weight: 100;
   text-align: center;
   width: 100%;
   box-sizing: border-box;
@@ -148,8 +148,17 @@ span, p {
 .white-line {
   height: 1px;
   background-color: white;
-  //border: .5px solid white;
   position: relative;
+}
+
+.link-menu {
+  position: absolute;
+  border-bottom: 1px solid white;
+  background-color: black;
+  opacity: .5;
+  right: 0;
+  bottom: 50px;
+  padding: 8px;
 }
 
 .background-image {
