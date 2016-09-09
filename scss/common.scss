@@ -21,7 +21,7 @@ h1 {
 
   @include responsive(mobile){
     line-height: 45px;
-    font-size: 25px;
+    font-size: 30px;
   }
 }
 
@@ -36,7 +36,7 @@ h2 {
 
   @include responsive(mobile) {
     font-size: 30px;
-    line-height: 30px;
+    line-height: 18px;
   }
 }
 

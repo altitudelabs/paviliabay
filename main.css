@@ -39,7 +39,7 @@ h1 {
   @media only screen and (max-width: 1024px) {
     h1 {
       line-height: 45px;
-      font-size: 25px; } }
+      font-size: 30px; } }
 
 h2 {
   line-height: 30px;
@@ -52,7 +52,7 @@ h2 {
   @media only screen and (max-width: 1024px) {
     h2 {
       font-size: 30px;
-      line-height: 30px; } }
+      line-height: 18px; } }
 
 h3 {
   line-height: 36px;
@@ -272,6 +272,12 @@ span, p {
 .disclaimer {
   text-align: center; }
 
+#designerprofile-section h1, #designerprofile-section h2, #designerprofile-section h3, #designerprofile-section h4 {
+  text-align: center;
+  color: white;
+  margin-top: 1.5vh;
+  margin-bottom: 1.5vh; }
+
 .description-gray-box {
   min-width: 80vw;
   align-self: center;
@@ -286,19 +292,27 @@ span, p {
       margin-right: 0; } }
 
 .profile-blue-box {
+  align-content: center;
   top: -70px;
   display: inline-block;
   margin: auto 40px 40px 40px;
   padding: 40px; }
+  .profile-blue-box .white-line {
+    left: -10vw;
+    width: 135%; }
   @media only screen and (max-width: 1024px) {
     .profile-blue-box {
       margin-left: -40px;
-      top: -50vw; } }
+      top: -53vw; }
+      .profile-blue-box .white-line {
+        left: -10vw;
+        width: 100%; } }
 
 .designerphoto {
   position: relative;
-  width: 90%;
-  margin: auto; }
+  display: block;
+  width: 60%;
+  margin: 30px auto 30px auto; }
 
 .description-text {
   margin-left: 40px;
