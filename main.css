@@ -69,7 +69,7 @@ h3 {
 
 h4 {
   font-size: 24px;
-  line-height: 30px;
+  line-height: 40px;
   font-weight: 100;
   text-align: center;
   width: 100%;
@@ -77,11 +77,11 @@ h4 {
   @media only screen and (min-width: 1025px) and (max-width: 1279px) {
     h4 {
       font-size: 20px;
-      line-height: 25px; } }
+      line-height: 30px; } }
   @media only screen and (max-width: 1024px) {
     h4 {
-      font-size: 14px;
-      line-height: 18px; } }
+      font-size: 16px;
+      line-height: 28px; } }
 
 span, p {
   display: inline;
@@ -211,7 +211,7 @@ span, p {
         right: -40%; } }
 
 .clubhouse-textbox {
-  padding: 4vh;
+  padding: 40px;
   position: absolute;
   box-sizing: border-box;
   min-height: 700px;
@@ -220,7 +220,7 @@ span, p {
   right: 50vw;
   margin: 10vh auto 10vw 10vh; }
   .clubhouse-textbox .white-line {
-    left: -18vh; }
+    left: -12vw; }
   @media only screen and (min-width: 1025px) and (max-width: 1279px) {
     .clubhouse-textbox {
       right: auto;
@@ -236,8 +236,8 @@ span, p {
       margin-left: 0px;
       margin-top: 0px; }
       .clubhouse-textbox .white-line {
-        left: -4vh;
-        width: 80%; } }
+        left: -10vw;
+        width: 90%; } }
 
 #companyinfo-section h3, span {
   color: white;

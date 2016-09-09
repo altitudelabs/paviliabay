@@ -42,7 +42,7 @@
 
 .clubhouse-textbox {
   @extend .description-box;
-  padding: 4vh;
+  padding: 40px;
   position: absolute;
   box-sizing: border-box;
   min-height: 700px;
@@ -52,7 +52,7 @@
   margin: 10vh auto 10vw 10vh;
 
   .white-line {
-    left: -18vh;
+    left: -12vw;
   }
 
   @include responsive(transition){
@@ -72,8 +72,8 @@
     margin-top: 0px;
 
     .white-line {
-      left: -4vh;
-      width: 80%;
+      left: -10vw;
+      width: 90%;
     }
   }
 }
