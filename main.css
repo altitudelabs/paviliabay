@@ -346,17 +346,28 @@ span, p {
   text-align: center;
   opacity: 0.5; }
 
+#portfolio-section h1 {
+  color: white; }
+
 .portfolio-header {
   height: auto;
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
   background-color: #000333; }
+  @media only screen and (max-width: 1024px) {
+    .portfolio-header {
+      margin-top: 2px; } }
+
+.portfolio-image-container {
+  text-align: center;
+  padding-top: 2px; }
 
 .portfolio-image {
   width: 33.3%;
   height: 60vw;
-  display: inline-block; }
+  display: inline-block;
+  vertical-align: top; }
 
 .portfolio-image:first-child {
   left: 0; }

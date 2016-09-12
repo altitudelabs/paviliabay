@@ -1,15 +1,31 @@
+#portfolio-section {
+  h1 {
+    color: white;
+  }
+}
+
 .portfolio-header {
   height: auto;
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
-  background-color: #000333
+  background-color: $dark-blue;
+
+  @include responsive(mobile){
+    margin-top: 2px;
+  }
+}
+
+.portfolio-image-container {
+  text-align: center;
+  padding-top: 2px;
 }
 
 .portfolio-image {
   width: 33.3%;
   height: 60vw;
   display: inline-block;
+  vertical-align: top;
 }
 
 .portfolio-image:first-child {
