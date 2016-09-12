@@ -437,11 +437,11 @@ br {
 .portfolio-image:last-child {
   right: 0; }
 
-#register-section.body-container {
-  background-color: #e6e6e6; }
+#register-section h1, #register-section h2, #register-section h3, #register-section h4, #register-section h5 {
+  color: white; }
 
-#register-section h3 {
-  text-align: center; }
+#register-section .section-container {
+  background-color: #999999; }
 
 .register-button {
   border: 1px solid white;

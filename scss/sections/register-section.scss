@@ -1,9 +1,10 @@
-#register-section.body-container {
-  background-color: #e6e6e6;
-}
-
-#register-section h3 {
-  text-align: center;
+#register-section {
+  h1, h2, h3, h4, h5 {
+    color: white;
+  }
+  .section-container {
+    background-color: $dark-gray;
+  }
 }
 
 .register-button {
