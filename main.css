@@ -105,14 +105,6 @@ br {
   position: relative;
   overflow: hidden; }
 
-.title-center {
-  position: absolute;
-  top: 45%;
-  background-color: transparent;
-  text-align: center;
-  left: 10%;
-  width: 80%; }
-
 .transparent-button {
   position: relative;
   margin-left: auto;
@@ -197,6 +189,14 @@ br {
   right: 0;
   bottom: 50px;
   padding: 8px; }
+
+#clubhouse-section .title-center {
+  position: absolute;
+  top: 45%;
+  background-color: transparent;
+  text-align: center;
+  left: 10%;
+  width: 80%; }
 
 .clubhouse-background {
   background-color: #e6e6e6; }
@@ -390,6 +390,9 @@ br {
   background-color: #000333;
   padding-left: 30px; }
 
+#panorama-section .title-center {
+  position: relative; }
+
 .panorama-image-container {
   height: 100vh;
   display: flex;
@@ -399,11 +402,10 @@ br {
 .panorama-background-image {
   flex: none;
   position: absolute;
-  width: 100%;
-  height: auto; }
+  height: 100vh;
+  width: 100%; }
   @media only screen and (max-width: 1024px) {
     .panorama-background-image {
-      height: 100%;
       width: auto; } }
   @media only screen and (max-width: 1024px) {
     .panorama-background-image {
@@ -412,21 +414,26 @@ br {
 
 .panorama-content {
   position: absolute;
-  width: 100%;
-  top: 40%; }
+  top: 40%;
+  width: 100%; }
 
 .panorama-button-group {
   position: relative;
   text-align: center;
-  margin: auto; }
+  margin: auto;
+  margin-top: 20px; }
 
 .panorama-button {
   display: inline-block;
   width: 100px;
-  margin-left: 2%;
+  margin-left: 5%;
   background-color: white;
   padding: 10px;
   text-align: center;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
   opacity: 0.5; }
 
 #portfolio-section h1 {
