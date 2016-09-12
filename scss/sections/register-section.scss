@@ -1,19 +1,29 @@
-#register-section.body-container {
-  background-color: #e6e6e6;
+#register-section {
+  h3, h4 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  h3 {
+    color: $dark-blue;
+  }
+   h4 {
+    color: white;
+    text-align: center;
+  }
 }
 
-#register-section h3 {
+.register-body-container {
+  padding: 20px;
+  background-color: $dark-gray;
+  height: 100%;
   text-align: center;
 }
 
 .register-button {
   border: 1px solid white;
-  padding: 10px 20px 10px 20px;
-  background-color: transparent;
-  width: 50%;
+  padding-right: 20px;
+  padding-left: 20px;
+  display: inline-block;
   margin: auto auto 30px auto;
-}
-
-.register-button h3 {
-  color: #000333;
 }
