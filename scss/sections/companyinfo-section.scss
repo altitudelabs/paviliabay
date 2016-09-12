@@ -1,27 +1,30 @@
-#companyinfo-section h3, span{
-  color: white;
-  margin: 5%;
+#companyinfo-section {
+  h1, h3, p {
+    color: white;
+    text-align: center;
+  }
+
+  p {
+    padding: 40px;
+    padding-bottom: 200px;
+  }
 }
 
-.companyinfo-background {
-  background-color: #000333;
-  width: 90vw;
+.companyinfo-body-container {
+  background-color: $dark-blue;
+  width: 95vw;
   position: relative;
   margin: 0 auto auto auto;
   text-align: center;
+
+  @include responsive(mobile) {
+    width: 100%;
+  }
 }
 
 .companylogo {
+  vertical-align: top;
+  padding-top: 40px;
   display: inline-block;
-  text-align: center;
   margin: 20px;
-  width: 200px;
-}
-
-.companylogo:last-child {
-  right: 0;
-}
-
-.disclaimer {
-  text-align: center;
 }
