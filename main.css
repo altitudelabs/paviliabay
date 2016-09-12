@@ -118,7 +118,7 @@ br {
       width: 45%; } }
 
 .blue-box, .clubhouse-blue-box, .profile-blue-box {
-  background-color: #000333;
+  background-color: #232f49;
   position: relative; }
   .blue-box h1, .clubhouse-blue-box h1, .profile-blue-box h1, .blue-box h2, .clubhouse-blue-box h2, .profile-blue-box h2, .blue-box h3, .clubhouse-blue-box h3, .profile-blue-box h3, .blue-box h4, .clubhouse-blue-box h4, .profile-blue-box h4, .blue-box h5, .clubhouse-blue-box h5, .profile-blue-box h5 {
     color: white; }
@@ -151,7 +151,7 @@ br {
 
 .hero-footer {
   padding: 20px;
-  background-color: #999999;
+  background-color: #9e9da2;
   height: 8vh; }
   .hero-footer h3 {
     text-align: left; }
@@ -179,7 +179,7 @@ br {
       width: 20%; } }
 
 #hero-section h3 {
-  color: #000333; }
+  color: #232f49; }
 
 #clubhouse-section h1, #clubhouse-section h2, #clubhouse-section h4 {
   text-align: left;
@@ -201,7 +201,7 @@ br {
   padding: 8px; }
 
 .clubhouse-background {
-  background-color: #e6e6e6; }
+  background-color: #dfdfe1; }
 
 .clubhouse-image-container {
   min-height: 1000px;
@@ -265,7 +265,7 @@ br {
   padding-bottom: 200px; }
 
 .companyinfo-body-container {
-  background-color: #000333;
+  background-color: #232f49;
   width: 95vw;
   position: relative;
   margin: 0 auto auto auto;
@@ -279,12 +279,6 @@ br {
   padding-top: 40px;
   display: inline-block;
   margin: 20px; }
-
-.companylogo:last-child {
-  right: 0; }
-
-.disclaimer {
-  text-align: center; }
 
 #designerprofile-section h1, #designerprofile-section h2, #designerprofile-section h3, #designerprofile-section h4 {
   text-align: center;
@@ -315,7 +309,7 @@ br {
   min-width: 80vw;
   min-height: 750px;
   align-self: center;
-  background-color: #e6e6e6;
+  background-color: #dfdfe1;
   margin-top: 60vw;
   margin-left: 40px;
   margin-right: 40px;
@@ -392,7 +386,7 @@ br {
 .map-container {
   display: inline-block;
   vertical-align: top;
-  background-color: #e6e6e6;
+  background-color: #dfdfe1;
   width: 65%;
   min-width: 400px;
   height: 800px;
@@ -409,7 +403,7 @@ br {
   width: 35%;
   height: 800px;
   min-height: 90vh;
-  background-color: #000333;
+  background-color: #232f49;
   padding-left: 80px;
   padding-bottom: 60px; }
   @media only screen and (max-width: 1024px) {
@@ -479,7 +473,7 @@ br {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
-  background-color: #000333; }
+  background-color: #232f49; }
   @media only screen and (max-width: 1024px) {
     .portfolio-header {
       margin-top: 2px; } }
@@ -506,7 +500,7 @@ br {
   margin-bottom: 10px; }
 
 #register-section h3 {
-  color: #000333; }
+  color: #232f49; }
 
 #register-section h4 {
   color: white;
@@ -514,7 +508,7 @@ br {
 
 .register-body-container {
   padding: 20px;
-  background-color: #999999;
+  background-color: #9e9da2;
   height: 100%;
   text-align: center; }
 
