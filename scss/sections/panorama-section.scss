@@ -1,6 +1,7 @@
 #panorama-section {
   .title-center {
     position: relative;
+    margin: auto;
   }
 }
 
@@ -30,6 +31,7 @@
 
 .panorama-content {
   position: absolute;
+  text-align: center;
   top: 40%;
   width:100%;
 }
@@ -43,10 +45,15 @@
 
 .panorama-button {
   display: inline-block;
-  width: 100px;
-  margin-left: 5%;
+  width: 150px;
+  margin-left: 2%;
+  margin-right: 2%;
   background-color: white;
   padding: 10px;
   text-align: center;
   @include opacity(.5);
+
+  @include responsive(mobile){
+    width: 100px;
+  }
 }

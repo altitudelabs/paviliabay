@@ -131,6 +131,16 @@ br {
   background-color: white;
   position: relative; }
 
+#hero-section h4 {
+  color: white; }
+
+#hero-section .title-center {
+  position: absolute;
+  top: 45%;
+  background-color: transparent;
+  left: 10%;
+  width: 80%; }
+
 .video-container {
   height: 92vh;
   width: 100%; }
@@ -189,14 +199,6 @@ br {
   right: 0;
   bottom: 50px;
   padding: 8px; }
-
-#clubhouse-section .title-center {
-  position: absolute;
-  top: 45%;
-  background-color: transparent;
-  text-align: center;
-  left: 10%;
-  width: 80%; }
 
 .clubhouse-background {
   background-color: #e6e6e6; }
@@ -391,7 +393,8 @@ br {
   padding-left: 30px; }
 
 #panorama-section .title-center {
-  position: relative; }
+  position: relative;
+  margin: auto; }
 
 .panorama-image-container {
   height: 100vh;
@@ -414,6 +417,7 @@ br {
 
 .panorama-content {
   position: absolute;
+  text-align: center;
   top: 40%;
   width: 100%; }
 
@@ -425,8 +429,9 @@ br {
 
 .panorama-button {
   display: inline-block;
-  width: 100px;
-  margin-left: 5%;
+  width: 150px;
+  margin-left: 2%;
+  margin-right: 2%;
   background-color: white;
   padding: 10px;
   text-align: center;
@@ -435,6 +440,9 @@ br {
   -moz-opacity: 0.5;
   -khtml-opacity: 0.5;
   opacity: 0.5; }
+  @media only screen and (max-width: 1024px) {
+    .panorama-button {
+      width: 100px; } }
 
 #portfolio-section h1 {
   color: white; }
