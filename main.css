@@ -105,14 +105,6 @@ br {
   position: relative;
   overflow: hidden; }
 
-.title-center {
-  position: absolute;
-  top: 45%;
-  background-color: transparent;
-  text-align: center;
-  left: 10%;
-  width: 80%; }
-
 .transparent-button {
   position: relative;
   margin-left: auto;
@@ -138,6 +130,16 @@ br {
   height: 1px;
   background-color: white;
   position: relative; }
+
+#hero-section h4 {
+  color: white; }
+
+#hero-section .title-center {
+  position: absolute;
+  top: 45%;
+  background-color: transparent;
+  left: 10%;
+  width: 80%; }
 
 .video-container {
   height: 92vh;
@@ -186,10 +188,14 @@ br {
   margin-bottom: 1.5vh; }
 
 #clubhouse-section .link-menu {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
   position: absolute;
   border-bottom: 1px solid white;
   background-color: black;
-  opacity: .5;
   right: 0;
   bottom: 50px;
   padding: 8px; }
@@ -386,27 +392,57 @@ br {
   background-color: #000333;
   padding-left: 30px; }
 
-#panorama-section .background-image {
-  position: relative; }
+#panorama-section .title-center {
+  position: relative;
+  margin: auto; }
+
+.panorama-image-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  overflow: hidden; }
+
+.panorama-background-image {
+  flex: none;
+  position: absolute;
+  height: 100vh;
+  width: 100%; }
+  @media only screen and (max-width: 1024px) {
+    .panorama-background-image {
+      width: auto; } }
+  @media only screen and (max-width: 1024px) {
+    .panorama-background-image {
+      height: 100%;
+      width: auto; } }
 
 .panorama-content {
   position: absolute;
-  width: 100%;
-  top: 40%; }
+  text-align: center;
+  top: 40%;
+  width: 100%; }
 
 .panorama-button-group {
   position: relative;
   text-align: center;
-  margin: auto; }
+  margin: auto;
+  margin-top: 20px; }
 
 .panorama-button {
   display: inline-block;
-  width: 100px;
+  width: 150px;
   margin-left: 2%;
+  margin-right: 2%;
   background-color: white;
   padding: 10px;
   text-align: center;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
   opacity: 0.5; }
+  @media only screen and (max-width: 1024px) {
+    .panorama-button {
+      width: 100px; } }
 
 #portfolio-section h1 {
   color: white; }

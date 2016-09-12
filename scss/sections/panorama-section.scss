@@ -1,25 +1,59 @@
-#panorama-section .background-image {
-  position: relative;
+#panorama-section {
+  .title-center {
+    position: relative;
+    margin: auto;
+  }
+}
+
+.panorama-image-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.panorama-background-image {
+  flex: none;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+
+  @include responsive(mobile){
+    width: auto;
+  }
+
+  @include responsive(mobile){
+    height: 100%;
+    width: auto;
+
+  }
 }
 
 .panorama-content {
   position: absolute;
-  width:100%;
+  text-align: center;
   top: 40%;
+  width:100%;
 }
 
 .panorama-button-group {
   position: relative;
   text-align: center;
   margin: auto;
+  margin-top: 20px;
 }
 
 .panorama-button {
   display: inline-block;
-  width: 100px;
+  width: 150px;
   margin-left: 2%;
+  margin-right: 2%;
   background-color: white;
   padding: 10px;
   text-align: center;
-  opacity: 0.5;
+  @include opacity(.5);
+
+  @include responsive(mobile){
+    width: 100px;
+  }
 }
