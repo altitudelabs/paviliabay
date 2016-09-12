@@ -307,8 +307,7 @@ br {
   margin-left: 40px;
   margin-right: 40px;
   position: relative;
-  padding-top: 40px;
-  padding-right: 40px; }
+  padding-top: 40px; }
   @media only screen and (max-width: 1024px) {
     .description-gray-box {
       margin-top: 500px;
@@ -363,7 +362,8 @@ br {
 .designer-description-text {
   vertical-align: top;
   position: relative;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  padding-right: 40px; }
   @media only screen and (max-width: 1024px) {
     .designer-description-text {
       clear: left;
