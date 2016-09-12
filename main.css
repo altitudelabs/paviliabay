@@ -186,10 +186,14 @@ br {
   margin-bottom: 1.5vh; }
 
 #clubhouse-section .link-menu {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
   position: absolute;
   border-bottom: 1px solid white;
   background-color: black;
-  opacity: .5;
   right: 0;
   bottom: 50px;
   padding: 8px; }
@@ -386,8 +390,25 @@ br {
   background-color: #000333;
   padding-left: 30px; }
 
-#panorama-section .background-image {
-  position: relative; }
+.panorama-image-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  overflow: hidden; }
+
+.panorama-background-image {
+  flex: none;
+  position: absolute;
+  width: 100%;
+  height: auto; }
+  @media only screen and (max-width: 1024px) {
+    .panorama-background-image {
+      height: 100%;
+      width: auto; } }
+  @media only screen and (max-width: 1024px) {
+    .panorama-background-image {
+      height: 100%;
+      width: auto; } }
 
 .panorama-content {
   position: absolute;

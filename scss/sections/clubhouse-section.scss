@@ -7,10 +7,10 @@
   }
 
   .link-menu {
+    @include opacity(.5);
     position: absolute;
     border-bottom: 1px solid white;
     background-color: black;
-    opacity: .5;
     right: 0;
     bottom: 50px;
     padding: 8px;
@@ -19,7 +19,6 @@
 
 .clubhouse-background {
   background-color: $light-gray;
-
 }
 
 .clubhouse-image-container {
@@ -72,7 +71,6 @@
     min-height: 70vh;
     margin-top: 3vh;
     margin-left: 5vw;
-
   }
 
   @include responsive(mobile){

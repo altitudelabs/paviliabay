@@ -8,23 +8,23 @@
  *        @include responsive(mobile){ ... }
  * * * * * * * * * * * * * * * * * * * * * * */
 
-//
-// @mixin transform($tranform){
-//   -webkit-transform: $tranform;
-//   -moz-transform: $tranform;
-//   -ms-transform: $tranform;
-//   -o-transform: $tranform;
-//   transform: $tranform;
-// }
-//
-// @mixin opacity($o) {
-//   -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity="+($o * 100)+")";
-// 	filter: alpha(opacity= $o * 100);
-//   -moz-opacity:$o;
-//   -khtml-opacity: $o;
-//   opacity: $o;
-// }
-//
+
+@mixin transform($tranform){
+  -webkit-transform: $tranform;
+  -moz-transform: $tranform;
+  -ms-transform: $tranform;
+  -o-transform: $tranform;
+  transform: $tranform;
+}
+
+@mixin opacity($o) {
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity="+($o * 100)+")";
+	filter: alpha(opacity= $o * 100);
+  -moz-opacity:$o;
+  -khtml-opacity: $o;
+  opacity: $o;
+}
+
 // @mixin transition($t) {
 //   -webkit-transition: $t;
 //   -moz-transition: $t;

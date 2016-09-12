@@ -1,5 +1,26 @@
-#panorama-section .background-image {
-  position: relative;
+.panorama-image-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.panorama-background-image {
+  flex: none;
+  position: absolute;
+  width: 100%;
+  height: auto;
+
+  @include responsive(mobile){
+    height: 100%;
+    width: auto;
+  }
+
+  @include responsive(mobile){
+    height: 100%;
+    width: auto;
+
+  }
 }
 
 .panorama-content {
@@ -7,6 +28,8 @@
   width:100%;
   top: 40%;
 }
+
+
 
 .panorama-button-group {
   position: relative;
