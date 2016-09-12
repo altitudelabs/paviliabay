@@ -437,18 +437,27 @@ br {
 .portfolio-image:last-child {
   right: 0; }
 
-#register-section h1, #register-section h2, #register-section h3, #register-section h4, #register-section h5 {
-  color: white; }
+#register-section h3, #register-section h4 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px; }
 
-#register-section .section-container {
-  background-color: #999999; }
+#register-section h3 {
+  color: #000333; }
+
+#register-section h4 {
+  color: white;
+  text-align: center; }
+
+.register-body-container {
+  padding: 20px;
+  background-color: #999999;
+  height: 100%;
+  text-align: center; }
 
 .register-button {
   border: 1px solid white;
-  padding: 10px 20px 10px 20px;
-  background-color: transparent;
-  width: 50%;
+  padding-right: 20px;
+  padding-left: 20px;
+  display: inline-block;
   margin: auto auto 30px auto; }
-
-.register-button h3 {
-  color: #000333; }
