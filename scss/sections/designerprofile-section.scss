@@ -1,9 +1,21 @@
 #designerprofile-section {
   h1, h2, h3, h4 {
     text-align: center;
-    color: white;
     margin-top: 1.5vh;
     margin-bottom: 1.5vh;
+  }
+
+  .link-menu {
+    position: absolute;
+    border-bottom: 1px solid black;
+    right: 0;
+    padding-right:8px;
+    bottom: 150px;
+
+    @include responsive(mobile){
+      top: 550px;
+      bottom: auto;
+    }
   }
 }
 
@@ -20,7 +32,7 @@
 
 .description-gray-box {
   min-width: 80vw;
-  height: 750px;
+  min-height: 750px;
   align-self: center;
   background-color: $light-gray;
   margin-top: 60vw;
@@ -33,7 +45,7 @@
   @include responsive(mobile){
     margin-top: 500px;
     margin-right: 0;
-    height: 600px;
+    min-height: 550px;
   }
 }
 
@@ -49,7 +61,11 @@
 
   .white-line {
     left: -10vw;
-    width: 135%;
+    width: 125%;
+  }
+
+  h1, h2, h3, h4 {
+    color: white;
   }
 
   @include responsive(mobile){
@@ -81,7 +97,7 @@
    float: left;
    width: 540px;
    height: 660px;
-   margin-right: 60px;
+   margin-right: 40px;
 
    @include responsive(mobile){
      width: 360px;
@@ -93,6 +109,7 @@
 .designer-description-text {
   vertical-align: top;
   position: relative;
+  padding-bottom: 50px;
 
   @include responsive (mobile){
     clear: left;

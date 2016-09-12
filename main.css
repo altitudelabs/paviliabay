@@ -47,8 +47,7 @@ h2 {
   font-weight: 100;
   text-align: center;
   width: 100%;
-  box-sizing: border-box;
-  text-transform: uppercase; }
+  box-sizing: border-box; }
   @media only screen and (max-width: 1024px) {
     h2 {
       font-size: 30px;
@@ -90,6 +89,10 @@ span, p {
   font-weight: 100;
   margin: 0;
   letter-spacing: 0.007em; }
+  @media only screen and (min-width: 1025px) and (max-width: 1279px) {
+    span, p {
+      line-height: 33px;
+      font-size: 22px; } }
   @media only screen and (max-width: 1024px) {
     span, p {
       line-height: 30px;
@@ -136,15 +139,6 @@ br {
   background-color: white;
   position: relative; }
 
-.link-menu {
-  position: absolute;
-  border-bottom: 1px solid white;
-  background-color: black;
-  opacity: .5;
-  right: 0;
-  bottom: 50px;
-  padding: 8px; }
-
 .video-container {
   height: 92vh;
   width: 100%; }
@@ -190,6 +184,15 @@ br {
   color: white;
   margin-top: 1.5vh;
   margin-bottom: 1.5vh; }
+
+#clubhouse-section .link-menu {
+  position: absolute;
+  border-bottom: 1px solid white;
+  background-color: black;
+  opacity: .5;
+  right: 0;
+  bottom: 50px;
+  padding: 8px; }
 
 .clubhouse-background {
   background-color: #e6e6e6; }
@@ -272,9 +275,19 @@ br {
 
 #designerprofile-section h1, #designerprofile-section h2, #designerprofile-section h3, #designerprofile-section h4 {
   text-align: center;
-  color: white;
   margin-top: 1.5vh;
   margin-bottom: 1.5vh; }
+
+#designerprofile-section .link-menu {
+  position: absolute;
+  border-bottom: 1px solid black;
+  right: 0;
+  padding-right: 8px;
+  bottom: 150px; }
+  @media only screen and (max-width: 1024px) {
+    #designerprofile-section .link-menu {
+      top: 550px;
+      bottom: auto; } }
 
 .background-image {
   height: 80vw;
@@ -287,7 +300,7 @@ br {
 
 .description-gray-box {
   min-width: 80vw;
-  height: 750px;
+  min-height: 750px;
   align-self: center;
   background-color: #e6e6e6;
   margin-top: 60vw;
@@ -300,7 +313,7 @@ br {
     .description-gray-box {
       margin-top: 500px;
       margin-right: 0;
-      height: 600px; } }
+      min-height: 550px; } }
 
 .profile-blue-box {
   width: 500px;
@@ -312,7 +325,9 @@ br {
   padding: 40px; }
   .profile-blue-box .white-line {
     left: -10vw;
-    width: 135%; }
+    width: 125%; }
+  .profile-blue-box h1, .profile-blue-box h2, .profile-blue-box h3, .profile-blue-box h4 {
+    color: white; }
   @media only screen and (max-width: 1024px) {
     .profile-blue-box {
       width: 400px;
@@ -339,7 +354,7 @@ br {
   float: left;
   width: 540px;
   height: 660px;
-  margin-right: 60px; }
+  margin-right: 40px; }
   @media only screen and (max-width: 1024px) {
     .erase-shifted-offset {
       width: 360px;
@@ -347,7 +362,8 @@ br {
 
 .designer-description-text {
   vertical-align: top;
-  position: relative; }
+  position: relative;
+  padding-bottom: 50px; }
   @media only screen and (max-width: 1024px) {
     .designer-description-text {
       clear: left;

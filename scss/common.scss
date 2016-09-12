@@ -32,7 +32,6 @@ h2 {
   text-align: center;
   width: 100%;
   box-sizing: border-box;
-  text-transform: uppercase;
 
   @include responsive(mobile) {
     font-size: 30px;
@@ -82,6 +81,10 @@ span, p {
   margin: 0;
   letter-spacing: 0.007em;
 
+  @include responsive(transition){
+    line-height: 33px;
+    font-size: 22px;
+  }
   @include responsive(mobile) {
     line-height: 30px;
     font-size: 20px;
@@ -136,14 +139,4 @@ br {
   height: 1px;
   background-color: white;
   position: relative;
-}
-
-.link-menu {
-  position: absolute;
-  border-bottom: 1px solid white;
-  background-color: black;
-  opacity: .5;
-  right: 0;
-  bottom: 50px;
-  padding: 8px;
 }

@@ -5,6 +5,16 @@
     margin-top: 1.5vh;
     margin-bottom: 1.5vh;
   }
+
+  .link-menu {
+    position: absolute;
+    border-bottom: 1px solid white;
+    background-color: black;
+    opacity: .5;
+    right: 0;
+    bottom: 50px;
+    padding: 8px;
+  }
 }
 
 .clubhouse-background {
