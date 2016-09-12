@@ -425,7 +425,6 @@ br {
 
 .panorama-background-image {
   flex: none;
-  position: absolute;
   height: 100vh;
   width: 100%; }
   @media only screen and (max-width: 1024px) {
