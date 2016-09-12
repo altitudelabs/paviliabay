@@ -256,22 +256,29 @@ br {
         left: -10vw;
         width: 90%; } }
 
-#companyinfo-section h3, span {
+#companyinfo-section h1, #companyinfo-section h3, #companyinfo-section p {
   color: white;
-  margin: 5%; }
+  text-align: center; }
 
-.companyinfo-background {
+#companyinfo-section p {
+  padding: 40px;
+  padding-bottom: 200px; }
+
+.companyinfo-body-container {
   background-color: #000333;
-  width: 90vw;
+  width: 95vw;
   position: relative;
   margin: 0 auto auto auto;
   text-align: center; }
+  @media only screen and (max-width: 1024px) {
+    .companyinfo-body-container {
+      width: 100%; } }
 
 .companylogo {
+  vertical-align: top;
+  padding-top: 40px;
   display: inline-block;
-  text-align: center;
-  margin: 20px;
-  width: 200px; }
+  margin: 20px; }
 
 .companylogo:last-child {
   right: 0; }
