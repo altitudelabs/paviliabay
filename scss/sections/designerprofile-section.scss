@@ -1,40 +1,118 @@
-.description-textbox {
-  width: 80vw;
-  align-self: center;
-  background-color: #e6e6e6;
-  margin-top: 80vh;
-  margin-left: 10vw;
-  position: relative;
-  padding-right: 40px;
+#designerprofile-section {
+  h1, h2, h3, h4 {
+    text-align: center;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+  }
+
+  .link-menu {
+    position: absolute;
+    border-bottom: 1px solid black;
+    right: 0;
+    padding-right:8px;
+    bottom: 150px;
+
+    @include responsive(mobile){
+      top: 550px;
+      bottom: auto;
+    }
+  }
 }
 
-.profile-textbox {
-  overflow: visible;
+.background-image {
+  height: 80vw;
+  min-height: 50vh;
+  max-width: 120%;
+  position: absolute;
+
+  @include responsive(mobile){
+    min-height: 500px;
+  }
+}
+
+.description-gray-box {
+  min-width: 80vw;
+  min-height: 750px;
+  align-self: center;
+  background-color: $light-gray;
+  margin-top: 60vw;
+  margin-left: 40px;
+  margin-right: 40px;
   position: relative;
-  top: -30px;
+  padding-top: 40px;
+
+  @include responsive(mobile){
+    margin-top: 500px;
+    margin-right: 0;
+    min-height: 550px;
+  }
+}
+
+.profile-blue-box {
+  @extend .blue-box;
+  width: 500px;
+  height: 750px;
+  align-content: center;
+  top: -90px;
   display: inline-block;
   margin: auto 40px 40px 40px;
-  background-color: #000333;
   padding: 40px;
+
+  .white-line {
+    left: -10vw;
+    width: 125%;
+  }
+
+  h1, h2, h3, h4 {
+    color: white;
+  }
+
+  @include responsive(mobile){
+    width: 400px;
+    height: 650px;
+    margin-left: -40px;
+    top: -460px ;
+    .white-line {
+      left: -10vw;
+      width: 100%;
+    }
+  }
 }
 
-.designerphoto {
+.designer-photo {
   position: relative;
-  width: 90%;
-  margin: auto;
+  display: block;
+  width: 60%;
+  margin: 30px auto 30px auto;
 }
 
-.description-text {
-  margin-left: 40px;
-  margin-bottom: 40px;
-  display: inline-block;
-}
+/* * * * * * * * * * * * * * * * * * * * * * *
+ * erase-shifted-offset:
+ *  An empty box with predefined size
+ *  so that the original space occupied by
+ *  the profile box can be used.
+ * * * * * * * * * * * * * * * * * * * * * * */
+ .erase-shifted-offset {
+   float: left;
+   width: 540px;
+   height: 660px;
+   margin-right: 40px;
 
-#designerprofile-section h1, h2, h3, h4, h5 {
-  color: white;
-  text-align: center;
-}
+   @include responsive(mobile){
+     width: 360px;
+     height: 190px;
+   }
+ }
 
-#designerprofile-section .body-container {
-  overflow: hidden;
+
+.designer-description-text {
+  vertical-align: top;
+  position: relative;
+  padding-bottom: 50px;
+  padding-right: 40px;
+
+  @include responsive (mobile){
+    clear: left;
+    padding: 40px;
+  }
 }

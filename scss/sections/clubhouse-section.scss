@@ -1,9 +1,19 @@
 #clubhouse-section {
-  h1, h4 {
+  h1, h2, h4 {
     text-align: left;
     color: white;
     margin-top: 1.5vh;
     margin-bottom: 1.5vh;
+  }
+
+  .link-menu {
+    position: absolute;
+    border-bottom: 1px solid white;
+    background-color: black;
+    opacity: .5;
+    right: 0;
+    bottom: 50px;
+    padding: 8px;
   }
 }
 
@@ -41,8 +51,8 @@
   }
 }
 
-.clubhouse-textbox {
-  @extend .description-box;
+.clubhouse-blue-box {
+  @extend .blue-box;
   padding: 40px;
   position: absolute;
   box-sizing: border-box;
