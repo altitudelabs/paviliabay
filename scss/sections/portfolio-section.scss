@@ -1,6 +1,9 @@
 #portfolio-section {
-  h1 {
+  h2 {
     color: white;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    text-transform: uppercase;
   }
 }
 
@@ -19,6 +22,10 @@
 .portfolio-image-container {
   text-align: center;
   padding-top: 2px;
+
+  @include responsive(mobile){
+    padding-bottom: 2px;
+  }
 }
 
 .portfolio-image {

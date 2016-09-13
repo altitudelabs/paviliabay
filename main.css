@@ -43,7 +43,8 @@
 @font-face {
   font-family: Futura;
   src: url("./fonts/futura_light.otf") format "opentype";
-  font-weight: 100; }
+  font-weight: 100;
+  font-style: normal; }
 
 h1 {
   line-height: 52px;
@@ -101,7 +102,6 @@ h4 {
 span, p {
   font-family: Futura;
   font-weight: 100;
-  color: white;
   position: relative;
   line-height: 40px;
   font-size: 25px;
@@ -154,7 +154,9 @@ div {
 .white-line {
   height: 1px;
   background-color: white;
-  position: relative; }
+  position: relative;
+  margin-top: 1vh;
+  margin-bottom: 1vh; }
 
 #hero-section h1, #hero-section h4 {
   text-align: center; }
@@ -326,10 +328,13 @@ div {
   display: inline-block;
   margin: 20px; }
 
-#designerprofile-section h1, #designerprofile-section h2, #designerprofile-section h3, #designerprofile-section h4 {
+#designerprofile-section h1, #designerprofile-section h2, #designerprofile-section h3 {
   text-align: center;
-  margin-top: 1.5vh;
-  margin-bottom: 1.5vh; }
+  margin-top: 4vh;
+  margin-bottom: 3vh; }
+
+#designerprofile-section h3 {
+  margin-top: 3vh; }
 
 #designerprofile-section .link-menu {
   position: absolute;
@@ -360,10 +365,11 @@ div {
   margin-left: 40px;
   margin-right: 40px;
   position: relative;
-  padding-top: 40px; }
+  padding-top: 80px; }
   @media only screen and (max-width: 1024px) {
     .description-gray-box {
       margin-top: 500px;
+      margin-left: 20px;
       margin-right: 0;
       min-height: 550px; } }
 
@@ -371,30 +377,26 @@ div {
   width: 500px;
   height: 750px;
   align-content: center;
-  top: -90px;
+  top: -170px;
   display: inline-block;
   margin: auto 40px 40px 40px;
   padding: 40px; }
   .profile-blue-box .white-line {
     left: -10vw;
     width: 125%; }
-  .profile-blue-box h1, .profile-blue-box h2, .profile-blue-box h3, .profile-blue-box h4 {
+  .profile-blue-box h1, .profile-blue-box h2, .profile-blue-box h3 {
     color: white; }
+  .profile-blue-box h2 {
+    text-transform: uppercase; }
   @media only screen and (max-width: 1024px) {
     .profile-blue-box {
       width: 400px;
-      height: 650px;
+      height: 590px;
       margin-left: -40px;
-      top: -460px; }
+      top: -500px; }
       .profile-blue-box .white-line {
         left: -10vw;
         width: 100%; } }
-
-.designer-photo {
-  position: relative;
-  display: block;
-  width: 60%;
-  margin: 30px auto 30px auto; }
 
 /* * * * * * * * * * * * * * * * * * * * * * *
  * erase-shifted-offset:
@@ -405,12 +407,18 @@ div {
 .erase-shifted-offset {
   float: left;
   width: 540px;
-  height: 660px;
+  height: 580px;
   margin-right: 40px; }
   @media only screen and (max-width: 1024px) {
     .erase-shifted-offset {
       width: 360px;
-      height: 190px; } }
+      height: 90px; } }
+
+.designer-photo {
+  position: relative;
+  display: block;
+  width: 70%;
+  margin: 30px auto 30px auto; }
 
 .designer-description-text {
   vertical-align: top;
@@ -510,8 +518,11 @@ div {
     .panorama-button {
       width: 100px; } }
 
-#portfolio-section h1 {
-  color: white; }
+#portfolio-section h2 {
+  color: white;
+  margin-top: 1.5vh;
+  margin-bottom: 1.5vh;
+  text-transform: uppercase; }
 
 .portfolio-header {
   height: auto;
@@ -526,6 +537,9 @@ div {
 .portfolio-image-container {
   text-align: center;
   padding-top: 2px; }
+  @media only screen and (max-width: 1024px) {
+    .portfolio-image-container {
+      padding-bottom: 2px; } }
 
 .portfolio-image {
   width: 33.3%;
