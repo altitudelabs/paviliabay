@@ -1,4 +1,14 @@
 #hero-section {
+  h1, h4 {
+    text-align: center;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    color: $dark-blue;
+    margin-left: 20px;
+  }
+
   h4 {
     color: white;
   }
@@ -9,6 +19,7 @@
     background-color: transparent;
     left: 10%;
     width: 80%;
+    text-align: center;
   }
 }
 
@@ -23,11 +34,14 @@
 }
 
 .hero-footer {
-  padding: 20px;
   background-color: $dark-gray;
   height: 8vh;
+  vertical-align: middle;
+
   h3 {
-    text-align: left;
+    line-height: 8vh;
+    height: 8vh;
+    letter-spacing: normal;
   }
 }
 
@@ -57,8 +71,9 @@
   }
 }
 
-#hero-section {
-  h3 {
-    color: $dark-blue;
-  }
+.transparent-button {
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, .3);
+  padding: 10px 15px;
+  margin-top: 10px;
 }

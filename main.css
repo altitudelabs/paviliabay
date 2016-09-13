@@ -16,26 +16,39 @@
  *        @include transition((margin 0.5s 1s));
  *        @include responsive(mobile){ ... }
  * * * * * * * * * * * * * * * * * * * * * * */
-* {
-  padding: 0;
-  margin: 0; }
+@font-face {
+  font-family: Futura;
+  src: url("./fonts/futura_medium_bt-webfont.ttf") format "truetype";
+  font-weight: 700;
+  font-style: normal; }
 
-html, body {
-  height: 100%;
-  width: 100%; }
+@font-face {
+  font-family: Futura;
+  src: url("./fonts/futurabt-book-opentype.otf") format "opentype";
+  font-weight: 500;
+  font-style: normal; }
 
-div {
-  box-sizing: border-box; }
+@font-face {
+  font-family: Futura;
+  src: url("./fonts/KozGoPr6N-Regular.otf") format "opentype";
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: Futura;
+  src: url("./fonts/Linotype - FuturaLTPro-Light.otf") format "opentype";
+  font-weight: 100;
+  font-style: normal; }
 
 h1 {
   line-height: 52px;
   font-size: 36px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
   width: 100%;
   box-sizing: border-box;
-  margin: 0; }
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase; }
   @media only screen and (max-width: 1024px) {
     h1 {
       line-height: 45px;
@@ -44,8 +57,7 @@ h1 {
 h2 {
   line-height: 30px;
   font-size: 28px;
-  font-weight: 100;
-  text-align: center;
+  font-weight: lighter;
   width: 100%;
   box-sizing: border-box; }
   @media only screen and (max-width: 1024px) {
@@ -54,39 +66,43 @@ h2 {
       line-height: 18px; } }
 
 h3 {
-  line-height: 36px;
-  font-size: 26px;
-  font-weight: 100;
+  line-height: 40px;
+  font-size: 24px;
   text-align: left;
   width: 100%;
+  font-weight: 100;
   box-sizing: border-box;
-  text-transform: uppercase; }
+  letter-spacing: 1px; }
+  @media only screen and (min-width: 1025px) and (max-width: 1279px) {
+    h3 {
+      line-height: 35px;
+      font-size: 22px; } }
   @media only screen and (max-width: 1024px) {
     h3 {
-      line-height: 24px;
+      line-height: 30px;
       font-size: 18px; } }
 
 h4 {
-  font-size: 24px;
-  line-height: 40px;
+  font-size: 16px;
+  line-height: 20px;
   font-weight: 100;
-  text-align: center;
   width: 100%;
   box-sizing: border-box; }
   @media only screen and (min-width: 1025px) and (max-width: 1279px) {
     h4 {
-      font-size: 20px;
-      line-height: 30px; } }
+      font-size: 12px;
+      line-height: 20px; } }
   @media only screen and (max-width: 1024px) {
     h4 {
       font-size: 16px;
       line-height: 28px; } }
 
 span, p {
+  font-family: Futura;
+  font-weight: 100;
   position: relative;
   line-height: 40px;
   font-size: 25px;
-  font-weight: 100;
   margin: 0;
   letter-spacing: 0.007em; }
   @media only screen and (min-width: 1025px) and (max-width: 1279px) {
@@ -99,23 +115,34 @@ span, p {
       font-size: 20px; } }
 
 br {
-  line-height: 40px; }
+  line-height: 30px; }
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  font-family: Futura;
+  vertical-align: baseline;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+html, body {
+  height: 100%;
+  width: 100%; }
+
+div {
+  box-sizing: border-box; }
+
+sup {
+  font-size: 12px;
+  line-height: 12px;
+  vertical-align: super; }
 
 .section-container {
   position: relative;
   overflow: hidden; }
-
-.transparent-button {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  width: 25%;
-  border: 1px solid white;
-  padding: 5px 10px;
-  margin-top: 10px; }
-  @media only screen and (max-width: 1024px) {
-    .transparent-button {
-      width: 45%; } }
 
 .blue-box, .clubhouse-blue-box, .profile-blue-box {
   background-color: #232f49;
@@ -129,7 +156,17 @@ br {
 .white-line {
   height: 1px;
   background-color: white;
-  position: relative; }
+  position: relative;
+  margin-top: 1vh;
+  margin-bottom: 1vh; }
+
+#hero-section h1, #hero-section h4 {
+  text-align: center; }
+
+#hero-section h3 {
+  text-transform: uppercase;
+  color: #232f49;
+  margin-left: 20px; }
 
 #hero-section h4 {
   color: white; }
@@ -139,7 +176,8 @@ br {
   top: 45%;
   background-color: transparent;
   left: 10%;
-  width: 80%; }
+  width: 80%;
+  text-align: center; }
 
 .video-container {
   height: 92vh;
@@ -150,11 +188,13 @@ br {
   height: 100%; }
 
 .hero-footer {
-  padding: 20px;
   background-color: #9e9da2;
-  height: 8vh; }
+  height: 8vh;
+  vertical-align: middle; }
   .hero-footer h3 {
-    text-align: left; }
+    line-height: 8vh;
+    height: 8vh;
+    letter-spacing: normal; }
 
 .hero-logo {
   display: inline-block;
@@ -178,27 +218,33 @@ br {
     .menu-nav {
       width: 20%; } }
 
-#hero-section h3 {
-  color: #232f49; }
+.transparent-button {
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 15px;
+  margin-top: 10px; }
 
-#clubhouse-section h1, #clubhouse-section h2, #clubhouse-section h4 {
-  text-align: left;
-  color: white;
-  margin-top: 1.5vh;
+#clubhouse-section h1, #clubhouse-section h2, #clubhouse-section h3 {
+  color: white; }
+
+#clubhouse-section h1, #clubhouse-section h3 {
+  margin-top: 3vh;
   margin-bottom: 1.5vh; }
 
+#clubhouse-section h2 {
+  text-align: center;
+  margin: 7px; }
+
 #clubhouse-section .link-menu {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
-  -moz-opacity: 0.5;
-  -khtml-opacity: 0.5;
-  opacity: 0.5;
   position: absolute;
   border-bottom: 1px solid white;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.3);
   right: 0;
-  bottom: 50px;
+  bottom: 200px;
   padding: 8px; }
+  @media only screen and (max-width: 1024px) {
+    #clubhouse-section .link-menu {
+      bottom: 50px; } }
 
 .clubhouse-background {
   background-color: #dfdfe1; }
@@ -221,7 +267,7 @@ br {
   @media only screen and (max-width: 1024px) {
     .clubhouse-image-container {
       top: 15vh;
-      height: 85vh;
+      height: 50vh;
       width: 100%; }
       .clubhouse-image-container .image {
         height: 100%;
@@ -229,6 +275,7 @@ br {
 
 .clubhouse-blue-box {
   padding: 40px;
+  padding-top: 20px;
   position: absolute;
   box-sizing: border-box;
   min-height: 700px;
@@ -249,7 +296,8 @@ br {
     .clubhouse-blue-box {
       right: auto;
       width: 65vw;
-      min-height: 70vh;
+      min-height: 50vh;
+      min-width: 350px;
       margin-left: 0px;
       margin-top: 0px; }
       .clubhouse-blue-box .white-line {
@@ -280,10 +328,10 @@ br {
   display: inline-block;
   margin: 20px; }
 
-#designerprofile-section h1, #designerprofile-section h2, #designerprofile-section h3, #designerprofile-section h4 {
-  text-align: center;
-  margin-top: 1.5vh;
-  margin-bottom: 1.5vh; }
+.disclaimer {
+  padding: 40px 30px; }
+  .disclaimer h3 {
+    text-transform: uppercase; }
 
 #designerprofile-section .link-menu {
   position: absolute;
@@ -291,6 +339,11 @@ br {
   right: 0;
   padding-right: 8px;
   bottom: 150px; }
+  #designerprofile-section .link-menu h2 {
+    margin: 8px; }
+  @media only screen and (min-width: 1025px) and (max-width: 1279px) {
+    #designerprofile-section .link-menu {
+      bottom: 50px; } }
   @media only screen and (max-width: 1024px) {
     #designerprofile-section .link-menu {
       top: 550px;
@@ -314,10 +367,11 @@ br {
   margin-left: 40px;
   margin-right: 40px;
   position: relative;
-  padding-top: 40px; }
+  padding-top: 80px; }
   @media only screen and (max-width: 1024px) {
     .description-gray-box {
       margin-top: 500px;
+      margin-left: 20px;
       margin-right: 0;
       min-height: 550px; } }
 
@@ -325,30 +379,31 @@ br {
   width: 500px;
   height: 750px;
   align-content: center;
-  top: -90px;
+  top: -170px;
   display: inline-block;
   margin: auto 40px 40px 40px;
   padding: 40px; }
   .profile-blue-box .white-line {
     left: -10vw;
     width: 125%; }
-  .profile-blue-box h1, .profile-blue-box h2, .profile-blue-box h3, .profile-blue-box h4 {
-    color: white; }
+  .profile-blue-box h1, .profile-blue-box h2, .profile-blue-box h3 {
+    color: white;
+    text-align: center;
+    margin-top: 4vh;
+    margin-bottom: 3vh; }
+  .profile-blue-box h2 {
+    text-transform: uppercase; }
+  .profile-blue-box h3 {
+    margin-top: 3vh; }
   @media only screen and (max-width: 1024px) {
     .profile-blue-box {
       width: 400px;
-      height: 650px;
+      height: 590px;
       margin-left: -40px;
-      top: -460px; }
+      top: -500px; }
       .profile-blue-box .white-line {
         left: -10vw;
         width: 100%; } }
-
-.designer-photo {
-  position: relative;
-  display: block;
-  width: 60%;
-  margin: 30px auto 30px auto; }
 
 /* * * * * * * * * * * * * * * * * * * * * * *
  * erase-shifted-offset:
@@ -359,12 +414,18 @@ br {
 .erase-shifted-offset {
   float: left;
   width: 540px;
-  height: 660px;
+  height: 580px;
   margin-right: 40px; }
   @media only screen and (max-width: 1024px) {
     .erase-shifted-offset {
       width: 360px;
-      height: 190px; } }
+      height: 90px; } }
+
+.designer-photo {
+  position: relative;
+  display: block;
+  width: 70%;
+  margin: 30px auto 30px auto; }
 
 .designer-description-text {
   vertical-align: top;
@@ -376,21 +437,23 @@ br {
       clear: left;
       padding: 40px; } }
 
-#map-section h1, #map-section h2, #map-section h3, #map-section h4, #map-section h5 {
-  color: white;
-  text-align: left; }
+#map-section h2, #map-section h3, #map-section h4 {
+  color: white; }
 
-#map-section h1 {
-  margin-top: 70px; }
+#map-section h2 {
+  margin-top: 70px;
+  text-transform: uppercase; }
 
 .map-container {
+  height: 950px;
   display: inline-block;
   vertical-align: top;
   background-color: #dfdfe1;
   width: 65%;
-  min-width: 400px;
-  height: 800px;
-  min-height: 90vh; }
+  min-width: 400px; }
+  @media only screen and (min-width: 1025px) and (max-width: 1279px) {
+    .map-container {
+      height: 850px; } }
   @media only screen and (max-width: 1024px) {
     .map-container {
       width: 100%;
@@ -398,20 +461,32 @@ br {
       min-height: 60vh; } }
 
 .map-info {
+  height: 950px;
   display: inline-block;
   vertical-align: top;
   width: 35%;
-  height: 800px;
-  min-height: 90vh;
   background-color: #232f49;
-  padding-left: 80px;
+  padding-left: 60px;
   padding-bottom: 60px; }
+  @media only screen and (min-width: 1025px) and (max-width: 1279px) {
+    .map-info {
+      height: 850px; } }
   @media only screen and (max-width: 1024px) {
     .map-info {
       width: 100%;
+      height: auto;
       min-height: 60vh; } }
   .map-info .white-line {
     width: 100%; }
+
+.map-info-text {
+  padding-right: 20px; }
+
+#panorama-section h1 {
+  letter-spacing: 2px; }
+
+#panorama-section h3 {
+  text-align: center; }
 
 #panorama-section .title-center {
   position: relative;
@@ -445,16 +520,15 @@ br {
   position: relative;
   text-align: center;
   margin: auto;
-  margin-top: 20px; }
+  margin-top: 40px; }
 
 .panorama-button {
   display: inline-block;
-  width: 150px;
   margin-left: 2%;
   margin-right: 2%;
   background-color: white;
   padding: 10px;
-  text-align: center;
+  min-width: 180px;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   filter: alpha(opacity=50);
   -moz-opacity: 0.5;
@@ -462,10 +536,13 @@ br {
   opacity: 0.5; }
   @media only screen and (max-width: 1024px) {
     .panorama-button {
-      width: 100px; } }
+      min-width: 100px; } }
 
-#portfolio-section h1 {
-  color: white; }
+#portfolio-section h2 {
+  color: white;
+  margin-top: 1.5vh;
+  margin-bottom: 1.5vh;
+  text-transform: uppercase; }
 
 .portfolio-header {
   height: auto;
@@ -480,6 +557,9 @@ br {
 .portfolio-image-container {
   text-align: center;
   padding-top: 2px; }
+  @media only screen and (max-width: 1024px) {
+    .portfolio-image-container {
+      padding-bottom: 2px; } }
 
 .portfolio-image {
   width: 33.3%;
@@ -493,27 +573,25 @@ br {
 .portfolio-image:last-child {
   right: 0; }
 
-#register-section h3, #register-section h4 {
+#register-section h3 {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px; }
-
-#register-section h3 {
-  color: #232f49; }
-
-#register-section h4 {
-  color: white;
-  text-align: center; }
 
 .register-body-container {
   padding: 20px;
   background-color: #9e9da2;
   height: 100%;
   text-align: center; }
+  .register-body-container h3 {
+    color: white; }
 
 .register-button {
   border: 1px solid white;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 40px;
+  padding-left: 40px;
   display: inline-block;
   margin: auto auto 30px auto; }
+  .register-button h3 {
+    color: #232f49;
+    text-transform: uppercase; }
