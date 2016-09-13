@@ -1,14 +1,4 @@
 #designerprofile-section {
-  h1, h2, h3 {
-    text-align: center;
-    margin-top: 4vh;
-    margin-bottom: 3vh;
-  }
-
-  h3 {
-    margin-top: 3vh;
-  }
-
   .link-menu {
     position: absolute;
     border-bottom: 1px solid black;
@@ -16,6 +6,9 @@
     padding-right:8px;
     bottom: 150px;
 
+    h2 {
+      margin: 8px;
+    }
     @include responsive(mobile){
       top: 550px;
       bottom: auto;
@@ -70,10 +63,17 @@
 
   h1, h2, h3 {
     color: white;
+    text-align: center;
+    margin-top: 4vh;
+    margin-bottom: 3vh;
   }
 
   h2 {
     text-transform: uppercase;
+  }
+
+  h3 {
+    margin-top: 3vh;
   }
 
   @include responsive(mobile){

@@ -328,20 +328,14 @@ div {
   display: inline-block;
   margin: 20px; }
 
-#designerprofile-section h1, #designerprofile-section h2, #designerprofile-section h3 {
-  text-align: center;
-  margin-top: 4vh;
-  margin-bottom: 3vh; }
-
-#designerprofile-section h3 {
-  margin-top: 3vh; }
-
 #designerprofile-section .link-menu {
   position: absolute;
   border-bottom: 1px solid black;
   right: 0;
   padding-right: 8px;
   bottom: 150px; }
+  #designerprofile-section .link-menu h2 {
+    margin: 8px; }
   @media only screen and (max-width: 1024px) {
     #designerprofile-section .link-menu {
       top: 550px;
@@ -385,9 +379,14 @@ div {
     left: -10vw;
     width: 125%; }
   .profile-blue-box h1, .profile-blue-box h2, .profile-blue-box h3 {
-    color: white; }
+    color: white;
+    text-align: center;
+    margin-top: 4vh;
+    margin-bottom: 3vh; }
   .profile-blue-box h2 {
     text-transform: uppercase; }
+  .profile-blue-box h3 {
+    margin-top: 3vh; }
   @media only screen and (max-width: 1024px) {
     .profile-blue-box {
       width: 400px;
