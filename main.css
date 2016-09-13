@@ -128,8 +128,7 @@ br {
   font-family: Futura;
   vertical-align: baseline;
   -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -o-font-smoothing: antialiased; }
+  -moz-osx-font-smoothing: grayscale; }
 
 html, body {
   height: 100%;
@@ -561,24 +560,18 @@ sup {
 .portfolio-image:last-child {
   right: 0; }
 
-#register-section h3, #register-section h4 {
+#register-section h3 {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px; }
-
-#register-section h3 {
-  color: #232f49;
-  text-transform: uppercase; }
-
-#register-section h4 {
-  color: white;
-  text-align: center; }
 
 .register-body-container {
   padding: 20px;
   background-color: #9e9da2;
   height: 100%;
   text-align: center; }
+  .register-body-container h3 {
+    color: white; }
 
 .register-button {
   border: 1px solid white;
@@ -586,3 +579,6 @@ sup {
   padding-left: 40px;
   display: inline-block;
   margin: auto auto 30px auto; }
+  .register-button h3 {
+    color: #232f49;
+    text-transform: uppercase; }

@@ -1,16 +1,8 @@
 #register-section {
-  h3, h4 {
+  h3 {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
-  }
-  h3 {
-    color: $dark-blue;
-    text-transform: uppercase;
-  }
-   h4 {
-    color: white;
-    text-align: center;
   }
 }
 
@@ -19,6 +11,10 @@
   background-color: $dark-gray;
   height: 100%;
   text-align: center;
+
+  h3 {
+    color: white;
+  }
 }
 
 .register-button {
@@ -27,4 +23,9 @@
   padding-left: 40px;
   display: inline-block;
   margin: auto auto 30px auto;
+
+  h3 {
+    color: $dark-blue;
+    text-transform: uppercase;
+  }
 }
