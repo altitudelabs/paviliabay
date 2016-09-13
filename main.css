@@ -18,31 +18,25 @@
  * * * * * * * * * * * * * * * * * * * * * * */
 @font-face {
   font-family: Futura;
-  src: url("./fonts/futura_medium_weight.ttf") format "truetype";
+  src: url("./fonts/futura_medium_bt-webfont.ttf") format "truetype";
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
   font-family: Futura;
-  src: url("./fonts/futura_medium2.otf") format "opentype";
+  src: url("./fonts/futurabt-book-opentype.otf") format "opentype";
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: Futura;
-  src: url("./fonts/futura_regular.otf") format "opentype";
+  src: url("./fonts/KozGoPr6N-Regular.otf") format "opentype";
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: Futura;
-  src: url("./fonts/futura_light.otf") format "opentype";
-  font-weight: 100;
-  font-style: normal; }
-
-@font-face {
-  font-family: Futura;
-  src: url("./fonts/futura_light.otf") format "opentype";
+  src: url("./fonts/Linotype - FuturaLTPro-Light.otf") format "opentype";
   font-weight: 100;
   font-style: normal; }
 
@@ -63,7 +57,7 @@ h1 {
 h2 {
   line-height: 30px;
   font-size: 28px;
-  font-weight: 100;
+  font-weight: lighter;
   width: 100%;
   box-sizing: border-box; }
   @media only screen and (max-width: 1024px) {
@@ -73,27 +67,31 @@ h2 {
 
 h3 {
   line-height: 40px;
-  font-size: 26px;
+  font-size: 24px;
   text-align: left;
   width: 100%;
   font-weight: 100;
   box-sizing: border-box;
   letter-spacing: 1px; }
+  @media only screen and (min-width: 1025px) and (max-width: 1279px) {
+    h3 {
+      line-height: 35px;
+      font-size: 22px; } }
   @media only screen and (max-width: 1024px) {
     h3 {
       line-height: 30px;
       font-size: 18px; } }
 
 h4 {
-  font-size: 24px;
-  line-height: 40px;
+  font-size: 16px;
+  line-height: 20px;
   font-weight: 100;
   width: 100%;
   box-sizing: border-box; }
   @media only screen and (min-width: 1025px) and (max-width: 1279px) {
     h4 {
-      font-size: 20px;
-      line-height: 30px; } }
+      font-size: 12px;
+      line-height: 20px; } }
   @media only screen and (max-width: 1024px) {
     h4 {
       font-size: 16px;
@@ -330,7 +328,7 @@ sup {
   margin: 20px; }
 
 .disclaimer {
-  margin: 40px 30px; }
+  padding: 40px 30px; }
   .disclaimer h3 {
     text-transform: uppercase; }
 
@@ -342,6 +340,9 @@ sup {
   bottom: 150px; }
   #designerprofile-section .link-menu h2 {
     margin: 8px; }
+  @media only screen and (min-width: 1025px) and (max-width: 1279px) {
+    #designerprofile-section .link-menu {
+      bottom: 50px; } }
   @media only screen and (max-width: 1024px) {
     #designerprofile-section .link-menu {
       top: 550px;
@@ -443,13 +444,15 @@ sup {
   text-transform: uppercase; }
 
 .map-container {
+  height: 950px;
   display: inline-block;
   vertical-align: top;
   background-color: #dfdfe1;
   width: 65%;
-  min-width: 400px;
-  height: 750px;
-  min-height: 90vh; }
+  min-width: 400px; }
+  @media only screen and (min-width: 1025px) and (max-width: 1279px) {
+    .map-container {
+      height: 850px; } }
   @media only screen and (max-width: 1024px) {
     .map-container {
       width: 100%;
@@ -457,20 +460,26 @@ sup {
       min-height: 60vh; } }
 
 .map-info {
+  height: 950px;
   display: inline-block;
   vertical-align: top;
   width: 35%;
-  height: 750px;
-  min-height: 90vh;
   background-color: #232f49;
-  padding-left: 80px;
+  padding-left: 60px;
   padding-bottom: 60px; }
+  @media only screen and (min-width: 1025px) and (max-width: 1279px) {
+    .map-info {
+      height: 850px; } }
   @media only screen and (max-width: 1024px) {
     .map-info {
       width: 100%;
+      height: auto;
       min-height: 60vh; } }
   .map-info .white-line {
     width: 100%; }
+
+.map-info-text {
+  padding-right: 20px; }
 
 #panorama-section h1 {
   letter-spacing: 2px; }

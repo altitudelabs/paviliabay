@@ -17,7 +17,7 @@ h1 {
 h2 {
   line-height: 30px;
   font-size: 28px;
-  font-weight: 100;
+  font-weight: lighter;
   width: 100%;
   box-sizing: border-box;
 
@@ -29,12 +29,17 @@ h2 {
 
 h3 {
   line-height: 40px;
-  font-size: 26px;
+  font-size: 24px;
   text-align: left;
   width: 100%;
   font-weight: 100;
   box-sizing: border-box;
   letter-spacing: 1px;
+
+  @include responsive(transition){
+      line-height: 35px;
+      font-size: 22px;
+  }
 
   @include responsive(mobile){
     line-height: 30px;
@@ -43,15 +48,15 @@ h3 {
 }
 
 h4 {
-  font-size: 24px;
-  line-height: 40px;
+  font-size: 16px;
+  line-height: 20px;
   font-weight: 100;
   width: 100%;
   box-sizing: border-box;
 
   @include responsive(transition){
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 12px;
+    line-height: 20px;
   }
 
   @include responsive(mobile){

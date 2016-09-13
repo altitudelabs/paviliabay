@@ -1,3 +1,6 @@
+$fixed_container_height_large: 950px;
+$fixed_container_height_trans: 850px;
+
 #map-section {
   h2, h3, h4 {
     color: white;
@@ -10,13 +13,16 @@
 }
 
 .map-container {
+  height: $fixed_container_height_large;
   display: inline-block;
   vertical-align: top;
   background-color: $light-gray;
   width: 65%;
   min-width: 400px;
-  height: 750px;
-  min-height: 90vh;
+
+  @include responsive(transition){
+      height: $fixed_container_height_trans;
+  }
 
   @include responsive(mobile){
     width: 100%;
@@ -26,21 +32,29 @@
 }
 
 .map-info {
+  height: $fixed_container_height_large;
   display: inline-block;
   vertical-align: top;
   width: 35%;
-  height: 750px;
-  min-height: 90vh;
   background-color: $dark-blue;
-  padding-left: 80px;
+  padding-left: 60px;
   padding-bottom: 60px;
+
+  @include responsive(transition){
+      height: $fixed_container_height_trans;
+  }
 
   @include responsive(mobile){
     width: 100%;
+    height: auto;
     min-height: 60vh;
   }
 
   .white-line {
     width: 100%;
   }
+}
+
+.map-info-text {
+  padding-right: 20px;
 }
