@@ -192,8 +192,11 @@ sup {
   height: 8vh;
   vertical-align: middle; }
   .hero-footer h3 {
-    line-height: 8vh;
     height: 8vh;
+    line-height: 8vh;
+    height: 100%;
+    vertical-align: middle;
+    font-size: 90%;
     letter-spacing: normal; }
 
 .hero-logo {
