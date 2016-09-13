@@ -62,8 +62,8 @@ h2 {
   box-sizing: border-box; }
   @media only screen and (max-width: 1024px) {
     h2 {
-      font-size: 30px;
-      line-height: 18px; } }
+      font-size: 18px;
+      line-height: 30px; } }
 
 h3 {
   line-height: 40px;
@@ -80,7 +80,7 @@ h3 {
   @media only screen and (max-width: 1024px) {
     h3 {
       line-height: 30px;
-      font-size: 18px; } }
+      font-size: 15px; } }
 
 h4 {
   font-size: 16px;
@@ -343,14 +343,18 @@ sup {
   padding-right: 8px;
   bottom: 150px; }
   #designerprofile-section .link-menu h2 {
-    margin: 8px; }
+    margin: 6px; }
   @media only screen and (min-width: 1025px) and (max-width: 1279px) {
     #designerprofile-section .link-menu {
       bottom: 50px; } }
   @media only screen and (max-width: 1024px) {
     #designerprofile-section .link-menu {
-      top: 550px;
-      bottom: auto; } }
+      max-width: 30%;
+      top: 480px;
+      bottom: auto; }
+      #designerprofile-section .link-menu h2 {
+        margin: 2px;
+        font-size: 100%; } }
 
 .background-image {
   height: 80vw;
@@ -373,7 +377,7 @@ sup {
   padding-top: 80px; }
   @media only screen and (max-width: 1024px) {
     .description-gray-box {
-      margin-top: 500px;
+      margin-top: 450px;
       margin-left: 20px;
       margin-right: 0;
       min-height: 550px; } }
@@ -400,8 +404,8 @@ sup {
     margin-top: 3vh; }
   @media only screen and (max-width: 1024px) {
     .profile-blue-box {
-      width: 400px;
-      height: 590px;
+      width: 70%;
+      height: 500px;
       margin-left: -40px;
       top: -500px; }
       .profile-blue-box .white-line {
@@ -422,7 +426,7 @@ sup {
   @media only screen and (max-width: 1024px) {
     .erase-shifted-offset {
       width: 360px;
-      height: 90px; } }
+      height: 0px; } }
 
 .designer-photo {
   position: relative;

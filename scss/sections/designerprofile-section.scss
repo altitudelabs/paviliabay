@@ -7,7 +7,7 @@
     bottom: 150px;
 
     h2 {
-      margin: 8px;
+      margin: 6px;
     }
 
     @include responsive(transition){
@@ -15,8 +15,14 @@
     }
 
     @include responsive(mobile){
-      top: 550px;
+      max-width: 30%;
+      top: 480px;
       bottom: auto;
+
+      h2 {
+        margin: 2px;
+        font-size: 100%;
+      }
     }
   }
 }
@@ -44,7 +50,7 @@
   padding-top: 80px;
 
   @include responsive(mobile){
-    margin-top: 500px;
+    margin-top: 450px;
     margin-left: 20px;
     margin-right: 0;
     min-height: 550px;
@@ -82,8 +88,8 @@
   }
 
   @include responsive(mobile){
-    width: 400px;
-    height: 590px;
+    width: 70%;
+    height: 500px;
     margin-left: -40px;
     top: -500px ;
     .white-line {
@@ -107,7 +113,7 @@
 
   @include responsive(mobile){
     width: 360px;
-    height: 90px;
+    height: 0px;
   }
 }
 

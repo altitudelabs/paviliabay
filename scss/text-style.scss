@@ -22,8 +22,8 @@ h2 {
   box-sizing: border-box;
 
   @include responsive(mobile) {
-    font-size: 30px;
-    line-height: 18px;
+    font-size: 18px;
+    line-height: 30px;
   }
 }
 
@@ -43,7 +43,7 @@ h3 {
 
   @include responsive(mobile){
     line-height: 30px;
-    font-size: 18px;
+    font-size: 15px;
   }
 }
 
