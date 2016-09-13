@@ -1,4 +1,15 @@
-* { padding: 0; margin: 0; }
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  font-family: Futura;
+  vertical-align: baseline;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+}
 
 html, body {
   height: 100%;
@@ -9,109 +20,9 @@ div {
   box-sizing: border-box;
 }
 
-h1 {
-  line-height: 52px;
-  font-size: 36px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  width: 100%;
-  box-sizing: border-box;
-  margin: 0;
-
-  @include responsive(mobile){
-    line-height: 45px;
-    font-size: 30px;
-  }
-}
-
-h2 {
-  line-height: 30px;
-  font-size: 28px;
-  font-weight: 100;
-  text-align: center;
-  width: 100%;
-  box-sizing: border-box;
-
-  @include responsive(mobile) {
-    font-size: 30px;
-    line-height: 18px;
-  }
-}
-
-h3 {
-  line-height: 36px;
-  font-size: 26px;
-  font-weight: 100;
-  text-align: left;
-  width: 100%;
-  box-sizing: border-box;
-  text-transform: uppercase;
-
-  @include responsive(mobile){
-    line-height: 24px;
-    font-size: 18px;
-  }
-}
-
-h4 {
-  font-size: 24px;
-  line-height: 40px;
-  font-weight: 100;
-  text-align: center;
-  width: 100%;
-  box-sizing: border-box;
-
-  @include responsive(transition){
-    font-size: 20px;
-    line-height: 30px;
-  }
-
-  @include responsive(mobile){
-    font-size: 16px;
-    line-height: 28px;
-  }
-}
-
-span, p {
-  position: relative;
-  line-height: 40px;
-  font-size: 25px;
-  font-weight: 100;
-  margin: 0;
-  letter-spacing: 0.007em;
-
-  @include responsive(transition){
-    line-height: 33px;
-    font-size: 22px;
-  }
-  @include responsive(mobile) {
-    line-height: 30px;
-    font-size: 20px;
-  }
-}
-
-br {
-  line-height: 40px;
-}
-
 .section-container {
   position: relative;
   overflow: hidden;
-}
-
-.transparent-button {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  width: 25%;
-  border: 1px solid white;
-  padding: 5px 10px;
-  margin-top: 10px;
-
-  @include responsive(mobile){
-    width: 45%;
-  }
 }
 
 .blue-box {

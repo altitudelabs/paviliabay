@@ -16,26 +16,42 @@
  *        @include transition((margin 0.5s 1s));
  *        @include responsive(mobile){ ... }
  * * * * * * * * * * * * * * * * * * * * * * */
+@font-face {
+  font-family: Futura;
+  src: url("./fonts/futura_medium_weight.ttf") format "truetype";
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: Futura;
+  src: url("./fonts/futura_medium2.otf") format "opentype";
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: Futura;
+  src: url("./fonts/futura_regular.otf") format "opentype";
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: Futura;
+  src: url("./fonts/futura_light.otf") format "opentype";
+  font-weight: 100;
+  font-style: normal; }
+
 * {
-  padding: 0;
-  margin: 0; }
-
-html, body {
-  height: 100%;
-  width: 100%; }
-
-div {
-  box-sizing: border-box; }
+  font-family: Futura, Helvetica; }
 
 h1 {
   line-height: 52px;
   font-size: 36px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
   width: 100%;
   box-sizing: border-box;
-  margin: 0; }
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase; }
   @media only screen and (max-width: 1024px) {
     h1 {
       line-height: 45px;
@@ -44,7 +60,6 @@ h1 {
 h2 {
   line-height: 30px;
   font-size: 28px;
-  font-weight: 100;
   text-align: center;
   width: 100%;
   box-sizing: border-box; }
@@ -56,11 +71,11 @@ h2 {
 h3 {
   line-height: 36px;
   font-size: 26px;
-  font-weight: 100;
   text-align: left;
   width: 100%;
+  font-weight: 100;
   box-sizing: border-box;
-  text-transform: uppercase; }
+  letter-spacing: 1px; }
   @media only screen and (max-width: 1024px) {
     h3 {
       line-height: 24px;
@@ -70,7 +85,6 @@ h4 {
   font-size: 24px;
   line-height: 40px;
   font-weight: 100;
-  text-align: center;
   width: 100%;
   box-sizing: border-box; }
   @media only screen and (min-width: 1025px) and (max-width: 1279px) {
@@ -83,10 +97,12 @@ h4 {
       line-height: 28px; } }
 
 span, p {
+  font-family: Futura;
+  font-weight: 100;
+  color: white;
   position: relative;
   line-height: 40px;
   font-size: 25px;
-  font-weight: 100;
   margin: 0;
   letter-spacing: 0.007em; }
   @media only screen and (min-width: 1025px) and (max-width: 1279px) {
@@ -101,21 +117,28 @@ span, p {
 br {
   line-height: 40px; }
 
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  font-family: Futura;
+  vertical-align: baseline;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased; }
+
+html, body {
+  height: 100%;
+  width: 100%; }
+
+div {
+  box-sizing: border-box; }
+
 .section-container {
   position: relative;
   overflow: hidden; }
-
-.transparent-button {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  width: 25%;
-  border: 1px solid white;
-  padding: 5px 10px;
-  margin-top: 10px; }
-  @media only screen and (max-width: 1024px) {
-    .transparent-button {
-      width: 45%; } }
 
 .blue-box, .clubhouse-blue-box, .profile-blue-box {
   background-color: #232f49;
@@ -131,6 +154,14 @@ br {
   background-color: white;
   position: relative; }
 
+#hero-section h1, #hero-section h4 {
+  text-align: center; }
+
+#hero-section h3 {
+  text-transform: uppercase;
+  color: #232f49;
+  margin-left: 20px; }
+
 #hero-section h4 {
   color: white; }
 
@@ -139,22 +170,27 @@ br {
   top: 45%;
   background-color: transparent;
   left: 10%;
-  width: 80%; }
+  width: 80%;
+  text-align: center; }
 
 .video-container {
   height: 92vh;
   width: 100%; }
+  @media only screen and (max-width: 1024px) {
+    .video-container {
+      height: 95vh; } }
 
 .video {
   width: 100%;
   height: 100%; }
 
 .hero-footer {
-  padding: 20px;
   background-color: #9e9da2;
-  height: 8vh; }
-  .hero-footer h3 {
-    text-align: left; }
+  height: 8vh;
+  padding: 10px; }
+  @media only screen and (max-width: 1024px) {
+    .hero-footer {
+      height: 5vh; } }
 
 .hero-logo {
   display: inline-block;
@@ -178,8 +214,11 @@ br {
     .menu-nav {
       width: 20%; } }
 
-#hero-section h3 {
-  color: #232f49; }
+.transparent-button {
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 15px;
+  margin-top: 10px; }
 
 #clubhouse-section h1, #clubhouse-section h2, #clubhouse-section h4 {
   text-align: left;
