@@ -26,10 +26,6 @@
 .video-container {
   height: 92vh;
   width: 100%;
-
-  @include responsive(mobile) {
-    height: 95vh;
-  }
 }
 
 .video {
@@ -40,10 +36,12 @@
 .hero-footer {
   background-color: $dark-gray;
   height: 8vh;
-  padding: 10px;
+  vertical-align: middle;
 
-  @include responsive(mobile) {
-    height: 5vh;
+  h3 {
+    line-height: 8vh;
+    height: 8vh;
+    letter-spacing: normal;
   }
 }
 

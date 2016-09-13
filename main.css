@@ -183,9 +183,6 @@ sup {
 .video-container {
   height: 92vh;
   width: 100%; }
-  @media only screen and (max-width: 1024px) {
-    .video-container {
-      height: 95vh; } }
 
 .video {
   width: 100%;
@@ -194,10 +191,11 @@ sup {
 .hero-footer {
   background-color: #9e9da2;
   height: 8vh;
-  padding: 10px; }
-  @media only screen and (max-width: 1024px) {
-    .hero-footer {
-      height: 5vh; } }
+  vertical-align: middle; }
+  .hero-footer h3 {
+    line-height: 8vh;
+    height: 8vh;
+    letter-spacing: normal; }
 
 .hero-logo {
   display: inline-block;
