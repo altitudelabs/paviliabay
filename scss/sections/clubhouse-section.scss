@@ -1,19 +1,29 @@
 #clubhouse-section {
-  h1, h2, h4 {
-    text-align: left;
+  h1, h2, h3 {
     color: white;
-    margin-top: 1.5vh;
+  }
+
+  h1, h3 {
+    margin-top: 3vh;
     margin-bottom: 1.5vh;
   }
 
+  h2 {
+    text-align: center;
+    margin: 7px;
+  }
+
   .link-menu {
-    @include opacity(.5);
     position: absolute;
     border-bottom: 1px solid white;
-    background-color: black;
+    background-color: rgba(0, 0, 0, .3);
     right: 0;
-    bottom: 50px;
+    bottom: 200px;
     padding: 8px;
+
+    @include responsive(mobile) {
+      bottom: 50px;
+    }
   }
 }
 
@@ -44,8 +54,9 @@
       height: 100%;
       right: -45%;
     }
+
     top: 15vh;
-    height: 85vh;
+    height: 60vh;
     width: 100%;
   }
 }
@@ -53,6 +64,7 @@
 .clubhouse-blue-box {
   @extend .blue-box;
   padding: 40px;
+  padding-top: 20px;
   position: absolute;
   box-sizing: border-box;
   min-height: 700px;
@@ -76,7 +88,8 @@
   @include responsive(mobile){
     right: auto;
     width: 65vw;
-    min-height: 70vh;
+    min-height: 50vh;
+    min-width: 350px;
     margin-left: 0px;
     margin-top: 0px;
 

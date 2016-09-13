@@ -40,8 +40,10 @@
   font-weight: 100;
   font-style: normal; }
 
-* {
-  font-family: Futura, Helvetica; }
+@font-face {
+  font-family: Futura;
+  src: url("./fonts/futura_light.otf") format "opentype";
+  font-weight: 100; }
 
 h1 {
   line-height: 52px;
@@ -60,7 +62,7 @@ h1 {
 h2 {
   line-height: 30px;
   font-size: 28px;
-  text-align: center;
+  font-weight: 100;
   width: 100%;
   box-sizing: border-box; }
   @media only screen and (max-width: 1024px) {
@@ -69,7 +71,7 @@ h2 {
       line-height: 18px; } }
 
 h3 {
-  line-height: 36px;
+  line-height: 40px;
   font-size: 26px;
   text-align: left;
   width: 100%;
@@ -78,7 +80,7 @@ h3 {
   letter-spacing: 1px; }
   @media only screen and (max-width: 1024px) {
     h3 {
-      line-height: 24px;
+      line-height: 30px;
       font-size: 18px; } }
 
 h4 {
@@ -220,24 +222,27 @@ div {
   padding: 10px 15px;
   margin-top: 10px; }
 
-#clubhouse-section h1, #clubhouse-section h2, #clubhouse-section h4 {
-  text-align: left;
-  color: white;
-  margin-top: 1.5vh;
+#clubhouse-section h1, #clubhouse-section h2, #clubhouse-section h3 {
+  color: white; }
+
+#clubhouse-section h1, #clubhouse-section h3 {
+  margin-top: 3vh;
   margin-bottom: 1.5vh; }
 
+#clubhouse-section h2 {
+  text-align: center;
+  margin: 7px; }
+
 #clubhouse-section .link-menu {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
-  -moz-opacity: 0.5;
-  -khtml-opacity: 0.5;
-  opacity: 0.5;
   position: absolute;
   border-bottom: 1px solid white;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.3);
   right: 0;
-  bottom: 50px;
+  bottom: 200px;
   padding: 8px; }
+  @media only screen and (max-width: 1024px) {
+    #clubhouse-section .link-menu {
+      bottom: 50px; } }
 
 .clubhouse-background {
   background-color: #dfdfe1; }
@@ -260,7 +265,7 @@ div {
   @media only screen and (max-width: 1024px) {
     .clubhouse-image-container {
       top: 15vh;
-      height: 85vh;
+      height: 60vh;
       width: 100%; }
       .clubhouse-image-container .image {
         height: 100%;
@@ -268,6 +273,7 @@ div {
 
 .clubhouse-blue-box {
   padding: 40px;
+  padding-top: 20px;
   position: absolute;
   box-sizing: border-box;
   min-height: 700px;
@@ -288,7 +294,8 @@ div {
     .clubhouse-blue-box {
       right: auto;
       width: 65vw;
-      min-height: 70vh;
+      min-height: 50vh;
+      min-width: 350px;
       margin-left: 0px;
       margin-top: 0px; }
       .clubhouse-blue-box .white-line {
