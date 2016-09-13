@@ -331,6 +331,11 @@ sup {
   display: inline-block;
   margin: 20px; }
 
+.disclaimer {
+  margin: 40px 30px; }
+  .disclaimer h3 {
+    text-transform: uppercase; }
+
 #designerprofile-section .link-menu {
   position: absolute;
   border-bottom: 1px solid black;
