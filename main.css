@@ -466,6 +466,12 @@ div {
   .map-info .white-line {
     width: 100%; }
 
+#panorama-section h1 {
+  letter-spacing: 2px; }
+
+#panorama-section h3 {
+  text-align: center; }
+
 #panorama-section .title-center {
   position: relative;
   margin: auto; }
@@ -498,16 +504,15 @@ div {
   position: relative;
   text-align: center;
   margin: auto;
-  margin-top: 20px; }
+  margin-top: 40px; }
 
 .panorama-button {
   display: inline-block;
-  width: 150px;
   margin-left: 2%;
   margin-right: 2%;
   background-color: white;
   padding: 10px;
-  text-align: center;
+  min-width: 180px;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   filter: alpha(opacity=50);
   -moz-opacity: 0.5;
@@ -515,7 +520,7 @@ div {
   opacity: 0.5; }
   @media only screen and (max-width: 1024px) {
     .panorama-button {
-      width: 100px; } }
+      min-width: 100px; } }
 
 #portfolio-section h2 {
   color: white;

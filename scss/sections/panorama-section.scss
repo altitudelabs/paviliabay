@@ -1,4 +1,12 @@
 #panorama-section {
+  h1 {
+    letter-spacing: 2px;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
   .title-center {
     position: relative;
     margin: auto;
@@ -39,20 +47,19 @@
   position: relative;
   text-align: center;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .panorama-button {
   display: inline-block;
-  width: 150px;
   margin-left: 2%;
   margin-right: 2%;
   background-color: white;
   padding: 10px;
-  text-align: center;
+  min-width: 180px;
   @include opacity(.5);
 
-  @include responsive(mobile){
-    width: 100px;
+  @include responsive(mobile) {
+    min-width: 100px;
   }
 }
