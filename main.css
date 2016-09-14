@@ -49,7 +49,7 @@ h1 {
   font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase; }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     h1 {
       line-height: 45px;
       font-size: 30px; } }
@@ -60,10 +60,10 @@ h2 {
   font-weight: lighter;
   width: 100%;
   box-sizing: border-box; }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     h2 {
-      font-size: 30px;
-      line-height: 18px; } }
+      font-size: 18px;
+      line-height: 30px; } }
 
 h3 {
   line-height: 40px;
@@ -73,14 +73,14 @@ h3 {
   font-weight: 100;
   box-sizing: border-box;
   letter-spacing: 1px; }
-  @media only screen and (min-width: 1025px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     h3 {
       line-height: 35px;
       font-size: 22px; } }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     h3 {
       line-height: 30px;
-      font-size: 18px; } }
+      font-size: 15px; } }
 
 h4 {
   font-size: 16px;
@@ -88,11 +88,11 @@ h4 {
   font-weight: 100;
   width: 100%;
   box-sizing: border-box; }
-  @media only screen and (min-width: 1025px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     h4 {
       font-size: 12px;
       line-height: 20px; } }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     h4 {
       font-size: 16px;
       line-height: 28px; } }
@@ -105,11 +105,11 @@ span, p {
   font-size: 25px;
   margin: 0;
   letter-spacing: 0.007em; }
-  @media only screen and (min-width: 1025px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     span, p {
       line-height: 33px;
       font-size: 22px; } }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     span, p {
       line-height: 30px;
       font-size: 20px; } }
@@ -192,9 +192,13 @@ sup {
   height: 8vh;
   vertical-align: middle; }
   .hero-footer h3 {
-    line-height: 8vh;
     height: 8vh;
+    line-height: 8vh;
     letter-spacing: normal; }
+    @media only screen and (max-width: 1023px) {
+      .hero-footer h3 {
+        font-size: 90%;
+        height: 100%; } }
 
 .hero-logo {
   display: inline-block;
@@ -203,7 +207,7 @@ sup {
   left: 5vw;
   width: 15%;
   height: auto; }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     .hero-logo {
       width: 20%; } }
 
@@ -214,7 +218,7 @@ sup {
   right: 5vw;
   width: 15%;
   height: auto; }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     .menu-nav {
       width: 20%; } }
 
@@ -242,7 +246,7 @@ sup {
   right: 0;
   bottom: 200px;
   padding: 8px; }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     #clubhouse-section .link-menu {
       bottom: 50px; } }
 
@@ -260,11 +264,11 @@ sup {
     right: 0;
     width: auto;
     height: 100%; }
-  @media only screen and (min-width: 1025px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     .clubhouse-image-container {
       top: 5vh;
       width: 80%; } }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     .clubhouse-image-container {
       top: 15vh;
       height: 50vh;
@@ -285,19 +289,18 @@ sup {
   margin: 10vh auto 10vw 10vh; }
   .clubhouse-blue-box .white-line {
     left: -15vw; }
-  @media only screen and (min-width: 1025px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     .clubhouse-blue-box {
       right: auto;
-      width: 50vw;
+      width: 60%;
       min-height: 70vh;
       margin-top: 3vh;
       margin-left: 5vw; } }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     .clubhouse-blue-box {
       right: auto;
-      width: 65vw;
+      width: 90%;
       min-height: 50vh;
-      min-width: 350px;
       margin-left: 0px;
       margin-top: 0px; }
       .clubhouse-blue-box .white-line {
@@ -318,7 +321,7 @@ sup {
   position: relative;
   margin: 0 auto auto auto;
   text-align: center; }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     .companyinfo-body-container {
       width: 100%; } }
 
@@ -340,21 +343,25 @@ sup {
   padding-right: 8px;
   bottom: 150px; }
   #designerprofile-section .link-menu h2 {
-    margin: 8px; }
-  @media only screen and (min-width: 1025px) and (max-width: 1279px) {
+    margin: 6px; }
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     #designerprofile-section .link-menu {
       bottom: 50px; } }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     #designerprofile-section .link-menu {
-      top: 550px;
-      bottom: auto; } }
+      max-width: 30%;
+      top: 480px;
+      bottom: auto; }
+      #designerprofile-section .link-menu h2 {
+        margin: 2px;
+        font-size: 100%; } }
 
 .background-image {
   height: 80vw;
   min-height: 50vh;
   max-width: 120%;
   position: absolute; }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     .background-image {
       min-height: 500px; } }
 
@@ -368,9 +375,9 @@ sup {
   margin-right: 40px;
   position: relative;
   padding-top: 80px; }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     .description-gray-box {
-      margin-top: 500px;
+      margin-top: 450px;
       margin-left: 20px;
       margin-right: 0;
       min-height: 550px; } }
@@ -395,10 +402,10 @@ sup {
     text-transform: uppercase; }
   .profile-blue-box h3 {
     margin-top: 3vh; }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     .profile-blue-box {
-      width: 400px;
-      height: 590px;
+      width: 70%;
+      height: 500px;
       margin-left: -40px;
       top: -500px; }
       .profile-blue-box .white-line {
@@ -416,10 +423,10 @@ sup {
   width: 540px;
   height: 580px;
   margin-right: 40px; }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     .erase-shifted-offset {
       width: 360px;
-      height: 90px; } }
+      height: 0px; } }
 
 .designer-photo {
   position: relative;
@@ -432,7 +439,7 @@ sup {
   position: relative;
   padding-bottom: 50px;
   padding-right: 40px; }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     .designer-description-text {
       clear: left;
       padding: 40px; } }
@@ -451,10 +458,10 @@ sup {
   background-color: #dfdfe1;
   width: 65%;
   min-width: 400px; }
-  @media only screen and (min-width: 1025px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     .map-container {
       height: 850px; } }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     .map-container {
       width: 100%;
       height: 60vh;
@@ -468,10 +475,10 @@ sup {
   background-color: #232f49;
   padding-left: 60px;
   padding-bottom: 60px; }
-  @media only screen and (min-width: 1025px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     .map-info {
       height: 850px; } }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     .map-info {
       width: 100%;
       height: auto;
@@ -502,10 +509,10 @@ sup {
   flex: none;
   height: 100vh;
   width: 100%; }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     .panorama-background-image {
       width: auto; } }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     .panorama-background-image {
       height: 100%;
       width: auto; } }
@@ -524,18 +531,19 @@ sup {
 
 .panorama-button {
   display: inline-block;
-  margin-left: 2%;
-  margin-right: 2%;
   background-color: white;
   padding: 10px;
+  margin: 2%;
   min-width: 180px;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   filter: alpha(opacity=50);
   -moz-opacity: 0.5;
   -khtml-opacity: 0.5;
   opacity: 0.5; }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     .panorama-button {
+      padding: 2px;
+      margin: auto;
       min-width: 100px; } }
 
 #portfolio-section h2 {
@@ -550,14 +558,14 @@ sup {
   padding-bottom: 10px;
   text-align: center;
   background-color: #232f49; }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     .portfolio-header {
       margin-top: 2px; } }
 
 .portfolio-image-container {
   text-align: center;
   padding-top: 2px; }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     .portfolio-image-container {
       padding-bottom: 2px; } }
 
