@@ -551,7 +551,8 @@ sup {
   color: white;
   margin-top: 1.5vh;
   margin-bottom: 1.5vh;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-weight: 500; }
 
 .portfolio-header {
   height: auto;
