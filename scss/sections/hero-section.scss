@@ -39,9 +39,14 @@
   vertical-align: middle;
 
   h3 {
-    line-height: 8vh;
     height: 8vh;
+    line-height: 8vh;
     letter-spacing: normal;
+
+    @include responsive(mobile) {
+      font-size: 90%;
+      height: 100%;
+    }
   }
 }
 

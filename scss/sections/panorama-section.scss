@@ -52,14 +52,15 @@
 
 .panorama-button {
   display: inline-block;
-  margin-left: 2%;
-  margin-right: 2%;
   background-color: white;
   padding: 10px;
+  margin: 2%;
   min-width: 180px;
   @include opacity(.5);
 
   @include responsive(mobile) {
+    padding: 2px;
+    margin: auto;
     min-width: 100px;
   }
 }
