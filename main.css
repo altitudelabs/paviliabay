@@ -98,7 +98,7 @@ h4 {
       line-height: 28px; } }
 
 span, p {
-  font-weight: 500;
+  font-weight: 700;
   position: relative;
   line-height: 40px;
   font-size: 25px;
@@ -450,7 +450,8 @@ sup {
 
 #map-section h2 {
   margin-top: 70px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-weight: 700; }
 
 .map-container {
   height: 950px;
