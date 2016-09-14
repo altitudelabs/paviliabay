@@ -33,6 +33,9 @@
 // }
 
 @mixin responsive($media) {
+  @if $media == smallmobile {
+    @media only screen and (max-width: $mobile-small-width) { @content; }
+  }
   @if $media == mobile {
     @media only screen and (max-width: $mobile-large-width - 1) { @content; }
   }

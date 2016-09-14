@@ -15,6 +15,10 @@
   h3 {
     color: white;
   }
+
+  @include responsive(mobile) {
+    padding: 20px 10px;
+  }
 }
 
 .register-button {
@@ -27,5 +31,18 @@
   h3 {
     color: $dark-blue;
     text-transform: uppercase;
+  }
+
+  @include responsive(mobile) {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
+
+.add-br {
+  display: none;
+
+  @include responsive(smallmobile) {
+    display: block;
   }
 }
