@@ -111,7 +111,7 @@ span, p {
   @media only screen and (max-width: 1023px) {
     span, p {
       line-height: 30px;
-      font-size: 20px; } }
+      font-size: 15px; } }
 
 br {
   line-height: 30px; }
@@ -314,6 +314,9 @@ sup {
 #companyinfo-section p {
   padding: 40px;
   padding-bottom: 200px; }
+  @media only screen and (max-width: 1023px) {
+    #companyinfo-section p {
+      padding: 20px; } }
 
 .companyinfo-body-container {
   background-color: #232f49;
@@ -335,6 +338,9 @@ sup {
   padding: 40px 30px; }
   .disclaimer h3 {
     text-transform: uppercase; }
+  @media only screen and (max-width: 1023px) {
+    .disclaimer {
+      padding: 40px 0; } }
 
 #designerprofile-section .link-menu {
   position: absolute;
@@ -462,7 +468,7 @@ sup {
   min-width: 400px; }
   @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     .map-container {
-      height: 850px; } }
+      height: 900px; } }
   @media only screen and (max-width: 1023px) {
     .map-container {
       width: 100%;
@@ -479,7 +485,7 @@ sup {
   padding-bottom: 60px; }
   @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     .map-info {
-      height: 850px; } }
+      height: 900px; } }
   @media only screen and (max-width: 1023px) {
     .map-info {
       width: 100%;
@@ -596,6 +602,9 @@ sup {
   text-align: center; }
   .register-body-container h3 {
     color: white; }
+  @media only screen and (max-width: 1023px) {
+    .register-body-container {
+      padding: 20px 10px; } }
 
 .register-button {
   border: 1px solid white;
@@ -606,3 +615,13 @@ sup {
   .register-button h3 {
     color: #232f49;
     text-transform: uppercase; }
+  @media only screen and (max-width: 1023px) {
+    .register-button {
+      padding-right: 5px;
+      padding-left: 5px; } }
+
+.add-br {
+  display: none; }
+  @media only screen and (max-width: 320px) {
+    .add-br {
+      display: block; } }
