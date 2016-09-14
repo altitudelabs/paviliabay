@@ -17,26 +17,26 @@
  *        @include responsive(mobile){ ... }
  * * * * * * * * * * * * * * * * * * * * * * */
 @font-face {
-  font-family: Futura;
-  src: url("./fonts/futura_medium_bt-webfont.ttf") format "truetype";
+  font-family: futuraNew;
+  src: url("./fonts/futura_medium_bt-webfont.ttf") format("truetype");
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
-  font-family: Futura;
-  src: url("./fonts/futurabt-book-opentype.otf") format "opentype";
+  font-family: futuraNew;
+  src: url("./fonts/futurabt-book-opentype.otf") format("opentype");
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
-  font-family: Futura;
-  src: url("./fonts/KozGoPr6N-Regular.otf") format "opentype";
+  font-family: futuraNew;
+  src: url("./fonts/KozGoPr6N-Regular.otf") format("opentype");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
-  font-family: Futura;
-  src: url("./fonts/Linotype - FuturaLTPro-Light.otf") format "opentype";
+  font-family: futuraNew;
+  src: url("./fonts/Linotype - FuturaLTPro-Light.otf") format("opentype");
   font-weight: 100;
   font-style: normal; }
 
@@ -46,7 +46,7 @@ h1 {
   width: 100%;
   box-sizing: border-box;
   margin: 0;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase; }
   @media only screen and (max-width: 1023px) {
@@ -70,7 +70,7 @@ h3 {
   font-size: 24px;
   text-align: left;
   width: 100%;
-  font-weight: 100;
+  font-weight: 700;
   box-sizing: border-box;
   letter-spacing: 1px; }
   @media only screen and (min-width: 1024px) and (max-width: 1279px) {
@@ -98,8 +98,7 @@ h4 {
       line-height: 28px; } }
 
 span, p {
-  font-family: Futura;
-  font-weight: 100;
+  font-weight: 500;
   position: relative;
   line-height: 40px;
   font-size: 25px;
@@ -123,7 +122,7 @@ br {
   border: 0;
   font-size: 100%;
   font: inherit;
-  font-family: Futura;
+  font-family: futuraNew;
   vertical-align: baseline;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -169,7 +168,8 @@ sup {
   margin-left: 20px; }
 
 #hero-section h4 {
-  color: white; }
+  color: white;
+  font-weight: 300; }
 
 #hero-section .title-center {
   position: absolute;
@@ -399,7 +399,8 @@ sup {
     margin-top: 4vh;
     margin-bottom: 3vh; }
   .profile-blue-box h2 {
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-weight: 500; }
   .profile-blue-box h3 {
     margin-top: 3vh; }
   @media only screen and (max-width: 1023px) {
