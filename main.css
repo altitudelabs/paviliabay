@@ -48,18 +48,22 @@
   src: url("./fonts/chinese traditional/H-LiHei-regular.ttf") format("truetype"); }
 
 h1 {
-  line-height: 52px;
-  font-size: 36px;
+  line-height: 45px;
+  font-size: 30px;
   width: 100%;
   box-sizing: border-box;
   margin: 0;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1279px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1279px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1024px) and (max-width: 1279px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1279px), only screen and (min-resolution: 192dpi) and (min-width: 1024px) and (max-width: 1279px), only screen and (min-resolution: 2dppx) and (min-width: 1024px) and (max-width: 1279px) {
     h1 {
-      line-height: 45px;
-      font-size: 30px; } }
+      line-height: 52px;
+      font-size: 36px; } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1280px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1280px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1280px), only screen and (min-resolution: 192dpi) and (min-width: 1280px), only screen and (min-resolution: 2dppx) and (min-width: 1280px) {
+    h1 {
+      line-height: 52px;
+      font-size: 36px; } }
 
 h2 {
   line-height: 30px;
@@ -631,3 +635,6 @@ sup {
 
 .add-br {
   display: none; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 320px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 320px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 320px), only screen and (min-device-pixel-ratio: 2) and (max-width: 320px), only screen and (min-resolution: 192dpi) and (max-width: 320px), only screen and (min-resolution: 2dppx) and (max-width: 320px) {
+    .add-br {
+      display: block; } }

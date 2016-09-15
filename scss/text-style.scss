@@ -1,6 +1,7 @@
 h1 {
-  line-height: 52px;
-  font-size: 36px;
+  // mobile screen
+  line-height: 45px;
+  font-size: 30px;
   width: 100%;
   box-sizing: border-box;
   margin: 0;
@@ -8,9 +9,14 @@ h1 {
   letter-spacing: 1px;
   text-transform: uppercase;
 
-  @include responsive(mobile){
-    line-height: 45px;
-    font-size: 30px;
+  @include responsive(transition){
+    line-height: 52px;
+    font-size: 36px;
+  }
+
+  @include responsive(desktop){
+    line-height: 52px;
+    font-size: 36px;
   }
 }
 
