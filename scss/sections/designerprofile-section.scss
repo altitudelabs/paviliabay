@@ -1,32 +1,3 @@
-#designerprofile-section {
-  .link-menu {
-    position: absolute;
-    border-bottom: 1px solid black;
-    right: 0;
-    padding-right:8px;
-    bottom: 150px;
-
-    h2 {
-      margin: 6px;
-    }
-
-    @include responsive(transition){
-        bottom: 50px;
-    }
-
-    @include responsive(mobile){
-      max-width: 30%;
-      top: 480px;
-      bottom: auto;
-
-      h2 {
-        margin: 2px;
-        font-size: 100%;
-      }
-    }
-  }
-}
-
 .background-image {
   height: 80vw;
   min-height: 50vh;
@@ -109,7 +80,7 @@
 .erase-shifted-offset {
   float: left;
   width: 540px;
-  height: 580px;
+  height: calc(580px + 80px);
   margin-right: 40px;
 
   @include responsive(mobile){
@@ -134,5 +105,25 @@
   @include responsive (mobile){
     clear: left;
     padding: 40px;
+  }
+}
+
+.designer-video-link {
+  padding-bottom: 40px;
+  display: inline-block;
+
+  a {
+    text-decoration: none;
+  }
+
+  h2 {
+    color: black;
+    padding-bottom: 2px;
+    border-bottom: 1px solid black;
+  }
+
+  @include responsive (mobile){
+    clear: left;
+    padding-left: 40px;
   }
 }

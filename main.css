@@ -17,28 +17,35 @@
  *        @include responsive(mobile){ ... }
  * * * * * * * * * * * * * * * * * * * * * * */
 @font-face {
-  font-family: futuraNew;
+  font-family: futuraEnglish;
   src: url("./fonts/futura_medium_bt-webfont.ttf") format("truetype");
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
-  font-family: futuraNew;
+  font-family: futuraEnglish;
   src: url("./fonts/futurabt-book-opentype.otf") format("opentype");
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
-  font-family: futuraNew;
+  font-family: futuraEnglish;
   src: url("./fonts/KozGoPr6N-Regular.otf") format("opentype");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
-  font-family: futuraNew;
+  font-family: futuraEnglish;
   src: url("./fonts/Linotype - FuturaLTPro-Light.otf") format("opentype");
   font-weight: 100;
   font-style: normal; }
+
+/* * * * * * * * * * *
+ * Chinese font
+ * * * * * * * * * * */
+@font-face {
+  font-family: futuraChinese;
+  src: url("./fonts/chinese traditional/H-LiHei-regular.ttf") format("truetype"); }
 
 h1 {
   line-height: 52px;
@@ -116,13 +123,21 @@ span, p {
 br {
   line-height: 30px; }
 
+.chinese-chars {
+  font-family: futuraChinese;
+  letter-spacing: 8px;
+  font-weight: 700; }
+
+.english-chars {
+  font-family: futuraEnglish; }
+
 * {
   padding: 0;
   margin: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
-  font-family: futuraNew;
+  font-family: futuraEnglish;
   vertical-align: baseline;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -203,9 +218,9 @@ sup {
 .hero-logo {
   display: inline-block;
   position: absolute;
-  top: 5vh;
-  left: 5vw;
-  width: 15%;
+  top: 3vh;
+  left: 1vw;
+  width: 20%;
   height: auto; }
   @media only screen and (max-width: 1023px) {
     .hero-logo {
@@ -214,8 +229,8 @@ sup {
 .menu-nav {
   display: inline-block;
   position: absolute;
-  top: 5vh;
-  right: 5vw;
+  top: 2vh;
+  right: 5px;
   width: 15%;
   height: auto; }
   @media only screen and (max-width: 1023px) {
@@ -342,26 +357,6 @@ sup {
     .disclaimer {
       padding: 40px 0; } }
 
-#designerprofile-section .link-menu {
-  position: absolute;
-  border-bottom: 1px solid black;
-  right: 0;
-  padding-right: 8px;
-  bottom: 150px; }
-  #designerprofile-section .link-menu h2 {
-    margin: 6px; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
-    #designerprofile-section .link-menu {
-      bottom: 50px; } }
-  @media only screen and (max-width: 1023px) {
-    #designerprofile-section .link-menu {
-      max-width: 30%;
-      top: 480px;
-      bottom: auto; }
-      #designerprofile-section .link-menu h2 {
-        margin: 2px;
-        font-size: 100%; } }
-
 .background-image {
   height: 80vw;
   min-height: 50vh;
@@ -428,7 +423,7 @@ sup {
 .erase-shifted-offset {
   float: left;
   width: 540px;
-  height: 580px;
+  height: calc(580px + 80px);
   margin-right: 40px; }
   @media only screen and (max-width: 1023px) {
     .erase-shifted-offset {
@@ -450,6 +445,20 @@ sup {
     .designer-description-text {
       clear: left;
       padding: 40px; } }
+
+.designer-video-link {
+  padding-bottom: 40px;
+  display: inline-block; }
+  .designer-video-link a {
+    text-decoration: none; }
+  .designer-video-link h2 {
+    color: black;
+    padding-bottom: 2px;
+    border-bottom: 1px solid black; }
+  @media only screen and (max-width: 1023px) {
+    .designer-video-link {
+      clear: left;
+      padding-left: 40px; } }
 
 #map-section h2, #map-section h3, #map-section h4 {
   color: white; }

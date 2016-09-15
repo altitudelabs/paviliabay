@@ -54,9 +54,9 @@
 .hero-logo {
   display: inline-block;
   position: absolute;
-  top: 5vh;
-  left: 5vw;
-  width: 15%;
+  top: 3vh;
+  left: 1vw;
+  width: 20%;
   height: auto;
 
   @include responsive(mobile){
@@ -67,8 +67,8 @@
 .menu-nav {
   display: inline-block;
   position: absolute;
-  top: 5vh;
-  right: 5vw;
+  top: 2vh;
+  right: 5px;
   width: 15%;
   height: auto;
 
