@@ -219,7 +219,7 @@ sup {
   display: inline-block;
   position: absolute;
   top: 3vh;
-  left: 5vw;
+  left: 1vw;
   width: 20%;
   height: auto; }
   @media only screen and (max-width: 1023px) {
