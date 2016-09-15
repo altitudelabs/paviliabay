@@ -41,4 +41,8 @@
 
 .add-br {
   display: none;
+
+  @include responsive(smallmobile){
+    display: block;
+  }
 }
