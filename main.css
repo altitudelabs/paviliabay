@@ -40,6 +40,13 @@
   font-weight: 100;
   font-style: normal; }
 
+/* * * * * * * * * * *
+ * Chinese font
+ * * * * * * * * * * */
+@font-face {
+  font-family: futuraChinese;
+  src: url("./fonts/chinese traditional/H-LiHei-regular.ttf") format("truetype"); }
+
 h1 {
   line-height: 52px;
   font-size: 36px;
@@ -115,6 +122,14 @@ span, p {
 
 br {
   line-height: 30px; }
+
+.chinese-chars {
+  font-family: futuraChinese;
+  letter-spacing: 8px;
+  font-weight: 700; }
+
+.english-chars {
+  font-family: futuraNew; }
 
 * {
   padding: 0;
@@ -203,9 +218,9 @@ sup {
 .hero-logo {
   display: inline-block;
   position: absolute;
-  top: 5vh;
+  top: 3vh;
   left: 5vw;
-  width: 15%;
+  width: 20%;
   height: auto; }
   @media only screen and (max-width: 1023px) {
     .hero-logo {
@@ -214,8 +229,8 @@ sup {
 .menu-nav {
   display: inline-block;
   position: absolute;
-  top: 5vh;
-  right: 5vw;
+  top: 2vh;
+  right: 5px;
   width: 15%;
   height: auto; }
   @media only screen and (max-width: 1023px) {

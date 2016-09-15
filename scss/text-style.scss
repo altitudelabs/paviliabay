@@ -86,3 +86,13 @@ span, p {
 br {
   line-height: 30px;
 }
+
+.chinese-chars {
+  font-family: futuraChinese;
+  letter-spacing: 8px;
+  font-weight: 700;
+}
+
+.english-chars {
+  font-family: futuraNew;
+}
