@@ -34,15 +34,40 @@
 
 @mixin responsive($media) {
   @if $media == smallmobile {
-    @media only screen and (max-width: $mobile-small-width) { @content; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2)      and (max-width: $mobile-small-width),
+            only screen and (   min--moz-device-pixel-ratio: 2)      and (max-width: $mobile-small-width),
+            only screen and (     -o-min-device-pixel-ratio: 2/1)    and (max-width: $mobile-small-width),
+            only screen and (        min-device-pixel-ratio: 2)      and (max-width: $mobile-small-width),
+            only screen and (                min-resolution: 192dpi) and (max-width: $mobile-small-width),
+            only screen and (                min-resolution: 2dppx)  and (max-width: $mobile-small-width) { @content; }
+
   }
+
   @if $media == mobile {
-    @media only screen and (max-width: $mobile-large-width - 1) { @content; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2)      and (max-width: $mobile-large-width - 1),
+            only screen and (   min--moz-device-pixel-ratio: 2)      and (max-width: $mobile-large-width - 1),
+            only screen and (     -o-min-device-pixel-ratio: 2/1)    and (max-width: $mobile-large-width - 1),
+            only screen and (        min-device-pixel-ratio: 2)      and (max-width: $mobile-large-width - 1),
+            only screen and (                min-resolution: 192dpi) and (max-width: $mobile-large-width - 1),
+            only screen and (                min-resolution: 2dppx)  and (max-width: $mobile-large-width - 1) { @content; }
+
   }
+
   @if $media == transition {
-    @media only screen and (min-width: $mobile-large-width) and (max-width: $desktop-large-width - 1) { @content; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: $mobile-large-width) and (max-width: $desktop-large-width - 1),
+            only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: $mobile-large-width) and (max-width: $desktop-large-width - 1),
+            only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: $mobile-large-width) and (max-width: $desktop-large-width - 1),
+            only screen and (        min-device-pixel-ratio: 2)      and (min-width: $mobile-large-width) and (max-width: $desktop-large-width - 1),
+            only screen and (                min-resolution: 192dpi) and (min-width: $mobile-large-width) and (max-width: $desktop-large-width - 1),
+            only screen and (                min-resolution: 2dppx)  and (min-width: $mobile-large-width) and (max-width: $desktop-large-width - 1) { @content; }
   }
+
   @else if $media == desktop {
-    @media only screen and (min-width: $desktop-large-width) { @content; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: $desktop-large-width),
+            only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: $desktop-large-width),
+            only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: $desktop-large-width),
+            only screen and (        min-device-pixel-ratio: 2)      and (min-width: $desktop-large-width),
+            only screen and (                min-resolution: 192dpi) and (min-width: $desktop-large-width),
+            only screen and (                min-resolution: 2dppx)  and (min-width: $desktop-large-width) { @content; }
   }
 }
