@@ -264,14 +264,13 @@ sup {
   position: absolute;
   background-color: #232f49; }
   #nav-menu-content li {
-    color: white;
     display: inline-block;
     padding: 10px;
-    clear: both; }
-    #nav-menu-content li:hover {
-      background-color: #9e9da2; }
+    width: 350px; }
     #nav-menu-content li a {
       text-decoration: none; }
+    #nav-menu-content li:nth-child(n+2):hover {
+      background-color: #9e9da2; }
 
 #nav-menu-image {
   top: 5vh;

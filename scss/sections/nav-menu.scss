@@ -31,17 +31,16 @@
   background-color: $dark-blue;
 
   li {
-    color: white;
     display: inline-block;
     padding: 10px;
-    clear: both;
-
-    &:hover {
-      background-color: $dark-gray;
-    }
+    width: 350px;
 
     a {
       text-decoration: none;
+    }
+
+    &:nth-child(n+2):hover {
+      background-color: $dark-gray;
     }
   }
 }
