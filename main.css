@@ -224,21 +224,10 @@ sup {
   position: absolute;
   top: 3vh;
   left: 1vw;
-  width: 20%;
+  width: 10%;
   height: auto; }
   @media only screen and (max-width: 1023px) {
     .hero-logo {
-      width: 20%; } }
-
-.menu-nav {
-  display: inline-block;
-  position: absolute;
-  top: 2vh;
-  right: 5px;
-  width: 15%;
-  height: auto; }
-  @media only screen and (max-width: 1023px) {
-    .menu-nav {
       width: 20%; } }
 
 .transparent-button {
@@ -246,6 +235,53 @@ sup {
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 10px 15px;
   margin-top: 10px; }
+
+#nav-menu {
+  text-align: right;
+  position: absolute;
+  right: 5vw;
+  top: 0;
+  width: 3%;
+  height: auto;
+  cursor: pointer; }
+  @media only screen and (max-width: 1023px) {
+    #nav-menu {
+      width: 5%; } }
+  #nav-menu h3 {
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform: none;
+    text-align: right;
+    margin-left: 0;
+    white-space: nowrap; }
+
+#nav-menu-content {
+  top: 0;
+  right: -15px;
+  height: 92vh;
+  left: auto;
+  position: absolute;
+  background-color: #232f49; }
+  #nav-menu-content li {
+    color: white;
+    display: inline-block;
+    padding: 10px;
+    clear: both; }
+    #nav-menu-content li:hover {
+      background-color: #9e9da2; }
+    #nav-menu-content li a {
+      text-decoration: none; }
+
+#nav-menu-image {
+  top: 5vh;
+  position: relative;
+  width: 100%;
+  height: auto; }
+
+#nav-cross {
+  width: 20%;
+  float: right; }
 
 #clubhouse-section h1, #clubhouse-section h2, #clubhouse-section h3 {
   color: white; }

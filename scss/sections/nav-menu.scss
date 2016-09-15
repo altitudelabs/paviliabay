@@ -1,0 +1,59 @@
+#nav-menu {
+  text-align: right;
+  position: absolute;
+  right: 5vw;
+  top: 0;
+  width: 3%;
+  height: auto;
+  cursor: pointer;
+
+  @include responsive(mobile){
+    width: 5%;
+  }
+
+  h3 {
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform: none;
+    text-align: right;
+    margin-left: 0;
+    white-space: nowrap;
+  }
+}
+
+#nav-menu-content {
+  top: 0;
+  right: -15px;
+  height: 92vh;
+  left: auto;
+  position: absolute;
+  background-color: $dark-blue;
+
+  li {
+    color: white;
+    display: inline-block;
+    padding: 10px;
+    clear: both;
+
+    &:hover {
+      background-color: $dark-gray;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+#nav-menu-image {
+  top: 5vh;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+#nav-cross {
+  width: 20%;
+  float: right;
+}

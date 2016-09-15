@@ -56,26 +56,26 @@
   position: absolute;
   top: 3vh;
   left: 1vw;
-  width: 20%;
+  width: 10%;
   height: auto;
 
   @include responsive(mobile){
     width: 20%;
   }
 }
-
-.menu-nav {
-  display: inline-block;
-  position: absolute;
-  top: 2vh;
-  right: 5px;
-  width: 15%;
-  height: auto;
-
-  @include responsive(mobile){
-    width: 20%;
-  }
-}
+//
+// .menu-nav {
+//   display: inline-block;
+//   position: absolute;
+//   top: 2vh;
+//   right: 5px;
+//   width: 15%;
+//   height: auto;
+//
+//   @include responsive(mobile){
+//     width: 20%;
+//   }
+// }
 
 .transparent-button {
   display: inline-block;
