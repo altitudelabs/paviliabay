@@ -417,7 +417,7 @@ sup {
 .erase-shifted-offset {
   float: left;
   width: 540px;
-  height: 580px;
+  height: calc(580px + 80px);
   margin-right: 40px; }
   @media only screen and (max-width: 1023px) {
     .erase-shifted-offset {
@@ -439,6 +439,20 @@ sup {
     .designer-description-text {
       clear: left;
       padding: 40px; } }
+
+.designer-video-link {
+  padding-bottom: 40px;
+  display: inline-block; }
+  .designer-video-link a {
+    text-decoration: none; }
+  .designer-video-link h2 {
+    color: black;
+    padding-bottom: 2px;
+    border-bottom: 1px solid black; }
+  @media only screen and (max-width: 1023px) {
+    .designer-video-link {
+      clear: left;
+      padding-left: 40px; } }
 
 #map-section h2, #map-section h3, #map-section h4 {
   color: white; }

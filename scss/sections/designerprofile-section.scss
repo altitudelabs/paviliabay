@@ -80,7 +80,7 @@
 .erase-shifted-offset {
   float: left;
   width: 540px;
-  height: 580px;
+  height: calc(580px + 80px);
   margin-right: 40px;
 
   @include responsive(mobile){
@@ -105,5 +105,25 @@
   @include responsive (mobile){
     clear: left;
     padding: 40px;
+  }
+}
+
+.designer-video-link {
+  padding-bottom: 40px;
+  display: inline-block;
+
+  a {
+    text-decoration: none;
+  }
+
+  h2 {
+    color: black;
+    padding-bottom: 2px;
+    border-bottom: 1px solid black;
+  }
+
+  @include responsive (mobile){
+    clear: left;
+    padding-left: 40px;
   }
 }
