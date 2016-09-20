@@ -239,7 +239,7 @@ sup {
 #nav-menu {
   text-align: right;
   position: absolute;
-  right: 5vw;
+  right: 3%;
   top: 0;
   width: 3%;
   height: auto;
@@ -247,30 +247,35 @@ sup {
   @media only screen and (max-width: 1023px) {
     #nav-menu {
       width: 5%; } }
-  #nav-menu h3 {
+  #nav-menu a, #nav-menu h3 {
     color: white;
+    font-size: 21px;
+    line-height: 35px;
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 20px;
     text-transform: none;
     text-align: right;
     margin-left: 0;
-    white-space: nowrap; }
+    white-space: nowrap;
+    font-weight: 700; }
 
 #nav-menu-content {
+  box-sizing: border-box;
   top: 0;
   right: -15px;
   height: 92vh;
   left: auto;
   position: absolute;
+  padding-top: 35px;
   background-color: #232f49; }
   #nav-menu-content li {
     display: inline-block;
-    padding: 10px;
-    width: 350px; }
+    width: 310px; }
     #nav-menu-content li a {
+      display: block;
       text-decoration: none; }
-    #nav-menu-content li:nth-child(n+2):hover {
-      background-color: #9e9da2; }
+      #nav-menu-content li a:hover {
+        background-color: #9e9da2; }
 
 #nav-menu-image {
   top: 5vh;
@@ -279,8 +284,22 @@ sup {
   height: auto; }
 
 #nav-cross {
-  width: 20%;
-  float: right; }
+  background-image: url("images/nav-menu/navmenubuttons_cross.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 12%;
+  height: 40px;
+  float: right;
+  margin-bottom: 40px; }
+
+#nav-arrow {
+  background-image: url("images/nav-menu/navmenubuttons_arrow.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  bottom: 0;
+  width: 6%;
+  height: 17px; }
 
 #clubhouse-section h1, #clubhouse-section h2, #clubhouse-section h3 {
   color: white; }
