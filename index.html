@@ -97,17 +97,17 @@
     </section>
 
     <!-- CLUBHOUSE SECTION -->
-    <section class="section-container" id="clubhouse-section">
+    <section class="section-container" id="clubhouse-section" data-id='clubhouse'>
       <div class="clubhouse-image-container animation-element fade">
       </div>
       <div class="clubhouse-blue-box-container">
         <div class="clubhouse-blue-box animation-element slide-left">
-          <h1> the <br> clubhouse </h1>
+          <h1 class="text clubTitle animation-element"> the <br> clubhouse </h1>
           <div class="white-line animation-element slide-left"></div>
           <div class="hide-scroll">
             <div class="scroll-textbox-area">
 
-              <h3 class="text animation-element">
+              <h3 class="text clubText animation-element">
                 Blue Pavilion - Hong Kong's first residential clubhouse
                 offers distinctive superyacht features. The pioneering
                 Blue Pavilia is designed by the international renowned superyacht
@@ -125,15 +125,27 @@
         </div>
 
       <div class="link-menu animation-element slide-right">
-        <h2>
+        <h2 class="clubLink section-change">
           The
           Facade >
         </h2>
       </div>
+
+      <!-- Image Modal -->
+      <div id="imageModal" class="modal">
+        <!-- Close Button -->
+        <span class="close" onclick="document.getElementById('imageModal').style.display='none'">&times;</span>
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="modalContent">
+      </div>
+
     </section>
 
+<<<<<<< b555ade4a040d08898963e8e56b28a862f1f1473
     <section>
     </section>
+=======
+>>>>>>> displays modal image
 
     <!-- DESIGNERPROFILE SECTION -->
     <section class="section-container" id="designerprofile-section">
