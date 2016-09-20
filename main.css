@@ -56,11 +56,11 @@ h1 {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1279px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1279px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1024px) and (max-width: 1279px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1279px), only screen and (min-resolution: 192dpi) and (min-width: 1024px) and (max-width: 1279px), only screen and (min-resolution: 2dppx) and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     h1 {
       line-height: 52px;
       font-size: 36px; } }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1280px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1280px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1280px), only screen and (min-resolution: 192dpi) and (min-width: 1280px), only screen and (min-resolution: 2dppx) and (min-width: 1280px) {
+  @media only screen and (min-width: 1280px) {
     h1 {
       line-height: 52px;
       font-size: 36px; } }
@@ -71,7 +71,7 @@ h2 {
   font-weight: lighter;
   width: 100%;
   box-sizing: border-box; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     h2 {
       font-size: 18px;
       line-height: 30px; } }
@@ -84,11 +84,11 @@ h3 {
   font-weight: 700;
   box-sizing: border-box;
   letter-spacing: 1px; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1279px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1279px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1024px) and (max-width: 1279px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1279px), only screen and (min-resolution: 192dpi) and (min-width: 1024px) and (max-width: 1279px), only screen and (min-resolution: 2dppx) and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     h3 {
       line-height: 35px;
       font-size: 22px; } }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     h3 {
       line-height: 30px;
       font-size: 15px; } }
@@ -99,11 +99,11 @@ h4 {
   font-weight: 100;
   width: 100%;
   box-sizing: border-box; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1279px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1279px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1024px) and (max-width: 1279px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1279px), only screen and (min-resolution: 192dpi) and (min-width: 1024px) and (max-width: 1279px), only screen and (min-resolution: 2dppx) and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     h4 {
       font-size: 12px;
       line-height: 20px; } }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     h4 {
       font-size: 16px;
       line-height: 28px; } }
@@ -115,11 +115,11 @@ span, p {
   font-size: 25px;
   margin: 0;
   letter-spacing: 0.007em; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1279px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1279px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1024px) and (max-width: 1279px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1279px), only screen and (min-resolution: 192dpi) and (min-width: 1024px) and (max-width: 1279px), only screen and (min-resolution: 2dppx) and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     span, p {
       line-height: 33px;
       font-size: 22px; } }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     span, p {
       line-height: 30px;
       font-size: 15px; } }
@@ -214,7 +214,7 @@ sup {
     height: 8vh;
     line-height: 8vh;
     letter-spacing: normal; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+    @media only screen and (max-width: 1023px) {
       .hero-footer h3 {
         font-size: 90%;
         height: 100%; } }
@@ -226,7 +226,7 @@ sup {
   left: 1vw;
   width: 20%;
   height: auto; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     .hero-logo {
       width: 20%; } }
 
@@ -237,7 +237,7 @@ sup {
   right: 5px;
   width: 15%;
   height: auto; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     .menu-nav {
       width: 20%; } }
 
@@ -265,7 +265,7 @@ sup {
   right: 0;
   bottom: 200px;
   padding: 8px; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     #clubhouse-section .link-menu {
       bottom: 50px; } }
 
@@ -283,11 +283,11 @@ sup {
     right: 0;
     width: auto;
     height: 100%; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1279px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1279px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1024px) and (max-width: 1279px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1279px), only screen and (min-resolution: 192dpi) and (min-width: 1024px) and (max-width: 1279px), only screen and (min-resolution: 2dppx) and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     .clubhouse-image-container {
       top: 5vh;
       width: 80%; } }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     .clubhouse-image-container {
       top: 15vh;
       height: 50vh;
@@ -308,14 +308,14 @@ sup {
   margin: 10vh auto 10vw 10vh; }
   .clubhouse-blue-box .white-line {
     left: -15vw; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1279px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1279px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1024px) and (max-width: 1279px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1279px), only screen and (min-resolution: 192dpi) and (min-width: 1024px) and (max-width: 1279px), only screen and (min-resolution: 2dppx) and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     .clubhouse-blue-box {
       right: auto;
       width: 60%;
       min-height: 70vh;
       margin-top: 3vh;
       margin-left: 5vw; } }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     .clubhouse-blue-box {
       right: auto;
       width: 90%;
@@ -333,7 +333,7 @@ sup {
 #companyinfo-section p {
   padding: 40px;
   padding-bottom: 200px; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     #companyinfo-section p {
       padding: 20px; } }
 
@@ -343,7 +343,7 @@ sup {
   position: relative;
   margin: 0 auto auto auto;
   text-align: center; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     .companyinfo-body-container {
       width: 100%; } }
 
@@ -357,7 +357,7 @@ sup {
   padding: 40px 30px; }
   .disclaimer h3 {
     text-transform: uppercase; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     .disclaimer {
       padding: 40px 0; } }
 
@@ -366,7 +366,7 @@ sup {
   min-height: 50vh;
   max-width: 120%;
   position: absolute; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     .background-image {
       min-height: 500px; } }
 
@@ -380,7 +380,7 @@ sup {
   margin-right: 40px;
   position: relative;
   padding-top: 80px; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     .description-gray-box {
       margin-top: 450px;
       margin-left: 20px;
@@ -408,7 +408,7 @@ sup {
     font-weight: 500; }
   .profile-blue-box h3 {
     margin-top: 3vh; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     .profile-blue-box {
       width: 70%;
       height: 500px;
@@ -429,7 +429,7 @@ sup {
   width: 540px;
   height: calc(580px + 80px);
   margin-right: 40px; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     .erase-shifted-offset {
       width: 360px;
       height: 0px; } }
@@ -445,7 +445,7 @@ sup {
   position: relative;
   padding-bottom: 50px;
   padding-right: 40px; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     .designer-description-text {
       clear: left;
       padding: 40px; } }
@@ -459,7 +459,7 @@ sup {
     color: black;
     padding-bottom: 2px;
     border-bottom: 1px solid black; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     .designer-video-link {
       clear: left;
       padding-left: 40px; } }
@@ -479,10 +479,10 @@ sup {
   background-color: #dfdfe1;
   width: 65%;
   min-width: 400px; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1279px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1279px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1024px) and (max-width: 1279px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1279px), only screen and (min-resolution: 192dpi) and (min-width: 1024px) and (max-width: 1279px), only screen and (min-resolution: 2dppx) and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     .map-container {
       height: 900px; } }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     .map-container {
       width: 100%;
       height: 60vh;
@@ -496,10 +496,10 @@ sup {
   background-color: #232f49;
   padding-left: 60px;
   padding-bottom: 60px; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1279px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1279px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1024px) and (max-width: 1279px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1024px) and (max-width: 1279px), only screen and (min-resolution: 192dpi) and (min-width: 1024px) and (max-width: 1279px), only screen and (min-resolution: 2dppx) and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     .map-info {
       height: 900px; } }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     .map-info {
       width: 100%;
       height: auto;
@@ -530,10 +530,10 @@ sup {
   flex: none;
   height: 100vh;
   width: 100%; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     .panorama-background-image {
       width: auto; } }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     .panorama-background-image {
       height: 100%;
       width: auto; } }
@@ -561,7 +561,7 @@ sup {
   -moz-opacity: 0.5;
   -khtml-opacity: 0.5;
   opacity: 0.5; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     .panorama-button {
       padding: 2px;
       margin: auto;
@@ -580,14 +580,14 @@ sup {
   padding-bottom: 10px;
   text-align: center;
   background-color: #232f49; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     .portfolio-header {
       margin-top: 2px; } }
 
 .portfolio-image-container {
   text-align: center;
   padding-top: 2px; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     .portfolio-image-container {
       padding-bottom: 2px; } }
 
@@ -615,7 +615,7 @@ sup {
   text-align: center; }
   .register-body-container h3 {
     color: white; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     .register-body-container {
       padding: 20px 10px; } }
 
@@ -628,13 +628,13 @@ sup {
   .register-button h3 {
     color: #232f49;
     text-transform: uppercase; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     .register-button {
       padding-right: 5px;
       padding-left: 5px; } }
 
 .add-br {
   display: none; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 320px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 320px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 320px), only screen and (min-device-pixel-ratio: 2) and (max-width: 320px), only screen and (min-resolution: 192dpi) and (max-width: 320px), only screen and (min-resolution: 2dppx) and (max-width: 320px) {
+  @media only screen and (max-width: 320px) {
     .add-br {
       display: block; } }
