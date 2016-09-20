@@ -267,6 +267,9 @@ sup {
         padding-right: 30px;
         font-size: 19px; } }
 
+ul {
+  list-style-type: none; }
+
 #nav-menu-content {
   z-index: 1;
   box-sizing: border-box;
@@ -275,23 +278,23 @@ sup {
   height: 92vh;
   left: auto;
   position: absolute;
-  padding-top: 35px;
+  padding-top: 37px;
   background-color: #232f49;
   /* First level */ }
   #nav-menu-content li {
     display: inline-block;
     width: 310px;
-    position: relative;
     /* Second level */ }
     #nav-menu-content li a {
       text-decoration: none; }
     #nav-menu-content li ul {
       display: none; }
+      #nav-menu-content li ul li {
+        height: 2em; }
       #nav-menu-content li ul li a {
         color: #9e9da2; }
     #nav-menu-content li:hover ul, #nav-menu-content li.hover_effect ul {
-      display: block;
-      background-color: #232f49; }
+      display: block; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
     #nav-menu-content {
       height: 100vh;
@@ -307,6 +310,7 @@ sup {
   background-image: url("images/nav-menu/navmenubuttons_cross.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  display: block;
   width: 12%;
   height: 40px;
   float: right;
@@ -314,6 +318,10 @@ sup {
   @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
     #nav-cross {
       margin-bottom: 45px; } }
+  #nav-cross:after {
+    clear: both;
+    content: " ";
+    display: block; }
 
 #nav-arrow {
   background-image: url("images/nav-menu/navmenubuttons_arrow.png");
@@ -323,6 +331,41 @@ sup {
   bottom: 0;
   width: 6%;
   height: 17px; }
+
+#nav-bottom-menu {
+  position: absolute;
+  height: 40px;
+  width: 310px;
+  right: -15px;
+  z-index: 2;
+  top: 83vh; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+    #nav-bottom-menu {
+      top: 88vh; } }
+
+#nav-sound {
+  vertical-align: top;
+  background-image: url("images/nav-menu/navmenubuttons_off.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: 0;
+  display: inline-block;
+  margin-right: 5px;
+  width: 40px;
+  height: 35px; }
+
+#lang-toolbar {
+  vertical-align: top;
+  display: inline-block;
+  margin-right: 15px;
+  height: 40px; }
+  #lang-toolbar li {
+    display: inline; }
+  #lang-toolbar a {
+    font-size: 18px;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px; }
 
 #clubhouse-section h1, #clubhouse-section h2, #clubhouse-section h3 {
   color: white; }

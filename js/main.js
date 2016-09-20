@@ -16,8 +16,17 @@ $(document).ready(function(){
    *  on mobile device
    * * * * * * * * * * * * * * */
   $('.hover').bind('touchstart touchend', function(e) {
-    e.preventDefault();
+    e.preventDefault;
     $(this).toggleClass('hover_effect');
-  })
+  });
+
+  // $('#nav-menu-content li').on('click', function(){
+  //   if ($(this).children('ul').css('display') == 'block') {
+  //     $(this).children('ul').css('display', 'none');
+  //   }
+  //   else {
+  //     $(this).children('ul').css('display', 'none');
+  //   }
+  // });
 
 });
