@@ -22,10 +22,16 @@
     margin-left: 0;
     white-space: nowrap;
     font-weight: 700;
+
+    @include responsive(mobile) {
+      padding-right: 30px;
+      font-size: 19px;
+    }
   }
 }
 
 #nav-menu-content {
+  z-index: 1;
   box-sizing: border-box;
   top: 0;
   right: -15px;
@@ -60,15 +66,10 @@
     }
   }
 
-
-  // /* hover */
-  // li a:hover {
-  //   background-color: $dark-gray;
-  //
-  //   #nav-menu-content li ul li {
-  //     background-color: red;
-  //   }
-  // }
+  @include responsive(mobile) {
+    height: 100vh;
+    padding-top: 15px;
+  }
 }
 
 #nav-menu-image {
@@ -87,6 +88,10 @@
   height: 40px;
   float: right;
   margin-bottom: 40px;
+
+  @include responsive(mobile) {
+    margin-bottom: 45px;
+  }
 }
 
 #nav-arrow {

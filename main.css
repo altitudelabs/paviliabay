@@ -258,8 +258,13 @@ sup {
     margin-left: 0;
     white-space: nowrap;
     font-weight: 700; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+      #nav-menu a, #nav-menu h3 {
+        padding-right: 30px;
+        font-size: 19px; } }
 
 #nav-menu-content {
+  z-index: 1;
   box-sizing: border-box;
   top: 0;
   right: -15px;
@@ -283,6 +288,10 @@ sup {
     #nav-menu-content li:hover ul {
       display: block;
       background-color: #232f49; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+    #nav-menu-content {
+      height: 100vh;
+      padding-top: 15px; } }
 
 #nav-menu-image {
   top: 5vh;
@@ -298,6 +307,9 @@ sup {
   height: 40px;
   float: right;
   margin-bottom: 40px; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+    #nav-cross {
+      margin-bottom: 45px; } }
 
 #nav-arrow {
   background-image: url("images/nav-menu/navmenubuttons_arrow.png");
