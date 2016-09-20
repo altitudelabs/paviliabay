@@ -60,9 +60,9 @@
       }
     }
 
-    &:hover ul {
-        display: block;
-        background-color: $dark-blue;
+    &:hover ul, &.hover_effect ul {
+      display: block;
+      background-color: $dark-blue;
     }
   }
 
