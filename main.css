@@ -278,7 +278,7 @@ ul {
   height: 92vh;
   left: auto;
   position: absolute;
-  padding-top: 37px;
+  padding-top: 35px;
   background-color: #232f49;
   /* First level */ }
   #nav-menu-content li {
@@ -311,6 +311,7 @@ ul {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   display: block;
+  margin-right: 20px;
   width: 12%;
   height: 40px;
   float: right;
@@ -336,7 +337,7 @@ ul {
   position: absolute;
   height: 40px;
   width: 310px;
-  right: -15px;
+  right: 6px;
   z-index: 2;
   top: 83vh; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
@@ -355,6 +356,7 @@ ul {
   height: 35px; }
 
 #lang-toolbar {
+  visibility: inherit;
   vertical-align: top;
   display: inline-block;
   margin-right: 15px;
@@ -362,7 +364,7 @@ ul {
   #lang-toolbar li {
     display: inline; }
   #lang-toolbar a {
-    font-size: 18px;
+    font-size: 17px;
     text-decoration: none;
     padding-left: 5px;
     padding-right: 5px; }
