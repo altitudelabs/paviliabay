@@ -48,8 +48,8 @@
   src: url("./fonts/chinese traditional/H-LiHei-regular.ttf") format("truetype"); }
 
 h1 {
-  line-height: 45px;
-  font-size: 30px;
+  line-height: 52px;
+  font-size: 37px;
   width: 100%;
   box-sizing: border-box;
   margin: 0;
@@ -60,14 +60,18 @@ h1 {
     h1 {
       line-height: 52px;
       font-size: 36px; } }
+<<<<<<< 92a8255ee08e52875ab5c1541d6bdf1e94f1b9a7
   @media only screen and (min-width: 1280px) {
+=======
+  @media only screen and (max-width: 1023px) {
+>>>>>>> Fix hero layout
     h1 {
-      line-height: 52px;
-      font-size: 36px; } }
+      line-height: 45px;
+      font-size: 35px; } }
 
 h2 {
-  line-height: 30px;
-  font-size: 28px;
+  line-height: 32px;
+  font-size: 30px;
   font-weight: lighter;
   width: 100%;
   box-sizing: border-box; }
@@ -78,12 +82,16 @@ h2 {
 
 h3 {
   line-height: 40px;
-  font-size: 24px;
+  font-size: 23px;
   text-align: left;
   width: 100%;
   font-weight: 700;
   box-sizing: border-box;
+<<<<<<< 92a8255ee08e52875ab5c1541d6bdf1e94f1b9a7
   letter-spacing: 1px; }
+=======
+  letter-spacing: 2px; }
+>>>>>>> Fix hero layout
   @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     h3 {
       line-height: 35px;
@@ -94,11 +102,16 @@ h3 {
       font-size: 15px; } }
 
 h4 {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 20px;
   font-weight: 100;
   width: 100%;
+<<<<<<< 92a8255ee08e52875ab5c1541d6bdf1e94f1b9a7
   box-sizing: border-box; }
+=======
+  box-sizing: border-box;
+  letter-spacing: .5px; }
+>>>>>>> Fix hero layout
   @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     h4 {
       font-size: 12px;
@@ -129,8 +142,7 @@ br {
 
 .chinese-chars {
   font-family: futuraChinese;
-  letter-spacing: 8px;
-  font-weight: 700; }
+  letter-spacing: 24px; }
 
 .english-chars {
   font-family: futuraEnglish; }
@@ -187,8 +199,7 @@ sup {
 
 #hero-section h3 {
   text-transform: uppercase;
-  color: #232f49;
-  margin-left: 20px; }
+  color: #232f49; }
 
 #hero-section h4 {
   color: white;
@@ -196,11 +207,15 @@ sup {
 
 #hero-section .title-center {
   position: absolute;
-  top: 45%;
+  top: 37.5%;
   background-color: transparent;
   left: 10%;
   width: 80%;
   text-align: center; }
+  #hero-section .title-center h2 {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight: normal; }
 
 .video-container {
   height: 92vh;
@@ -217,7 +232,12 @@ sup {
   .hero-footer h3 {
     height: 8vh;
     line-height: 8vh;
+<<<<<<< 92a8255ee08e52875ab5c1541d6bdf1e94f1b9a7
     letter-spacing: normal; }
+=======
+    letter-spacing: normal;
+    margin-left: 45px; }
+>>>>>>> Fix hero layout
     @media only screen and (max-width: 1023px) {
       .hero-footer h3 {
         font-size: 90%;
@@ -226,9 +246,15 @@ sup {
 .hero-logo {
   display: inline-block;
   position: absolute;
+<<<<<<< 92a8255ee08e52875ab5c1541d6bdf1e94f1b9a7
   top: 3vh;
   left: 1vw;
   width: 10%;
+=======
+  top: 3.5%;
+  left: 1%;
+  width: 14%;
+>>>>>>> Fix hero layout
   height: auto; }
   @media only screen and (max-width: 1023px) {
     .hero-logo {
@@ -278,6 +304,7 @@ ul {
   height: 92vh;
   left: auto;
   position: absolute;
+<<<<<<< 92a8255ee08e52875ab5c1541d6bdf1e94f1b9a7
   padding-top: 35px;
   background-color: #232f49;
   /* First level */ }
@@ -330,6 +357,15 @@ ul {
   bottom: 0;
   width: 6%;
   height: 17px; }
+=======
+  top: 4.5%;
+  right: 4%;
+  width: 3.5%;
+  height: auto; }
+  @media only screen and (max-width: 1023px) {
+    .menu-nav {
+      width: 20%; } }
+>>>>>>> Fix hero layout
 
 #nav-bottom-menu {
   position: absolute;
@@ -349,6 +385,7 @@ ul {
   background-repeat: no-repeat;
   border: 0;
   display: inline-block;
+<<<<<<< 92a8255ee08e52875ab5c1541d6bdf1e94f1b9a7
   margin-right: 5px;
   width: 40px;
   height: 35px; }
@@ -366,6 +403,11 @@ ul {
     text-decoration: none;
     padding-left: 5px;
     padding-right: 5px; }
+=======
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 10px 23px;
+  margin-top: 40px; }
+>>>>>>> Fix hero layout
 
 #clubhouse-section h1, #clubhouse-section h2, #clubhouse-section h3 {
   color: white; }

@@ -6,7 +6,6 @@
   h3 {
     text-transform: uppercase;
     color: $dark-blue;
-    margin-left: 20px;
   }
 
   h4 {
@@ -16,11 +15,17 @@
 
   .title-center {
     position: absolute;
-    top: 45%;
+    top: 37.5%;
     background-color: transparent;
     left: 10%;
     width: 80%;
     text-align: center;
+
+    h2 {
+      margin-top: 10px;
+      margin-left: 10px;
+      font-weight: normal;
+    }
   }
 }
 
@@ -43,6 +48,7 @@
     height: 8vh;
     line-height: 8vh;
     letter-spacing: normal;
+    margin-left: 45px;
 
     @include responsive(mobile) {
       font-size: 90%;
@@ -54,9 +60,22 @@
 .hero-logo {
   display: inline-block;
   position: absolute;
-  top: 3vh;
-  left: 1vw;
-  width: 10%;
+  top: 3.5%;
+  left: 1%;
+  width: 14%;
+  height: auto;
+
+  @include responsive(mobile){
+    width: 20%;
+  }
+}
+
+.menu-nav {
+  display: inline-block;
+  position: absolute;
+  top: 4.5%;
+  right: 4%;
+  width: 3.5%;
   height: auto;
 
   @include responsive(mobile){
@@ -79,7 +98,7 @@
 
 .transparent-button {
   display: inline-block;
-  border: 1px solid rgba(255, 255, 255, .3);
-  padding: 10px 15px;
-  margin-top: 10px;
+  border: 1px solid rgba(255, 255, 255, .5);
+  padding: 10px 23px;
+  margin-top: 40px;
 }
