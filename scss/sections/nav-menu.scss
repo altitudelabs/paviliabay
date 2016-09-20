@@ -35,19 +35,40 @@
   padding-top: 35px;
   background-color: $dark-blue;
 
+  /* First level */
   li {
     display: inline-block;
     width: 310px;
+    position: relative;
 
     a {
-      display: block;
       text-decoration: none;
+    }
 
-      &:hover {
-        background-color: $dark-gray;
+    /* Second level */
+    ul {
+      display: none;
+
+      li a {
+        color: $dark-gray;
       }
     }
+
+    &:hover ul {
+        display: block;
+        background-color: $dark-blue;
+    }
   }
+
+
+  // /* hover */
+  // li a:hover {
+  //   background-color: $dark-gray;
+  //
+  //   #nav-menu-content li ul li {
+  //     background-color: red;
+  //   }
+  // }
 }
 
 #nav-menu-image {

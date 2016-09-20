@@ -267,15 +267,22 @@ sup {
   left: auto;
   position: absolute;
   padding-top: 35px;
-  background-color: #232f49; }
+  background-color: #232f49;
+  /* First level */ }
   #nav-menu-content li {
     display: inline-block;
-    width: 310px; }
+    width: 310px;
+    position: relative;
+    /* Second level */ }
     #nav-menu-content li a {
-      display: block;
       text-decoration: none; }
-      #nav-menu-content li a:hover {
-        background-color: #9e9da2; }
+    #nav-menu-content li ul {
+      display: none; }
+      #nav-menu-content li ul li a {
+        color: #9e9da2; }
+    #nav-menu-content li:hover ul {
+      display: block;
+      background-color: #232f49; }
 
 #nav-menu-image {
   top: 5vh;
