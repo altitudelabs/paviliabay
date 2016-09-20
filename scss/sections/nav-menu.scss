@@ -67,9 +67,9 @@ ul {
       }
     }
 
-    &:hover ul, &.hover_effect ul {
-      display: block;
-    }
+    // &:hover ul, &.hover_effect ul {
+    //   display: block;
+    // }
   }
 
   @include responsive(mobile) {
