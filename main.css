@@ -56,7 +56,7 @@ h1 {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) {
     h1 {
       line-height: 52px;
       font-size: 36px; } }
@@ -79,12 +79,11 @@ h2 {
 h3 {
   line-height: 40px;
   font-size: 23px;
-  text-align: left;
   width: 100%;
   font-weight: 700;
   box-sizing: border-box;
   letter-spacing: 2px; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) {
     h3 {
       line-height: 35px;
       font-size: 22px; } }
@@ -112,7 +111,7 @@ span, p {
   font-size: 25px;
   margin: 0;
   letter-spacing: 0.007em; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) {
     span, p {
       line-height: 33px;
       font-size: 22px; } }
@@ -158,11 +157,10 @@ sup {
   position: relative;
   overflow: hidden; }
 
-.blue-box, .clubhouse-blue-box, .profile-blue-box {
+.blue-box, .clubhouse-blue-box, #designerprofile-section .profile-blue-box {
+  color: white;
   background-color: #232f49;
   position: relative; }
-  .blue-box h1, .clubhouse-blue-box h1, .profile-blue-box h1, .blue-box h2, .clubhouse-blue-box h2, .profile-blue-box h2, .blue-box h3, .clubhouse-blue-box h3, .profile-blue-box h3, .blue-box h4, .clubhouse-blue-box h4, .profile-blue-box h4, .blue-box h5, .clubhouse-blue-box h5, .profile-blue-box h5 {
-    color: white; }
 
 .image {
   position: absolute; }
@@ -177,21 +175,21 @@ sup {
   -webkit-user-select: none;
   -webkit-touch-callout: none; }
 
-.clearfix:before, #clubhouse-section:before, .clearfix:after, #clubhouse-section:after {
+.clearfix:before, #clubhouse-section:before, #designerprofile-section .description-gray-box:before, .clearfix:after, #clubhouse-section:after, #designerprofile-section .description-gray-box:after {
   content: " ";
   display: table; }
 
-.clearfix:after, #clubhouse-section:after {
+.clearfix:after, #clubhouse-section:after, #designerprofile-section .description-gray-box:after {
   clear: both; }
 
-.background-image, .background-cover, .clubhouse-image-container, .background-contain {
+.background-image, .background-cover, .clubhouse-image-container, #designerprofile-section .yacht, .background-contain, #designerprofile-section .designer-photo {
   background-position: center center;
   background-repeat: no-repeat; }
 
-.background-cover, .clubhouse-image-container {
+.background-cover, .clubhouse-image-container, #designerprofile-section .yacht {
   background-size: cover; }
 
-.background-contain {
+.background-contain, #designerprofile-section .designer-photo {
   background-size: contain; }
 
 #hero-section h1, #hero-section h4 {
@@ -440,7 +438,7 @@ ul {
   position: relative;
   float: right;
   width: 64.5%; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) {
     .clubhouse-image-container {
       width: 64%; } }
   @media only screen and (max-width: 1023px) {
@@ -558,99 +556,150 @@ ul {
     .disclaimer {
       padding: 40px 0; } }
 
-.description-gray-box {
-  min-width: 80vw;
-  min-height: 750px;
-  align-self: center;
+#designerprofile-section .yacht {
+  background-image: url("images/designerprofile-section/bg.jpg");
+  padding-bottom: 756px; }
+  @media only screen and (max-width: 1023px) {
+    #designerprofile-section .yacht {
+      padding-bottom: 70%; } }
+
+#designerprofile-section .description-gray-box {
+  position: relative;
+  margin: 0 50px;
+  margin-top: -135px;
   background-color: #dfdfe1;
-  margin-top: 60vw;
-  margin-left: 40px;
-  margin-right: 40px;
-  position: relative;
-  padding-top: 80px; }
+  overflow: visible;
+  min-height: 750px; }
   @media only screen and (max-width: 1023px) {
-    .description-gray-box {
-      margin-top: 450px;
-      margin-left: 20px;
-      margin-right: 0;
-      min-height: 550px; } }
+    #designerprofile-section .description-gray-box {
+      min-height: initial;
+      margin: 0 0 0 20px;
+      margin-top: 0px; } }
 
-.profile-blue-box {
-  width: 500px;
-  height: 750px;
-  align-content: center;
-  top: -170px;
-  display: inline-block;
-  margin: auto 40px 40px 40px;
-  padding: 40px; }
-  .profile-blue-box .white-line {
-    left: -10vw;
-    width: 125%; }
-  .profile-blue-box h1, .profile-blue-box h2, .profile-blue-box h3 {
-    color: white;
-    text-align: center;
-    margin-top: 4vh;
-    margin-bottom: 3vh; }
-  .profile-blue-box h2 {
-    text-transform: uppercase;
-    font-weight: 500; }
-  .profile-blue-box h3 {
-    margin-top: 3vh; }
-  @media only screen and (max-width: 1023px) {
-    .profile-blue-box {
-      width: 70%;
-      height: 500px;
-      margin-left: -40px;
-      top: -500px; }
-      .profile-blue-box .white-line {
-        left: -10vw;
-        width: 100%; } }
+@media only screen and (max-width: 1023px) {
+  #designerprofile-section .blue-box-container {
+    padding-right: 20%; } }
 
-/* * * * * * * * * * * * * * * * * * * * * * *
- * erase-shifted-offset:
- *  An empty box with predefined size
- *  so that the original space occupied by
- *  the profile box can be used.
- * * * * * * * * * * * * * * * * * * * * * * */
-.erase-shifted-offset {
+#designerprofile-section .profile-blue-box {
   float: left;
-  width: 540px;
-  height: calc(580px + 80px);
-  margin-right: 40px; }
+  color: #dfdfe1;
+  margin-left: 70px;
+  margin-top: -90px;
+  width: 465px;
+  height: 735px;
+  align-content: center;
+  padding: 40px;
+  text-align: center; }
   @media only screen and (max-width: 1023px) {
-    .erase-shifted-offset {
-      width: 360px;
-      height: 0px; } }
+    #designerprofile-section .profile-blue-box {
+      padding: calc(3% + 20px) 30px;
+      margin-left: -20px;
+      margin-top: calc(-10% - 180px);
+      height: auto;
+      width: 100%; } }
+  #designerprofile-section .profile-blue-box .white-line {
+    margin: 15px 0;
+    left: -120px;
+    width: 441px; }
+    @media only screen and (max-width: 1023px) {
+      #designerprofile-section .profile-blue-box .white-line {
+        margin: 10px auto;
+        width: 1000px;
+        right: 0px;
+        left: calc(50% - 927px); } }
+  @media only screen and (min-width: 1024px) {
+    #designerprofile-section .profile-blue-box h1 {
+      font-size: 38px;
+      margin: 36px auto;
+      line-height: 52px; } }
+  @media only screen and (max-width: 1023px) {
+    #designerprofile-section .profile-blue-box h1 {
+      line-height: 30px; } }
+  #designerprofile-section .profile-blue-box h2 {
+    text-transform: uppercase; }
+    @media only screen and (min-width: 1024px) {
+      #designerprofile-section .profile-blue-box h2 {
+        font-weight: 600;
+        margin-top: 50px; } }
+    @media only screen and (max-width: 1023px) {
+      #designerprofile-section .profile-blue-box h2 {
+        font-size: 17px;
+        line-height: 17px;
+        font-weight: bold; } }
+  #designerprofile-section .profile-blue-box h3 {
+    line-height: normal;
+    letter-spacing: 0px; }
+    @media only screen and (min-width: 1024px) {
+      #designerprofile-section .profile-blue-box h3 {
+        margin-top: 0px;
+        font-size: 22px;
+        font-weight: 800; } }
 
-.designer-photo {
-  position: relative;
-  display: block;
-  width: 70%;
-  margin: 30px auto 30px auto; }
+#designerprofile-section .designer-photo {
+  background-image: url("images/designerprofile-section/designer.png"); }
+  @media only screen and (min-width: 1024px) {
+    #designerprofile-section .designer-photo {
+      height: 270px; } }
+  @media only screen and (max-width: 1023px) {
+    #designerprofile-section .designer-photo {
+      padding-bottom: calc(120px + 20%);
+      margin: 20px 0; } }
 
-.designer-description-text {
+#designerprofile-section .designer-description-text {
+  float: right;
+  width: calc(100% - 465px - 70px);
+  padding: 100px 65px;
+  padding-bottom: 170px;
   vertical-align: top;
-  position: relative;
-  padding-bottom: 50px;
-  padding-right: 40px; }
+  position: relative; }
+  #designerprofile-section .designer-description-text p {
+    font-weight: 500; }
+  @media only screen and (min-width: 1024px) {
+    #designerprofile-section .designer-description-text .quote {
+      font-style: italic;
+      line-height: 38px;
+      font-size: 25px; } }
+  #designerprofile-section .designer-description-text .desc {
+    margin-bottom: 20px; }
+    @media only screen and (min-width: 1024px) {
+      #designerprofile-section .designer-description-text .desc {
+        line-height: 33px;
+        font-size: 23px;
+        margin-bottom: 40px;
+        min-height: 200px; } }
   @media only screen and (max-width: 1023px) {
-    .designer-description-text {
-      clear: left;
-      padding: 40px; } }
+    #designerprofile-section .designer-description-text {
+      width: auto;
+      padding: calc(5% + 15px) 30px; } }
 
-.designer-video-link {
-  padding-bottom: 40px;
+#designerprofile-section .designer-video-link {
   display: inline-block; }
-  .designer-video-link a {
+  #designerprofile-section .designer-video-link a {
     text-decoration: none; }
-  .designer-video-link h2 {
+  #designerprofile-section .designer-video-link h2 {
     color: black;
     padding-bottom: 2px;
     border-bottom: 1px solid black; }
+
+#designerprofile-section .next-prev {
+  background: black;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  bottom: 55px;
+  right: -35px; }
   @media only screen and (max-width: 1023px) {
-    .designer-video-link {
-      clear: left;
-      padding-left: 40px; } }
+    #designerprofile-section .next-prev {
+      display: none; } }
+  #designerprofile-section .next-prev.mobile {
+    width: 75px;
+    height: 75px;
+    right: -60px;
+    bottom: 20px;
+    display: none; }
+    @media only screen and (max-width: 1023px) {
+      #designerprofile-section .next-prev.mobile {
+        display: block; } }
 
 #map-section h2, #map-section h3, #map-section h4 {
   color: white; }
@@ -667,7 +716,7 @@ ul {
   background-color: #dfdfe1;
   width: 65%;
   min-width: 400px; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) {
     .map-container {
       height: 900px; } }
   @media only screen and (max-width: 1023px) {
@@ -684,7 +733,7 @@ ul {
   background-color: #232f49;
   padding-left: 60px;
   padding-bottom: 60px; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) {
     .map-info {
       height: 900px; } }
   @media only screen and (max-width: 1023px) {
