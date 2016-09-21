@@ -56,7 +56,7 @@ h1 {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) and (max-width: 1280px) {
     h1 {
       line-height: 52px;
       font-size: 36px; } }
@@ -84,7 +84,7 @@ h3 {
   font-weight: 700;
   box-sizing: border-box;
   letter-spacing: 2px; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) and (max-width: 1280px) {
     h3 {
       line-height: 35px;
       font-size: 22px; } }
@@ -100,7 +100,7 @@ h4 {
   width: 100%;
   box-sizing: border-box;
   letter-spacing: .5px; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) and (max-width: 1280px) {
     h4 {
       font-size: 12px;
       line-height: 20px; } }
@@ -116,7 +116,7 @@ span, p {
   font-size: 25px;
   margin: 0;
   letter-spacing: 0.007em; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) and (max-width: 1280px) {
     span, p {
       line-height: 33px;
       font-size: 22px; } }
@@ -173,10 +173,9 @@ sup {
 
 .white-line {
   height: 1px;
+  width: 200%;
   background-color: white;
-  position: relative;
-  margin-top: 1vh;
-  margin-bottom: 1vh; }
+  position: relative; }
 
 .hover {
   -webkit-user-select: none;
@@ -373,6 +372,15 @@ ul {
 #clubhouse-section h1, #clubhouse-section h2, #clubhouse-section h3 {
   color: white; }
 
+#clubhouse-section h1 {
+  line-height: 55px;
+  font-size: 38px; }
+
+#clubhouse-section h3 {
+  line-height: 32px;
+  font-size: 20px;
+  letter-spacing: 1px; }
+
 #clubhouse-section h2 {
   text-align: center;
   margin: 7px; }
@@ -396,15 +404,17 @@ ul {
   overflow: hidden;
   position: relative;
   float: right;
-  width: 70%; }
+  width: 80%; }
   .clubhouse-image-container .image {
-    right: 0;
-    width: auto;
-    height: 100%; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    object-fit: cover;
+    width: 100%; }
+  @media only screen and (min-width: 1024px) and (max-width: 1280px) {
     .clubhouse-image-container {
-      top: 5vh;
-      width: 80%; } }
+      width: 64%; }
+      .clubhouse-image-container .image {
+        object-fit: cover;
+        height: 100%;
+        width: auto; } }
   @media only screen and (max-width: 1023px) {
     .clubhouse-image-container {
       top: 10.5vh;
@@ -425,16 +435,9 @@ ul {
   margin-top: 5%;
   margin-left: 4%; }
   .clubhouse-blue-box .white-line {
-    left: -15vw; }
-  .clubhouse-blue-box h3 {
-    font-size: 10px; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
-    .clubhouse-blue-box {
-      right: auto;
-      width: 60%;
-      min-height: 70vh;
-      margin-top: 3vh;
-      margin-left: 5vw; } }
+    left: -469px;
+    margin-top: 14px;
+    margin-bottom: 38px; }
   @media only screen and (max-width: 1023px) {
     .clubhouse-blue-box {
       right: auto;
@@ -599,7 +602,7 @@ ul {
   background-color: #dfdfe1;
   width: 65%;
   min-width: 400px; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) and (max-width: 1280px) {
     .map-container {
       height: 900px; } }
   @media only screen and (max-width: 1023px) {
@@ -616,7 +619,7 @@ ul {
   background-color: #232f49;
   padding-left: 60px;
   padding-bottom: 60px; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) and (max-width: 1280px) {
     .map-info {
       height: 900px; } }
   @media only screen and (max-width: 1023px) {
