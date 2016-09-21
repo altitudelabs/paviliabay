@@ -14,20 +14,20 @@ h1 {
   }
 
   @include responsive(mobile){
-    line-height: 45px;
-    font-size: 35px;
+    line-height: 35px;
+    font-size: 24px;
   }
 }
 
 h2 {
   line-height: 32px;
   font-size: 30px;
-  font-weight: lighter;
+  font-weight: 100;
   width: 100%;
   box-sizing: border-box;
 
   @include responsive(mobile) {
-    font-size: 18px;
+    font-size: 24px;
     line-height: 30px;
   }
 }
@@ -60,14 +60,9 @@ h4 {
   box-sizing: border-box;
   letter-spacing: .5px;
 
-  @include responsive(transition){
-    font-size: 12px;
-    line-height: 20px;
-  }
-
   @include responsive(mobile){
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 13px;
+    line-height: 15px;
   }
 }
 
@@ -95,7 +90,6 @@ br {
 
 .chinese-chars {
   font-family: futuraChinese;
-  letter-spacing: 24px;
 
   h2 {
 

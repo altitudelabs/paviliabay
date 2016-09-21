@@ -62,18 +62,18 @@ h1 {
       font-size: 36px; } }
   @media only screen and (max-width: 1023px) {
     h1 {
-      line-height: 45px;
-      font-size: 35px; } }
+      line-height: 35px;
+      font-size: 24px; } }
 
 h2 {
   line-height: 32px;
   font-size: 30px;
-  font-weight: lighter;
+  font-weight: 100;
   width: 100%;
   box-sizing: border-box; }
   @media only screen and (max-width: 1023px) {
     h2 {
-      font-size: 18px;
+      font-size: 24px;
       line-height: 30px; } }
 
 h3 {
@@ -100,14 +100,10 @@ h4 {
   width: 100%;
   box-sizing: border-box;
   letter-spacing: .5px; }
-  @media only screen and (min-width: 1024px) and (max-width: 1280px) {
-    h4 {
-      font-size: 12px;
-      line-height: 20px; } }
   @media only screen and (max-width: 1023px) {
     h4 {
-      font-size: 16px;
-      line-height: 28px; } }
+      font-size: 13px;
+      line-height: 15px; } }
 
 span, p {
   font-weight: 700;
@@ -129,8 +125,7 @@ br {
   line-height: 30px; }
 
 .chinese-chars {
-  font-family: futuraChinese;
-  letter-spacing: 24px; }
+  font-family: futuraChinese; }
 
 .english-chars {
   font-family: futuraEnglish; }
@@ -184,6 +179,15 @@ sup {
 #hero-section h1, #hero-section h4 {
   text-align: center; }
 
+#hero-section h2 {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-weight: normal;
+  letter-spacing: 24px; }
+  @media only screen and (max-width: 1023px) {
+    #hero-section h2 {
+      letter-spacing: 12px; } }
+
 #hero-section h3 {
   text-transform: uppercase;
   color: #232f49; }
@@ -199,10 +203,6 @@ sup {
   left: 10%;
   width: 80%;
   text-align: center; }
-  #hero-section .title-center h2 {
-    margin-top: 10px;
-    margin-left: 10px;
-    font-weight: normal; }
 
 .video-container {
   height: 92vh;
@@ -223,6 +223,7 @@ sup {
     margin-left: 45px; }
     @media only screen and (max-width: 1023px) {
       .hero-footer h3 {
+        margin-left: 20px;
         font-size: 90%;
         height: 100%; } }
 
@@ -241,6 +242,9 @@ sup {
   border: 1px solid rgba(255, 255, 255, 0.5);
   padding: 10px 23px;
   margin-top: 40px; }
+  @media only screen and (max-width: 1023px) {
+    .transparent-button {
+      margin-top: 20px; } }
 
 #nav-menu {
   text-align: right;
@@ -388,7 +392,8 @@ ul {
   @media only screen and (max-width: 1023px) {
     #clubhouse-section h2 {
       padding-top: 2px;
-      line-height: 20px; } }
+      line-height: 20px;
+      font-size: 18px; } }
 
 #clubhouse-section h3 {
   line-height: 32px;
@@ -407,14 +412,15 @@ ul {
   bottom: 80px; }
   @media only screen and (max-width: 1023px) {
     #clubhouse-section .link-menu {
-      bottom: 40px; } }
+      bottom: 50px; } }
 
 .clubhouse-background {
-  background-color: #dfdfe1; }
+  background-color: #dfdfe1;
+  height: 90%;
+  min-height: 95vh; }
 
 .clubhouse-image-container {
   height: 96vh;
-  overflow: hidden;
   position: relative;
   float: right;
   width: 80%; }
@@ -427,16 +433,16 @@ ul {
       .clubhouse-image-container .image {
         object-fit: cover;
         height: 100%;
-        width: auto; } }
+        width: auto;
+        right: 0; } }
   @media only screen and (max-width: 1023px) {
     .clubhouse-image-container {
       top: 10.5vh;
-      height: 73vh;
+      height: 84.5vh;
       width: 100%; }
       .clubhouse-image-container .image {
         object-fit: cover;
-        height: 100%;
-        width: auto; } }
+        height: 100%; } }
 
 .clubhouse-blue-box {
   padding: 40px;
@@ -446,8 +452,10 @@ ul {
   display: table;
   width: 460px;
   height: 610px;
+  overflow: auto;
   margin-top: 5%;
-  margin-left: 4%; }
+  margin-left: 4%;
+  overflow: auto; }
   .clubhouse-blue-box .white-line {
     left: -469px;
     margin-top: 14px;
@@ -462,7 +470,8 @@ ul {
       margin-left: 0px;
       margin-top: 0px;
       width: 66%;
-      height: 400px; }
+      max-height: 400px;
+      overflow-y: auto; }
       .clubhouse-blue-box .white-line {
         margin-bottom: 22px;
         left: -8vw;
