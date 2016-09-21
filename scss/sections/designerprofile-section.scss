@@ -1,13 +1,13 @@
-.background-image {
-  height: 80vw;
-  min-height: 50vh;
-  max-width: 120%;
-  position: absolute;
-
-  @include responsive(mobile){
-    min-height: 500px;
-  }
-}
+// .background-image {
+//   height: 80vw;
+//   min-height: 50vh;
+//   max-width: 120%;
+//   position: absolute;
+//
+//   @include responsive(mobile){
+//     min-height: 500px;
+//   }
+// }
 
 .description-gray-box {
   min-width: 80vw;
