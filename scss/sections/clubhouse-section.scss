@@ -7,6 +7,11 @@
   h1 {
     line-height: 55px;
     font-size: 38px;
+
+    @include responsive(mobile) {
+      line-height: 28px;
+      font-size: 20px;
+    }
   }
 
   h2 {
@@ -17,6 +22,11 @@
     line-height: 32px;
     font-size: 20px;
     letter-spacing: 1px;
+
+    @include responsive(mobile) {
+      line-height: 19px;
+      font-size: 12px;
+    }
   }
 
 
@@ -72,8 +82,9 @@
 
   @include responsive(mobile){
     .image {
-      height: 93%;
-      right: -57%;
+      object-fit: cover;
+      height: 100%;
+      width: auto;
     }
 
     top: 10.5vh;
@@ -113,6 +124,10 @@
 
   @include responsive(mobile){
     right: auto;
+    padding: 24px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-right: 20px;
     //width: 90%;
     //min-height: 50vh;
     margin-left: 0px;
@@ -121,7 +136,8 @@
     height: 400px;
 
     .white-line {
-      left: -10vw;
+      margin-bottom: 22px;
+      left: -8vw;
       width: 90%;
     }
   }

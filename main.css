@@ -375,11 +375,19 @@ ul {
 #clubhouse-section h1 {
   line-height: 55px;
   font-size: 38px; }
+  @media only screen and (max-width: 1023px) {
+    #clubhouse-section h1 {
+      line-height: 28px;
+      font-size: 20px; } }
 
 #clubhouse-section h3 {
   line-height: 32px;
   font-size: 20px;
   letter-spacing: 1px; }
+  @media only screen and (max-width: 1023px) {
+    #clubhouse-section h3 {
+      line-height: 19px;
+      font-size: 12px; } }
 
 #clubhouse-section h2 {
   text-align: center;
@@ -421,8 +429,9 @@ ul {
       height: 73vh;
       width: 100%; }
       .clubhouse-image-container .image {
-        height: 93%;
-        right: -57%; } }
+        object-fit: cover;
+        height: 100%;
+        width: auto; } }
 
 .clubhouse-blue-box {
   padding: 40px;
@@ -441,12 +450,17 @@ ul {
   @media only screen and (max-width: 1023px) {
     .clubhouse-blue-box {
       right: auto;
+      padding: 24px;
+      padding-top: 30px;
+      padding-bottom: 20px;
+      padding-right: 20px;
       margin-left: 0px;
       margin-top: 0px;
       width: 66%;
       height: 400px; }
       .clubhouse-blue-box .white-line {
-        left: -10vw;
+        margin-bottom: 22px;
+        left: -8vw;
         width: 90%; } }
 
 #companyinfo-section h1, #companyinfo-section h3, #companyinfo-section p {
