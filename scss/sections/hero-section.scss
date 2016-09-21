@@ -60,41 +60,14 @@
 .hero-logo {
   display: inline-block;
   position: absolute;
-  top: 3.5%;
-  left: 1%;
-  width: 14%;
-  height: auto;
+  top: 5%;
+  left: 3.5%;
+  width: 9.5%;
 
   @include responsive(mobile){
     width: 20%;
   }
 }
-
-.menu-nav {
-  display: inline-block;
-  position: absolute;
-  top: 4.5%;
-  right: 4%;
-  width: 3.5%;
-  height: auto;
-
-  @include responsive(mobile){
-    width: 20%;
-  }
-}
-//
-// .menu-nav {
-//   display: inline-block;
-//   position: absolute;
-//   top: 2vh;
-//   right: 5px;
-//   width: 15%;
-//   height: auto;
-//
-//   @include responsive(mobile){
-//     width: 20%;
-//   }
-// }
 
 .transparent-button {
   display: inline-block;
