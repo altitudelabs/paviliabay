@@ -2,6 +2,7 @@
  * Helpers / Functions
  * Usage:
  *        @include transform(translateX(1px));
+ *        @include animation((modal-fade 1s));
  *        @include transform((translateX(1px) rotateY(5deg)));
  *        @include opacity(0.5);
  *        @include transition((margin 0.5s 1s));
@@ -15,6 +16,14 @@
   -ms-transform: $tranform;
   -o-transform: $tranform;
   transform: $tranform;
+}
+
+@mixin animation($animation){
+  -webkit-animation: $animation;
+  -moz-animation: $animation;
+  -ms-animation: $animation;
+  -o-animation: $animation;
+  animation: $animation;
 }
 
 @mixin opacity($o) {
