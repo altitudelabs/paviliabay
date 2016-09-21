@@ -3,10 +3,14 @@
     color: white;
   }
 
-  h1, h3 {
-    margin-top: 3vh;
-    margin-bottom: 1.5vh;
+  h1 {
+
   }
+
+  // h1, h3 {
+  //   margin-top: 3vh;
+  //   margin-bottom: 1.5vh;
+  // }
 
   h2 {
     text-align: center;
@@ -37,8 +41,8 @@
     width: auto;
     height: 100%;
   }
-  min-height: 1000px;
-  height: 100vh;
+  // min-height: 1000px;
+  height: 96vh;
   overflow: hidden;
   position: relative;
   float: right;
@@ -51,20 +55,20 @@
 
   @include responsive(mobile){
     .image {
-      height: 100%;
-      right: -45%;
+      height: 93%;
+      right: -57%;
     }
 
-    top: 15vh;
-    height: 50vh;
+    top: 10.5vh;
+    height: 73vh;
     width: 100%;
   }
 }
 
 .clubhouse-blue-box {
   @extend .blue-box;
-  //padding: 40px;
-  //padding-top: 20px;
+  padding: 40px;
+  padding-top: 30px;
   position: absolute;
   box-sizing: border-box;
   //min-height: 700px;
@@ -93,10 +97,12 @@
 
   @include responsive(mobile){
     right: auto;
-    width: 90%;
-    min-height: 50vh;
+    //width: 90%;
+    //min-height: 50vh;
     margin-left: 0px;
     margin-top: 0px;
+    width: 66%;
+    height: 400px;
 
     .white-line {
       left: -10vw;

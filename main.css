@@ -373,10 +373,6 @@ ul {
 #clubhouse-section h1, #clubhouse-section h2, #clubhouse-section h3 {
   color: white; }
 
-#clubhouse-section h1, #clubhouse-section h3 {
-  margin-top: 3vh;
-  margin-bottom: 1.5vh; }
-
 #clubhouse-section h2 {
   text-align: center;
   margin: 7px; }
@@ -396,8 +392,7 @@ ul {
   background-color: #dfdfe1; }
 
 .clubhouse-image-container {
-  min-height: 1000px;
-  height: 100vh;
+  height: 96vh;
   overflow: hidden;
   position: relative;
   float: right;
@@ -412,14 +407,16 @@ ul {
       width: 80%; } }
   @media only screen and (max-width: 1023px) {
     .clubhouse-image-container {
-      top: 15vh;
-      height: 50vh;
+      top: 10.5vh;
+      height: 73vh;
       width: 100%; }
       .clubhouse-image-container .image {
-        height: 100%;
-        right: -45%; } }
+        height: 93%;
+        right: -57%; } }
 
 .clubhouse-blue-box {
+  padding: 40px;
+  padding-top: 30px;
   position: absolute;
   box-sizing: border-box;
   display: table;
@@ -441,10 +438,10 @@ ul {
   @media only screen and (max-width: 1023px) {
     .clubhouse-blue-box {
       right: auto;
-      width: 90%;
-      min-height: 50vh;
       margin-left: 0px;
-      margin-top: 0px; }
+      margin-top: 0px;
+      width: 66%;
+      height: 400px; }
       .clubhouse-blue-box .white-line {
         left: -10vw;
         width: 90%; } }
