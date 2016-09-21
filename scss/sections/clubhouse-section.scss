@@ -15,7 +15,15 @@
   }
 
   h2 {
+    text-align: center;
+    margin: 2px;
+    margin-left: 5px;
+    padding-right: 12px;
 
+    @include responsive(mobile) {
+      padding-top: 2px;
+      line-height: 20px;
+    }
   }
 
   h3 {
@@ -35,21 +43,15 @@
   //   margin-bottom: 1.5vh;
   // }
 
-  h2 {
-    text-align: center;
-    margin: 7px;
-  }
-
   .link-menu {
     position: absolute;
     border-bottom: 1px solid white;
     background-color: rgba(0, 0, 0, .3);
     right: 0;
-    bottom: 200px;
-    padding: 8px;
+    bottom: 80px;
 
     @include responsive(mobile) {
-      bottom: 50px;
+      bottom: 40px;
     }
   }
 }
