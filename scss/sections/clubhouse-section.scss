@@ -46,13 +46,15 @@
     bottom: 80px;
 
     @include responsive(mobile) {
-      bottom: 40px;
+      bottom: 33px;
     }
   }
 }
 
 .clubhouse-image-container {
   min-height: 750px;
+  height: 96vh;
+  max-height: 850px;
 
   @extend .background-cover;
   background-image: url("./images/clubhouse-section/club1.jpg");
@@ -79,7 +81,9 @@
     // }
     background-position: left;
     top: 11.5vh;
-    height: 84.5vh;
+    // height: 84.5vh;
+    // min-height: 84.5vh;
+    min-height: 570px;
     width: 100%;
   }
 }
@@ -147,6 +151,8 @@
 .scroll-textbox-area {
   height: 373px;
   overflow-y: auto;
+  margin-right: -300px;
+  padding-right: 300px;
 
   @include responsive(mobile) {
     height: 240px;
@@ -154,7 +160,33 @@
 }
 
 .hide-scroll{
-  height: 350px;
-  background-color: red;
+  height: 373px;
   overflow: hidden;
+
+  @include responsive(mobile) {
+    height: 240px;
+  }
+}
+
+.wheelbutton-container {
+  width: 100px;
+  float: right;
+  padding-left: 100px;
+  margin-top: -127px;
+
+  @include responsive(mobile) {
+    padding-left: 90px;
+    margin-top: -28px;
+  }
+}
+
+.wheelbutton {
+  height: 125px;
+  width: 125px;
+  background-color: black;
+
+  @include responsive(mobile) {
+    height: 85px;
+    width: 85px;
+  }
 }
