@@ -168,7 +168,6 @@ sup {
   position: absolute; }
 
 .white-line {
-  z-index: 5;
   height: 1px;
   width: 200%;
   background-color: white;
@@ -454,8 +453,7 @@ ul {
   width: 35.5%; }
   @media only screen and (max-width: 1023px) {
     .clubhouse-blue-box-container {
-      width: 100%;
-      height: 10.5vh;
+      width: 0;
       top: 0;
       padding-bottom: 0; } }
 
