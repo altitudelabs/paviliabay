@@ -56,11 +56,11 @@ h1 {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 784px) and (max-width: 1279px) {
     h1 {
       line-height: 52px;
       font-size: 36px; } }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     h1 {
       line-height: 35px;
       font-size: 24px; } }
@@ -71,7 +71,7 @@ h2 {
   font-weight: 100;
   width: 100%;
   box-sizing: border-box; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     h2 {
       font-size: 24px;
       line-height: 30px; } }
@@ -84,11 +84,11 @@ h3 {
   font-weight: 700;
   box-sizing: border-box;
   letter-spacing: 2px; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 784px) and (max-width: 1279px) {
     h3 {
       line-height: 35px;
       font-size: 22px; } }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     h3 {
       line-height: 30px;
       font-size: 15px; } }
@@ -100,7 +100,7 @@ h4 {
   width: 100%;
   box-sizing: border-box;
   letter-spacing: .5px; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     h4 {
       font-size: 13px;
       line-height: 15px; } }
@@ -112,11 +112,11 @@ span, p {
   font-size: 25px;
   margin: 0;
   letter-spacing: 0.007em; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 784px) and (max-width: 1279px) {
     span, p {
       line-height: 33px;
       font-size: 22px; } }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     span, p {
       line-height: 30px;
       font-size: 15px; } }
@@ -202,7 +202,7 @@ sup {
   margin-left: 10px;
   font-weight: normal;
   letter-spacing: 24px; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     #hero-section h2 {
       letter-spacing: 12px; } }
 
@@ -239,7 +239,7 @@ sup {
     line-height: 8vh;
     letter-spacing: normal;
     margin-left: 45px; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 783px) {
       .hero-footer h3 {
         margin-left: 20px;
         font-size: 90%;
@@ -251,7 +251,7 @@ sup {
   top: 5%;
   left: 3.5%;
   width: 9.5%; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     .hero-logo {
       width: 20%; } }
 
@@ -260,7 +260,7 @@ sup {
   border: 1px solid rgba(255, 255, 255, 0.5);
   padding: 10px 23px;
   margin-top: 40px; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     .transparent-button {
       margin-top: 20px; } }
 
@@ -272,7 +272,7 @@ sup {
   width: 3%;
   height: auto;
   cursor: pointer; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     #nav-menu {
       width: 5%; } }
   #nav-menu a, #nav-menu h3 {
@@ -286,7 +286,7 @@ sup {
     margin-left: 0;
     white-space: nowrap;
     font-weight: 700; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 783px) {
       #nav-menu a, #nav-menu h3 {
         padding-right: 30px;
         font-size: 19px; } }
@@ -317,7 +317,7 @@ ul {
         height: 2em; }
       #nav-menu-content li ul li a {
         color: #9e9da2; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     #nav-menu-content {
       height: 100vh;
       padding-top: 15px; } }
@@ -338,7 +338,7 @@ ul {
   height: 40px;
   float: right;
   margin-bottom: 40px; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     #nav-cross {
       margin-bottom: 45px; } }
   #nav-cross:after {
@@ -362,7 +362,7 @@ ul {
   right: 6px;
   z-index: 2;
   top: 83vh; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     #nav-bottom-menu {
       top: 88vh; } }
 
@@ -393,13 +393,12 @@ ul {
 
 #clubhouse-section {
   position: relative;
-  color: white;
-  background-color: #dfdfe1;
-  height: 96vh; }
+  color: #dfdfe1;
+  background-color: #dfdfe1; }
   #clubhouse-section h1 {
     line-height: 55px;
     font-size: 38px; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 783px) {
       #clubhouse-section h1 {
         line-height: 28px;
         font-size: 20px; } }
@@ -408,7 +407,7 @@ ul {
     margin: 2px;
     margin-left: 5px;
     padding-right: 12px; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 783px) {
       #clubhouse-section h2 {
         padding-top: 2px;
         line-height: 20px;
@@ -417,9 +416,9 @@ ul {
     line-height: 32px;
     font-size: 20px;
     letter-spacing: 1px; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 783px) {
       #clubhouse-section h3 {
-        line-height: 19px;
+        line-height: 18px;
         font-size: 12px; } }
   #clubhouse-section .link-menu {
     position: absolute;
@@ -427,67 +426,76 @@ ul {
     background-color: rgba(0, 0, 0, 0.3);
     right: 0;
     bottom: 80px; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 783px) {
       #clubhouse-section .link-menu {
-        bottom: 50px; } }
+        bottom: 40px; } }
 
 .clubhouse-image-container {
-  height: 96vh;
+  min-height: 750px;
   background-image: url("./images/clubhouse-section/club1.jpg");
+  background-position: left;
+  background-size: cover;
   position: relative;
   float: right;
   width: 64.5%; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 784px) and (max-width: 1279px) {
     .clubhouse-image-container {
       width: 64%; } }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     .clubhouse-image-container {
+      background-position: left;
+      top: 11.5vh;
       height: 84.5vh;
       width: 100%; } }
 
 .clubhouse-blue-box-container {
   overflow-y: visible;
   float: left;
-  padding-bottom: 150px;
+  padding-bottom: 79px;
   padding-top: 65px;
   width: 35.5%; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     .clubhouse-blue-box-container {
       width: 0;
       top: 0;
+      padding-top: 0;
       padding-bottom: 0; } }
 
 .clubhouse-blue-box {
   position: relative;
   padding: 40px;
   padding-top: 30px;
-  left: calc(100% - 395px);
-  width: 460px;
-  height: 610px; }
+  left: calc(100% - 404px);
+  width: 460px; }
   .clubhouse-blue-box .white-line {
     left: -469px;
     margin-top: 14px;
     margin-bottom: 38px; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     .clubhouse-blue-box {
       left: 0;
       top: 0;
-      padding: 24px;
-      padding-top: 30px;
-      padding-bottom: 20px;
-      padding-right: 20px;
+      padding: 30px 20px 20px 24px;
       margin-left: 0px;
       margin-top: 0px;
-      width: 66%;
-      min-height: 400px; }
+      max-height: 400px;
+      width: 250px; }
       .clubhouse-blue-box .white-line {
         margin-bottom: 22px;
         left: -8vw;
         width: 90%; } }
 
-.scroll-textbox {
+.scroll-textbox-area {
+  height: 373px;
+  overflow-y: auto; }
+  @media only screen and (max-width: 783px) {
+    .scroll-textbox-area {
+      height: 240px; } }
+
+.hide-scroll {
   height: 350px;
-  overflow-y: scroll; }
+  background-color: red;
+  overflow: hidden; }
 
 #companyinfo-section h1, #companyinfo-section h3, #companyinfo-section p {
   color: white;
@@ -496,7 +504,7 @@ ul {
 #companyinfo-section p {
   padding: 40px;
   padding-bottom: 200px; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     #companyinfo-section p {
       padding: 20px; } }
 
@@ -506,7 +514,7 @@ ul {
   position: relative;
   margin: 0 auto auto auto;
   text-align: center; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     .companyinfo-body-container {
       width: 100%; } }
 
@@ -520,7 +528,7 @@ ul {
   padding: 40px 30px; }
   .disclaimer h3 {
     text-transform: uppercase; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     .disclaimer {
       padding: 40px 0; } }
 
@@ -534,7 +542,7 @@ ul {
   margin-right: 40px;
   position: relative;
   padding-top: 80px; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     .description-gray-box {
       margin-top: 450px;
       margin-left: 20px;
@@ -562,7 +570,7 @@ ul {
     font-weight: 500; }
   .profile-blue-box h3 {
     margin-top: 3vh; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     .profile-blue-box {
       width: 70%;
       height: 500px;
@@ -583,7 +591,7 @@ ul {
   width: 540px;
   height: calc(580px + 80px);
   margin-right: 40px; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     .erase-shifted-offset {
       width: 360px;
       height: 0px; } }
@@ -599,7 +607,7 @@ ul {
   position: relative;
   padding-bottom: 50px;
   padding-right: 40px; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     .designer-description-text {
       clear: left;
       padding: 40px; } }
@@ -613,7 +621,7 @@ ul {
     color: black;
     padding-bottom: 2px;
     border-bottom: 1px solid black; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     .designer-video-link {
       clear: left;
       padding-left: 40px; } }
@@ -633,10 +641,10 @@ ul {
   background-color: #dfdfe1;
   width: 65%;
   min-width: 400px; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 784px) and (max-width: 1279px) {
     .map-container {
       height: 900px; } }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     .map-container {
       width: 100%;
       height: 60vh;
@@ -650,10 +658,10 @@ ul {
   background-color: #232f49;
   padding-left: 60px;
   padding-bottom: 60px; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 784px) and (max-width: 1279px) {
     .map-info {
       height: 900px; } }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     .map-info {
       width: 100%;
       height: auto;
@@ -684,10 +692,10 @@ ul {
   flex: none;
   height: 100vh;
   width: 100%; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     .panorama-background-image {
       width: auto; } }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     .panorama-background-image {
       height: 100%;
       width: auto; } }
@@ -715,7 +723,7 @@ ul {
   -moz-opacity: 0.5;
   -khtml-opacity: 0.5;
   opacity: 0.5; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     .panorama-button {
       padding: 2px;
       margin: auto;
@@ -734,14 +742,14 @@ ul {
   padding-bottom: 10px;
   text-align: center;
   background-color: #232f49; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     .portfolio-header {
       margin-top: 2px; } }
 
 .portfolio-image-container {
   text-align: center;
   padding-top: 2px; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     .portfolio-image-container {
       padding-bottom: 2px; } }
 
@@ -769,7 +777,7 @@ ul {
   text-align: center; }
   .register-body-container h3 {
     color: white; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     .register-body-container {
       padding: 20px 10px; } }
 
@@ -782,7 +790,7 @@ ul {
   .register-button h3 {
     color: #232f49;
     text-transform: uppercase; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 783px) {
     .register-button {
       padding-right: 5px;
       padding-left: 5px; } }

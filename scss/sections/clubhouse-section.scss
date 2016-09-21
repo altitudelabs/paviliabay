@@ -1,9 +1,8 @@
 #clubhouse-section {
   @extend .clearfix;
   position: relative;
-  color: white;
+  color: $light-gray;
   background-color: $light-gray;
-  height: 96vh;
 
   h1 {
     line-height: 55px;
@@ -34,7 +33,7 @@
     letter-spacing: 1px;
 
     @include responsive(mobile) {
-      line-height: 19px;
+      line-height: 18px;
       font-size: 12px;
     }
   }
@@ -47,17 +46,18 @@
     bottom: 80px;
 
     @include responsive(mobile) {
-      // bottom: 40px;
-      bottom: 50px;
+      bottom: 40px;
     }
   }
 }
 
 .clubhouse-image-container {
-  height: 96vh;
+  min-height: 750px;
 
   @extend .background-cover;
   background-image: url("./images/clubhouse-section/club1.jpg");
+  background-position: left;
+  background-size: cover;
   position: relative;
   float: right;
   width: 64.5%;
@@ -77,7 +77,8 @@
     //   object-fit: cover;
     //   height: 100%;
     // }
-
+    background-position: left;
+    top: 11.5vh;
     height: 84.5vh;
     width: 100%;
   }
@@ -86,13 +87,14 @@
   overflow-y: visible;
   float: left;
 
-  padding-bottom: 150px;
+  padding-bottom: 79px;
   padding-top: 65px;
   width: 35.5%;
 
   @include responsive(mobile) {
     width: 0;
     top: 0;
+    padding-top: 0;
     padding-bottom: 0;
 
   }
@@ -106,10 +108,10 @@
   //left: 50px;
   // right: -65px;
   // left: auto;
-  left: calc(100% - 395px);
+  left: calc(100% - 404px);
   width: 460px;
   //max-width: 460px;
-  height: 610px;
+  // height: 610px;
 
   .white-line {
     left: -469px;
@@ -128,14 +130,11 @@
   @include responsive(mobile){
     left: 0;
     top: 0;
-    padding: 24px;
-    padding-top: 30px;
-    padding-bottom: 20px;
-    padding-right: 20px;
+    padding: 30px 20px 20px 24px;
     margin-left: 0px;
     margin-top: 0px;
-    width: 66%;
-    min-height: 400px;
+    max-height: 400px;
+    width: 250px;
 
     .white-line {
       margin-bottom: 22px;
@@ -145,7 +144,17 @@
   }
 }
 
-.scroll-textbox {
+.scroll-textbox-area {
+  height: 373px;
+  overflow-y: auto;
+
+  @include responsive(mobile) {
+    height: 240px;
+  }
+}
+
+.hide-scroll{
   height: 350px;
-  overflow-y: scroll;
+  background-color: red;
+  overflow: hidden;
 }
