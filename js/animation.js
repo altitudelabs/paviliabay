@@ -60,7 +60,7 @@ $('.clubhouse-blue-box').on('webkitTransitionEnd otransitionend oTransitionEnd m
 });
 
 var changeClubhouseContent = function (currentSection) {
-  var clubhouseText = ['Blue Pavilia - Hong Kong\'s first residential clubhouse ',
+  var clubhouseText = ['Blue Pavilion - Hong Kong\'s first residential clubhouse ',
     'embodied with distinctive superyacht features. The pioneering Blue Pavilia is designed ',
     'by the international renowned superyacht designer Philippe Briand. ',
     'It features a swimming pool, a kids pool, three jacuzzis, three saunas, ',
@@ -78,19 +78,22 @@ var changeClubhouseContent = function (currentSection) {
   if (currentSection == 'clubhouse') {
   	$('#clubTitle').html('the <br> facade');
   	$('#clubText').text(facadeText);
-  	$('#clubImage').attr('src','images/clubhouse-section/6_facade1.jpg');
+    // $('.clubhouse-image-container').css('background-image', 'url(images/clubhouse-section/6_facade1.jpg)');
+  	// $('#clubImage').attr('src','images/clubhouse-section/6_facade1.jpg');
   	$('.clubLink').text('The Interior >');
     $('#clubhouse-section').data('id', 'facade')
   } else if (currentSection == 'facade') {
     $('#clubTitle').html('the <br> interior');
     $('#clubText').text(interiorText);
-    $('#clubImage').attr('src','images/clubhouse-section/9_interior2.jpg');
+    // $('.clubhouse-image-container').css('background-image', 'url(images/clubhouse-section/9_interior2.jpg)');
+    // $('#clubImage').attr('src','images/clubhouse-section/9_interior2.jpg');
     $('.clubLink').text('The Clubhouse >');
     $('#clubhouse-section').data('id', 'interior')
   } else {
     $('#clubTitle').html('the <br> clubhouse');
     $('#clubText').text(clubhouseText);
-    $('#clubImage').attr('src','images/clubhouse-section/club1.jpg');
+    // $('.clubhouse-image-container').css('background-image', 'url(images/clubhouse-section/club1.jpg)');
+    // $('#clubImage').attr('src','images/clubhouse-section/club1.jpg');
     $('.clubLink').text('The Facade >');
     $('#clubhouse-section').data('id', 'clubhouse')   
   }
