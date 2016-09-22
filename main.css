@@ -48,65 +48,6 @@
   font-family: futuraChinese;
   src: url("./fonts/chinese traditional/H-LiHei-regular.ttf") format("truetype"); }
 
-h1 {
-  line-height: 52px;
-  font-size: 37px;
-  font-weight: 700;
-  letter-spacing: 1px; }
-  @media only screen and (min-width: 1024px) {
-    h1 {
-      line-height: 52px;
-      font-size: 36px; } }
-  @media only screen and (max-width: 1023px) {
-    h1 {
-      line-height: 35px;
-      font-size: 24px; } }
-
-h2 {
-  line-height: 32px;
-  font-size: 30px;
-  font-weight: 100;
-  width: 100%;
-  box-sizing: border-box; }
-  @media only screen and (max-width: 1023px) {
-    h2 {
-      font-size: 24px;
-      line-height: 30px; } }
-
-h3 {
-  line-height: 40px;
-  font-size: 23px;
-  width: 100%;
-  font-weight: 700;
-  box-sizing: border-box;
-  letter-spacing: 2px; }
-  @media only screen and (min-width: 1024px) {
-    h3 {
-      line-height: 35px;
-      font-size: 22px; } }
-  @media only screen and (max-width: 1023px) {
-    h3 {
-      line-height: 30px;
-      font-size: 15px; } }
-
-h4 {
-  font-size: 15px;
-  line-height: 20px;
-  font-weight: 100;
-  width: 100%;
-  box-sizing: border-box;
-  letter-spacing: .5px; }
-  @media only screen and (max-width: 1023px) {
-    h4 {
-      font-size: 13px;
-      line-height: 15px; } }
-
-br {
-  line-height: 30px; }
-
-.chinese-char {
-  font-family: futuraChinese; }
-
 * {
   padding: 0;
   margin: 0;
@@ -140,9 +81,6 @@ sup {
   background-color: #232f49;
   position: relative; }
 
-.image {
-  position: absolute; }
-
 .white-line {
   height: 1px;
   width: 200%;
@@ -153,11 +91,11 @@ sup {
   -webkit-user-select: none;
   -webkit-touch-callout: none; }
 
-.clearfix:before, #clubhouse-section:before, #designerprofile-section .description-grey-box:before, .clearfix:after, #clubhouse-section:after, #designerprofile-section .description-grey-box:after {
+.clearfix:before, .fixer-float-container:before, #clubhouse-section:before, #designerprofile-section .description-grey-box:before, .clearfix:after, .fixer-float-container:after, #clubhouse-section:after, #designerprofile-section .description-grey-box:after {
   content: " ";
   display: table; }
 
-.clearfix:after, #clubhouse-section:after, #designerprofile-section .description-grey-box:after {
+.clearfix:after, .fixer-float-container:after, #clubhouse-section:after, #designerprofile-section .description-grey-box:after {
   clear: both; }
 
 .background-image, .background-cover, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, .background-contain, #designerprofile-section .designer-photo {
@@ -315,6 +253,24 @@ sup {
     max-width: 1280px;
     height: auto;
     padding-top: 50vh; } }
+
+/* * * * * * * * * * * * * * * * * * * * *
+ * To horizontally center float elements
+ * Place the float elements inside the fixer container
+ *  inside the main container.
+ * * * * * * * * * * * * * * * * * * * * */
+.main-float-container {
+  float: left;
+  position: relative;
+  left: 50%; }
+
+.fixer-float-container {
+  float: left;
+  position: relative;
+  left: -50%; }
+
+.chinese-char {
+  font-family: futuraChinese; }
 
 #hero-section .title-container {
   position: absolute;
@@ -675,40 +631,87 @@ sup {
         height: 85px;
         width: 85px; } }
 
-#companyinfo-section h1, #companyinfo-section h3, #companyinfo-section p {
+#companyinfo-section {
   color: white;
   text-align: center; }
-
-#companyinfo-section p {
-  padding: 40px;
-  padding-bottom: 200px; }
-  @media only screen and (max-width: 1023px) {
-    #companyinfo-section p {
-      padding: 20px; } }
-
-.companyinfo-body-container {
-  background-color: #232f49;
-  width: 95vw;
-  position: relative;
-  margin: 0 auto auto auto;
-  text-align: center; }
-  @media only screen and (max-width: 1023px) {
-    .companyinfo-body-container {
-      width: 100%; } }
-
-.companylogo {
-  vertical-align: top;
-  padding-top: 40px;
-  display: inline-block;
-  margin: 20px; }
-
-.disclaimer {
-  padding: 40px 30px; }
-  .disclaimer h3 {
-    text-transform: uppercase; }
-  @media only screen and (max-width: 1023px) {
-    .disclaimer {
-      padding: 40px 0; } }
+  #companyinfo-section .companyinfo-body-container {
+    background-color: #232f49;
+    width: 95vw;
+    position: relative;
+    margin: 0 auto auto auto;
+    text-align: center; }
+    @media only screen and (max-width: 1023px) {
+      #companyinfo-section .companyinfo-body-container {
+        width: 100%; } }
+  #companyinfo-section p {
+    padding: 40px;
+    padding-bottom: 200px; }
+    @media only screen and (max-width: 1023px) {
+      #companyinfo-section p {
+        padding: 20px; } }
+  #companyinfo-section .company-logo {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 40px;
+    margin-bottom: 20px; }
+    #companyinfo-section .company-logo .description {
+      line-height: 40px;
+      font-size: 23px;
+      width: 100%;
+      font-weight: 700;
+      box-sizing: border-box;
+      letter-spacing: 2px; }
+      @media only screen and (min-width: 1024px) {
+        #companyinfo-section .company-logo .description {
+          line-height: 35px;
+          font-size: 22px; } }
+      @media only screen and (max-width: 1023px) {
+        #companyinfo-section .company-logo .description {
+          line-height: 30px;
+          font-size: 15px; } }
+    #companyinfo-section .company-logo .image {
+      width: 200px;
+      height: 100px;
+      background-color: black;
+      position: relative;
+      margin: auto; }
+  #companyinfo-section .disclaimer {
+    position: relative;
+    padding: 40px 30px; }
+    @media only screen and (max-width: 1023px) {
+      #companyinfo-section .disclaimer {
+        padding: 40px 0; } }
+    #companyinfo-section .disclaimer .title {
+      text-transform: uppercase;
+      line-height: 40px;
+      font-size: 23px;
+      width: 100%;
+      font-weight: 700;
+      box-sizing: border-box;
+      letter-spacing: 2px; }
+      @media only screen and (min-width: 1024px) {
+        #companyinfo-section .disclaimer .title {
+          line-height: 35px;
+          font-size: 22px; } }
+      @media only screen and (max-width: 1023px) {
+        #companyinfo-section .disclaimer .title {
+          line-height: 30px;
+          font-size: 15px; } }
+    #companyinfo-section .disclaimer p {
+      font-weight: 700;
+      position: relative;
+      line-height: 40px;
+      font-size: 25px;
+      margin: 0;
+      letter-spacing: 0.007em; }
+      @media only screen and (min-width: 1024px) {
+        #companyinfo-section .disclaimer p {
+          line-height: 33px;
+          font-size: 22px; } }
+      @media only screen and (max-width: 1023px) {
+        #companyinfo-section .disclaimer p {
+          line-height: 30px;
+          font-size: 15px; } }
 
 #designerprofile-section .yacht {
   background-image: url("images/designerprofile-section/bg.jpg");

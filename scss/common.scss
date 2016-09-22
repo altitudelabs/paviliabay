@@ -37,10 +37,6 @@ sup {
   position: relative;
 }
 
-.image {
-  position: absolute;
-}
-
 .white-line {
   height: 1px;
   width: 200%;
@@ -198,4 +194,26 @@ sup {
     height: auto;
     padding-top: 50vh;
   }
+}
+
+/* * * * * * * * * * * * * * * * * * * * *
+ * To horizontally center float elements
+ * Place the float elements inside the fixer container
+ *  inside the main container.
+ * * * * * * * * * * * * * * * * * * * * */
+.main-float-container {
+  float: left;
+  position: relative;
+  left: 50%;
+}
+.fixer-float-container {
+  float: left;
+  position: relative;
+  left: -50%;
+
+  @extend .clearfix;
+}
+
+.chinese-char {
+  font-family: futuraChinese;
 }

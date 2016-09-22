@@ -1,7 +1,17 @@
 #companyinfo-section {
-  h1, h3, p {
-    color: white;
+  color: white;
+  text-align: center;
+
+  .companyinfo-body-container {
+    background-color: $dark-blue;
+    width: 95vw;
+    position: relative;
+    margin: 0 auto auto auto;
     text-align: center;
+
+    @include responsive(mobile) {
+      width: 100%;
+    }
   }
 
   p {
@@ -12,35 +22,85 @@
       padding: 20px;
     }
   }
-}
 
-.companyinfo-body-container {
-  background-color: $dark-blue;
-  width: 95vw;
-  position: relative;
-  margin: 0 auto auto auto;
-  text-align: center;
+  .company-logo {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 40px;
+    margin-bottom: 20px;
 
-  @include responsive(mobile) {
-    width: 100%;
+    .description {
+      line-height: 40px;
+      font-size: 23px;
+      width: 100%;
+      font-weight: 700;
+      box-sizing: border-box;
+      letter-spacing: 2px;
+
+      @include responsive(transition){
+          line-height: 35px;
+          font-size: 22px;
+      }
+
+      @include responsive(mobile){
+        line-height: 30px;
+        font-size: 15px;
+      }
+    }
+
+    .image {
+      width: 200px;
+      height: 100px;
+      background-color: black;
+      position: relative;
+      margin: auto;
+    }
   }
-}
 
-.companylogo {
-  vertical-align: top;
-  padding-top: 40px;
-  display: inline-block;
-  margin: 20px;
-}
+  .disclaimer {
+    position: relative;
+    padding: 40px 30px;
 
-.disclaimer {
-  padding: 40px 30px;
+    @include responsive(mobile) {
+      padding: 40px 0;
+    }
 
-  h3 {
-    text-transform: uppercase;
-  }
+    .title {
+      text-transform: uppercase;
+      line-height: 40px;
+      font-size: 23px;
+      width: 100%;
+      font-weight: 700;
+      box-sizing: border-box;
+      letter-spacing: 2px;
 
-  @include responsive(mobile) {
-    padding: 40px 0;
+      @include responsive(transition){
+          line-height: 35px;
+          font-size: 22px;
+      }
+
+      @include responsive(mobile){
+        line-height: 30px;
+        font-size: 15px;
+      }
+    }
+
+    p {
+      font-weight: 700;
+      position: relative;
+      line-height: 40px;
+      font-size: 25px;
+      margin: 0;
+      letter-spacing: 0.007em;
+
+      @include responsive(transition){
+        line-height: 33px;
+        font-size: 22px;
+      }
+      @include responsive(mobile) {
+        line-height: 30px;
+        font-size: 15px;
+      }
+    }
   }
 }
