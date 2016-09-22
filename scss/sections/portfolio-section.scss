@@ -1,45 +1,55 @@
 #portfolio-section {
-  h2 {
-    color: white;
-    margin-top: 1.5vh;
-    margin-bottom: 1.5vh;
-    text-transform: uppercase;
-    font-weight: 500;
+
+  .portfolio-header {
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: $dark-blue;
+
+    @include responsive(mobile){
+      margin-top: 2px;
+    }
+
+    h1 {
+      color: white;
+      margin-top: 1.5vh;
+      margin-bottom: 1.5vh;
+      text-transform: uppercase;
+      font-weight: 500;
+
+      line-height: 32px;
+      font-size: 30px;
+
+      @include responsive(mobile) {
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
   }
-}
 
-.portfolio-header {
-  height: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  text-align: center;
-  background-color: $dark-blue;
+  .portfolio-image-container {
+    text-align: center;
+    padding-top: 2px;
 
-  @include responsive(mobile){
-    margin-top: 2px;
+    @include responsive(mobile){
+      padding-bottom: 2px;
+    }
   }
-}
 
-.portfolio-image-container {
-  text-align: center;
-  padding-top: 2px;
-
-  @include responsive(mobile){
-    padding-bottom: 2px;
+  .portfolio-image {
+    width: 33.3%;
+    height: 60vw;
+    display: inline-block;
+    vertical-align: top;
   }
-}
 
-.portfolio-image {
-  width: 33.3%;
-  height: 60vw;
-  display: inline-block;
-  vertical-align: top;
-}
+  .portfolio-image:first-child {
+    left: 0;
+  }
 
-.portfolio-image:first-child {
-  left: 0;
-}
+  .portfolio-image:last-child {
+    right: 0;
+  }
 
-.portfolio-image:last-child {
-  right: 0;
 }
