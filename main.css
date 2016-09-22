@@ -11,6 +11,7 @@
  * Helpers / Functions
  * Usage:
  *        @include transform(translateX(1px));
+ *        @include animation((modal-fade 1s));
  *        @include transform((translateX(1px) rotateY(5deg)));
  *        @include opacity(0.5);
  *        @include transition((margin 0.5s 1s));
@@ -175,6 +176,23 @@ sup {
   -webkit-user-select: none;
   -webkit-touch-callout: none; }
 
+.clearfix:before, #clubhouse-section:before, #designerprofile-section .description-gray-box:before, .clearfix:after, #clubhouse-section:after, #designerprofile-section .description-gray-box:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after, #clubhouse-section:after, #designerprofile-section .description-gray-box:after {
+  clear: both; }
+
+.background-image, .background-cover, .clubhouse-image-container, #designerprofile-section .yacht, .background-contain, #designerprofile-section .designer-photo {
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+.background-cover, .clubhouse-image-container, #designerprofile-section .yacht {
+  background-size: cover; }
+
+.background-contain, #designerprofile-section .designer-photo {
+  background-size: contain; }
+
 /*animation element*/
 .animation-element {
   opacity: 0;
@@ -183,60 +201,61 @@ sup {
 /*animation element sliding left*/
 .animation-element.slide-left {
   opacity: 0;
-  -moz-transition: all 600ms linear;
   -webkit-transition: all 600ms linear;
+  -moz-transition: all 600ms linear;
   -o-transition: all 600ms linear;
   transition: all 600ms linear;
-  -moz-transform: translate3d(-100px, 0px, 0px);
   -webkit-transform: translate3d(-100px, 0px, 0px);
-  -o-transform: translate(-100px, 0px);
-  -ms-transform: translate(-100px, 0px);
+  -moz-transform: translate3d(-100px, 0px, 0px);
+  -ms-transform: translate3d(-100px, 0px, 0px);
+  -o-transform: translate3d(-100px, 0px, 0px);
   transform: translate3d(-100px, 0px, 0px); }
 
 .animation-element.slide-left.in-view {
   opacity: 1;
-  -moz-transform: translate3d(0px, 0px, 0px);
   -webkit-transform: translate3d(0px, 0px, 0px);
-  -o-transform: translate(0px, 0px);
-  -ms-transform: translate(0px, 0px);
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -ms-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate3d(0px, 0px, 0px);
   transform: translate3d(0px, 0px, 0px); }
 
+/*animation element sliding right*/
 .animation-element.slide-right {
   opacity: 0;
-  -moz-transition: all 600ms linear;
   -webkit-transition: all 600ms linear;
+  -moz-transition: all 600ms linear;
   -o-transition: all 600ms linear;
   transition: all 600ms linear;
-  -moz-transform: translate3d(100px, 0px, 0px);
   -webkit-transform: translate3d(100px, 0px, 0px);
-  -o-transform: translate(100px, 0px);
-  -ms-transform: translate(100px, 0px);
+  -moz-transform: translate3d(100px, 0px, 0px);
+  -ms-transform: translate3d(100px, 0px, 0px);
+  -o-transform: translate3d(100px, 0px, 0px);
   transform: translate3d(100px, 0px, 0px); }
 
 .animation-element.slide-right.in-view {
   opacity: 1;
-  -moz-transform: translate3d(0px, 0px, 0px);
   -webkit-transform: translate3d(0px, 0px, 0px);
-  -o-transform: translate(0px, 0px);
-  -ms-transform: translate(0px, 0px);
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -ms-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate3d(0px, 0px, 0px);
   transform: translate3d(0px, 0px, 0px); }
 
+/*animation element fade*/
 .animation-element.fade {
   opacity: 0;
-  -moz-transition: all 1s linear;
   -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
   -o-transition: all 1s linear;
   transition: all 1s linear; }
 
 .animation-element.fade.in-view {
-  opacity: 1; }
+  opacity: 1;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear; }
 
 /* IMAGE MODAL */
-/* Style the Image Used to Trigger the Modal */
-.image {
-  cursor: pointer;
-  transition: 1s; }
-
 /* Modal Background */
 .modal {
   display: none;
@@ -267,13 +286,10 @@ sup {
 /* Fade in Modal */
 .modal-content, .modal {
   -webkit-animation: modal-fade 1s;
-  /* Safari 4+ */
   -moz-animation: modal-fade 1s;
-  /* Fx 5+ */
+  -ms-animation: modal-fade 1s;
   -o-animation: modal-fade 1s;
-  /* Opera 12+ */
-  animation: modal-fade 1s;
-  /* IE 10+, Fx 29+ */ }
+  animation: modal-fade 1s; }
 
 @-webkit-keyframes modal-fade {
   from {
@@ -319,25 +335,9 @@ sup {
 @media only screen and (max-width: 700px) {
   .modal-content {
     width: 100%;
+    max-width: 1280px;
     height: auto;
     padding-top: 50vh; } }
-
-.clearfix:before, #clubhouse-section:before, #designerprofile-section .description-gray-box:before, .clearfix:after, #clubhouse-section:after, #designerprofile-section .description-gray-box:after {
-  content: " ";
-  display: table; }
-
-.clearfix:after, #clubhouse-section:after, #designerprofile-section .description-gray-box:after {
-  clear: both; }
-
-.background-image, .background-cover, .clubhouse-image-container, #designerprofile-section .yacht, .background-contain, #designerprofile-section .designer-photo {
-  background-position: center center;
-  background-repeat: no-repeat; }
-
-.background-cover, .clubhouse-image-container, #designerprofile-section .yacht {
-  background-size: cover; }
-
-.background-contain, #designerprofile-section .designer-photo {
-  background-size: contain; }
 
 #hero-section h1, #hero-section h4 {
   text-align: center; }
@@ -574,6 +574,10 @@ ul {
     @media only screen and (max-width: 1023px) {
       #clubhouse-section .link-menu {
         bottom: 33px; } }
+
+#clubImage {
+  cursor: pointer;
+  transition: 1s; }
 
 .clubhouse-image-container {
   min-height: 750px;
