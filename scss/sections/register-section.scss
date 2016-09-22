@@ -1,48 +1,83 @@
 #register-section {
-  h3 {
+  padding: 20px;
+  background-color: $dark-gray;
+  text-align: center;
+  color: white;
+
+  @include responsive(mobile) {
+    padding: 20px 20px;
+  }
+
+  p {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
-  }
-}
 
-.register-body-container {
-  padding: 20px;
-  background-color: $dark-gray;
-  height: 100%;
-  text-align: center;
+    line-height: 40px;
+    font-size: 23px;
+    width: 100%;
+    font-weight: 700;
+    box-sizing: border-box;
+    letter-spacing: 2px;
 
-  h3 {
-    color: white;
-  }
+    @include responsive(transition){
+        line-height: 35px;
+        font-size: 22px;
+    }
 
-  @include responsive(mobile) {
-    padding: 20px 10px;
-  }
-}
-
-.register-button {
-  border: 1px solid white;
-  padding-right: 40px;
-  padding-left: 40px;
-  display: inline-block;
-  margin: auto auto 30px auto;
-
-  h3 {
-    color: $dark-blue;
-    text-transform: uppercase;
+    @include responsive(mobile){
+      line-height: 30px;
+      font-size: 15px;
+    }
   }
 
-  @include responsive(mobile) {
-    padding-right: 5px;
-    padding-left: 5px;
-  }
-}
+  .register-button {
+    border: 1px solid white;
+    padding-right: 40px;
+    padding-left: 40px;
+    display: inline-block;
+    margin: auto auto 30px auto;
 
-.add-br {
-  display: none;
 
-  @include responsive(smallmobile){
-    display: block;
+    @include responsive(mobile) {
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+
+    p {
+      color: $dark-blue;
+      text-transform: uppercase;
+
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      line-height: 40px;
+      font-size: 23px;
+      width: 100%;
+      font-weight: 700;
+      box-sizing: border-box;
+      letter-spacing: 2px;
+
+      @include responsive(transition){
+          line-height: 35px;
+          font-size: 22px;
+      }
+
+      @include responsive(mobile){
+        line-height: 30px;
+        font-size: 15px;
+      }
+    }
+
   }
+
+  .add-br {
+    display: none;
+
+    @include responsive(smallmobile){
+      display: block;
+    }
+  }
+
 }

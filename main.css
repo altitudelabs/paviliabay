@@ -1073,38 +1073,64 @@ sup {
 #portfolio-section .portfolio-image:last-child {
   right: 0; }
 
-#register-section h3 {
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px; }
-
-.register-body-container {
+#register-section {
   padding: 20px;
   background-color: #9e9da2;
-  height: 100%;
-  text-align: center; }
-  .register-body-container h3 {
-    color: white; }
+  text-align: center;
+  color: white; }
   @media only screen and (max-width: 1023px) {
-    .register-body-container {
-      padding: 20px 10px; } }
-
-.register-button {
-  border: 1px solid white;
-  padding-right: 40px;
-  padding-left: 40px;
-  display: inline-block;
-  margin: auto auto 30px auto; }
-  .register-button h3 {
-    color: #232f49;
-    text-transform: uppercase; }
-  @media only screen and (max-width: 1023px) {
-    .register-button {
-      padding-right: 5px;
-      padding-left: 5px; } }
-
-.add-br {
-  display: none; }
-  @media only screen and (max-width: 320px) {
-    .add-br {
-      display: block; } }
+    #register-section {
+      padding: 20px 20px; } }
+  #register-section p {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 40px;
+    font-size: 23px;
+    width: 100%;
+    font-weight: 700;
+    box-sizing: border-box;
+    letter-spacing: 2px; }
+    @media only screen and (min-width: 1024px) {
+      #register-section p {
+        line-height: 35px;
+        font-size: 22px; } }
+    @media only screen and (max-width: 1023px) {
+      #register-section p {
+        line-height: 30px;
+        font-size: 15px; } }
+  #register-section .register-button {
+    border: 1px solid white;
+    padding-right: 40px;
+    padding-left: 40px;
+    display: inline-block;
+    margin: auto auto 30px auto; }
+    @media only screen and (max-width: 1023px) {
+      #register-section .register-button {
+        padding-right: 5px;
+        padding-left: 5px; } }
+    #register-section .register-button p {
+      color: #232f49;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      line-height: 40px;
+      font-size: 23px;
+      width: 100%;
+      font-weight: 700;
+      box-sizing: border-box;
+      letter-spacing: 2px; }
+      @media only screen and (min-width: 1024px) {
+        #register-section .register-button p {
+          line-height: 35px;
+          font-size: 22px; } }
+      @media only screen and (max-width: 1023px) {
+        #register-section .register-button p {
+          line-height: 30px;
+          font-size: 15px; } }
+  #register-section .add-br {
+    display: none; }
+    @media only screen and (max-width: 320px) {
+      #register-section .add-br {
+        display: block; } }
