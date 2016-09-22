@@ -1,92 +1,41 @@
 #hero-section {
-
-  /* * * * * * * * * * * * * * * *
-  * Text styles
-  * * * * * * * * * * * * * * * */
-
-  // titles
-  .title-eng-text {
-    line-height: 52px;
-    font-size: 37px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-align: center;
-
-    @include responsive(transition){
-      line-height: 52px;
-      font-size: 36px;
-    }
-
-    @include responsive(mobile){
-      line-height: 35px;
-      font-size: 24px;
-    }
-  }
-
-  .title-chi-text {
-    text-align: center;
-    letter-spacing: 24px;margin-top: 10px;
-    margin-left: 10px;
-    font-weight: normal;
-
-    @include responsive(mobile) {
-      letter-spacing: 12px;
-    }
-  }
-
-  .title-white-box-text {
-    color: white;
-    font-weight: 300;
-    text-align: center;
-    font-size: 15px;
-    line-height: 20px;
-    font-weight: 100;
-    width: 100%;
-    box-sizing: border-box;
-    letter-spacing: .5px;
-
-    @include responsive(mobile){
-      font-size: 13px;
-      line-height: 15px;
-    }
-  }
-
-  // footer
-  .register-link-text {
-    text-transform: uppercase;
-    color: $dark-blue;
-    line-height: 40px;
-    font-size: 23px;
-    width: 100%;
-    font-weight: 700;
-    box-sizing: border-box;
-    letter-spacing: normal;
-    margin-left: 45px;
-
-    @include responsive(transition){
-      line-height: 35px;
-      font-size: 22px;
-    }
-
-    @include responsive(mobile){
-      margin-left: 20px;
-      font-size: 90%;
-      height: 100%;
-    }
-  }
-
-  /* * * * * * * * * * * * * * * *
-  * container, div, video, logo
-  * * * * * * * * * * * * * * * */
-
-  .title-center {
+  .title-container {
     position: absolute;
     top: 37.5%;
     background-color: transparent;
     left: 10%;
     width: 80%;
     text-align: center;
+
+    .title-eng-text {
+      line-height: 52px;
+      font-size: 37px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-align: center;
+
+      @include responsive(transition){
+        line-height: 52px;
+        font-size: 36px;
+      }
+
+      @include responsive(mobile){
+        line-height: 35px;
+        font-size: 24px;
+      }
+    }
+
+    .title-chi-text {
+      text-align: center;
+      letter-spacing: 24px;margin-top: 10px;
+      margin-left: 10px;
+      font-weight: normal;
+
+      @include responsive(mobile) {
+        letter-spacing: 12px;
+      }
+    }
   }
 
   .video-container {
@@ -103,6 +52,30 @@
     background-color: $dark-gray;
     height: 8vh;
     vertical-align: middle;
+
+    // footer
+    .register-link-text {
+      text-transform: uppercase;
+      color: $dark-blue;
+      line-height: 40px;
+      font-size: 23px;
+      width: 100%;
+      font-weight: 700;
+      box-sizing: border-box;
+      letter-spacing: normal;
+      margin-left: 45px;
+
+      @include responsive(transition){
+        line-height: 35px;
+        font-size: 22px;
+      }
+
+      @include responsive(mobile){
+        margin-left: 20px;
+        font-size: 90%;
+        height: 100%;
+      }
+    }
   }
 
   .hero-logo {
@@ -125,6 +98,23 @@
 
     @include responsive(mobile) {
       margin-top: 20px;
+    }
+
+    .title-white-box-text {
+      color: white;
+      font-weight: 300;
+      text-align: center;
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: 100;
+      width: 100%;
+      box-sizing: border-box;
+      letter-spacing: .5px;
+
+      @include responsive(mobile){
+        font-size: 13px;
+        line-height: 15px;
+      }
     }
   }
 }
