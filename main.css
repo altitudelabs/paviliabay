@@ -154,11 +154,11 @@ sup {
   -webkit-user-select: none;
   -webkit-touch-callout: none; }
 
-.clearfix:before, #clubhouse-section:before, #designerprofile-section .description-gray-box:before, .clearfix:after, #clubhouse-section:after, #designerprofile-section .description-gray-box:after {
+.clearfix:before, #clubhouse-section:before, #designerprofile-section .description-grey-box:before, .clearfix:after, #clubhouse-section:after, #designerprofile-section .description-grey-box:after {
   content: " ";
   display: table; }
 
-.clearfix:after, #clubhouse-section:after, #designerprofile-section .description-gray-box:after {
+.clearfix:after, #clubhouse-section:after, #designerprofile-section .description-grey-box:after {
   clear: both; }
 
 .background-image, .background-cover, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, .background-contain, #designerprofile-section .designer-photo {
@@ -718,7 +718,7 @@ sup {
     #designerprofile-section .yacht {
       padding-bottom: 70%; } }
 
-#designerprofile-section .description-gray-box {
+#designerprofile-section .description-grey-box {
   position: relative;
   margin: 0 50px;
   margin-top: -135px;
@@ -726,7 +726,7 @@ sup {
   overflow: visible;
   min-height: 750px; }
   @media only screen and (max-width: 1023px) {
-    #designerprofile-section .description-gray-box {
+    #designerprofile-section .description-grey-box {
       min-height: initial;
       margin: 0 0 0 20px;
       margin-top: 0px; } }
@@ -762,33 +762,49 @@ sup {
         width: 1000px;
         right: 0px;
         left: calc(50% - 927px); } }
-  @media only screen and (min-width: 1024px) {
-    #designerprofile-section .profile-blue-box h1 {
-      font-size: 38px;
-      margin: 36px auto;
-      line-height: 52px; } }
-  @media only screen and (max-width: 1023px) {
-    #designerprofile-section .profile-blue-box h1 {
-      line-height: 30px; } }
-  #designerprofile-section .profile-blue-box h2 {
+  #designerprofile-section .profile-blue-box .designer-title {
+    line-height: 52px;
+    font-size: 37px;
+    font-weight: 700;
+    letter-spacing: 1px;
     text-transform: uppercase; }
     @media only screen and (min-width: 1024px) {
-      #designerprofile-section .profile-blue-box h2 {
+      #designerprofile-section .profile-blue-box .designer-title {
+        font-size: 38px;
+        margin: 36px auto;
+        line-height: 52px; } }
+    @media only screen and (max-width: 1023px) {
+      #designerprofile-section .profile-blue-box .designer-title {
+        line-height: 30px;
+        font-size: 24px; } }
+  #designerprofile-section .profile-blue-box .designer-name {
+    text-transform: uppercase;
+    line-height: 32px;
+    font-size: 30px;
+    font-weight: 100; }
+    @media only screen and (min-width: 1024px) {
+      #designerprofile-section .profile-blue-box .designer-name {
         font-weight: 600;
         margin-top: 50px; } }
     @media only screen and (max-width: 1023px) {
-      #designerprofile-section .profile-blue-box h2 {
+      #designerprofile-section .profile-blue-box .designer-name {
         font-size: 17px;
         line-height: 17px;
         font-weight: bold; } }
-  #designerprofile-section .profile-blue-box h3 {
-    line-height: normal;
+  #designerprofile-section .profile-blue-box .designer-company-name {
+    line-height: 40px;
+    font-size: 23px;
+    font-weight: 700;
     letter-spacing: 0px; }
     @media only screen and (min-width: 1024px) {
-      #designerprofile-section .profile-blue-box h3 {
+      #designerprofile-section .profile-blue-box .designer-company-name {
         margin-top: 0px;
         font-size: 22px;
         font-weight: 800; } }
+    @media only screen and (max-width: 1023px) {
+      #designerprofile-section .profile-blue-box .designer-company-name {
+        line-height: 30px;
+        font-size: 15px; } }
 
 #designerprofile-section .designer-photo {
   background-image: url("images/designerprofile-section/designer.png"); }
@@ -814,10 +830,10 @@ sup {
       font-style: italic;
       line-height: 38px;
       font-size: 25px; } }
-  #designerprofile-section .designer-description-text .desc {
+  #designerprofile-section .designer-description-text .description {
     margin-bottom: 20px; }
     @media only screen and (min-width: 1024px) {
-      #designerprofile-section .designer-description-text .desc {
+      #designerprofile-section .designer-description-text .description {
         line-height: 33px;
         font-size: 23px;
         margin-bottom: 40px;
@@ -830,13 +846,21 @@ sup {
 #designerprofile-section .designer-video-link {
   display: inline-block; }
   #designerprofile-section .designer-video-link a {
-    text-decoration: none; }
-  #designerprofile-section .designer-video-link h2 {
+    text-decoration: none;
     color: black;
     padding-bottom: 2px;
-    border-bottom: 1px solid black; }
+    border-bottom: 1px solid black;
+    line-height: 32px;
+    font-size: 30px;
+    font-weight: 100;
+    width: 100%;
+    box-sizing: border-box; }
+    @media only screen and (max-width: 1023px) {
+      #designerprofile-section .designer-video-link a {
+        font-size: 24px;
+        line-height: 30px; } }
 
-#designerprofile-section .next-prev {
+#designerprofile-section .next-prev-wheelbutton {
   background: black;
   width: 150px;
   height: 150px;
@@ -844,16 +868,16 @@ sup {
   bottom: 55px;
   right: -35px; }
   @media only screen and (max-width: 1023px) {
-    #designerprofile-section .next-prev {
+    #designerprofile-section .next-prev-wheelbutton {
       display: none; } }
-  #designerprofile-section .next-prev.mobile {
+  #designerprofile-section .next-prev-wheelbutton.mobile {
     width: 75px;
     height: 75px;
     right: -60px;
     bottom: 20px;
     display: none; }
     @media only screen and (max-width: 1023px) {
-      #designerprofile-section .next-prev.mobile {
+      #designerprofile-section .next-prev-wheelbutton.mobile {
         display: block; } }
 
 #map-section h2, #map-section h3, #map-section h4 {

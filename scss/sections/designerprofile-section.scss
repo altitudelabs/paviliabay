@@ -36,7 +36,7 @@
     }
   }
 
-  .description-gray-box {
+  .description-grey-box {
     @extend .clearfix;
     position: relative;
     margin: 0 $greybox-horizontal-gutter;
@@ -90,7 +90,12 @@
       }
     }
 
-    h1 {
+    .designer-title {
+      line-height: 52px;
+      font-size: 37px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
       @include responsive(transition) {
         font-size: 38px;
         margin: 36px auto;
@@ -99,11 +104,16 @@
 
       @include responsive(mobile) {
         line-height: 30px;
+        font-size: 24px;
       }
     }
 
-    h2 {
+    .designer-name {
       text-transform: uppercase;
+      line-height: 32px;
+      font-size: 30px;
+      font-weight: 100;
+
       @include responsive(transition) {
         font-weight: 600;
         margin-top: 50px;
@@ -115,13 +125,21 @@
       }
     }
 
-    h3 {
-      line-height: normal;
+    .designer-company-name {
+      line-height: 40px;
+      font-size: 23px;
+      font-weight: 700;
       letter-spacing: 0px;
+
       @include responsive(transition) {
         margin-top: 0px;
         font-size: 22px;
         font-weight: 800;
+      }
+
+      @include responsive(mobile){
+        line-height: 30px;
+        font-size: 15px;
       }
     }
 
@@ -158,7 +176,7 @@
         font-size: 25px;
       }
     }
-    .desc {
+    .description {
       @include responsive(transition) {
         line-height: 33px;
         font-size: 23px;
@@ -176,18 +194,26 @@
 
   .designer-video-link {
     display: inline-block;
+
     a {
       text-decoration: none;
-    }
-
-    h2 {
       color: black;
       padding-bottom: 2px;
       border-bottom: 1px solid black;
+      line-height: 32px;
+      font-size: 30px;
+      font-weight: 100;
+      width: 100%;
+      box-sizing: border-box;
+
+      @include responsive(mobile) {
+        font-size: 24px;
+        line-height: 30px;
+      }
     }
   }
 
-  .next-prev {
+  .next-prev-wheelbutton {
     background: black;
     width: $next-prev-width;
     height: $next-prev-height;
