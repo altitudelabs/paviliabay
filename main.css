@@ -48,43 +48,42 @@
   src: url("./fonts/chinese traditional/H-LiHei-regular.ttf") format("truetype"); }
 
 h1 {
-  line-height: 45px;
-  font-size: 30px;
+  line-height: 52px;
+  font-size: 37px;
   width: 100%;
   box-sizing: border-box;
   margin: 0;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) {
     h1 {
       line-height: 52px;
       font-size: 36px; } }
-  @media only screen and (min-width: 1280px) {
+  @media only screen and (max-width: 1023px) {
     h1 {
-      line-height: 52px;
-      font-size: 36px; } }
+      line-height: 35px;
+      font-size: 24px; } }
 
 h2 {
-  line-height: 30px;
-  font-size: 28px;
-  font-weight: lighter;
+  line-height: 32px;
+  font-size: 30px;
+  font-weight: 100;
   width: 100%;
   box-sizing: border-box; }
   @media only screen and (max-width: 1023px) {
     h2 {
-      font-size: 18px;
+      font-size: 24px;
       line-height: 30px; } }
 
 h3 {
   line-height: 40px;
-  font-size: 24px;
-  text-align: left;
+  font-size: 23px;
   width: 100%;
   font-weight: 700;
   box-sizing: border-box;
-  letter-spacing: 1px; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  letter-spacing: 2px; }
+  @media only screen and (min-width: 1024px) {
     h3 {
       line-height: 35px;
       font-size: 22px; } }
@@ -94,19 +93,16 @@ h3 {
       font-size: 15px; } }
 
 h4 {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 20px;
   font-weight: 100;
   width: 100%;
-  box-sizing: border-box; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
-    h4 {
-      font-size: 12px;
-      line-height: 20px; } }
+  box-sizing: border-box;
+  letter-spacing: .5px; }
   @media only screen and (max-width: 1023px) {
     h4 {
-      font-size: 16px;
-      line-height: 28px; } }
+      font-size: 13px;
+      line-height: 15px; } }
 
 span, p {
   font-weight: 700;
@@ -115,7 +111,7 @@ span, p {
   font-size: 25px;
   margin: 0;
   letter-spacing: 0.007em; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) {
     span, p {
       line-height: 33px;
       font-size: 22px; } }
@@ -128,9 +124,7 @@ br {
   line-height: 30px; }
 
 .chinese-chars {
-  font-family: futuraChinese;
-  letter-spacing: 8px;
-  font-weight: 700; }
+  font-family: futuraChinese; }
 
 .english-chars {
   font-family: futuraEnglish; }
@@ -144,7 +138,8 @@ br {
   font-family: futuraEnglish;
   vertical-align: baseline;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box; }
 
 html, body {
   height: 100%;
@@ -162,33 +157,56 @@ sup {
   position: relative;
   overflow: hidden; }
 
-.blue-box, .clubhouse-blue-box, .profile-blue-box {
+.blue-box, .clubhouse-blue-box, #designerprofile-section .profile-blue-box {
+  color: white;
   background-color: #232f49;
   position: relative; }
-  .blue-box h1, .clubhouse-blue-box h1, .profile-blue-box h1, .blue-box h2, .clubhouse-blue-box h2, .profile-blue-box h2, .blue-box h3, .clubhouse-blue-box h3, .profile-blue-box h3, .blue-box h4, .clubhouse-blue-box h4, .profile-blue-box h4, .blue-box h5, .clubhouse-blue-box h5, .profile-blue-box h5 {
-    color: white; }
 
 .image {
   position: absolute; }
 
 .white-line {
   height: 1px;
+  width: 200%;
   background-color: white;
-  position: relative;
-  margin-top: 1vh;
-  margin-bottom: 1vh; }
+  position: relative; }
 
 .hover {
   -webkit-user-select: none;
   -webkit-touch-callout: none; }
 
+.clearfix:before, #clubhouse-section:before, #designerprofile-section .description-gray-box:before, .clearfix:after, #clubhouse-section:after, #designerprofile-section .description-gray-box:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after, #clubhouse-section:after, #designerprofile-section .description-gray-box:after {
+  clear: both; }
+
+.background-image, .background-cover, .clubhouse-image-container, #designerprofile-section .yacht, .background-contain, #designerprofile-section .designer-photo {
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+.background-cover, .clubhouse-image-container, #designerprofile-section .yacht {
+  background-size: cover; }
+
+.background-contain, #designerprofile-section .designer-photo {
+  background-size: contain; }
+
 #hero-section h1, #hero-section h4 {
   text-align: center; }
 
+#hero-section h2 {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-weight: normal;
+  letter-spacing: 24px; }
+  @media only screen and (max-width: 1023px) {
+    #hero-section h2 {
+      letter-spacing: 12px; } }
+
 #hero-section h3 {
   text-transform: uppercase;
-  color: #232f49;
-  margin-left: 20px; }
+  color: #232f49; }
 
 #hero-section h4 {
   color: white;
@@ -196,7 +214,7 @@ sup {
 
 #hero-section .title-center {
   position: absolute;
-  top: 45%;
+  top: 37.5%;
   background-color: transparent;
   left: 10%;
   width: 80%;
@@ -217,33 +235,37 @@ sup {
   .hero-footer h3 {
     height: 8vh;
     line-height: 8vh;
-    letter-spacing: normal; }
+    letter-spacing: normal;
+    margin-left: 45px; }
     @media only screen and (max-width: 1023px) {
       .hero-footer h3 {
+        margin-left: 20px;
         font-size: 90%;
         height: 100%; } }
 
 .hero-logo {
   display: inline-block;
   position: absolute;
-  top: 3vh;
-  left: 1vw;
-  width: 10%;
-  height: auto; }
+  top: 5%;
+  left: 3.5%;
+  width: 9.5%; }
   @media only screen and (max-width: 1023px) {
     .hero-logo {
       width: 20%; } }
 
 .transparent-button {
   display: inline-block;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 10px 15px;
-  margin-top: 10px; }
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 10px 23px;
+  margin-top: 40px; }
+  @media only screen and (max-width: 1023px) {
+    .transparent-button {
+      margin-top: 20px; } }
 
 #nav-menu {
   text-align: right;
   position: absolute;
-  right: 3%;
+  right: 4%;
   top: 0;
   width: 3%;
   height: auto;
@@ -262,7 +284,7 @@ sup {
     margin-left: 0;
     white-space: nowrap;
     font-weight: 700; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+    @media only screen and (max-width: 1023px) {
       #nav-menu a, #nav-menu h3 {
         padding-right: 30px;
         font-size: 19px; } }
@@ -293,7 +315,7 @@ ul {
         height: 2em; }
       #nav-menu-content li ul li a {
         color: #9e9da2; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     #nav-menu-content {
       height: 100vh;
       padding-top: 15px; } }
@@ -301,7 +323,7 @@ ul {
 #nav-menu-image {
   top: 5vh;
   position: relative;
-  width: 100%;
+  width: 90%;
   height: auto; }
 
 #nav-cross {
@@ -314,7 +336,7 @@ ul {
   height: 40px;
   float: right;
   margin-bottom: 40px; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     #nav-cross {
       margin-bottom: 45px; } }
   #nav-cross:after {
@@ -338,7 +360,7 @@ ul {
   right: 6px;
   z-index: 2;
   top: 83vh; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1023px), only screen and (min-resolution: 192dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     #nav-bottom-menu {
       top: 88vh; } }
 
@@ -367,84 +389,137 @@ ul {
     padding-left: 5px;
     padding-right: 5px; }
 
-#clubhouse-section h1, #clubhouse-section h2, #clubhouse-section h3 {
-  color: white; }
-
-#clubhouse-section h1, #clubhouse-section h3 {
-  margin-top: 3vh;
-  margin-bottom: 1.5vh; }
-
-#clubhouse-section h2 {
-  text-align: center;
-  margin: 7px; }
-
-#clubhouse-section .link-menu {
-  position: absolute;
-  border-bottom: 1px solid white;
-  background-color: rgba(0, 0, 0, 0.3);
-  right: 0;
-  bottom: 200px;
-  padding: 8px; }
-  @media only screen and (max-width: 1023px) {
-    #clubhouse-section .link-menu {
-      bottom: 50px; } }
-
-.clubhouse-background {
+#clubhouse-section {
+  position: relative;
+  color: #dfdfe1;
   background-color: #dfdfe1; }
+  #clubhouse-section h1 {
+    line-height: 55px;
+    font-size: 38px; }
+    @media only screen and (max-width: 1023px) {
+      #clubhouse-section h1 {
+        line-height: 28px;
+        font-size: 20px; } }
+  #clubhouse-section h2 {
+    text-align: center;
+    margin: 2px;
+    margin-left: 5px;
+    padding-right: 12px; }
+    @media only screen and (max-width: 1023px) {
+      #clubhouse-section h2 {
+        padding-top: 2px;
+        line-height: 20px;
+        font-size: 18px; } }
+  #clubhouse-section h3 {
+    line-height: 32px;
+    font-size: 20px;
+    letter-spacing: 1px; }
+    @media only screen and (max-width: 1023px) {
+      #clubhouse-section h3 {
+        line-height: 18px;
+        font-size: 12px; } }
+  #clubhouse-section .link-menu {
+    position: absolute;
+    border-bottom: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.3);
+    right: 0;
+    bottom: 80px; }
+    @media only screen and (max-width: 1023px) {
+      #clubhouse-section .link-menu {
+        bottom: 33px; } }
 
 .clubhouse-image-container {
-  min-height: 1000px;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 750px;
+  height: 96vh;
+  max-height: 850px;
+  background-image: url("./images/clubhouse-section/club1.jpg");
+  background-position: left;
+  background-size: cover;
   position: relative;
   float: right;
-  width: 70%; }
-  .clubhouse-image-container .image {
-    right: 0;
-    width: auto;
-    height: 100%; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  width: 64.5%; }
+  @media only screen and (min-width: 1024px) {
     .clubhouse-image-container {
-      top: 5vh;
-      width: 80%; } }
+      width: 64%; } }
   @media only screen and (max-width: 1023px) {
     .clubhouse-image-container {
-      top: 15vh;
-      height: 50vh;
-      width: 100%; }
-      .clubhouse-image-container .image {
-        height: 100%;
-        right: -45%; } }
+      background-position: left;
+      top: 11.5vh;
+      min-height: 570px;
+      height: 570px;
+      width: 100%; } }
+
+.clubhouse-blue-box-container {
+  overflow-y: visible;
+  float: left;
+  padding-bottom: 79px;
+  padding-top: 65px;
+  width: 35.5%; }
+  @media only screen and (max-width: 1023px) {
+    .clubhouse-blue-box-container {
+      width: 0;
+      top: 0;
+      padding-top: 0;
+      padding-bottom: 0; } }
 
 .clubhouse-blue-box {
+  position: relative;
   padding: 40px;
-  padding-top: 20px;
-  position: absolute;
-  box-sizing: border-box;
-  min-height: 700px;
-  display: table;
-  width: 40vw;
-  right: 50vw;
-  margin: 10vh auto 10vw 10vh; }
+  padding-top: 30px;
+  left: calc(100% - 404px);
+  width: 460px; }
   .clubhouse-blue-box .white-line {
-    left: -15vw; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
-    .clubhouse-blue-box {
-      right: auto;
-      width: 60%;
-      min-height: 70vh;
-      margin-top: 3vh;
-      margin-left: 5vw; } }
+    left: -469px;
+    margin-top: 14px;
+    margin-bottom: 38px; }
   @media only screen and (max-width: 1023px) {
     .clubhouse-blue-box {
-      right: auto;
-      width: 90%;
-      min-height: 50vh;
+      left: 0;
+      top: 0;
+      padding: 30px 20px 20px 24px;
       margin-left: 0px;
-      margin-top: 0px; }
+      margin-top: 0px;
+      max-height: 400px;
+      width: 250px; }
       .clubhouse-blue-box .white-line {
-        left: -10vw;
+        margin-bottom: 22px;
+        left: -8vw;
         width: 90%; } }
+
+.scroll-textbox-area {
+  height: 373px;
+  overflow-y: auto;
+  margin-right: -300px;
+  padding-right: 300px; }
+  @media only screen and (max-width: 1023px) {
+    .scroll-textbox-area {
+      height: 240px; } }
+
+.hide-scroll {
+  height: 373px;
+  overflow: hidden; }
+  @media only screen and (max-width: 1023px) {
+    .hide-scroll {
+      height: 240px; } }
+
+.wheelbutton-container {
+  width: 100px;
+  float: right;
+  padding-left: 100px;
+  margin-top: -127px; }
+  @media only screen and (max-width: 1023px) {
+    .wheelbutton-container {
+      padding-left: 90px;
+      margin-top: -28px; } }
+
+.wheelbutton {
+  height: 125px;
+  width: 125px;
+  background-color: black; }
+  @media only screen and (max-width: 1023px) {
+    .wheelbutton {
+      height: 85px;
+      width: 85px; } }
 
 #companyinfo-section h1, #companyinfo-section h3, #companyinfo-section p {
   color: white;
@@ -481,108 +556,150 @@ ul {
     .disclaimer {
       padding: 40px 0; } }
 
-.background-image {
-  height: 80vw;
-  min-height: 50vh;
-  max-width: 120%;
-  position: absolute; }
+#designerprofile-section .yacht {
+  background-image: url("images/designerprofile-section/bg.jpg");
+  padding-bottom: 756px; }
   @media only screen and (max-width: 1023px) {
-    .background-image {
-      min-height: 500px; } }
+    #designerprofile-section .yacht {
+      padding-bottom: 70%; } }
 
-.description-gray-box {
-  min-width: 80vw;
-  min-height: 750px;
-  align-self: center;
+#designerprofile-section .description-gray-box {
+  position: relative;
+  margin: 0 50px;
+  margin-top: -135px;
   background-color: #dfdfe1;
-  margin-top: 60vw;
-  margin-left: 40px;
-  margin-right: 40px;
-  position: relative;
-  padding-top: 80px; }
+  overflow: visible;
+  min-height: 750px; }
   @media only screen and (max-width: 1023px) {
-    .description-gray-box {
-      margin-top: 450px;
-      margin-left: 20px;
-      margin-right: 0;
-      min-height: 550px; } }
+    #designerprofile-section .description-gray-box {
+      min-height: initial;
+      margin: 0 0 0 20px;
+      margin-top: 0px; } }
 
-.profile-blue-box {
-  width: 500px;
-  height: 750px;
-  align-content: center;
-  top: -170px;
-  display: inline-block;
-  margin: auto 40px 40px 40px;
-  padding: 40px; }
-  .profile-blue-box .white-line {
-    left: -10vw;
-    width: 125%; }
-  .profile-blue-box h1, .profile-blue-box h2, .profile-blue-box h3 {
-    color: white;
-    text-align: center;
-    margin-top: 4vh;
-    margin-bottom: 3vh; }
-  .profile-blue-box h2 {
-    text-transform: uppercase;
-    font-weight: 500; }
-  .profile-blue-box h3 {
-    margin-top: 3vh; }
-  @media only screen and (max-width: 1023px) {
-    .profile-blue-box {
-      width: 70%;
-      height: 500px;
-      margin-left: -40px;
-      top: -500px; }
-      .profile-blue-box .white-line {
-        left: -10vw;
-        width: 100%; } }
+@media only screen and (max-width: 1023px) {
+  #designerprofile-section .blue-box-container {
+    padding-right: 20%; } }
 
-/* * * * * * * * * * * * * * * * * * * * * * *
- * erase-shifted-offset:
- *  An empty box with predefined size
- *  so that the original space occupied by
- *  the profile box can be used.
- * * * * * * * * * * * * * * * * * * * * * * */
-.erase-shifted-offset {
+#designerprofile-section .profile-blue-box {
   float: left;
-  width: 540px;
-  height: calc(580px + 80px);
-  margin-right: 40px; }
+  color: #dfdfe1;
+  margin-left: 70px;
+  margin-top: -90px;
+  width: 465px;
+  height: 735px;
+  align-content: center;
+  padding: 40px;
+  text-align: center; }
   @media only screen and (max-width: 1023px) {
-    .erase-shifted-offset {
-      width: 360px;
-      height: 0px; } }
+    #designerprofile-section .profile-blue-box {
+      padding: calc(3% + 20px) 30px;
+      margin-left: -20px;
+      margin-top: calc(-10% - 180px);
+      height: auto;
+      width: 100%; } }
+  #designerprofile-section .profile-blue-box .white-line {
+    margin: 15px 0;
+    left: -120px;
+    width: 441px; }
+    @media only screen and (max-width: 1023px) {
+      #designerprofile-section .profile-blue-box .white-line {
+        margin: 10px auto;
+        width: 1000px;
+        right: 0px;
+        left: calc(50% - 927px); } }
+  @media only screen and (min-width: 1024px) {
+    #designerprofile-section .profile-blue-box h1 {
+      font-size: 38px;
+      margin: 36px auto;
+      line-height: 52px; } }
+  @media only screen and (max-width: 1023px) {
+    #designerprofile-section .profile-blue-box h1 {
+      line-height: 30px; } }
+  #designerprofile-section .profile-blue-box h2 {
+    text-transform: uppercase; }
+    @media only screen and (min-width: 1024px) {
+      #designerprofile-section .profile-blue-box h2 {
+        font-weight: 600;
+        margin-top: 50px; } }
+    @media only screen and (max-width: 1023px) {
+      #designerprofile-section .profile-blue-box h2 {
+        font-size: 17px;
+        line-height: 17px;
+        font-weight: bold; } }
+  #designerprofile-section .profile-blue-box h3 {
+    line-height: normal;
+    letter-spacing: 0px; }
+    @media only screen and (min-width: 1024px) {
+      #designerprofile-section .profile-blue-box h3 {
+        margin-top: 0px;
+        font-size: 22px;
+        font-weight: 800; } }
 
-.designer-photo {
-  position: relative;
-  display: block;
-  width: 70%;
-  margin: 30px auto 30px auto; }
+#designerprofile-section .designer-photo {
+  background-image: url("images/designerprofile-section/designer.png"); }
+  @media only screen and (min-width: 1024px) {
+    #designerprofile-section .designer-photo {
+      height: 270px; } }
+  @media only screen and (max-width: 1023px) {
+    #designerprofile-section .designer-photo {
+      padding-bottom: calc(120px + 20%);
+      margin: 20px 0; } }
 
-.designer-description-text {
+#designerprofile-section .designer-description-text {
+  float: right;
+  width: calc(100% - 465px - 70px);
+  padding: 100px 65px;
+  padding-bottom: 170px;
   vertical-align: top;
-  position: relative;
-  padding-bottom: 50px;
-  padding-right: 40px; }
+  position: relative; }
+  #designerprofile-section .designer-description-text p {
+    font-weight: 500; }
+  @media only screen and (min-width: 1024px) {
+    #designerprofile-section .designer-description-text .quote {
+      font-style: italic;
+      line-height: 38px;
+      font-size: 25px; } }
+  #designerprofile-section .designer-description-text .desc {
+    margin-bottom: 20px; }
+    @media only screen and (min-width: 1024px) {
+      #designerprofile-section .designer-description-text .desc {
+        line-height: 33px;
+        font-size: 23px;
+        margin-bottom: 40px;
+        min-height: 200px; } }
   @media only screen and (max-width: 1023px) {
-    .designer-description-text {
-      clear: left;
-      padding: 40px; } }
+    #designerprofile-section .designer-description-text {
+      width: auto;
+      padding: calc(5% + 15px) 30px; } }
 
-.designer-video-link {
-  padding-bottom: 40px;
+#designerprofile-section .designer-video-link {
   display: inline-block; }
-  .designer-video-link a {
+  #designerprofile-section .designer-video-link a {
     text-decoration: none; }
-  .designer-video-link h2 {
+  #designerprofile-section .designer-video-link h2 {
     color: black;
     padding-bottom: 2px;
     border-bottom: 1px solid black; }
+
+#designerprofile-section .next-prev {
+  background: black;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  bottom: 55px;
+  right: -35px; }
   @media only screen and (max-width: 1023px) {
-    .designer-video-link {
-      clear: left;
-      padding-left: 40px; } }
+    #designerprofile-section .next-prev {
+      display: none; } }
+  #designerprofile-section .next-prev.mobile {
+    width: 75px;
+    height: 75px;
+    right: -60px;
+    bottom: 20px;
+    display: none; }
+    @media only screen and (max-width: 1023px) {
+      #designerprofile-section .next-prev.mobile {
+        display: block; } }
 
 #map-section h2, #map-section h3, #map-section h4 {
   color: white; }
@@ -599,7 +716,7 @@ ul {
   background-color: #dfdfe1;
   width: 65%;
   min-width: 400px; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) {
     .map-container {
       height: 900px; } }
   @media only screen and (max-width: 1023px) {
@@ -616,7 +733,7 @@ ul {
   background-color: #232f49;
   padding-left: 60px;
   padding-bottom: 60px; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) {
     .map-info {
       height: 900px; } }
   @media only screen and (max-width: 1023px) {

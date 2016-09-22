@@ -1,7 +1,6 @@
 h1 {
-  // mobile screen
-  line-height: 45px;
-  font-size: 30px;
+  line-height: 52px;
+  font-size: 37px;
   width: 100%;
   box-sizing: border-box;
   margin: 0;
@@ -14,33 +13,32 @@ h1 {
     font-size: 36px;
   }
 
-  @include responsive(desktop){
-    line-height: 52px;
-    font-size: 36px;
+  @include responsive(mobile){
+    line-height: 35px;
+    font-size: 24px;
   }
 }
 
 h2 {
-  line-height: 30px;
-  font-size: 28px;
-  font-weight: lighter;
+  line-height: 32px;
+  font-size: 30px;
+  font-weight: 100;
   width: 100%;
   box-sizing: border-box;
 
   @include responsive(mobile) {
-    font-size: 18px;
+    font-size: 24px;
     line-height: 30px;
   }
 }
 
 h3 {
   line-height: 40px;
-  font-size: 24px;
-  text-align: left;
+  font-size: 23px;
   width: 100%;
   font-weight: 700;
   box-sizing: border-box;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 
   @include responsive(transition){
       line-height: 35px;
@@ -54,20 +52,16 @@ h3 {
 }
 
 h4 {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 20px;
   font-weight: 100;
   width: 100%;
   box-sizing: border-box;
-
-  @include responsive(transition){
-    font-size: 12px;
-    line-height: 20px;
-  }
+  letter-spacing: .5px;
 
   @include responsive(mobile){
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 13px;
+    line-height: 15px;
   }
 }
 
@@ -95,8 +89,10 @@ br {
 
 .chinese-chars {
   font-family: futuraChinese;
-  letter-spacing: 8px;
-  font-weight: 700;
+
+  h2 {
+
+  }
 }
 
 .english-chars {

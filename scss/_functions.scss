@@ -44,7 +44,7 @@
   }
 
   @if $media == transition {
-    @media only screen and (min-width: $mobile-large-width) and (max-width: $desktop-large-width - 1) { @content; }
+    @media only screen and (min-width: $mobile-large-width) { @content; }
   }
 
   @else if $media == desktop {

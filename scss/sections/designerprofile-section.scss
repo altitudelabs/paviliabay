@@ -1,129 +1,218 @@
-.background-image {
-  height: 80vw;
-  min-height: 50vh;
-  max-width: 120%;
-  position: absolute;
+#designerprofile-section {
+  // default variable
+  $yacht-height: 756px;
+  $yacht-greybox-gutter: 135px;
 
-  @include responsive(mobile){
-    min-height: 500px;
-  }
-}
+  $greybox-horizontal-gutter: 50px;
+  $greybox-bluebox-offset-x: 70px;
+  $greybox-bluebox-offset-y: -90px;
 
-.description-gray-box {
-  min-width: 80vw;
-  min-height: 750px;
-  align-self: center;
-  background-color: $light-gray;
-  margin-top: 60vw;
-  margin-left: 40px;
-  margin-right: 40px;
-  position: relative;
-  padding-top: 80px;
+  $bluebox-width: 465px;
+  $bluebox-height: 735px;
 
-  @include responsive(mobile){
-    margin-top: 450px;
-    margin-left: 20px;
-    margin-right: 0;
-    min-height: 550px;
-  }
-}
+  $next-prev-height: 150px;
+  $next-prev-width: 150px;
 
-.profile-blue-box {
-  @extend .blue-box;
-  width: 500px;
-  height: 750px;
-  align-content: center;
-  top: -170px;
-  display: inline-block;
-  margin: auto 40px 40px 40px;
-  padding: 40px;
+  // mobile
+  $yacht-height-mobile: 70%;
+  $yacht-greybox-gutter-mobile: 0px;
 
-  .white-line {
-    left: -10vw;
-    width: 125%;
-  }
+  $greybox-horizontal-gutter-mobile: 20px;
+  $greybox-bluebox-offset-x-mobile: -20px;
+  $greybox-bluebox-offset-y-mobile: calc(-10% - 180px);
 
-  h1, h2, h3 {
-    color: white;
-    text-align: center;
-    margin-top: 4vh;
-    margin-bottom: 3vh;
-  }
+  $bluebox-height-mobile: auto;
+  $bluebox-width-mobile: 100%;
 
-  h2 {
-    text-transform: uppercase;
-    font-weight: 500;
-  }
+  $next-prev-height-mobile: 75px;
+  $next-prev-width-mobile: 75px;
 
-  h3 {
-    margin-top: 3vh;
-  }
-
-  @include responsive(mobile){
-    width: 70%;
-    height: 500px;
-    margin-left: -40px;
-    top: -500px ;
-    .white-line {
-      left: -10vw;
-      width: 100%;
+  .yacht {
+    @extend .background-cover;
+    background-image: url("images/designerprofile-section/bg.jpg");
+    padding-bottom: $yacht-height;
+    @include responsive(mobile) {
+      padding-bottom: $yacht-height-mobile;
     }
   }
-}
 
-/* * * * * * * * * * * * * * * * * * * * * * *
- * erase-shifted-offset:
- *  An empty box with predefined size
- *  so that the original space occupied by
- *  the profile box can be used.
- * * * * * * * * * * * * * * * * * * * * * * */
-.erase-shifted-offset {
-  float: left;
-  width: 540px;
-  height: calc(580px + 80px);
-  margin-right: 40px;
+  .description-gray-box {
+    @extend .clearfix;
+    position: relative;
+    margin: 0 $greybox-horizontal-gutter;
+    margin-top: -$yacht-greybox-gutter;
+    background-color: $light-gray;
+    overflow: visible;
+    min-height: 750px;
 
-  @include responsive(mobile){
-    width: 360px;
-    height: 0px;
+    @include responsive(mobile) {
+      min-height: initial;
+      margin: 0 0 0 $greybox-horizontal-gutter-mobile;
+      margin-top: -$yacht-greybox-gutter-mobile;
+    }
   }
-}
 
-.designer-photo {
-  position: relative;
-  display: block;
-  width: 70%;
-  margin: 30px auto 30px auto;
-}
+  .blue-box-container {
+    @include responsive(mobile) {
+      padding-right: 20%;
+    }
+  }
 
-.designer-description-text {
-  vertical-align: top;
-  position: relative;
-  padding-bottom: 50px;
-  padding-right: 40px;
-
-  @include responsive (mobile){
-    clear: left;
+  .profile-blue-box {
+    @extend .blue-box;
+    float: left;
+    color: $light-gray;
+    margin-left: $greybox-bluebox-offset-x;
+    margin-top: $greybox-bluebox-offset-y;
+    width: $bluebox-width;
+    height: $bluebox-height;
+    align-content: center;
     padding: 40px;
-  }
-}
+    text-align: center;
 
-.designer-video-link {
-  padding-bottom: 40px;
-  display: inline-block;
+    @include responsive(mobile) {
+      padding: calc(3% + 20px) 30px;
+      margin-left: $greybox-bluebox-offset-x-mobile;
+      margin-top: $greybox-bluebox-offset-y-mobile;
+      height: $bluebox-height-mobile;
+      width: $bluebox-width-mobile;
+    }
 
-  a {
-    text-decoration: none;
+    .white-line {
+      margin: 15px 0;
+      left: -120px;
+      width: 441px;
+      @include responsive(mobile) {
+        margin: 10px auto;
+        width: 1000px;
+        right: 0px;
+        left: calc(50% - 927px);
+      }
+    }
+
+    h1 {
+      @include responsive(transition) {
+        font-size: 38px;
+        margin: 36px auto;
+        line-height: 52px;
+      }
+
+      @include responsive(mobile) {
+        line-height: 30px;
+      }
+    }
+
+    h2 {
+      text-transform: uppercase;
+      @include responsive(transition) {
+        font-weight: 600;
+        margin-top: 50px;
+      }
+      @include responsive(mobile) {
+        font-size: 17px;
+        line-height: 17px;
+        font-weight: bold;
+      }
+    }
+
+    h3 {
+      line-height: normal;
+      letter-spacing: 0px;
+      @include responsive(transition) {
+        margin-top: 0px;
+        font-size: 22px;
+        font-weight: 800;
+      }
+    }
+
   }
 
-  h2 {
-    color: black;
-    padding-bottom: 2px;
-    border-bottom: 1px solid black;
+  .designer-photo {
+    @extend .background-contain;
+    background-image: url("images/designerprofile-section/designer.png");
+    @include responsive(transition) {
+      height: 270px;
+    }
+    @include responsive(mobile) {
+      padding-bottom: calc(120px + 20%);
+      margin: 20px 0;
+    }
   }
 
-  @include responsive (mobile){
-    clear: left;
-    padding-left: 40px;
+  .designer-description-text {
+    float: right;
+    width: calc(100% - #{$bluebox-width} - #{$greybox-bluebox-offset-x});
+    padding: 100px 65px;
+    padding-bottom: 170px;
+    vertical-align: top;
+    position: relative;
+
+    p {
+      font-weight: 500;
+    }
+
+    .quote {
+      @include responsive(transition) {
+        font-style: italic;
+        line-height: 38px;
+        font-size: 25px;
+      }
+    }
+    .desc {
+      @include responsive(transition) {
+        line-height: 33px;
+        font-size: 23px;
+        margin-bottom: 40px;
+        min-height: 200px;
+      }
+      margin-bottom: 20px;
+    }
+
+    @include responsive (mobile){
+      width: auto;
+      padding: calc(5% + 15px) 30px;
+    }
   }
+
+  .designer-video-link {
+    display: inline-block;
+    a {
+      text-decoration: none;
+    }
+
+    h2 {
+      color: black;
+      padding-bottom: 2px;
+      border-bottom: 1px solid black;
+    }
+  }
+
+  .next-prev {
+    background: black;
+    width: $next-prev-width;
+    height: $next-prev-height;
+    position: absolute;
+    bottom: $next-prev-width - 95px;
+    right: $next-prev-width - 185px;
+    @include responsive(mobile) {
+      display: none;
+      // right: auto;
+      // bottom: auto;
+      // right: 15%;
+      // top: 40px;
+    }
+
+    &.mobile {
+      width: $next-prev-width-mobile;
+      height: $next-prev-height-mobile;
+      right: 15px - $next-prev-width-mobile;
+      bottom: 20px;
+
+      display: none;
+      @include responsive(mobile) {
+        display: block;
+      }
+    }
+  }
+
 }

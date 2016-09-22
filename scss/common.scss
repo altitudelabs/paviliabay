@@ -8,6 +8,7 @@
   vertical-align: baseline;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 html, body {
@@ -31,9 +32,7 @@ sup {
 }
 
 .blue-box {
-  h1, h2, h3, h4, h5 {
-    color: white;
-  }
+  color: white;
   background-color: $dark-blue;
   position: relative;
 }
@@ -44,13 +43,37 @@ sup {
 
 .white-line {
   height: 1px;
+  width: 200%;
   background-color: white;
   position: relative;
-  margin-top: 1vh;
-  margin-bottom: 1vh;
 }
 
 .hover {
   -webkit-user-select: none;
   -webkit-touch-callout: none;
+}
+
+.clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.background-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.background-cover {
+  @extend .background-image;
+  background-size: cover;
+}
+
+.background-contain {
+  @extend .background-image;
+  background-size: contain;
 }
