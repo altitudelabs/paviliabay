@@ -926,47 +926,55 @@ sup {
 .map-info-text {
   padding-right: 20px; }
 
-#panorama-section h1 {
-  letter-spacing: 2px; }
-
-#panorama-section h3 {
-  text-align: center; }
-
 #panorama-section .title-center {
   position: relative;
   margin: auto; }
+  #panorama-section .title-center h1 {
+    letter-spacing: 2px;
+    line-height: 52px;
+    font-size: 37px;
+    font-weight: 700;
+    text-transform: uppercase; }
+    @media only screen and (min-width: 1024px) {
+      #panorama-section .title-center h1 {
+        line-height: 52px;
+        font-size: 36px; } }
+    @media only screen and (max-width: 1023px) {
+      #panorama-section .title-center h1 {
+        line-height: 35px;
+        font-size: 24px; } }
 
-.panorama-image-container {
+#panorama-section .panorama-image-container {
   height: 100vh;
   display: flex;
   justify-content: center;
   overflow: hidden; }
 
-.panorama-background-image {
+#panorama-section .panorama-background-image {
   flex: none;
   height: 100vh;
   width: 100%; }
   @media only screen and (max-width: 1023px) {
-    .panorama-background-image {
+    #panorama-section .panorama-background-image {
       width: auto; } }
   @media only screen and (max-width: 1023px) {
-    .panorama-background-image {
+    #panorama-section .panorama-background-image {
       height: 100%;
       width: auto; } }
 
-.panorama-content {
+#panorama-section .panorama-content {
   position: absolute;
   text-align: center;
   top: 40%;
   width: 100%; }
 
-.panorama-button-group {
+#panorama-section .button-group {
   position: relative;
   text-align: center;
   margin: auto;
   margin-top: 40px; }
 
-.panorama-button {
+#panorama-section .button {
   display: inline-block;
   background-color: white;
   padding: 10px;
@@ -978,10 +986,26 @@ sup {
   -khtml-opacity: 0.5;
   opacity: 0.5; }
   @media only screen and (max-width: 1023px) {
-    .panorama-button {
+    #panorama-section .button {
       padding: 2px;
       margin: auto;
       min-width: 100px; } }
+  #panorama-section .button span {
+    text-align: center;
+    line-height: 40px;
+    font-size: 23px;
+    width: 100%;
+    font-weight: 700;
+    box-sizing: border-box;
+    letter-spacing: 2px; }
+    @media only screen and (min-width: 1024px) {
+      #panorama-section .button span {
+        line-height: 35px;
+        font-size: 22px; } }
+    @media only screen and (max-width: 1023px) {
+      #panorama-section .button span {
+        line-height: 30px;
+        font-size: 15px; } }
 
 #portfolio-section .portfolio-header {
   height: auto;
