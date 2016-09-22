@@ -62,23 +62,23 @@ h4 {
   }
 }
 
-span, p {
-  font-weight: 700;
-  position: relative;
-  line-height: 40px;
-  font-size: 25px;
-  margin: 0;
-  letter-spacing: 0.007em;
-
-  @include responsive(transition){
-    line-height: 33px;
-    font-size: 22px;
-  }
-  @include responsive(mobile) {
-    line-height: 30px;
-    font-size: 15px;
-  }
-}
+// span, p {
+//   font-weight: 700;
+//   position: relative;
+//   line-height: 40px;
+//   font-size: 25px;
+//   margin: 0;
+//   letter-spacing: 0.007em;
+//
+//   @include responsive(transition){
+//     line-height: 33px;
+//     font-size: 22px;
+//   }
+//   @include responsive(mobile) {
+//     line-height: 30px;
+//     font-size: 15px;
+//   }
+// }
 
 br {
   line-height: 30px;

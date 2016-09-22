@@ -46,12 +46,12 @@ img.on('click', function(){
 // var span = document.getElementsByClassName("close")[0];
 
 // // When the user clicks on <span> (x), close the modal
-// span.on('click', function() { 
+// span.on('click', function() {
 //   modal.style.display = "none";
 // });
 
 // CLUBHOUSE SECTION
-$('.clubhouse-blue-box').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',   
+$('.clubhouse-blue-box').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
   function(e) {
 
   $('.clubhouse-text').addClass('fade');
@@ -76,31 +76,31 @@ var changeClubhouseContent = function (currentSection) {
     'contempporary design '].join('');
 
   if (currentSection == 'clubhouse') {
-  	$('#clubTitle').html('the <br> facade');
-  	$('#clubText').text(facadeText);
+  	$('.club-title-text').html('the <br> facade');
+  	$('.club-description-text').text(facadeText);
     // $('.clubhouse-image-container').css('background-image', 'url(images/clubhouse-section/6_facade1.jpg)');
   	// $('#clubImage').attr('src','images/clubhouse-section/6_facade1.jpg');
-  	$('.clubLink').text('The Interior >');
+  	$('.link-text').text('The Interior >');
     $('#clubhouse-section').data('id', 'facade')
   } else if (currentSection == 'facade') {
-    $('#clubTitle').html('the <br> interior');
-    $('#clubText').text(interiorText);
+    $('.club-title-text').html('the <br> interior');
+    $('.club-description-text').text(interiorText);
     // $('.clubhouse-image-container').css('background-image', 'url(images/clubhouse-section/9_interior2.jpg)');
     // $('#clubImage').attr('src','images/clubhouse-section/9_interior2.jpg');
-    $('.clubLink').text('The Clubhouse >');
+    $('.link-text').text('The Clubhouse >');
     $('#clubhouse-section').data('id', 'interior')
   } else {
-    $('#clubTitle').html('the <br> clubhouse');
-    $('#clubText').text(clubhouseText);
+    $('.club-title-text').html('the <br> clubhouse');
+    $('.club-description-text').text(clubhouseText);
     // $('.clubhouse-image-container').css('background-image', 'url(images/clubhouse-section/club1.jpg)');
     // $('#clubImage').attr('src','images/clubhouse-section/club1.jpg');
-    $('.clubLink').text('The Facade >');
-    $('#clubhouse-section').data('id', 'clubhouse')   
+    $('.link-text').text('The Facade >');
+    $('#clubhouse-section').data('id', 'clubhouse')
   }
 }
 
 // On click, change section title, text, image and link
-$('.clubLink').on('click', function() { 
+$('.link-text').on('click', function() {
   $animation_elements.removeClass('in-view');
   $animation_elements.removeClass('fade');
   setTimeout(function() {

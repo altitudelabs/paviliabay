@@ -102,22 +102,6 @@ h4 {
       font-size: 13px;
       line-height: 15px; } }
 
-span, p {
-  font-weight: 700;
-  position: relative;
-  line-height: 40px;
-  font-size: 25px;
-  margin: 0;
-  letter-spacing: 0.007em; }
-  @media only screen and (min-width: 1024px) {
-    span, p {
-      line-height: 33px;
-      font-size: 22px; } }
-  @media only screen and (max-width: 1023px) {
-    span, p {
-      line-height: 30px;
-      font-size: 15px; } }
-
 br {
   line-height: 30px; }
 
@@ -152,7 +136,7 @@ sup {
   position: relative;
   overflow: hidden; }
 
-.blue-box, .clubhouse-blue-box, #designerprofile-section .profile-blue-box {
+.blue-box, #clubhouse-section .clubhouse-blue-box, #designerprofile-section .profile-blue-box {
   color: white;
   background-color: #232f49;
   position: relative; }
@@ -177,11 +161,11 @@ sup {
 .clearfix:after, #clubhouse-section:after, #designerprofile-section .description-gray-box:after {
   clear: both; }
 
-.background-image, .background-cover, .clubhouse-image-container, #designerprofile-section .yacht, .background-contain, #designerprofile-section .designer-photo {
+.background-image, .background-cover, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, .background-contain, #designerprofile-section .designer-photo {
   background-position: center center;
   background-repeat: no-repeat; }
 
-.background-cover, .clubhouse-image-container, #designerprofile-section .yacht {
+.background-cover, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht {
   background-size: cover; }
 
 .background-contain, #designerprofile-section .designer-photo {
@@ -557,32 +541,44 @@ sup {
 #clubhouse-section {
   position: relative;
   color: #dfdfe1;
-  background-color: #dfdfe1; }
-  #clubhouse-section h1 {
+  background-color: #dfdfe1;
+  /* * * * * * * * * * * * * * * *
+  * Text styles
+  * * * * * * * * * * * * * * * */ }
+  #clubhouse-section .club-title-text {
     line-height: 55px;
-    font-size: 38px; }
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase; }
     @media only screen and (max-width: 1023px) {
-      #clubhouse-section h1 {
+      #clubhouse-section .club-title-text {
         line-height: 28px;
         font-size: 20px; } }
-  #clubhouse-section h2 {
+  #clubhouse-section .club-description-text {
+    line-height: 32px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 700; }
+    @media only screen and (max-width: 1023px) {
+      #clubhouse-section .club-description-text {
+        line-height: 18px;
+        font-size: 12px; } }
+  #clubhouse-section .link-text {
+    line-height: 32px;
+    font-size: 30px;
+    font-weight: 100;
     text-align: center;
     margin: 2px;
     margin-left: 5px;
     padding-right: 12px; }
     @media only screen and (max-width: 1023px) {
-      #clubhouse-section h2 {
+      #clubhouse-section .link-text {
         padding-top: 2px;
         line-height: 20px;
         font-size: 18px; } }
-  #clubhouse-section h3 {
-    line-height: 32px;
-    font-size: 20px;
-    letter-spacing: 1px; }
-    @media only screen and (max-width: 1023px) {
-      #clubhouse-section h3 {
-        line-height: 18px;
-        font-size: 12px; } }
+    #clubhouse-section .link-text .the-text {
+      font-style: italic; }
   #clubhouse-section .link-menu {
     position: absolute;
     border-bottom: 1px solid white;
@@ -592,103 +588,95 @@ sup {
     @media only screen and (max-width: 1023px) {
       #clubhouse-section .link-menu {
         bottom: 33px; } }
-
-#clubImage {
-  cursor: pointer;
-  transition: 1s; }
-
-.clubhouse-image-container {
-  min-height: 750px;
-  height: 96vh;
-  max-height: 850px;
-  background-image: url("./images/clubhouse-section/club1.jpg");
-  background-position: left;
-  background-size: cover;
-  position: relative;
-  float: right;
-  width: 64.5%; }
-  @media only screen and (min-width: 1024px) {
-    .clubhouse-image-container {
-      width: 64%; } }
-  @media only screen and (max-width: 1023px) {
-    .clubhouse-image-container {
-      background-position: left;
-      top: 11.5vh;
-      min-height: 570px;
-      height: 570px;
-      width: 100%; } }
-
-.clubhouse-blue-box-container {
-  overflow-y: visible;
-  float: left;
-  padding-bottom: 79px;
-  padding-top: 65px;
-  width: 35.5%; }
-  @media only screen and (max-width: 1023px) {
-    .clubhouse-blue-box-container {
-      width: 0;
-      top: 0;
-      padding-top: 0;
-      padding-bottom: 0; } }
-
-.clubhouse-blue-box {
-  position: relative;
-  padding: 40px;
-  padding-top: 30px;
-  left: calc(100% - 404px);
-  width: 460px; }
-  .clubhouse-blue-box .white-line {
-    left: -469px;
-    margin-top: 14px;
-    margin-bottom: 38px; }
-  @media only screen and (max-width: 1023px) {
-    .clubhouse-blue-box {
-      left: 0;
-      top: 0;
-      padding: 30px 20px 20px 24px;
-      margin-left: 0px;
-      margin-top: 0px;
-      max-height: 400px;
-      width: 250px; }
-      .clubhouse-blue-box .white-line {
-        margin-bottom: 22px;
-        left: -8vw;
-        width: 90%; } }
-
-.scroll-textbox-area {
-  height: 373px;
-  overflow-y: auto;
-  margin-right: -300px;
-  padding-right: 300px; }
-  @media only screen and (max-width: 1023px) {
-    .scroll-textbox-area {
-      height: 240px; } }
-
-.hide-scroll {
-  height: 373px;
-  overflow: hidden; }
-  @media only screen and (max-width: 1023px) {
-    .hide-scroll {
-      height: 240px; } }
-
-.wheelbutton-container {
-  width: 100px;
-  float: right;
-  padding-left: 100px;
-  margin-top: -127px; }
-  @media only screen and (max-width: 1023px) {
-    .wheelbutton-container {
-      padding-left: 90px;
-      margin-top: -28px; } }
-
-.wheelbutton {
-  height: 125px;
-  width: 125px;
-  background-color: black; }
-  @media only screen and (max-width: 1023px) {
-    .wheelbutton {
-      height: 85px;
-      width: 85px; } }
+  #clubhouse-section .clubhouse-image-container {
+    min-height: 750px;
+    height: 96vh;
+    max-height: 850px;
+    background-image: url("./images/clubhouse-section/club1.jpg");
+    background-position: left;
+    background-size: cover;
+    position: relative;
+    float: right;
+    width: 64.5%; }
+    @media only screen and (min-width: 1024px) {
+      #clubhouse-section .clubhouse-image-container {
+        width: 64%; } }
+    @media only screen and (max-width: 1023px) {
+      #clubhouse-section .clubhouse-image-container {
+        background-position: left;
+        top: 11.5vh;
+        min-height: 570px;
+        height: 570px;
+        width: 100%; } }
+  #clubhouse-section #clubImage {
+    cursor: pointer;
+    transition: 1s; }
+  #clubhouse-section .clubhouse-blue-box-container {
+    overflow-y: visible;
+    float: left;
+    padding-bottom: 79px;
+    padding-top: 65px;
+    width: 35.5%; }
+    @media only screen and (max-width: 1023px) {
+      #clubhouse-section .clubhouse-blue-box-container {
+        width: 0;
+        top: 0;
+        padding-top: 0;
+        padding-bottom: 0; } }
+  #clubhouse-section .clubhouse-blue-box {
+    position: relative;
+    padding: 40px;
+    padding-top: 30px;
+    left: calc(100% - 404px);
+    width: 460px; }
+    #clubhouse-section .clubhouse-blue-box .white-line {
+      left: -469px;
+      margin-top: 14px;
+      margin-bottom: 38px; }
+    @media only screen and (max-width: 1023px) {
+      #clubhouse-section .clubhouse-blue-box {
+        left: 0;
+        top: 0;
+        padding: 30px 20px 20px 24px;
+        margin-left: 0px;
+        margin-top: 0px;
+        max-height: 400px;
+        width: 250px; }
+        #clubhouse-section .clubhouse-blue-box .white-line {
+          margin-bottom: 22px;
+          left: -8vw;
+          width: 90%; } }
+  #clubhouse-section .scroll-textbox-area {
+    height: 373px;
+    overflow-y: auto;
+    margin-right: -300px;
+    padding-right: 300px; }
+    @media only screen and (max-width: 1023px) {
+      #clubhouse-section .scroll-textbox-area {
+        height: 240px; } }
+  #clubhouse-section .hide-scroll {
+    height: 373px;
+    overflow: hidden; }
+    @media only screen and (max-width: 1023px) {
+      #clubhouse-section .hide-scroll {
+        height: 240px; } }
+  #clubhouse-section .wheelbutton-container {
+    width: 100px;
+    float: right;
+    padding-left: 100px;
+    margin-top: -127px; }
+    @media only screen and (max-width: 1023px) {
+      #clubhouse-section .wheelbutton-container {
+        padding-left: 90px;
+        margin-top: -28px; } }
+  #clubhouse-section .next-prev-wheelbutton {
+    height: 125px;
+    width: 125px;
+    background-color: black; }
+    @media only screen and (max-width: 1023px) {
+      #clubhouse-section .next-prev-wheelbutton {
+        height: 85px;
+        width: 85px; } }
 
 #companyinfo-section h1, #companyinfo-section h3, #companyinfo-section p {
   color: white;
