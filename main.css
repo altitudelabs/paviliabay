@@ -332,6 +332,9 @@ sup {
   left: 50%;
   width: 80%;
   text-align: center; }
+  @media only screen and (max-width: 720px) {
+    #hero-section .title-container {
+      top: 38%; } }
   #hero-section .title-container .title-eng-text {
     font-family: futura;
     font-weight: normal;
@@ -343,8 +346,8 @@ sup {
     left: -50%; }
     @media only screen and (max-width: 720px) {
       #hero-section .title-container .title-eng-text {
-        line-height: 35px;
-        font-size: 24px; } }
+        font-size: 24px;
+        letter-spacing: 0.02em; } }
   #hero-section .title-container .title-chi-text {
     font-family: kozukaGothic;
     font-weight: normal;
@@ -355,7 +358,9 @@ sup {
     left: calc(-50% + 10px); }
     @media only screen and (max-width: 720px) {
       #hero-section .title-container .title-chi-text {
-        letter-spacing: 12px; } }
+        left: -50%;
+        font-size: 20px;
+        letter-spacing: 0.64em; } }
   #hero-section .title-container .transparent-button {
     display: inline-block;
     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -365,7 +370,8 @@ sup {
     left: -50%; }
     @media only screen and (max-width: 720px) {
       #hero-section .title-container .transparent-button {
-        margin-top: 20px; } }
+        margin-top: 20px;
+        padding: 8px 18px; } }
     #hero-section .title-container .transparent-button .title-white-box-text {
       font-family: futuraBT;
       font-weight: normal;
@@ -375,15 +381,15 @@ sup {
       text-align: center; }
       @media only screen and (max-width: 720px) {
         #hero-section .title-container .transparent-button .title-white-box-text {
-          font-size: 13px;
-          line-height: 15px; } }
+          font-size: 14px;
+          letter-spacing: 0.02em; } }
 
 #hero-section .video-container {
   height: 666px;
   width: 100%; }
   @media only screen and (max-width: 720px) {
     #hero-section .video-container {
-      height: 537px; } }
+      height: 531px; } }
 
 #hero-section .video {
   width: 100%;
@@ -406,8 +412,8 @@ sup {
       #hero-section .hero-footer .register-link-text {
         margin-left: 20px;
         top: 9px;
-        font-size: 90%;
-        height: 100%; } }
+        font-size: 14px;
+        letter-spacing: 0.025em; } }
 
 #hero-section .hero-logo {
   background-image: url("images/hero-section/shiplogo.png");
@@ -615,7 +621,7 @@ sup {
     position: relative;
     float: right;
     width: 75%; }
-    @media only screen and (min-width: 721px) and (max-width: 1023px) {
+    @media only screen and (min-width: 721px) and (max-width: 1199px) {
       #clubhouse-section .clubhouse-image-container {
         width: 64%; } }
     @media only screen and (max-width: 720px) {
@@ -633,7 +639,7 @@ sup {
     float: left;
     padding-top: 54px;
     width: 25%; }
-    @media only screen and (min-width: 721px) and (max-width: 1023px) {
+    @media only screen and (min-width: 721px) and (max-width: 1199px) {
       #clubhouse-section .clubhouse-blue-box-container {
         width: 36%; } }
     @media only screen and (max-width: 720px) {
@@ -837,7 +843,7 @@ sup {
 
 #designerprofile-section .designer-photo {
   background-image: url("images/designerprofile-section/designer.png"); }
-  @media only screen and (min-width: 721px) and (max-width: 1023px) {
+  @media only screen and (min-width: 721px) and (max-width: 1199px) {
     #designerprofile-section .designer-photo {
       height: 270px; } }
   @media only screen and (max-width: 720px) {
@@ -914,13 +920,13 @@ sup {
     background-color: #dfdfe1;
     width: 65%;
     min-width: 400px; }
-    @media only screen and (min-width: 721px) and (max-width: 1023px) {
+    @media only screen and (min-width: 721px) and (max-width: 1199px) {
       #map-section .map-container {
         height: 900px; } }
     @media only screen and (max-width: 720px) {
       #map-section .map-container {
         width: 100%;
-        height: 60vh;
+        height: 357px;
         min-height: 60vh; } }
   #map-section .map-info {
     height: 950px;
@@ -930,13 +936,13 @@ sup {
     background-color: #232f49;
     padding-left: 60px;
     padding-bottom: 60px; }
-    @media only screen and (min-width: 721px) and (max-width: 1023px) {
+    @media only screen and (min-width: 721px) and (max-width: 1199px) {
       #map-section .map-info {
         height: 900px; } }
     @media only screen and (max-width: 720px) {
       #map-section .map-info {
         width: 100%;
-        height: auto;
+        height: 440px;
         min-height: 60vh; } }
     #map-section .map-info .white-line {
       width: 100%; }
@@ -1095,7 +1101,7 @@ sup {
   width: 33.3%;
   vertical-align: top;
   height: 674px; }
-  @media only screen and (min-width: 721px) and (max-width: 1023px) {
+  @media only screen and (min-width: 721px) and (max-width: 1199px) {
     #portfolio-section .portfolio-image {
       height: 450px; } }
   @media only screen and (max-width: 720px) {

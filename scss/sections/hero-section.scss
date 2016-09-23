@@ -4,9 +4,10 @@
   $section-height-mobile: 576px;
 
   $footer-height: 39px;
+  $footer-height-mobile: 45px;
 
   $video-height: $section-height - $footer-height;
-  $video-height-mobile: $section-height-mobile - $footer-height;
+  $video-height-mobile: $section-height-mobile - $footer-height-mobile;
 
   $logo-width: 110px;
   $logo-width-mobile: 65px;
@@ -18,6 +19,10 @@
     left: 50%;
     width: 80%;
     text-align: center;
+
+    @include responsive(mobile) {
+      top: 38%;
+    }
 
     .title-eng-text {
       font-family: futura;
@@ -32,8 +37,8 @@
       left: -50%;
 
       @include responsive(mobile) {
-        line-height: 35px;
         font-size: 24px;
+        letter-spacing: 0.02em;
       }
     }
 
@@ -48,7 +53,9 @@
       left: calc(-50% + 10px);
 
       @include responsive(mobile) {
-        letter-spacing: 12px;
+        left: -50%;
+        font-size: 20px;
+        letter-spacing: 0.64em;
       }
     }
 
@@ -63,6 +70,7 @@
 
       @include responsive(mobile) {
         margin-top: 20px;
+        padding: 8px 18px;
       }
 
       .title-white-box-text {
@@ -74,8 +82,8 @@
         text-align: center;
 
         @include responsive(mobile){
-          font-size: 13px;
-          line-height: 15px;
+          font-size: 14px;
+          letter-spacing: 0.02em;
         }
       }
     }
@@ -115,8 +123,8 @@
       @include responsive(mobile){
         margin-left: 20px;
         top: 9px;
-        font-size: 90%;
-        height: 100%;
+        font-size: 14px;
+        letter-spacing: 0.025em;
       }
     }
   }
