@@ -708,9 +708,9 @@ sup {
   text-align: center; }
   #companyinfo-section .companyinfo-body-container {
     background-color: #232f49;
-    width: 95vw;
+    width: 92%;
     position: relative;
-    margin: 0 auto auto auto;
+    margin: 0 auto 105px auto;
     text-align: center; }
     @media only screen and (max-width: 720px) {
       #companyinfo-section .companyinfo-body-container {
@@ -718,8 +718,9 @@ sup {
   #companyinfo-section .company-logo {
     display: inline-block;
     vertical-align: top;
-    padding: 40px;
-    margin-bottom: 20px; }
+    padding-top: 96px;
+    padding-right: 155px;
+    padding-left: 155px; }
     #companyinfo-section .company-logo .description {
       font-family: futura;
       font-weight: normal;
@@ -731,14 +732,15 @@ sup {
           line-height: 30px;
           font-size: 15px; } }
     #companyinfo-section .company-logo .image {
-      width: 200px;
-      height: 100px;
-      background-color: black;
+      top: 35px;
+      height: 42px;
+      width: auto;
       position: relative;
-      margin: auto; }
+      margin: auto;
+      margin-bottom: 40px; }
   #companyinfo-section .disclaimer {
     position: relative;
-    padding: 40px 30px; }
+    padding: 40px 80px; }
     @media only screen and (max-width: 720px) {
       #companyinfo-section .disclaimer {
         padding: 40px 0; } }
@@ -748,7 +750,9 @@ sup {
       font-size: 21px;
       letter-spacing: 0.025em;
       line-height: 26px;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      margin-top: 30px;
+      margin-bottom: 20px; }
       @media only screen and (max-width: 720px) {
         #companyinfo-section .disclaimer .title {
           line-height: 30px;
