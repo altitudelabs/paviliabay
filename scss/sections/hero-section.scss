@@ -13,11 +13,12 @@
 
   .title-container {
     position: absolute;
-    top: 37.5%;
+    top: 43%;
     background-color: transparent;
-    left: 10%;
+    left: 50%;
     width: 80%;
     text-align: center;
+
     .title-eng-text {
       font-family: futura;
       font-weight: normal;
@@ -26,6 +27,9 @@
       letter-spacing: 0.025em;
       text-transform: uppercase;
       text-align: center;
+
+      position: relative;
+      left: -50%;
 
       @include responsive(mobile) {
         line-height: 35px;
@@ -40,11 +44,39 @@
       letter-spacing: 1.4em;
       text-align: center;
 
-      margin-top: 10px;
-      margin-left: 10px;
+      position: relative;
+      left: calc(-50% + 10px);
 
       @include responsive(mobile) {
         letter-spacing: 12px;
+      }
+    }
+
+    .transparent-button {
+      display: inline-block;
+      border: 1px solid rgba(255, 255, 255, .5);
+      padding: 10px 23px;
+      margin-top: 12px;
+
+      position: relative;
+      left: -50%;
+
+      @include responsive(mobile) {
+        margin-top: 20px;
+      }
+
+      .title-white-box-text {
+        font-family: futuraBT;
+        font-weight: normal;
+        font-size: 12px;
+        letter-spacing: 0.05em;
+        color: white;
+        text-align: center;
+
+        @include responsive(mobile){
+          font-size: 13px;
+          line-height: 15px;
+        }
       }
     }
   }
@@ -105,31 +137,6 @@
       padding-bottom: 48 / 244 * $logo-width-mobile;
       top: 4%;
       left: 5%;
-    }
-  }
-
-  .transparent-button {
-    display: inline-block;
-    border: 1px solid rgba(255, 255, 255, .5);
-    padding: 10px 23px;
-    margin-top: 40px;
-
-    @include responsive(mobile) {
-      margin-top: 20px;
-    }
-
-    .title-white-box-text {
-      font-family: futuraBT;
-      font-weight: normal;
-      font-size: 12px;
-      letter-spacing: 0.05em;
-      color: white;
-      text-align: center;
-
-      @include responsive(mobile){
-        font-size: 13px;
-        line-height: 15px;
-      }
     }
   }
 }

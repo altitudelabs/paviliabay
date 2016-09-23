@@ -270,9 +270,9 @@ sup {
 
 #hero-section .title-container {
   position: absolute;
-  top: 37.5%;
+  top: 43%;
   background-color: transparent;
-  left: 10%;
+  left: 50%;
   width: 80%;
   text-align: center; }
   #hero-section .title-container .title-eng-text {
@@ -281,7 +281,9 @@ sup {
     font-size: 27px;
     letter-spacing: 0.025em;
     text-transform: uppercase;
-    text-align: center; }
+    text-align: center;
+    position: relative;
+    left: -50%; }
     @media only screen and (max-width: 720px) {
       #hero-section .title-container .title-eng-text {
         line-height: 35px;
@@ -292,11 +294,32 @@ sup {
     font-size: 23px;
     letter-spacing: 1.4em;
     text-align: center;
-    margin-top: 10px;
-    margin-left: 10px; }
+    position: relative;
+    left: calc(-50% + 10px); }
     @media only screen and (max-width: 720px) {
       #hero-section .title-container .title-chi-text {
         letter-spacing: 12px; } }
+  #hero-section .title-container .transparent-button {
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 10px 23px;
+    margin-top: 12px;
+    position: relative;
+    left: -50%; }
+    @media only screen and (max-width: 720px) {
+      #hero-section .title-container .transparent-button {
+        margin-top: 20px; } }
+    #hero-section .title-container .transparent-button .title-white-box-text {
+      font-family: futuraBT;
+      font-weight: normal;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      color: white;
+      text-align: center; }
+      @media only screen and (max-width: 720px) {
+        #hero-section .title-container .transparent-button .title-white-box-text {
+          font-size: 13px;
+          line-height: 15px; } }
 
 #hero-section .video-container {
   height: 666px;
@@ -344,26 +367,6 @@ sup {
       padding-bottom: 12.78689px;
       top: 4%;
       left: 5%; } }
-
-#hero-section .transparent-button {
-  display: inline-block;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  padding: 10px 23px;
-  margin-top: 40px; }
-  @media only screen and (max-width: 720px) {
-    #hero-section .transparent-button {
-      margin-top: 20px; } }
-  #hero-section .transparent-button .title-white-box-text {
-    font-family: futuraBT;
-    font-weight: normal;
-    font-size: 12px;
-    letter-spacing: 0.05em;
-    color: white;
-    text-align: center; }
-    @media only screen and (max-width: 720px) {
-      #hero-section .transparent-button .title-white-box-text {
-        font-size: 13px;
-        line-height: 15px; } }
 
 #nav-menu {
   font-family: futura;
