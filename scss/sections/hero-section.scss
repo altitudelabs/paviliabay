@@ -9,7 +9,7 @@
   $video-height-mobile: $section-height-mobile - $footer-height;
 
   $logo-width: 110px;
-  $logo-width-mobile: 80px;
+  $logo-width-mobile: 65px;
 
   .title-container {
     position: absolute;
@@ -101,7 +101,10 @@
     left: 4%;
 
     @include responsive(mobile){
-      width: 20%;
+      width: $logo-width-mobile;
+      padding-bottom: 48 / 244 * $logo-width-mobile;
+      top: 4%;
+      left: 5%;
     }
   }
 

@@ -1,7 +1,8 @@
 #nav-menu {
   $nav-content-width: 310px;
-  $nav-image-width: 25px;
 
+  $nav-image-width: 25px;
+  $nav-image-width-mobile: 16px;
   font-family: futura;
   color: white;
   text-align: right;
@@ -18,6 +19,12 @@
     right: 4%;
     cursor: pointer;
 
+    @include responsive(mobile) {
+      width: $nav-image-width-mobile;
+      padding-bottom: 48 / 64 * $nav-image-width-mobile;
+      top: 3.5%;
+      right: 5.5%;
+    }
   }
 
   /* * * * * * * * * * * * * *
