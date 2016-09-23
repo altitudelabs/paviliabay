@@ -623,7 +623,7 @@ sup {
     width: 75%; }
     @media only screen and (min-width: 721px) and (max-width: 1199px) {
       #clubhouse-section .clubhouse-image-container {
-        width: 64%; } }
+        width: 60%; } }
     @media only screen and (max-width: 720px) {
       #clubhouse-section .clubhouse-image-container {
         background-position: left;
@@ -641,7 +641,7 @@ sup {
     width: 25%; }
     @media only screen and (min-width: 721px) and (max-width: 1199px) {
       #clubhouse-section .clubhouse-blue-box-container {
-        width: 36%; } }
+        width: 40%; } }
     @media only screen and (max-width: 720px) {
       #clubhouse-section .clubhouse-blue-box-container {
         width: 0;
@@ -651,13 +651,16 @@ sup {
   #clubhouse-section .clubhouse-blue-box {
     position: relative;
     padding: 60px 40px;
-    left: calc(100% - 278px);
+    left: calc(100% - 286px);
     width: 337px;
     height: 452px; }
     #clubhouse-section .clubhouse-blue-box .white-line {
-      left: -300px;
+      left: -250px;
       margin-top: 23px;
       margin-bottom: 23px; }
+    @media only screen and (min-width: 721px) and (max-width: 1199px) {
+      #clubhouse-section .clubhouse-blue-box {
+        left: calc(100% - 276px); } }
     @media only screen and (max-width: 720px) {
       #clubhouse-section .clubhouse-blue-box {
         left: 0;
@@ -779,7 +782,7 @@ sup {
 
 #designerprofile-section .description-grey-box {
   position: relative;
-  margin: 0 52px;
+  margin: 0 60px;
   margin-top: -46px;
   background-color: #dfdfe1;
   overflow: visible;
@@ -908,7 +911,7 @@ sup {
   height: 100px;
   position: absolute;
   bottom: -33px;
-  right: -25px; }
+  right: -33px; }
   @media only screen and (max-width: 720px) {
     #designerprofile-section .next-prev-wheelbutton {
       display: none; } }

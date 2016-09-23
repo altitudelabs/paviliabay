@@ -10,16 +10,18 @@
   $link-menu-bottom-mobile: 30px;
 
   $image-container-width: 75%;
-  $image-container-width-trans: 64%;
+  $image-container-width-trans: 60%;
 
   $bluebox-container-width: 100% - $image-container-width;
   $bluebox-container-width-trans: 100% - $image-container-width-trans;
 
   $bluebox-height: 452px;
+  $bluebox-image-overlap: calc(100% - 286px); // including 8px side-scroll-width
+  $bluebox-image-overlap-trans: calc(100% - 276px);
 
   $text-area-height: 225px;
 
-  $white-line-left: -300px;
+  $white-line-left: -250px;
 
   @extend .clearfix;
   position: relative;
@@ -146,7 +148,7 @@
     @extend .blue-box;
     position: relative;
     padding: 60px 40px;
-    left: calc(100% - 278px);
+    left:  $bluebox-image-overlap;
     width: 337px;
     height: $bluebox-height;
 
@@ -157,13 +159,9 @@
       margin-bottom: 23px;
     }
 
-    // @include responsive(transition){
-    //   right: auto;
-    //   width: 60%;
-    //   min-height: 70vh;
-    //   margin-top: 3vh;
-    //   margin-left: 5vw;
-    // }
+    @include responsive(transition) {
+      left: $bluebox-image-overlap-trans;
+    }
 
     @include responsive(mobile){
       left: 0;

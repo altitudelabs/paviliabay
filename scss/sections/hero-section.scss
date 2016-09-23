@@ -5,6 +5,9 @@
 
   $footer-height: 39px;
   $footer-height-mobile: 45px;
+  
+  $register-link-left: 52px + $side-scroll-width;
+  $register-link-left-trans: 12px + $side-scroll-width;
 
   $video-height: $section-height - $footer-height;
   $video-height-mobile: $section-height-mobile - $footer-height-mobile;
@@ -118,10 +121,10 @@
 
       position: relative;
       top: 7px;
-      margin-left: 60px;
+      margin-left: $register-link-left;
 
       @include responsive(mobile){
-        margin-left: 20px;
+        margin-left: $register-link-left-trans;
         top: 9px;
         font-size: 14px;
         letter-spacing: 0.025em;

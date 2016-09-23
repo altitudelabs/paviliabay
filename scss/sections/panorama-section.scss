@@ -3,6 +3,8 @@
   $section-height: 663px;
   $section-height-mobile: 576px;
 
+  $panorama-content-top: 40%;
+
   .panorama-image-container {
 
     background-image: url("images/panorama-section/pano_bg.jpg");
@@ -19,7 +21,7 @@
   .panorama-content {
     position: absolute;
     text-align: center;
-    top: 40%;
+    top: $panorama-content-top;
     width:100%;
 
     @include responsive(mobile) {

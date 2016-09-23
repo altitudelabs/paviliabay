@@ -3,7 +3,7 @@
   $yacht-height: 666px;
   $yacht-greybox-gutter: 46px;
 
-  $greybox-horizontal-gutter: 52px;
+  $greybox-horizontal-gutter: 52px + $side-scroll-width;
   $greybox-bluebox-offset-x: 30px;
   $greybox-bluebox-offset-y: -117px;
 
@@ -213,7 +213,7 @@
     height: $next-prev-height;
     position: absolute;
     bottom: $next-prev-width - 133px;
-    right: $next-prev-width - 125px;
+    right: $next-prev-width - 125px - $side-scroll-width;
     @include responsive(mobile) {
       display: none;
       // right: auto;
