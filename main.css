@@ -355,6 +355,7 @@ sup {
         line-height: 15px; } }
 
 #nav-menu {
+  font-family: futura;
   color: white;
   text-align: right;
   position: absolute;
@@ -898,7 +899,7 @@ sup {
 #panorama-section .title-center {
   position: relative;
   margin: auto; }
-  #panorama-section .title-center h1 {
+  #panorama-section .title-center p {
     font-family: futura;
     font-weight: normal;
     font-size: 27px;
@@ -906,7 +907,7 @@ sup {
     line-height: 46px;
     text-transform: uppercase; }
     @media only screen and (max-width: 1023px) {
-      #panorama-section .title-center h1 {
+      #panorama-section .title-center p {
         line-height: 35px;
         font-size: 24px; } }
 
@@ -956,14 +957,14 @@ sup {
       padding: 2px;
       margin: auto;
       min-width: 100px; } }
-  #panorama-section .button span {
+  #panorama-section .button p {
     font-family: futuraBT;
     font-weight: normal;
     font-size: 14px;
     letter-spacing: 0.05em;
     text-align: center; }
     @media only screen and (max-width: 1023px) {
-      #panorama-section .button span {
+      #panorama-section .button p {
         line-height: 30px;
         font-size: 15px; } }
 
@@ -976,7 +977,7 @@ sup {
   @media only screen and (max-width: 1023px) {
     #portfolio-section .portfolio-header {
       margin-top: 2px; } }
-  #portfolio-section .portfolio-header h1 {
+  #portfolio-section .portfolio-header div {
     font-family: futura;
     font-weight: normal;
     font-size: 24px;
@@ -986,7 +987,7 @@ sup {
     margin-bottom: 1.5vh;
     text-transform: uppercase; }
     @media only screen and (max-width: 1023px) {
-      #portfolio-section .portfolio-header h1 {
+      #portfolio-section .portfolio-header div {
         font-size: 24px;
         line-height: 30px; } }
 
