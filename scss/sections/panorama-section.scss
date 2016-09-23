@@ -5,16 +5,17 @@
     margin: auto;
 
     h1 {
-      letter-spacing: 2px;
-      line-height: 52px;
-      font-size: 37px;
-      font-weight: 700;
+      font-family: futura;
+      font-weight: normal;
+      font-size: 27px;
+      letter-spacing: 0.025em;
+      line-height: 46px;
       text-transform: uppercase;
 
-      @include responsive(transition){
-        line-height: 52px;
-        font-size: 36px;
-      }
+      // @include responsive(transition){
+      //   line-height: 52px;
+      //   font-size: 36px;
+      // }
 
       @include responsive(mobile){
         line-height: 35px;
@@ -76,18 +77,16 @@
     }
 
     span {
+      font-family: futuraBT;
+      font-weight: normal;
+      font-size: 14px;
+      letter-spacing: 0.05em;
       text-align: center;
-      line-height: 40px;
-      font-size: 23px;
-      width: 100%;
-      font-weight: 700;
-      box-sizing: border-box;
-      letter-spacing: 2px;
 
-      @include responsive(transition){
-          line-height: 35px;
-          font-size: 22px;
-      }
+      // @include responsive(transition){
+      //     line-height: 35px;
+      //     font-size: 22px;
+      // }
 
       @include responsive(mobile){
         line-height: 30px;

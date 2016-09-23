@@ -12,14 +12,14 @@
     }
 
     h1 {
+      font-family: futura;
+      font-weight: normal;
+      font-size: 24px;
+      letter-spacing: 0.025em;
       color: white;
       margin-top: 1.5vh;
       margin-bottom: 1.5vh;
       text-transform: uppercase;
-      font-weight: 500;
-
-      line-height: 32px;
-      font-size: 30px;
 
       @include responsive(mobile) {
         font-size: 24px;

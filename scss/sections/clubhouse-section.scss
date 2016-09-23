@@ -9,10 +9,11 @@
   * * * * * * * * * * * * * * * */
 
   .club-title-text {
-    line-height: 55px;
-    font-size: 38px;
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-family: futura;
+    font-weight: normal;
+    font-size: 24px;
+    letter-spacing: 0.025em;
+    line-height: 33px;
     text-transform: uppercase;
 
     @include responsive(mobile) {
@@ -22,10 +23,11 @@
   }
 
   .club-description-text {
-    line-height: 32px;
-    font-size: 20px;
-    letter-spacing: 1px;
-    font-weight: 700;
+    font-family: futura;
+    font-weight: normal;
+    font-size: 13px;
+    letter-spacing: 0.025em;
+    line-height: 25px;
 
     @include responsive(mobile) {
       line-height: 18px;
@@ -34,10 +36,12 @@
   }
 
   .link-text {
-    line-height: 32px;
-    font-size: 30px;
-    font-weight: 100;
+    font-family: futuraLTProLight;
+    font-weight: lighter;
+    font-size: 17px;
+    letter-spacing: 0.025em;
     text-align: center;
+
     margin: 2px;
     margin-left: 5px;
     padding-right: 12px;
@@ -125,7 +129,7 @@
     }
     //padding-left: calc(35.5% - 330px);
   }
-  
+
   .clubhouse-blue-box {
     @extend .blue-box;
     position: relative;

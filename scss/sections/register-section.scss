@@ -1,29 +1,26 @@
 #register-section {
-  padding: 20px;
   background-color: $dark-gray;
+  font-family: futura;
+  font-weight: normal;
+  font-size: 17px;
+  letter-spacing: 0.025em;
   text-align: center;
-  color: white;
+
+  padding: 20px;
 
   @include responsive(mobile) {
     padding: 20px 20px;
   }
 
   p {
-    text-align: center;
+    color: white;
     margin-top: 10px;
     margin-bottom: 10px;
 
-    line-height: 40px;
-    font-size: 23px;
-    width: 100%;
-    font-weight: 700;
-    box-sizing: border-box;
-    letter-spacing: 2px;
-
-    @include responsive(transition){
-        line-height: 35px;
-        font-size: 22px;
-    }
+    // @include responsive(transition){
+    //     line-height: 35px;
+    //     font-size: 22px;
+    // }
 
     @include responsive(mobile){
       line-height: 30px;
@@ -47,22 +44,13 @@
     p {
       color: $dark-blue;
       text-transform: uppercase;
-
-      text-align: center;
       margin-top: 10px;
       margin-bottom: 10px;
 
-      line-height: 40px;
-      font-size: 23px;
-      width: 100%;
-      font-weight: 700;
-      box-sizing: border-box;
-      letter-spacing: 2px;
-
-      @include responsive(transition){
-          line-height: 35px;
-          font-size: 22px;
-      }
+      // @include responsive(transition){
+      //     line-height: 35px;
+      //     font-size: 22px;
+      // }
 
       @include responsive(mobile){
         line-height: 30px;

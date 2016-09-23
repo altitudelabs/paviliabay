@@ -18,27 +18,27 @@
  *        @include responsive(mobile){ ... }
  * * * * * * * * * * * * * * * * * * * * * * */
 @font-face {
-  font-family: futuraEnglish;
+  font-family: futura;
   src: url("./fonts/futura_medium_bt-webfont.ttf") format("truetype");
-  font-weight: 700;
+  font-weight: bold;
   font-style: normal; }
 
 @font-face {
-  font-family: futuraEnglish;
+  font-family: futuraBT;
   src: url("./fonts/futurabt-book-opentype.otf") format("opentype");
-  font-weight: 500;
+  font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: futuraEnglish;
+  font-family: kozukaGothic;
   src: url("./fonts/KozGoPr6N-Regular.otf") format("opentype");
-  font-weight: 300;
+  font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: futuraEnglish;
+  font-family: futuraLTProLight;
   src: url("./fonts/Linotype - FuturaLTPro-Light.otf") format("opentype");
-  font-weight: 100;
+  font-weight: normal;
   font-style: normal; }
 
 /* * * * * * * * * * *
@@ -54,7 +54,6 @@
   border: 0;
   font-size: 100%;
   font: inherit;
-  font-family: futuraEnglish;
   vertical-align: baseline;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -269,9 +268,6 @@ sup {
   position: relative;
   left: -50%; }
 
-.chinese-char {
-  font-family: futuraChinese; }
-
 #hero-section .title-container {
   position: absolute;
   top: 37.5%;
@@ -280,26 +276,24 @@ sup {
   width: 80%;
   text-align: center; }
   #hero-section .title-container .title-eng-text {
-    line-height: 52px;
-    font-size: 37px;
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-family: futura;
+    font-weight: normal;
+    font-size: 27px;
+    letter-spacing: 0.025em;
     text-transform: uppercase;
     text-align: center; }
-    @media only screen and (min-width: 1024px) {
-      #hero-section .title-container .title-eng-text {
-        line-height: 52px;
-        font-size: 36px; } }
     @media only screen and (max-width: 1023px) {
       #hero-section .title-container .title-eng-text {
         line-height: 35px;
         font-size: 24px; } }
   #hero-section .title-container .title-chi-text {
+    font-family: kozukaGothic;
+    font-weight: normal;
+    font-size: 23px;
+    letter-spacing: 1.4em;
     text-align: center;
-    letter-spacing: 24px;
     margin-top: 10px;
-    margin-left: 10px;
-    font-weight: normal; }
+    margin-left: 10px; }
     @media only screen and (max-width: 1023px) {
       #hero-section .title-container .title-chi-text {
         letter-spacing: 12px; } }
@@ -317,19 +311,13 @@ sup {
   height: 8vh;
   vertical-align: middle; }
   #hero-section .hero-footer .register-link-text {
+    font-family: futura;
+    font-weight: normal;
+    font-size: 13px;
+    letter-spacing: 0.025em;
     text-transform: uppercase;
     color: #232f49;
-    line-height: 40px;
-    font-size: 23px;
-    width: 100%;
-    font-weight: 700;
-    box-sizing: border-box;
-    letter-spacing: normal;
     margin-left: 45px; }
-    @media only screen and (min-width: 1024px) {
-      #hero-section .hero-footer .register-link-text {
-        line-height: 35px;
-        font-size: 22px; } }
     @media only screen and (max-width: 1023px) {
       #hero-section .hero-footer .register-link-text {
         margin-left: 20px;
@@ -355,15 +343,12 @@ sup {
     #hero-section .transparent-button {
       margin-top: 20px; } }
   #hero-section .transparent-button .title-white-box-text {
+    font-family: futuraBT;
+    font-weight: normal;
+    font-size: 12px;
+    letter-spacing: 0.05em;
     color: white;
-    font-weight: 300;
-    text-align: center;
-    font-size: 15px;
-    line-height: 20px;
-    font-weight: 100;
-    width: 100%;
-    box-sizing: border-box;
-    letter-spacing: .5px; }
+    text-align: center; }
     @media only screen and (max-width: 1023px) {
       #hero-section .transparent-button .title-white-box-text {
         font-size: 13px;
@@ -499,28 +484,31 @@ sup {
   * Text styles
   * * * * * * * * * * * * * * * */ }
   #clubhouse-section .club-title-text {
-    line-height: 55px;
-    font-size: 38px;
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-family: futura;
+    font-weight: normal;
+    font-size: 24px;
+    letter-spacing: 0.025em;
+    line-height: 33px;
     text-transform: uppercase; }
     @media only screen and (max-width: 1023px) {
       #clubhouse-section .club-title-text {
         line-height: 28px;
         font-size: 20px; } }
   #clubhouse-section .club-description-text {
-    line-height: 32px;
-    font-size: 20px;
-    letter-spacing: 1px;
-    font-weight: 700; }
+    font-family: futura;
+    font-weight: normal;
+    font-size: 13px;
+    letter-spacing: 0.025em;
+    line-height: 25px; }
     @media only screen and (max-width: 1023px) {
       #clubhouse-section .club-description-text {
         line-height: 18px;
         font-size: 12px; } }
   #clubhouse-section .link-text {
-    line-height: 32px;
-    font-size: 30px;
-    font-weight: 100;
+    font-family: futuraLTProLight;
+    font-weight: lighter;
+    font-size: 17px;
+    letter-spacing: 0.025em;
     text-align: center;
     margin: 2px;
     margin-left: 5px;
@@ -643,28 +631,17 @@ sup {
     @media only screen and (max-width: 1023px) {
       #companyinfo-section .companyinfo-body-container {
         width: 100%; } }
-  #companyinfo-section p {
-    padding: 40px;
-    padding-bottom: 200px; }
-    @media only screen and (max-width: 1023px) {
-      #companyinfo-section p {
-        padding: 20px; } }
   #companyinfo-section .company-logo {
     display: inline-block;
     vertical-align: top;
-    padding-top: 40px;
+    padding: 40px;
     margin-bottom: 20px; }
     #companyinfo-section .company-logo .description {
-      line-height: 40px;
-      font-size: 23px;
-      width: 100%;
-      font-weight: 700;
-      box-sizing: border-box;
-      letter-spacing: 2px; }
-      @media only screen and (min-width: 1024px) {
-        #companyinfo-section .company-logo .description {
-          line-height: 35px;
-          font-size: 22px; } }
+      font-family: futura;
+      font-weight: normal;
+      font-size: 15px;
+      letter-spacing: 0.025em;
+      line-height: 26px; }
       @media only screen and (max-width: 1023px) {
         #companyinfo-section .company-logo .description {
           line-height: 30px;
@@ -682,32 +659,24 @@ sup {
       #companyinfo-section .disclaimer {
         padding: 40px 0; } }
     #companyinfo-section .disclaimer .title {
-      text-transform: uppercase;
-      line-height: 40px;
-      font-size: 23px;
-      width: 100%;
-      font-weight: 700;
-      box-sizing: border-box;
-      letter-spacing: 2px; }
-      @media only screen and (min-width: 1024px) {
-        #companyinfo-section .disclaimer .title {
-          line-height: 35px;
-          font-size: 22px; } }
+      font-family: futura;
+      font-weight: normal;
+      font-size: 21px;
+      letter-spacing: 0.025em;
+      line-height: 26px;
+      text-transform: uppercase; }
       @media only screen and (max-width: 1023px) {
         #companyinfo-section .disclaimer .title {
           line-height: 30px;
           font-size: 15px; } }
     #companyinfo-section .disclaimer p {
-      font-weight: 700;
+      font-family: futuraBT;
+      font-weight: normal;
+      font-size: 13px;
+      letter-spacing: 0.025em;
+      line-height: 25px;
       position: relative;
-      line-height: 40px;
-      font-size: 25px;
-      margin: 0;
-      letter-spacing: 0.007em; }
-      @media only screen and (min-width: 1024px) {
-        #companyinfo-section .disclaimer p {
-          line-height: 33px;
-          font-size: 22px; } }
+      margin: 0; }
       @media only screen and (max-width: 1023px) {
         #companyinfo-section .disclaimer p {
           line-height: 30px;
@@ -765,48 +734,28 @@ sup {
         right: 0px;
         left: calc(50% - 927px); } }
   #designerprofile-section .profile-blue-box .designer-title {
-    line-height: 52px;
-    font-size: 37px;
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-family: futura;
+    font-weight: normal;
+    font-size: 24px;
+    letter-spacing: 0.025em;
+    line-height: 31px;
     text-transform: uppercase; }
-    @media only screen and (min-width: 1024px) {
-      #designerprofile-section .profile-blue-box .designer-title {
-        font-size: 38px;
-        margin: 36px auto;
-        line-height: 52px; } }
     @media only screen and (max-width: 1023px) {
       #designerprofile-section .profile-blue-box .designer-title {
         line-height: 30px;
         font-size: 24px; } }
-  #designerprofile-section .profile-blue-box .designer-name {
-    text-transform: uppercase;
-    line-height: 32px;
-    font-size: 30px;
-    font-weight: 100; }
-    @media only screen and (min-width: 1024px) {
-      #designerprofile-section .profile-blue-box .designer-name {
-        font-weight: 600;
-        margin-top: 50px; } }
+  #designerprofile-section .profile-blue-box .designer-info {
+    font-family: futura;
+    font-weight: normal;
+    font-size: 17px;
+    letter-spacing: 0.025em; }
     @media only screen and (max-width: 1023px) {
-      #designerprofile-section .profile-blue-box .designer-name {
+      #designerprofile-section .profile-blue-box .designer-info {
         font-size: 17px;
         line-height: 17px;
         font-weight: bold; } }
-  #designerprofile-section .profile-blue-box .designer-company-name {
-    line-height: 40px;
-    font-size: 23px;
-    font-weight: 700;
-    letter-spacing: 0px; }
-    @media only screen and (min-width: 1024px) {
-      #designerprofile-section .profile-blue-box .designer-company-name {
-        margin-top: 0px;
-        font-size: 22px;
-        font-weight: 800; } }
-    @media only screen and (max-width: 1023px) {
-      #designerprofile-section .profile-blue-box .designer-company-name {
-        line-height: 30px;
-        font-size: 15px; } }
+    #designerprofile-section .profile-blue-box .designer-info .designer-name {
+      text-transform: uppercase; }
 
 #designerprofile-section .designer-photo {
   background-image: url("images/designerprofile-section/designer.png"); }
@@ -826,20 +775,17 @@ sup {
   vertical-align: top;
   position: relative; }
   #designerprofile-section .designer-description-text p {
-    font-weight: 500; }
-  @media only screen and (min-width: 1024px) {
-    #designerprofile-section .designer-description-text .quote {
-      font-style: italic;
-      line-height: 38px;
-      font-size: 25px; } }
+    font-weight: normal;
+    font-family: futura;
+    letter-spacing: 0.025em; }
+  #designerprofile-section .designer-description-text .quote {
+    font-style: italic;
+    font-size: 17px; }
   #designerprofile-section .designer-description-text .description {
+    font-size: 13px;
+    letter-spacing: 0.025em;
+    line-height: 25px;
     margin-bottom: 20px; }
-    @media only screen and (min-width: 1024px) {
-      #designerprofile-section .designer-description-text .description {
-        line-height: 33px;
-        font-size: 23px;
-        margin-bottom: 40px;
-        min-height: 200px; } }
   @media only screen and (max-width: 1023px) {
     #designerprofile-section .designer-description-text {
       width: auto;
@@ -848,15 +794,14 @@ sup {
 #designerprofile-section .designer-video-link {
   display: inline-block; }
   #designerprofile-section .designer-video-link a {
+    font-family: futuraLTProLight;
+    font-weight: lighter;
+    font-size: 17px;
+    letter-spacing: 0.025em;
     text-decoration: none;
     color: black;
     padding-bottom: 2px;
-    border-bottom: 1px solid black;
-    line-height: 32px;
-    font-size: 30px;
-    font-weight: 100;
-    width: 100%;
-    box-sizing: border-box; }
+    border-bottom: 1px solid black; }
     @media only screen and (max-width: 1023px) {
       #designerprofile-section .designer-video-link a {
         font-size: 24px;
@@ -918,26 +863,22 @@ sup {
     #map-section .map-info .white-line {
       width: 100%; }
   #map-section .map-info-text {
-    padding-right: 20px; }
+    padding-right: 20px;
+    font-family: futura;
+    font-weight: normal;
+    letter-spacing: 0.025em; }
     #map-section .map-info-text .title {
-      margin-top: 70px;
+      font-size: 21px;
+      line-height: 41px;
       text-transform: uppercase;
-      font-weight: 700;
-      line-height: 32px;
-      font-size: 30px; }
+      margin-top: 70px; }
       @media only screen and (max-width: 1023px) {
         #map-section .map-info-text .title {
           font-size: 24px;
           line-height: 30px; } }
     #map-section .map-info-text .content {
-      line-height: 40px;
-      font-size: 23px;
-      font-weight: 700;
-      letter-spacing: 2px; }
-      @media only screen and (min-width: 1024px) {
-        #map-section .map-info-text .content {
-          line-height: 35px;
-          font-size: 22px; } }
+      font-size: 13px;
+      line-height: 33px; }
       @media only screen and (max-width: 1023px) {
         #map-section .map-info-text .content {
           line-height: 30px;
@@ -958,15 +899,12 @@ sup {
   position: relative;
   margin: auto; }
   #panorama-section .title-center h1 {
-    letter-spacing: 2px;
-    line-height: 52px;
-    font-size: 37px;
-    font-weight: 700;
+    font-family: futura;
+    font-weight: normal;
+    font-size: 27px;
+    letter-spacing: 0.025em;
+    line-height: 46px;
     text-transform: uppercase; }
-    @media only screen and (min-width: 1024px) {
-      #panorama-section .title-center h1 {
-        line-height: 52px;
-        font-size: 36px; } }
     @media only screen and (max-width: 1023px) {
       #panorama-section .title-center h1 {
         line-height: 35px;
@@ -1019,17 +957,11 @@ sup {
       margin: auto;
       min-width: 100px; } }
   #panorama-section .button span {
-    text-align: center;
-    line-height: 40px;
-    font-size: 23px;
-    width: 100%;
-    font-weight: 700;
-    box-sizing: border-box;
-    letter-spacing: 2px; }
-    @media only screen and (min-width: 1024px) {
-      #panorama-section .button span {
-        line-height: 35px;
-        font-size: 22px; } }
+    font-family: futuraBT;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    text-align: center; }
     @media only screen and (max-width: 1023px) {
       #panorama-section .button span {
         line-height: 30px;
@@ -1045,13 +977,14 @@ sup {
     #portfolio-section .portfolio-header {
       margin-top: 2px; } }
   #portfolio-section .portfolio-header h1 {
+    font-family: futura;
+    font-weight: normal;
+    font-size: 24px;
+    letter-spacing: 0.025em;
     color: white;
     margin-top: 1.5vh;
     margin-bottom: 1.5vh;
-    text-transform: uppercase;
-    font-weight: 500;
-    line-height: 32px;
-    font-size: 30px; }
+    text-transform: uppercase; }
     @media only screen and (max-width: 1023px) {
       #portfolio-section .portfolio-header h1 {
         font-size: 24px;
@@ -1077,27 +1010,20 @@ sup {
   right: 0; }
 
 #register-section {
-  padding: 20px;
   background-color: #9e9da2;
+  font-family: futura;
+  font-weight: normal;
+  font-size: 17px;
+  letter-spacing: 0.025em;
   text-align: center;
-  color: white; }
+  padding: 20px; }
   @media only screen and (max-width: 1023px) {
     #register-section {
       padding: 20px 20px; } }
   #register-section p {
-    text-align: center;
+    color: white;
     margin-top: 10px;
-    margin-bottom: 10px;
-    line-height: 40px;
-    font-size: 23px;
-    width: 100%;
-    font-weight: 700;
-    box-sizing: border-box;
-    letter-spacing: 2px; }
-    @media only screen and (min-width: 1024px) {
-      #register-section p {
-        line-height: 35px;
-        font-size: 22px; } }
+    margin-bottom: 10px; }
     @media only screen and (max-width: 1023px) {
       #register-section p {
         line-height: 30px;
@@ -1115,19 +1041,8 @@ sup {
     #register-section .register-button p {
       color: #232f49;
       text-transform: uppercase;
-      text-align: center;
       margin-top: 10px;
-      margin-bottom: 10px;
-      line-height: 40px;
-      font-size: 23px;
-      width: 100%;
-      font-weight: 700;
-      box-sizing: border-box;
-      letter-spacing: 2px; }
-      @media only screen and (min-width: 1024px) {
-        #register-section .register-button p {
-          line-height: 35px;
-          font-size: 22px; } }
+      margin-bottom: 10px; }
       @media only screen and (max-width: 1023px) {
         #register-section .register-button p {
           line-height: 30px;

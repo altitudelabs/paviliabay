@@ -91,16 +91,12 @@
     }
 
     .designer-title {
-      line-height: 52px;
-      font-size: 37px;
-      font-weight: 700;
-      letter-spacing: 1px;
+      font-family: futura;
+      font-weight: normal;
+      font-size: 24px;
+      letter-spacing: 0.025em;
+      line-height: 31px;
       text-transform: uppercase;
-      @include responsive(transition) {
-        font-size: 38px;
-        margin: 36px auto;
-        line-height: 52px;
-      }
 
       @include responsive(mobile) {
         line-height: 30px;
@@ -108,41 +104,22 @@
       }
     }
 
-    .designer-name {
-      text-transform: uppercase;
-      line-height: 32px;
-      font-size: 30px;
-      font-weight: 100;
+    .designer-info {
+      font-family: futura;
+      font-weight: normal;
+      font-size: 17px;
+      letter-spacing: 0.025em;
 
-      @include responsive(transition) {
-        font-weight: 600;
-        margin-top: 50px;
-      }
       @include responsive(mobile) {
         font-size: 17px;
         line-height: 17px;
         font-weight: bold;
       }
-    }
 
-    .designer-company-name {
-      line-height: 40px;
-      font-size: 23px;
-      font-weight: 700;
-      letter-spacing: 0px;
-
-      @include responsive(transition) {
-        margin-top: 0px;
-        font-size: 22px;
-        font-weight: 800;
-      }
-
-      @include responsive(mobile){
-        line-height: 30px;
-        font-size: 15px;
+      .designer-name {
+        text-transform: uppercase;
       }
     }
-
   }
 
   .designer-photo {
@@ -166,23 +143,33 @@
     position: relative;
 
     p {
-      font-weight: 500;
+      font-weight: normal;
+      font-family: futura;
+      letter-spacing: 0.025em;
     }
 
     .quote {
-      @include responsive(transition) {
-        font-style: italic;
-        line-height: 38px;
-        font-size: 25px;
-      }
+      font-style: italic;
+      font-size: 17px;
+
+      // @include responsive(transition) {
+      //   font-style: italic;
+      //   line-height: 38px;
+      //   font-size: 25px;
+      // }
     }
     .description {
-      @include responsive(transition) {
-        line-height: 33px;
-        font-size: 23px;
-        margin-bottom: 40px;
-        min-height: 200px;
-      }
+      font-size: 13px;
+      letter-spacing: 0.025em;
+      line-height: 25px;
+
+
+      // @include responsive(transition) {
+      //   line-height: 33px;
+      //   font-size: 23px;
+      //   margin-bottom: 40px;
+      //   min-height: 200px;
+      // }
       margin-bottom: 20px;
     }
 
@@ -196,15 +183,15 @@
     display: inline-block;
 
     a {
+      font-family: futuraLTProLight;
+      font-weight: lighter;
+      font-size: 17px;
+      letter-spacing: 0.025em;
+
       text-decoration: none;
       color: black;
       padding-bottom: 2px;
       border-bottom: 1px solid black;
-      line-height: 32px;
-      font-size: 30px;
-      font-weight: 100;
-      width: 100%;
-      box-sizing: border-box;
 
       @include responsive(mobile) {
         font-size: 24px;

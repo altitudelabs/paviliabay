@@ -14,33 +14,32 @@
     }
   }
 
-  p {
-    padding: 40px;
-    padding-bottom: 200px;
-
-    @include responsive(mobile) {
-      padding: 20px;
-    }
-  }
+  // p {
+  //   padding: 40px;
+  //   padding-bottom: 200px;
+  //
+  //   @include responsive(mobile) {
+  //     padding: 20px;
+  //   }
+  // }
 
   .company-logo {
     display: inline-block;
     vertical-align: top;
-    padding-top: 40px;
+    padding: 40px;
     margin-bottom: 20px;
 
     .description {
-      line-height: 40px;
-      font-size: 23px;
-      width: 100%;
-      font-weight: 700;
-      box-sizing: border-box;
-      letter-spacing: 2px;
+      font-family: futura;
+      font-weight: normal;
+      font-size: 15px;
+      letter-spacing: 0.025em;
+      line-height: 26px;
 
-      @include responsive(transition){
-          line-height: 35px;
-          font-size: 22px;
-      }
+      // @include responsive(transition){
+      //     line-height: 35px;
+      //     font-size: 22px;
+      // }
 
       @include responsive(mobile){
         line-height: 30px;
@@ -66,18 +65,17 @@
     }
 
     .title {
+      font-family: futura;
+      font-weight: normal;
+      font-size: 21px;
+      letter-spacing: 0.025em;
+      line-height: 26px;
       text-transform: uppercase;
-      line-height: 40px;
-      font-size: 23px;
-      width: 100%;
-      font-weight: 700;
-      box-sizing: border-box;
-      letter-spacing: 2px;
 
-      @include responsive(transition){
-          line-height: 35px;
-          font-size: 22px;
-      }
+      // @include responsive(transition){
+      //     line-height: 35px;
+      //     font-size: 22px;
+      // }
 
       @include responsive(mobile){
         line-height: 30px;
@@ -86,17 +84,18 @@
     }
 
     p {
-      font-weight: 700;
+      font-family: futuraBT;
+      font-weight: normal;
+      font-size: 13px;
+      letter-spacing: 0.025em;
+      line-height: 25px;
       position: relative;
-      line-height: 40px;
-      font-size: 25px;
       margin: 0;
-      letter-spacing: 0.007em;
 
-      @include responsive(transition){
-        line-height: 33px;
-        font-size: 22px;
-      }
+      // @include responsive(transition){
+      //   line-height: 33px;
+      //   font-size: 22px;
+      // }
       @include responsive(mobile) {
         line-height: 30px;
         font-size: 15px;
