@@ -1,12 +1,13 @@
 #register-section {
+  height: 245px;
+  padding-top: 65px;
+
   background-color: $dark-gray;
   font-family: futura;
   font-weight: normal;
   font-size: 17px;
   letter-spacing: 0.025em;
   text-align: center;
-
-  padding: 20px;
 
   @include responsive(mobile) {
     padding: 20px 20px;
@@ -29,12 +30,11 @@
   }
 
   .register-button {
-    border: 1px solid white;
+    border: 2px solid white;
+    margin-top: 15px;
     padding-right: 40px;
     padding-left: 40px;
     display: inline-block;
-    margin: auto auto 30px auto;
-
 
     @include responsive(mobile) {
       padding-right: 5px;

@@ -936,7 +936,7 @@ sup {
     background-color: #232f49;
     padding-left: 70px;
     padding-bottom: 60px;
-    padding-top: 20px; }
+    padding-top: 30px; }
     @media only screen and (min-width: 721px) and (max-width: 1199px) {
       #map-section .map-info {
         height: 640px; } }
@@ -1120,13 +1120,14 @@ sup {
       width: 50%; } }
 
 #register-section {
+  height: 245px;
+  padding-top: 65px;
   background-color: #9e9da2;
   font-family: futura;
   font-weight: normal;
   font-size: 17px;
   letter-spacing: 0.025em;
-  text-align: center;
-  padding: 20px; }
+  text-align: center; }
   @media only screen and (max-width: 720px) {
     #register-section {
       padding: 20px 20px; } }
@@ -1139,11 +1140,11 @@ sup {
         line-height: 30px;
         font-size: 15px; } }
   #register-section .register-button {
-    border: 1px solid white;
+    border: 2px solid white;
+    margin-top: 15px;
     padding-right: 40px;
     padding-left: 40px;
-    display: inline-block;
-    margin: auto auto 30px auto; }
+    display: inline-block; }
     @media only screen and (max-width: 720px) {
       #register-section .register-button {
         padding-right: 5px;
