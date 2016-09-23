@@ -1,5 +1,32 @@
 #panorama-section {
 
+  $section-height: 663px;
+  $section-height-mobile: 576px;
+
+  .panorama-image-container {
+
+    background-image: url("images/panorama-section/pano_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: $section-height;
+
+    @include responsive(mobile) {
+      height: $section-height-mobile;
+    }
+  }
+
+  .panorama-content {
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    width:100%;
+
+    @include responsive(mobile) {
+      top: 37%;
+    }
+  }
+
   .title-center {
     position: relative;
     margin: auto;
@@ -12,24 +39,11 @@
       line-height: 46px;
       text-transform: uppercase;
 
-      // @include responsive(transition){
-      //   line-height: 52px;
-      //   font-size: 36px;
-      // }
-
       @include responsive(mobile){
         line-height: 35px;
         font-size: 24px;
       }
     }
-  }
-
-
-  .panorama-image-container {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
   }
 
   .panorama-background-image {
@@ -48,32 +62,30 @@
     }
   }
 
-  .panorama-content {
-    position: absolute;
-    text-align: center;
-    top: 40%;
-    width:100%;
-  }
-
   .button-group {
     position: relative;
     text-align: center;
     margin: auto;
-    margin-top: 40px;
   }
 
   .button {
     display: inline-block;
     background-color: white;
+    margin: 20px 20px;
     padding: 10px;
-    margin: 2%;
-    min-width: 180px;
+    min-width: 140px;
     @include opacity(.5);
 
     @include responsive(mobile) {
-      padding: 2px;
-      margin: auto;
+      padding: 8px 2px;
+      margin: 25px 8px;
       min-width: 100px;
+    }
+
+    @include responsive(smallmobile) {
+      padding: 8px 2px;
+      margin: 25px 8px;
+      min-width: 80px;
     }
 
     p {
@@ -83,14 +95,9 @@
       letter-spacing: 0.05em;
       text-align: center;
 
-      // @include responsive(transition){
-      //     line-height: 35px;
-      //     font-size: 22px;
-      // }
 
       @include responsive(mobile){
-        line-height: 30px;
-        font-size: 15px;
+        font-size: 13px;
       }
     }
   }

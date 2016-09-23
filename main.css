@@ -973,6 +973,25 @@ sup {
           font-size: 13px;
           line-height: 15px; } }
 
+#panorama-section .panorama-image-container {
+  background-image: url("images/panorama-section/pano_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 663px; }
+  @media only screen and (max-width: 720px) {
+    #panorama-section .panorama-image-container {
+      height: 576px; } }
+
+#panorama-section .panorama-content {
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  width: 100%; }
+  @media only screen and (max-width: 720px) {
+    #panorama-section .panorama-content {
+      top: 37%; } }
+
 #panorama-section .title-center {
   position: relative;
   margin: auto; }
@@ -988,12 +1007,6 @@ sup {
         line-height: 35px;
         font-size: 24px; } }
 
-#panorama-section .panorama-image-container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  overflow: hidden; }
-
 #panorama-section .panorama-background-image {
   flex: none;
   height: 100vh;
@@ -1006,24 +1019,17 @@ sup {
       height: 100%;
       width: auto; } }
 
-#panorama-section .panorama-content {
-  position: absolute;
-  text-align: center;
-  top: 40%;
-  width: 100%; }
-
 #panorama-section .button-group {
   position: relative;
   text-align: center;
-  margin: auto;
-  margin-top: 40px; }
+  margin: auto; }
 
 #panorama-section .button {
   display: inline-block;
   background-color: white;
+  margin: 20px 20px;
   padding: 10px;
-  margin: 2%;
-  min-width: 180px;
+  min-width: 140px;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   filter: alpha(opacity=50);
   -moz-opacity: 0.5;
@@ -1031,9 +1037,14 @@ sup {
   opacity: 0.5; }
   @media only screen and (max-width: 720px) {
     #panorama-section .button {
-      padding: 2px;
-      margin: auto;
+      padding: 8px 2px;
+      margin: 25px 8px;
       min-width: 100px; } }
+  @media only screen and (max-width: 320px) {
+    #panorama-section .button {
+      padding: 8px 2px;
+      margin: 25px 8px;
+      min-width: 80px; } }
   #panorama-section .button p {
     font-family: futuraBT;
     font-weight: normal;
@@ -1042,8 +1053,7 @@ sup {
     text-align: center; }
     @media only screen and (max-width: 720px) {
       #panorama-section .button p {
-        line-height: 30px;
-        font-size: 15px; } }
+        font-size: 13px; } }
 
 #portfolio-section .portfolio-header {
   height: auto;
