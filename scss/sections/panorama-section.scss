@@ -1,66 +1,97 @@
 #panorama-section {
-  h1 {
-    letter-spacing: 2px;
-  }
-
-  h3 {
-    text-align: center;
-  }
 
   .title-center {
     position: relative;
     margin: auto;
-  }
-}
 
-.panorama-image-container {
+    p {
+      font-family: futura;
+      font-weight: normal;
+      font-size: 27px;
+      letter-spacing: 0.025em;
+      line-height: 46px;
+      text-transform: uppercase;
+
+      // @include responsive(transition){
+      //   line-height: 52px;
+      //   font-size: 36px;
+      // }
+
+      @include responsive(mobile){
+        line-height: 35px;
+        font-size: 24px;
+      }
+    }
+  }
+
+
+  .panorama-image-container {
     height: 100vh;
     display: flex;
     justify-content: center;
     overflow: hidden;
-}
-
-.panorama-background-image {
-  flex: none;
-  height: 100vh;
-  width: 100%;
-
-  @include responsive(mobile){
-    width: auto;
   }
 
-  @include responsive(mobile){
-    height: 100%;
-    width: auto;
+  .panorama-background-image {
+    flex: none;
+    height: 100vh;
+    width: 100%;
 
+    @include responsive(mobile){
+      width: auto;
+    }
+
+    @include responsive(mobile){
+      height: 100%;
+      width: auto;
+
+    }
   }
-}
 
-.panorama-content {
-  position: absolute;
-  text-align: center;
-  top: 40%;
-  width:100%;
-}
+  .panorama-content {
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    width:100%;
+  }
 
-.panorama-button-group {
-  position: relative;
-  text-align: center;
-  margin: auto;
-  margin-top: 40px;
-}
-
-.panorama-button {
-  display: inline-block;
-  background-color: white;
-  padding: 10px;
-  margin: 2%;
-  min-width: 180px;
-  @include opacity(.5);
-
-  @include responsive(mobile) {
-    padding: 2px;
+  .button-group {
+    position: relative;
+    text-align: center;
     margin: auto;
-    min-width: 100px;
+    margin-top: 40px;
+  }
+
+  .button {
+    display: inline-block;
+    background-color: white;
+    padding: 10px;
+    margin: 2%;
+    min-width: 180px;
+    @include opacity(.5);
+
+    @include responsive(mobile) {
+      padding: 2px;
+      margin: auto;
+      min-width: 100px;
+    }
+
+    p {
+      font-family: futuraBT;
+      font-weight: normal;
+      font-size: 14px;
+      letter-spacing: 0.05em;
+      text-align: center;
+
+      // @include responsive(transition){
+      //     line-height: 35px;
+      //     font-size: 22px;
+      // }
+
+      @include responsive(mobile){
+        line-height: 30px;
+        font-size: 15px;
+      }
+    }
   }
 }

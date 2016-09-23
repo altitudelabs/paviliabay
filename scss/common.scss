@@ -4,7 +4,6 @@
   border: 0;
   font-size: 100%;
   font: inherit;
-  font-family: futuraEnglish;
   vertical-align: baseline;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -35,10 +34,6 @@ sup {
   color: white;
   background-color: $dark-blue;
   position: relative;
-}
-
-.image {
-  position: absolute;
 }
 
 .white-line {
@@ -198,4 +193,26 @@ sup {
     height: auto;
     padding-top: 50vh;
   }
+}
+
+/* * * * * * * * * * * * * * * * * * * * *
+ * To horizontally center float elements
+ * Place the float elements inside the fixer container
+ *  inside the main container.
+ * * * * * * * * * * * * * * * * * * * * */
+.main-float-container {
+  float: left;
+  position: relative;
+  left: 50%;
+}
+.fixer-float-container {
+  float: left;
+  position: relative;
+  left: -50%;
+
+  @extend .clearfix;
+}
+
+.chinese-char {
+  //font-family: futuraChinese;
 }

@@ -4,9 +4,17 @@
   color: $light-gray;
   background-color: $light-gray;
 
-  h1 {
-    line-height: 55px;
-    font-size: 38px;
+  /* * * * * * * * * * * * * * * *
+  * Text styles
+  * * * * * * * * * * * * * * * */
+
+  .club-title-text {
+    font-family: futura;
+    font-weight: normal;
+    font-size: 24px;
+    letter-spacing: 0.025em;
+    line-height: 33px;
+    text-transform: uppercase;
 
     @include responsive(mobile) {
       line-height: 28px;
@@ -14,8 +22,26 @@
     }
   }
 
-  h2 {
+  .club-description-text {
+    font-family: futura;
+    font-weight: normal;
+    font-size: 13px;
+    letter-spacing: 0.025em;
+    line-height: 25px;
+
+    @include responsive(mobile) {
+      line-height: 18px;
+      font-size: 12px;
+    }
+  }
+
+  .link-text {
+    font-family: futuraLTProLight;
+    font-weight: lighter;
+    font-size: 17px;
+    letter-spacing: 0.025em;
     text-align: center;
+
     margin: 2px;
     margin-left: 5px;
     padding-right: 12px;
@@ -25,16 +51,9 @@
       line-height: 20px;
       font-size: 18px;
     }
-  }
 
-  h3 {
-    line-height: 32px;
-    font-size: 20px;
-    letter-spacing: 1px;
-
-    @include responsive(mobile) {
-      line-height: 18px;
-      font-size: 12px;
+    .the-text {
+      font-style: italic;
     }
   }
 
@@ -49,151 +68,152 @@
       bottom: 33px;
     }
   }
-}
 
-#clubImage {
-  cursor: pointer;
-  transition: 1s;
-}
+  .clubhouse-image-container {
+    min-height: 750px;
+    height: 96vh;
+    max-height: 850px;
 
-
-.clubhouse-image-container {
-  min-height: 750px;
-  height: 96vh;
-  max-height: 850px;
-
-  @extend .background-cover;
-  background-image: url("./images/clubhouse-section/club1.jpg");
-  background-position: left;
-  background-size: cover;
-  position: relative;
-  float: right;
-  width: 64.5%;
-
-  @include responsive(transition){
-    // .image {
-    //   object-fit: cover;
-    //   height: 100%;
-    //   width: auto;
-    //   right: 0;
-    // }
-    width: 64%;
-  }
-
-  @include responsive(mobile){
-    // .image {
-    //   object-fit: cover;
-    //   height: 100%;
-    // }
+    @extend .background-cover;
+    background-image: url("./images/clubhouse-section/club1.jpg");
     background-position: left;
-    top: 11.5vh;
-    // height: 84.5vh;
-    // min-height: 84.5vh;
-    min-height: 570px;
-    height: 570px;
-    width: 100%;
-  }
-}
-.clubhouse-blue-box-container {
-  overflow-y: visible;
-  float: left;
+    background-size: cover;
+    position: relative;
+    float: right;
+    width: 64.5%;
 
-  padding-bottom: 79px;
-  padding-top: 65px;
-  width: 35.5%;
+    @include responsive(transition){
+      // .image {
+      //   object-fit: cover;
+      //   height: 100%;
+      //   width: auto;
+      //   right: 0;
+      // }
+      width: 64%;
+    }
 
-  @include responsive(mobile) {
-    width: 0;
-    top: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-
-  }
-  //padding-left: calc(35.5% - 330px);
-}
-.clubhouse-blue-box {
-  @extend .blue-box;
-  position: relative;
-  padding: 40px;
-  padding-top: 30px;
-  //left: 50px;
-  // right: -65px;
-  // left: auto;
-  left: calc(100% - 404px);
-  width: 460px;
-  //max-width: 460px;
-  // height: 610px;
-
-  .white-line {
-    left: -469px;
-    margin-top: 14px;
-    margin-bottom: 38px;
-  }
-
-  // @include responsive(transition){
-  //   right: auto;
-  //   width: 60%;
-  //   min-height: 70vh;
-  //   margin-top: 3vh;
-  //   margin-left: 5vw;
-  // }
-
-  @include responsive(mobile){
-    left: 0;
-    top: 0;
-    padding: 30px 20px 20px 24px;
-    margin-left: 0px;
-    margin-top: 0px;
-    max-height: 400px;
-    width: 250px;
-
-    .white-line {
-      margin-bottom: 22px;
-      left: -8vw;
-      width: 90%;
+    @include responsive(mobile){
+      // .image {
+      //   object-fit: cover;
+      //   height: 100%;
+      // }
+      background-position: left;
+      top: 11.5vh;
+      // height: 84.5vh;
+      // min-height: 84.5vh;
+      min-height: 570px;
+      height: 570px;
+      width: 100%;
     }
   }
-}
 
-.scroll-textbox-area {
-  height: 373px;
-  overflow-y: auto;
-  margin-right: -300px;
-  padding-right: 300px;
-
-  @include responsive(mobile) {
-    height: 240px;
+  #clubImage {
+    cursor: pointer;
+    transition: 1s;
   }
-}
 
-.hide-scroll{
-  height: 373px;
-  overflow: hidden;
+  .clubhouse-blue-box-container {
+    overflow-y: visible;
+    float: left;
 
-  @include responsive(mobile) {
-    height: 240px;
+    padding-bottom: 79px;
+    padding-top: 65px;
+    width: 35.5%;
+
+    @include responsive(mobile) {
+      width: 0;
+      top: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+
+    }
+    //padding-left: calc(35.5% - 330px);
   }
-}
 
-.wheelbutton-container {
-  width: 100px;
-  float: right;
-  padding-left: 100px;
-  margin-top: -127px;
+  .clubhouse-blue-box {
+    @extend .blue-box;
+    position: relative;
+    padding: 40px;
+    padding-top: 30px;
+    //left: 50px;
+    // right: -65px;
+    // left: auto;
+    left: calc(100% - 404px);
+    width: 460px;
+    //max-width: 460px;
+    // height: 610px;
 
-  @include responsive(mobile) {
-    padding-left: 90px;
-    margin-top: -28px;
+    .white-line {
+      left: -469px;
+      margin-top: 14px;
+      margin-bottom: 38px;
+    }
+
+    // @include responsive(transition){
+    //   right: auto;
+    //   width: 60%;
+    //   min-height: 70vh;
+    //   margin-top: 3vh;
+    //   margin-left: 5vw;
+    // }
+
+    @include responsive(mobile){
+      left: 0;
+      top: 0;
+      padding: 30px 20px 20px 24px;
+      margin-left: 0px;
+      margin-top: 0px;
+      max-height: 400px;
+      width: 250px;
+
+      .white-line {
+        margin-bottom: 22px;
+        left: -8vw;
+        width: 90%;
+      }
+    }
   }
-}
 
-.wheelbutton {
-  height: 125px;
-  width: 125px;
-  background-color: black;
+  .scroll-textbox-area {
+    height: 373px;
+    overflow-y: auto;
+    margin-right: -300px;
+    padding-right: 300px;
 
-  @include responsive(mobile) {
-    height: 85px;
-    width: 85px;
+    @include responsive(mobile) {
+      height: 240px;
+    }
+  }
+
+  .hide-scroll{
+    height: 373px;
+    overflow: hidden;
+
+    @include responsive(mobile) {
+      height: 240px;
+    }
+  }
+
+  .wheelbutton-container {
+    width: 100px;
+    float: right;
+    padding-left: 100px;
+    margin-top: -127px;
+
+    @include responsive(mobile) {
+      padding-left: 90px;
+      margin-top: -28px;
+    }
+  }
+
+  .next-prev-wheelbutton {
+    height: 125px;
+    width: 125px;
+    background-color: black;
+
+    @include responsive(mobile) {
+      height: 85px;
+      width: 85px;
+    }
   }
 }

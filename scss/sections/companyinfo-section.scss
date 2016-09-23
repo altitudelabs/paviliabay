@@ -1,46 +1,105 @@
 #companyinfo-section {
-  h1, h3, p {
-    color: white;
-    text-align: center;
-  }
-
-  p {
-    padding: 40px;
-    padding-bottom: 200px;
-
-    @include responsive(mobile) {
-      padding: 20px;
-    }
-  }
-}
-
-.companyinfo-body-container {
-  background-color: $dark-blue;
-  width: 95vw;
-  position: relative;
-  margin: 0 auto auto auto;
+  color: white;
   text-align: center;
 
-  @include responsive(mobile) {
-    width: 100%;
-  }
-}
+  .companyinfo-body-container {
+    background-color: $dark-blue;
+    width: 95vw;
+    position: relative;
+    margin: 0 auto auto auto;
+    text-align: center;
 
-.companylogo {
-  vertical-align: top;
-  padding-top: 40px;
-  display: inline-block;
-  margin: 20px;
-}
-
-.disclaimer {
-  padding: 40px 30px;
-
-  h3 {
-    text-transform: uppercase;
+    @include responsive(mobile) {
+      width: 100%;
+    }
   }
 
-  @include responsive(mobile) {
-    padding: 40px 0;
+  // p {
+  //   padding: 40px;
+  //   padding-bottom: 200px;
+  //
+  //   @include responsive(mobile) {
+  //     padding: 20px;
+  //   }
+  // }
+
+  .company-logo {
+    display: inline-block;
+    vertical-align: top;
+    padding: 40px;
+    margin-bottom: 20px;
+
+    .description {
+      font-family: futura;
+      font-weight: normal;
+      font-size: 15px;
+      letter-spacing: 0.025em;
+      line-height: 26px;
+
+      // @include responsive(transition){
+      //     line-height: 35px;
+      //     font-size: 22px;
+      // }
+
+      @include responsive(mobile){
+        line-height: 30px;
+        font-size: 15px;
+      }
+    }
+
+    .image {
+      width: 200px;
+      height: 100px;
+      background-color: black;
+      position: relative;
+      margin: auto;
+    }
+  }
+
+  .disclaimer {
+    position: relative;
+    padding: 40px 30px;
+
+    @include responsive(mobile) {
+      padding: 40px 0;
+    }
+
+    .title {
+      font-family: futura;
+      font-weight: normal;
+      font-size: 21px;
+      letter-spacing: 0.025em;
+      line-height: 26px;
+      text-transform: uppercase;
+
+      // @include responsive(transition){
+      //     line-height: 35px;
+      //     font-size: 22px;
+      // }
+
+      @include responsive(mobile){
+        line-height: 30px;
+        font-size: 15px;
+      }
+    }
+
+    p {
+      font-family: futuraBT;
+      font-weight: normal;
+      font-size: 13px;
+      letter-spacing: 0.025em;
+      line-height: 25px;
+      position: relative;
+      margin: 0;
+
+      // @include responsive(transition){
+      //   line-height: 33px;
+      //   font-size: 22px;
+      // }
+      @include responsive(mobile) {
+        line-height: 30px;
+        font-size: 15px;
+      }
+    }
   }
 }
