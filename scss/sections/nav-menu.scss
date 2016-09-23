@@ -1,20 +1,23 @@
 #nav-menu {
   $nav-content-width: 310px;
-  $nav-image-width: 100px;
+  $nav-image-width: 25px;
 
   font-family: futura;
   color: white;
-  $nav-content-width: 310px;
   text-align: right;
-  position: absolute;
-  right: 4%;
-  top: 0;
-  width: 3%;
-  height: auto;
-  cursor: pointer;
 
-  @include responsive(mobile){
-    width: 5%;
+  #nav-menu-image {
+    background-image: url("images/hero-section/navmenubutton.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: $nav-image-width;
+    height: 0;
+    padding-bottom: 48 / 64 * $nav-image-width;
+    position: absolute;
+    top: 7%;
+    right: 4%;
+    cursor: pointer;
+
   }
 
   /* * * * * * * * * * * * * *
@@ -42,12 +45,6 @@
 
   .second-level {
     color: $dark-gray;
-  }
-
-  .language-menu-text {
-    font-size: 17px;
-    padding-left: 5px;
-    padding-right: 5px;
   }
 
   a {
@@ -95,16 +92,7 @@
   }
 
 
-  #nav-menu-image {
-    background-image: url("images/hero-section/navmenubutton.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: $nav-image-width;
-    height: 0;
-    padding-top: 48 / 64 * $nav-image-width;
-    position: auto;
-    top: 5vh;
-  }
+
 
   #nav-cross {
     background-image: url('images/nav-menu/navmenubuttons_cross.png');
@@ -176,6 +164,12 @@
 
     li {
       display: inline;
+    }
+
+    a {
+      font-size: 17px;
+      padding-left: 5px;
+      padding-right: 5px;
     }
   }
 }
