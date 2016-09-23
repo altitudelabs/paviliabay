@@ -530,12 +530,13 @@ sup {
     font-size: 17px;
     letter-spacing: 0.025em;
     text-align: center;
-    margin: 2px;
+    margin: 6px;
     margin-left: 5px;
-    padding-right: 12px; }
+    padding-right: 60px; }
     @media only screen and (max-width: 720px) {
       #clubhouse-section .link-text {
         padding-top: 2px;
+        padding-right: 2px;
         line-height: 20px;
         font-size: 18px; } }
     #clubhouse-section .link-text .the-text {
@@ -543,22 +544,20 @@ sup {
   #clubhouse-section .link-menu {
     position: absolute;
     border-bottom: 1px solid white;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     right: 0;
-    bottom: 80px; }
+    bottom: 41px; }
     @media only screen and (max-width: 720px) {
       #clubhouse-section .link-menu {
         bottom: 33px; } }
   #clubhouse-section .clubhouse-image-container {
-    min-height: 750px;
-    height: 96vh;
-    max-height: 850px;
+    height: 669px;
     background-image: url("./images/clubhouse-section/club1.jpg");
     background-position: left;
     background-size: cover;
     position: relative;
     float: right;
-    width: 64.5%; }
+    width: 75%; }
     @media only screen and (min-width: 721px) and (max-width: 1023px) {
       #clubhouse-section .clubhouse-image-container {
         width: 64%; } }
@@ -575,9 +574,11 @@ sup {
   #clubhouse-section .clubhouse-blue-box-container {
     overflow-y: visible;
     float: left;
-    padding-bottom: 79px;
-    padding-top: 65px;
-    width: 35.5%; }
+    padding-top: 54px;
+    width: 25%; }
+    @media only screen and (min-width: 721px) and (max-width: 1023px) {
+      #clubhouse-section .clubhouse-blue-box-container {
+        width: 36%; } }
     @media only screen and (max-width: 720px) {
       #clubhouse-section .clubhouse-blue-box-container {
         width: 0;
@@ -586,14 +587,14 @@ sup {
         padding-bottom: 0; } }
   #clubhouse-section .clubhouse-blue-box {
     position: relative;
-    padding: 40px;
-    padding-top: 30px;
-    left: calc(100% - 404px);
-    width: 460px; }
+    padding: 60px 40px;
+    left: calc(100% - 278px);
+    width: 337px;
+    height: 452px; }
     #clubhouse-section .clubhouse-blue-box .white-line {
-      left: -469px;
-      margin-top: 14px;
-      margin-bottom: 38px; }
+      left: -300px;
+      margin-top: 23px;
+      margin-bottom: 23px; }
     @media only screen and (max-width: 720px) {
       #clubhouse-section .clubhouse-blue-box {
         left: 0;
@@ -608,7 +609,7 @@ sup {
           left: -8vw;
           width: 90%; } }
   #clubhouse-section .scroll-textbox-area {
-    height: 373px;
+    height: 225px;
     overflow-y: auto;
     margin-right: -300px;
     padding-right: 300px; }
@@ -616,7 +617,7 @@ sup {
       #clubhouse-section .scroll-textbox-area {
         height: 240px; } }
   #clubhouse-section .hide-scroll {
-    height: 373px;
+    height: 225px;
     overflow: hidden; }
     @media only screen and (max-width: 720px) {
       #clubhouse-section .hide-scroll {
@@ -624,15 +625,15 @@ sup {
   #clubhouse-section .wheelbutton-container {
     width: 100px;
     float: right;
-    padding-left: 100px;
-    margin-top: -127px; }
+    padding-left: 75px;
+    margin-top: -2px; }
     @media only screen and (max-width: 720px) {
       #clubhouse-section .wheelbutton-container {
         padding-left: 90px;
         margin-top: -28px; } }
   #clubhouse-section .next-prev-wheelbutton {
-    height: 125px;
-    width: 125px;
+    height: 100px;
+    width: 100px;
     background-color: black; }
     @media only screen and (max-width: 720px) {
       #clubhouse-section .next-prev-wheelbutton {
