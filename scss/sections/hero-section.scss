@@ -98,9 +98,7 @@
   .hero-footer {
     background-color: $dark-gray;
     height: $footer-height;
-    vertical-align: middle;
 
-    // footer
     .register-link-text {
       font-family: futura;
       font-weight: normal;
@@ -109,10 +107,14 @@
       text-transform: uppercase;
       color: $dark-blue;
       // line-height: 40px;
-      margin-left: 45px;
+
+      position: relative;
+      top: 7px;
+      margin-left: 60px;
 
       @include responsive(mobile){
         margin-left: 20px;
+        top: 9px;
         font-size: 90%;
         height: 100%;
       }

@@ -334,8 +334,7 @@ sup {
 
 #hero-section .hero-footer {
   background-color: #9e9da2;
-  height: 39px;
-  vertical-align: middle; }
+  height: 39px; }
   #hero-section .hero-footer .register-link-text {
     font-family: futura;
     font-weight: normal;
@@ -343,10 +342,13 @@ sup {
     letter-spacing: 0.025em;
     text-transform: uppercase;
     color: #232f49;
-    margin-left: 45px; }
+    position: relative;
+    top: 7px;
+    margin-left: 60px; }
     @media only screen and (max-width: 720px) {
       #hero-section .hero-footer .register-link-text {
         margin-left: 20px;
+        top: 9px;
         font-size: 90%;
         height: 100%; } }
 
