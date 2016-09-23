@@ -325,11 +325,16 @@ sup {
         height: 100%; } }
 
 #hero-section .hero-logo {
+  background-image: url("images/hero-section/shiplogo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 9.5%;
+  height: 0;
+  padding-top: 1.86885%;
   display: inline-block;
   position: absolute;
   top: 5%;
-  left: 3.5%;
-  width: 9.5%; }
+  left: 3.5%; }
   @media only screen and (max-width: 1023px) {
     #hero-section .hero-logo {
       width: 20%; } }
@@ -365,8 +370,8 @@ sup {
   height: auto;
   cursor: pointer;
   /* * * * * * * * * * * * * *
-   * Text styles
-   * * * * * * * * * * * * * */ }
+  * Text styles
+  * * * * * * * * * * * * * */ }
   @media only screen and (max-width: 1023px) {
     #nav-menu {
       width: 5%; } }
@@ -419,6 +424,9 @@ sup {
         height: 100vh;
         padding-top: 15px; } }
   #nav-menu #nav-menu-image {
+    background-image: url("images/hero-section/navmenubutton.png");
+    background-size: contain;
+    background-repeat: no-repeat;
     top: 5vh;
     position: relative;
     width: 90%;

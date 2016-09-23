@@ -1,4 +1,7 @@
 #nav-menu {
+  $nav-content-width: 310px;
+  $nav-image-width: 100px;
+
   font-family: futura;
   color: white;
   $nav-content-width: 310px;
@@ -15,8 +18,8 @@
   }
 
   /* * * * * * * * * * * * * *
-   * Text styles
-   * * * * * * * * * * * * * */
+  * Text styles
+  * * * * * * * * * * * * * */
 
   .menu-title-text {
     text-decoration: underline;
@@ -91,7 +94,12 @@
     }
   }
 
+
   #nav-menu-image {
+    background-image: url("images/hero-section/navmenubutton.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
     top: 5vh;
     position: relative;
     width: 90%;
@@ -102,6 +110,7 @@
     background-image: url('images/nav-menu/navmenubuttons_cross.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
+
 
     display: block;
     margin-right: 20px;

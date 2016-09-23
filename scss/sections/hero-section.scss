@@ -1,4 +1,8 @@
+
 #hero-section {
+  $hero-logo-width: 9.5%;
+  $hero-logo-width-mobile: 80px;
+
   .title-container {
     position: absolute;
     top: 37.5%;
@@ -73,11 +77,17 @@
   }
 
   .hero-logo {
+    background-image: url("images/hero-section/shiplogo.png"); // 244 x 48
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: $hero-logo-width;
+    height: 0;
+    padding-top: 48 / 244 * $hero-logo-width;
+
     display: inline-block;
     position: absolute;
     top: 5%;
     left: 3.5%;
-    width: 9.5%;
 
     @include responsive(mobile){
       width: 20%;
