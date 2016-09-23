@@ -1,17 +1,17 @@
 #designerprofile-section {
   // default variable
-  $yacht-height: 756px;
-  $yacht-greybox-gutter: 135px;
+  $yacht-height: 666px;
+  $yacht-greybox-gutter: 46px;
 
-  $greybox-horizontal-gutter: 50px;
-  $greybox-bluebox-offset-x: 70px;
-  $greybox-bluebox-offset-y: -90px;
+  $greybox-horizontal-gutter: 52px;
+  $greybox-bluebox-offset-x: 30px;
+  $greybox-bluebox-offset-y: -117px;
 
-  $bluebox-width: 465px;
-  $bluebox-height: 735px;
+  $bluebox-width: 337px;
+  $bluebox-height: 516px;
 
-  $next-prev-height: 150px;
-  $next-prev-width: 150px;
+  $next-prev-height: 100px;
+  $next-prev-width: 100px;
 
   // mobile
   $yacht-height-mobile: 70%;
@@ -43,7 +43,8 @@
     margin-top: -$yacht-greybox-gutter;
     background-color: $light-gray;
     overflow: visible;
-    min-height: 750px;
+    min-height: 446px;
+    margin-bottom: 82px;
 
     @include responsive(mobile) {
       min-height: initial;
@@ -67,7 +68,7 @@
     width: $bluebox-width;
     height: $bluebox-height;
     align-content: center;
-    padding: 40px;
+    padding: 60px;
     text-align: center;
 
     @include responsive(mobile) {
@@ -80,7 +81,7 @@
 
     .white-line {
       margin: 15px 0;
-      left: -120px;
+      left: -200px;
       width: 441px;
       @include responsive(mobile) {
         margin: 10px auto;
@@ -115,18 +116,23 @@
         line-height: 17px;
         font-weight: bold;
       }
+    }
 
-      .designer-name {
-        text-transform: uppercase;
-      }
+    .name {
+      text-transform: uppercase;
     }
   }
 
   .designer-photo {
     @extend .background-contain;
     background-image: url("images/designerprofile-section/designer.png");
+    height: 221px;
+    margin-top: 21px;
+    margin-bottom: 31px;
     @include responsive(transition) {
-      height: 270px;
+      height: 180px;
+      margin-top: 15;
+      margin-bottom: 15;
     }
     @include responsive(mobile) {
       padding-bottom: calc(120px + 20%);
@@ -137,7 +143,8 @@
   .designer-description-text {
     float: right;
     width: calc(100% - #{$bluebox-width} - #{$greybox-bluebox-offset-x});
-    padding: 100px 65px;
+    padding: 88px 80px;
+    padding-left: 55px;
     padding-bottom: 170px;
     vertical-align: top;
     position: relative;
@@ -205,8 +212,8 @@
     width: $next-prev-width;
     height: $next-prev-height;
     position: absolute;
-    bottom: $next-prev-width - 95px;
-    right: $next-prev-width - 185px;
+    bottom: $next-prev-width - 133px;
+    right: $next-prev-width - 125px;
     @include responsive(mobile) {
       display: none;
       // right: auto;

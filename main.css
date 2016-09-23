@@ -772,18 +772,19 @@ sup {
 
 #designerprofile-section .yacht {
   background-image: url("images/designerprofile-section/bg.jpg");
-  padding-bottom: 756px; }
+  padding-bottom: 666px; }
   @media only screen and (max-width: 720px) {
     #designerprofile-section .yacht {
       padding-bottom: 70%; } }
 
 #designerprofile-section .description-grey-box {
   position: relative;
-  margin: 0 50px;
-  margin-top: -135px;
+  margin: 0 52px;
+  margin-top: -46px;
   background-color: #dfdfe1;
   overflow: visible;
-  min-height: 750px; }
+  min-height: 446px;
+  margin-bottom: 82px; }
   @media only screen and (max-width: 720px) {
     #designerprofile-section .description-grey-box {
       min-height: initial;
@@ -797,12 +798,12 @@ sup {
 #designerprofile-section .profile-blue-box {
   float: left;
   color: #dfdfe1;
-  margin-left: 70px;
-  margin-top: -90px;
-  width: 465px;
-  height: 735px;
+  margin-left: 30px;
+  margin-top: -117px;
+  width: 337px;
+  height: 516px;
   align-content: center;
-  padding: 40px;
+  padding: 60px;
   text-align: center; }
   @media only screen and (max-width: 720px) {
     #designerprofile-section .profile-blue-box {
@@ -813,7 +814,7 @@ sup {
       width: 100%; } }
   #designerprofile-section .profile-blue-box .white-line {
     margin: 15px 0;
-    left: -120px;
+    left: -200px;
     width: 441px; }
     @media only screen and (max-width: 720px) {
       #designerprofile-section .profile-blue-box .white-line {
@@ -842,14 +843,19 @@ sup {
         font-size: 17px;
         line-height: 17px;
         font-weight: bold; } }
-    #designerprofile-section .profile-blue-box .designer-info .designer-name {
-      text-transform: uppercase; }
+  #designerprofile-section .profile-blue-box .name {
+    text-transform: uppercase; }
 
 #designerprofile-section .designer-photo {
-  background-image: url("images/designerprofile-section/designer.png"); }
+  background-image: url("images/designerprofile-section/designer.png");
+  height: 221px;
+  margin-top: 21px;
+  margin-bottom: 31px; }
   @media only screen and (min-width: 721px) and (max-width: 1199px) {
     #designerprofile-section .designer-photo {
-      height: 270px; } }
+      height: 180px;
+      margin-top: 15;
+      margin-bottom: 15; } }
   @media only screen and (max-width: 720px) {
     #designerprofile-section .designer-photo {
       padding-bottom: calc(120px + 20%);
@@ -857,8 +863,9 @@ sup {
 
 #designerprofile-section .designer-description-text {
   float: right;
-  width: calc(100% - 465px - 70px);
-  padding: 100px 65px;
+  width: calc(100% - 337px - 30px);
+  padding: 88px 80px;
+  padding-left: 55px;
   padding-bottom: 170px;
   vertical-align: top;
   position: relative; }
@@ -897,11 +904,11 @@ sup {
 
 #designerprofile-section .next-prev-wheelbutton {
   background: black;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   position: absolute;
-  bottom: 55px;
-  right: -35px; }
+  bottom: -33px;
+  right: -25px; }
   @media only screen and (max-width: 720px) {
     #designerprofile-section .next-prev-wheelbutton {
       display: none; } }
