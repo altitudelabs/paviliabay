@@ -1,23 +1,25 @@
 #map-section {
   color: white;
 
-  $info_container_height_large: 950px;
-  $info_container_height_trans: 900px;
+  $info-container-height: 669px;
+  $info-container-height-trans: 640px;
   $info-container-height-mobile: 440px;
 
-  $map-height-mobile: 357px;
+  $info-container-width: 41%;
 
+  $map-height-mobile: 357px;
+  $map-width: 100% - $info-container-width;
 
   .map-container {
-    height: $info_container_height_large;
+    height: $info-container-height;
     display: inline-block;
     vertical-align: top;
     background-color: $light-gray;
-    width: 65%;
+    width: $map-width;
     min-width: 400px;
 
     @include responsive(transition){
-      height: $info_container_height_trans;
+      height: $info-container-height-trans;
     }
 
     @include responsive(mobile){
@@ -28,16 +30,17 @@
   }
 
   .map-info {
-    height: $info_container_height_large;
+    height: $info-container-height;
     display: inline-block;
     vertical-align: top;
-    width: 35%;
+    width: $info-container-width;
     background-color: $dark-blue;
-    padding-left: 60px;
+    padding-left: 70px;
     padding-bottom: 60px;
+    padding-top: 20px;
 
     @include responsive(transition){
-      height: $info_container_height_trans;
+      height: $info-container-height-trans;
     }
 
     @include responsive(mobile){
@@ -56,13 +59,22 @@
     font-family: futura;
     font-weight: normal;
     letter-spacing: 0.025em;
+    width: 380px;
+
+    @include responsive(transition){
+      width: 100%;
+    }
 
     .title {
       font-size: 21px;
-      line-height: 41px;
+      line-height: 38px;
       text-transform: uppercase;
+      margin-top: 42px;
 
-      margin-top: 70px;
+      @include responsive(transition) {
+        font-size: 18px;
+        line-height: 32px;
+      }
 
       @include responsive(mobile) {
         font-size: 24px;
@@ -71,8 +83,9 @@
     }
 
     .content {
+      margin-top: 5px;
       font-size: 13px;
-      line-height: 33px;
+      line-height: 23px;
 
       // @include responsive(transition){
       //   line-height: 35px;
