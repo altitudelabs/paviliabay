@@ -5,9 +5,9 @@
  *        @include responsive(desktop) { ... }
  * * * * * * * * * * * * * * * * * * * * * * */
 
-$mobile-small-width: 320px;
-$mobile-large-width: 1024px;
-$desktop-large-width: 1280px;
+$mobile-small-width: 320px; // special case in register section --> when to add <br>
+$mobile-large-width: 720px;
+$desktop-min-width: 1024px;
 
 /* * * * * * * * * * * * * * * * * * * * * * *
  * Colors

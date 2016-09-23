@@ -99,11 +99,11 @@
     background-image: url("images/hero-section/navmenubutton.png");
     background-size: contain;
     background-repeat: no-repeat;
-
+    width: $nav-image-width;
+    height: 0;
+    padding-top: 48 / 64 * $nav-image-width;
+    position: auto;
     top: 5vh;
-    position: relative;
-    width: 90%;
-    height: auto;
   }
 
   #nav-cross {

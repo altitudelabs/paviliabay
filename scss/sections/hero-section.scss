@@ -1,7 +1,15 @@
-
 #hero-section {
-  $hero-logo-width: 9.5%;
-  $hero-logo-width-mobile: 80px;
+
+  $section-height: 705px;
+  $section-height-mobile: 576px;
+
+  $footer-height: 39px;
+
+  $video-height: $section-height - $footer-height;
+  $video-height-mobile: $section-height-mobile - $footer-height;
+
+  $logo-width: 110px;
+  $logo-width-mobile: 80px;
 
   .title-container {
     position: absolute;
@@ -10,7 +18,6 @@
     left: 10%;
     width: 80%;
     text-align: center;
-
     .title-eng-text {
       font-family: futura;
       font-weight: normal;
@@ -20,7 +27,7 @@
       text-transform: uppercase;
       text-align: center;
 
-      @include responsive(mobile){
+      @include responsive(mobile) {
         line-height: 35px;
         font-size: 24px;
       }
@@ -43,8 +50,12 @@
   }
 
   .video-container {
-    height: 92vh;
+    height: $video-height;
     width: 100%;
+
+    @include responsive(mobile) {
+      height: $video-height-mobile;
+    }
   }
 
   .video {
@@ -54,7 +65,7 @@
 
   .hero-footer {
     background-color: $dark-gray;
-    height: 8vh;
+    height: $footer-height;
     vertical-align: middle;
 
     // footer
@@ -80,14 +91,14 @@
     background-image: url("images/hero-section/shiplogo.png"); // 244 x 48
     background-size: contain;
     background-repeat: no-repeat;
-    width: $hero-logo-width;
+    width: $logo-width;
     height: 0;
-    padding-top: 48 / 244 * $hero-logo-width;
+    padding-bottom: 48 / 244 * $logo-width;
 
     display: inline-block;
     position: absolute;
-    top: 5%;
-    left: 3.5%;
+    top: 6.5%;
+    left: 4%;
 
     @include responsive(mobile){
       width: 20%;
