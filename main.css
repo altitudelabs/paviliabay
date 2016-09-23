@@ -273,56 +273,56 @@ sup {
   display: table;
   clear: both; }
 
-.grid .grid-item, #portfolio-section .portfolio-image-container .grid-item, .grid #portfolio-section .portfolio-image, #portfolio-section .grid .portfolio-image, #portfolio-section .portfolio-image-container .portfolio-image {
+.grid .grid-item, #portfolio-section .portfolio-image-container .grid-item {
   float: left;
   position: relative; }
 
-.grid .grid-item.full, #portfolio-section .portfolio-image-container .grid-item.full, .grid #portfolio-section .full.portfolio-image, #portfolio-section .grid .full.portfolio-image, #portfolio-section .portfolio-image-container .full.portfolio-image {
+.grid .grid-item.full, #portfolio-section .portfolio-image-container .grid-item.full {
   width: 100%; }
 
-.grid .grid-item.one-half, #portfolio-section .portfolio-image-container .grid-item.one-half, .grid #portfolio-section .one-half.portfolio-image, #portfolio-section .grid .one-half.portfolio-image, #portfolio-section .portfolio-image-container .one-half.portfolio-image {
+.grid .grid-item.one-half, #portfolio-section .portfolio-image-container .grid-item.one-half {
   width: 50%; }
 
-.grid .grid-item.one-third, #portfolio-section .portfolio-image-container .grid-item.one-third, .grid #portfolio-section .one-third.portfolio-image, #portfolio-section .grid .one-third.portfolio-image, #portfolio-section .portfolio-image-container .one-third.portfolio-image {
+.grid .grid-item.one-third, #portfolio-section .portfolio-image-container .grid-item.one-third {
   width: 33.33%; }
 
-.grid .grid-item.two-third, #portfolio-section .portfolio-image-container .grid-item.two-third, .grid #portfolio-section .two-third.portfolio-image, #portfolio-section .grid .two-third.portfolio-image, #portfolio-section .portfolio-image-container .two-third.portfolio-image {
+.grid .grid-item.two-third, #portfolio-section .portfolio-image-container .grid-item.two-third {
   width: 66.66%; }
 
-.grid .grid-item.one-fourth, #portfolio-section .portfolio-image-container .grid-item.one-fourth, .grid #portfolio-section .one-fourth.portfolio-image, #portfolio-section .grid .one-fourth.portfolio-image, #portfolio-section .portfolio-image-container .one-fourth.portfolio-image {
+.grid .grid-item.one-fourth, #portfolio-section .portfolio-image-container .grid-item.one-fourth {
   width: 25%; }
 
-.grid .grid-item.three-fourth, #portfolio-section .portfolio-image-container .grid-item.three-fourth, .grid #portfolio-section .three-fourth.portfolio-image, #portfolio-section .grid .three-fourth.portfolio-image, #portfolio-section .portfolio-image-container .three-fourth.portfolio-image {
+.grid .grid-item.three-fourth, #portfolio-section .portfolio-image-container .grid-item.three-fourth {
   width: 75%; }
 
-.grid .grid-item.one-fifth, #portfolio-section .portfolio-image-container .grid-item.one-fifth, .grid #portfolio-section .one-fifth.portfolio-image, #portfolio-section .grid .one-fifth.portfolio-image, #portfolio-section .portfolio-image-container .one-fifth.portfolio-image {
+.grid .grid-item.one-fifth, #portfolio-section .portfolio-image-container .grid-item.one-fifth {
   width: 20%; }
 
-.grid .grid-item.two-fifth, #portfolio-section .portfolio-image-container .grid-item.two-fifth, .grid #portfolio-section .two-fifth.portfolio-image, #portfolio-section .grid .two-fifth.portfolio-image, #portfolio-section .portfolio-image-container .two-fifth.portfolio-image {
+.grid .grid-item.two-fifth, #portfolio-section .portfolio-image-container .grid-item.two-fifth {
   width: 40%; }
 
-.grid .grid-item.three-fifth, #portfolio-section .portfolio-image-container .grid-item.three-fifth, .grid #portfolio-section .three-fifth.portfolio-image, #portfolio-section .grid .three-fifth.portfolio-image, #portfolio-section .portfolio-image-container .three-fifth.portfolio-image {
+.grid .grid-item.three-fifth, #portfolio-section .portfolio-image-container .grid-item.three-fifth {
   width: 60%; }
 
-.grid .grid-item.four-fifth, #portfolio-section .portfolio-image-container .grid-item.four-fifth, .grid #portfolio-section .four-fifth.portfolio-image, #portfolio-section .grid .four-fifth.portfolio-image, #portfolio-section .portfolio-image-container .four-fifth.portfolio-image {
+.grid .grid-item.four-fifth, #portfolio-section .portfolio-image-container .grid-item.four-fifth {
   width: 80%; }
 
-.grid .grid-item.one-sixth, #portfolio-section .portfolio-image-container .grid-item.one-sixth, .grid #portfolio-section .one-sixth.portfolio-image, #portfolio-section .grid .one-sixth.portfolio-image, #portfolio-section .portfolio-image-container .one-sixth.portfolio-image {
+.grid .grid-item.one-sixth, #portfolio-section .portfolio-image-container .grid-item.one-sixth {
   width: 16.66%; }
 
-.grid .grid-item.five-sixth, #portfolio-section .portfolio-image-container .grid-item.five-sixth, .grid #portfolio-section .five-sixth.portfolio-image, #portfolio-section .grid .five-sixth.portfolio-image, #portfolio-section .portfolio-image-container .five-sixth.portfolio-image {
+.grid .grid-item.five-sixth, #portfolio-section .portfolio-image-container .grid-item.five-sixth {
   width: 83.33%; }
 
-.grid .grid-item.one-eighth, #portfolio-section .portfolio-image-container .grid-item.one-eighth, .grid #portfolio-section .one-eighth.portfolio-image, #portfolio-section .grid .one-eighth.portfolio-image, #portfolio-section .portfolio-image-container .one-eighth.portfolio-image {
+.grid .grid-item.one-eighth, #portfolio-section .portfolio-image-container .grid-item.one-eighth {
   width: 12.5%; }
 
-.grid .grid-item.three-eighth, #portfolio-section .portfolio-image-container .grid-item.three-eighth, .grid #portfolio-section .three-eighth.portfolio-image, #portfolio-section .grid .three-eighth.portfolio-image, #portfolio-section .portfolio-image-container .three-eighth.portfolio-image {
+.grid .grid-item.three-eighth, #portfolio-section .portfolio-image-container .grid-item.three-eighth {
   width: 37.5%; }
 
-.grid .grid-item.five-eighth, #portfolio-section .portfolio-image-container .grid-item.five-eighth, .grid #portfolio-section .five-eighth.portfolio-image, #portfolio-section .grid .five-eighth.portfolio-image, #portfolio-section .portfolio-image-container .five-eighth.portfolio-image {
+.grid .grid-item.five-eighth, #portfolio-section .portfolio-image-container .grid-item.five-eighth {
   width: 62.5%; }
 
-.grid .grid-item.seven-eighth, #portfolio-section .portfolio-image-container .grid-item.seven-eighth, .grid #portfolio-section .seven-eighth.portfolio-image, #portfolio-section .grid .seven-eighth.portfolio-image, #portfolio-section .portfolio-image-container .seven-eighth.portfolio-image {
+.grid .grid-item.seven-eighth, #portfolio-section .portfolio-image-container .grid-item.seven-eighth {
   width: 87.5%; }
 
 #hero-section .title-container {
@@ -1079,25 +1079,28 @@ sup {
 
 #portfolio-section .portfolio-image-container {
   text-align: center;
-  height: 674px;
   padding-top: 3px;
   margin-bottom: 3px;
-  width: 100%;
+  width: auto;
+  white-space: nowrap;
   overflow: auto; }
-  @media only screen and (min-width: 721px) and (max-width: 1023px) {
-    #portfolio-section .portfolio-image-container {
-      height: 450px; } }
   @media only screen and (max-width: 720px) {
     #portfolio-section .portfolio-image-container {
-      height: 286px;
       padding-top: 1px;
-      padding-bottom: 2px; } }
+      padding-bottom: 2px;
+      height: 286px; } }
 
 #portfolio-section .portfolio-image {
+  display: inline-block;
   width: 33.3%;
-  height: 100%; }
+  vertical-align: top;
+  height: 674px; }
+  @media only screen and (min-width: 721px) and (max-width: 1023px) {
+    #portfolio-section .portfolio-image {
+      height: 450px; } }
   @media only screen and (max-width: 720px) {
     #portfolio-section .portfolio-image {
+      height: 286px;
       width: 50%; } }
 
 #register-section {

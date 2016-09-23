@@ -34,11 +34,24 @@
   .portfolio-image-container {
     @extend .grid;
     text-align: center;
-    height: $image-height;
     padding-top: 3px;
     margin-bottom: 3px;
-    width: 100%;
+    width: auto;
+    white-space: nowrap;
     overflow: auto;
+
+    @include responsive(mobile) {
+      padding-top: 1px;
+      padding-bottom: 2px;
+      height: $image-height-mobile;
+    }
+  }
+
+  .portfolio-image {
+    display: inline-block;
+    width: 33.3%;
+    vertical-align: top;
+    height: $image-height;
 
     @include responsive(transition) {
       height: $image-height-transition;
@@ -46,17 +59,6 @@
 
     @include responsive(mobile) {
       height: $image-height-mobile;
-      padding-top: 1px;
-      padding-bottom: 2px;
-    }
-  }
-
-  .portfolio-image {
-    @extend .grid-item;
-    width: 33.3%;
-    height: 100%;
-
-    @include responsive(mobile) {
       width: 50%;
     }
   }
