@@ -122,7 +122,7 @@ var changeClubhouseContent = function (currentSection) {
 // On click, change section title, text, image and link
 $('.link-text').on('click', function() {
   $animation_elements.removeClass('in-view');
-  $animation_elements.removeClass('fade');
+  $('#clubhouse-section').find('.animation-element').removeClass('fade');
   setTimeout(function() {
     changeClubhouseContent($('#clubhouse-section').data('id'));
       $window.trigger('scroll');
