@@ -1,11 +1,31 @@
 #hero-section {
+
+  $section-height: 705px;
+  $section-height-mobile: 576px;
+
+  $footer-height: 39px;
+  $footer-height-mobile: 45px;
+  
+  $register-link-left: 52px + $side-scroll-width;
+  $register-link-left-trans: 12px + $side-scroll-width;
+
+  $video-height: $section-height - $footer-height;
+  $video-height-mobile: $section-height-mobile - $footer-height-mobile;
+
+  $logo-width: 110px;
+  $logo-width-mobile: 65px;
+
   .title-container {
     position: absolute;
-    top: 37.5%;
+    top: 43%;
     background-color: transparent;
-    left: 10%;
+    left: 50%;
     width: 80%;
     text-align: center;
+
+    @include responsive(mobile) {
+      top: 38%;
+    }
 
     .title-eng-text {
       font-family: futura;
@@ -16,9 +36,12 @@
       text-transform: uppercase;
       text-align: center;
 
-      @include responsive(mobile){
-        line-height: 35px;
+      position: relative;
+      left: -50%;
+
+      @include responsive(mobile) {
         font-size: 24px;
+        letter-spacing: 0.02em;
       }
     }
 
@@ -29,18 +52,53 @@
       letter-spacing: 1.4em;
       text-align: center;
 
-      margin-top: 10px;
-      margin-left: 10px;
+      position: relative;
+      left: calc(-50% + 10px);
 
       @include responsive(mobile) {
-        letter-spacing: 12px;
+        left: -50%;
+        font-size: 20px;
+        letter-spacing: 0.64em;
+      }
+    }
+
+    .transparent-button {
+      display: inline-block;
+      border: 1px solid rgba(255, 255, 255, .5);
+      padding: 10px 23px;
+      margin-top: 12px;
+
+      position: relative;
+      left: -50%;
+
+      @include responsive(mobile) {
+        margin-top: 20px;
+        padding: 8px 18px;
+      }
+
+      .title-white-box-text {
+        font-family: futuraBT;
+        font-weight: normal;
+        font-size: 12px;
+        letter-spacing: 0.05em;
+        color: white;
+        text-align: center;
+
+        @include responsive(mobile){
+          font-size: 14px;
+          letter-spacing: 0.02em;
+        }
       }
     }
   }
 
   .video-container {
-    height: 92vh;
+    height: $video-height;
     width: 100%;
+
+    @include responsive(mobile) {
+      height: $video-height-mobile;
+    }
   }
 
   .video {
@@ -50,10 +108,8 @@
 
   .hero-footer {
     background-color: $dark-gray;
-    height: 8vh;
-    vertical-align: middle;
+    height: $footer-height;
 
-    // footer
     .register-link-text {
       font-family: futura;
       font-weight: normal;
@@ -62,50 +118,38 @@
       text-transform: uppercase;
       color: $dark-blue;
       // line-height: 40px;
-      margin-left: 45px;
+
+      position: relative;
+      top: 7px;
+      margin-left: $register-link-left;
 
       @include responsive(mobile){
-        margin-left: 20px;
-        font-size: 90%;
-        height: 100%;
+        margin-left: $register-link-left-trans;
+        top: 9px;
+        font-size: 14px;
+        letter-spacing: 0.025em;
       }
     }
   }
 
   .hero-logo {
+    background-image: url("images/hero-section/shiplogo.png"); // 244 x 48
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: $logo-width;
+    height: 0;
+    padding-bottom: 48 / 244 * $logo-width;
+
     display: inline-block;
     position: absolute;
-    top: 5%;
-    left: 3.5%;
-    width: 9.5%;
+    top: 6.5%;
+    left: 4%;
 
     @include responsive(mobile){
-      width: 20%;
-    }
-  }
-
-  .transparent-button {
-    display: inline-block;
-    border: 1px solid rgba(255, 255, 255, .5);
-    padding: 10px 23px;
-    margin-top: 40px;
-
-    @include responsive(mobile) {
-      margin-top: 20px;
-    }
-
-    .title-white-box-text {
-      font-family: futuraBT;
-      font-weight: normal;
-      font-size: 12px;
-      letter-spacing: 0.05em;
-      color: white;
-      text-align: center;
-
-      @include responsive(mobile){
-        font-size: 13px;
-        line-height: 15px;
-      }
+      width: $logo-width-mobile;
+      padding-bottom: 48 / 244 * $logo-width-mobile;
+      top: 4%;
+      left: 5%;
     }
   }
 }

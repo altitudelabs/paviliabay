@@ -4,9 +4,9 @@
 
   .companyinfo-body-container {
     background-color: $dark-blue;
-    width: 95vw;
+    width: 92%;
     position: relative;
-    margin: 0 auto auto auto;
+    margin: 0 auto 105px auto;
     text-align: center;
 
     @include responsive(mobile) {
@@ -14,20 +14,12 @@
     }
   }
 
-  // p {
-  //   padding: 40px;
-  //   padding-bottom: 200px;
-  //
-  //   @include responsive(mobile) {
-  //     padding: 20px;
-  //   }
-  // }
-
   .company-logo {
     display: inline-block;
     vertical-align: top;
-    padding: 40px;
-    margin-bottom: 20px;
+    padding-top: 96px;
+    padding-right: 155px;
+    padding-left: 155px;
 
     .description {
       font-family: futura;
@@ -36,11 +28,6 @@
       letter-spacing: 0.025em;
       line-height: 26px;
 
-      // @include responsive(transition){
-      //     line-height: 35px;
-      //     font-size: 22px;
-      // }
-
       @include responsive(mobile){
         line-height: 30px;
         font-size: 15px;
@@ -48,17 +35,18 @@
     }
 
     .image {
-      width: 200px;
-      height: 100px;
-      background-color: black;
+      top: 35px;
+      height: 42px;
+      width: auto;
       position: relative;
       margin: auto;
+      margin-bottom: 40px;
     }
   }
 
   .disclaimer {
     position: relative;
-    padding: 40px 30px;
+    padding: 40px 80px;
 
     @include responsive(mobile) {
       padding: 40px 0;
@@ -71,6 +59,8 @@
       letter-spacing: 0.025em;
       line-height: 26px;
       text-transform: uppercase;
+      margin-top: 30px;
+      margin-bottom: 20px;
 
       // @include responsive(transition){
       //     line-height: 35px;

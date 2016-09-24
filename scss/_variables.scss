@@ -5,14 +5,16 @@
  *        @include responsive(desktop) { ... }
  * * * * * * * * * * * * * * * * * * * * * * */
 
-$mobile-small-width: 320px;
-$mobile-large-width: 1024px;
-$desktop-large-width: 1280px;
+$mobile-small-width: 320px; // special case in register section --> when to add <br>
+$mobile-large-width: 720px;
+$desktop-min-width: 1200px;
 
 /* * * * * * * * * * * * * * * * * * * * * * *
  * Colors
  * * * * * * * * * * * * * * * * * * * * * * */
 
- $dark-blue: #232f49;
- $light-gray: #dfdfe1;
- $dark-gray: #9e9da2;
+$dark-blue: #232f49;
+$light-gray: #dfdfe1;
+$dark-gray: #9e9da2;
+
+$side-scroll-width: 8px;

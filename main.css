@@ -268,39 +268,128 @@ sup {
   position: relative;
   left: -50%; }
 
+.grid:after, #portfolio-section .portfolio-image-container:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.grid .grid-item, #portfolio-section .portfolio-image-container .grid-item {
+  float: left;
+  position: relative; }
+
+.grid .grid-item.full, #portfolio-section .portfolio-image-container .grid-item.full {
+  width: 100%; }
+
+.grid .grid-item.one-half, #portfolio-section .portfolio-image-container .grid-item.one-half {
+  width: 50%; }
+
+.grid .grid-item.one-third, #portfolio-section .portfolio-image-container .grid-item.one-third {
+  width: 33.33%; }
+
+.grid .grid-item.two-third, #portfolio-section .portfolio-image-container .grid-item.two-third {
+  width: 66.66%; }
+
+.grid .grid-item.one-fourth, #portfolio-section .portfolio-image-container .grid-item.one-fourth {
+  width: 25%; }
+
+.grid .grid-item.three-fourth, #portfolio-section .portfolio-image-container .grid-item.three-fourth {
+  width: 75%; }
+
+.grid .grid-item.one-fifth, #portfolio-section .portfolio-image-container .grid-item.one-fifth {
+  width: 20%; }
+
+.grid .grid-item.two-fifth, #portfolio-section .portfolio-image-container .grid-item.two-fifth {
+  width: 40%; }
+
+.grid .grid-item.three-fifth, #portfolio-section .portfolio-image-container .grid-item.three-fifth {
+  width: 60%; }
+
+.grid .grid-item.four-fifth, #portfolio-section .portfolio-image-container .grid-item.four-fifth {
+  width: 80%; }
+
+.grid .grid-item.one-sixth, #portfolio-section .portfolio-image-container .grid-item.one-sixth {
+  width: 16.66%; }
+
+.grid .grid-item.five-sixth, #portfolio-section .portfolio-image-container .grid-item.five-sixth {
+  width: 83.33%; }
+
+.grid .grid-item.one-eighth, #portfolio-section .portfolio-image-container .grid-item.one-eighth {
+  width: 12.5%; }
+
+.grid .grid-item.three-eighth, #portfolio-section .portfolio-image-container .grid-item.three-eighth {
+  width: 37.5%; }
+
+.grid .grid-item.five-eighth, #portfolio-section .portfolio-image-container .grid-item.five-eighth {
+  width: 62.5%; }
+
+.grid .grid-item.seven-eighth, #portfolio-section .portfolio-image-container .grid-item.seven-eighth {
+  width: 87.5%; }
+
 #hero-section .title-container {
   position: absolute;
-  top: 37.5%;
+  top: 43%;
   background-color: transparent;
-  left: 10%;
+  left: 50%;
   width: 80%;
   text-align: center; }
+  @media only screen and (max-width: 720px) {
+    #hero-section .title-container {
+      top: 38%; } }
   #hero-section .title-container .title-eng-text {
     font-family: futura;
     font-weight: normal;
     font-size: 27px;
     letter-spacing: 0.025em;
     text-transform: uppercase;
-    text-align: center; }
-    @media only screen and (max-width: 1023px) {
+    text-align: center;
+    position: relative;
+    left: -50%; }
+    @media only screen and (max-width: 720px) {
       #hero-section .title-container .title-eng-text {
-        line-height: 35px;
-        font-size: 24px; } }
+        font-size: 24px;
+        letter-spacing: 0.02em; } }
   #hero-section .title-container .title-chi-text {
     font-family: kozukaGothic;
     font-weight: normal;
     font-size: 23px;
     letter-spacing: 1.4em;
     text-align: center;
-    margin-top: 10px;
-    margin-left: 10px; }
-    @media only screen and (max-width: 1023px) {
+    position: relative;
+    left: calc(-50% + 10px); }
+    @media only screen and (max-width: 720px) {
       #hero-section .title-container .title-chi-text {
-        letter-spacing: 12px; } }
+        left: -50%;
+        font-size: 20px;
+        letter-spacing: 0.64em; } }
+  #hero-section .title-container .transparent-button {
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 10px 23px;
+    margin-top: 12px;
+    position: relative;
+    left: -50%; }
+    @media only screen and (max-width: 720px) {
+      #hero-section .title-container .transparent-button {
+        margin-top: 20px;
+        padding: 8px 18px; } }
+    #hero-section .title-container .transparent-button .title-white-box-text {
+      font-family: futuraBT;
+      font-weight: normal;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      color: white;
+      text-align: center; }
+      @media only screen and (max-width: 720px) {
+        #hero-section .title-container .transparent-button .title-white-box-text {
+          font-size: 14px;
+          letter-spacing: 0.02em; } }
 
 #hero-section .video-container {
-  height: 92vh;
+  height: 666px;
   width: 100%; }
+  @media only screen and (max-width: 720px) {
+    #hero-section .video-container {
+      height: 531px; } }
 
 #hero-section .video {
   width: 100%;
@@ -308,8 +397,7 @@ sup {
 
 #hero-section .hero-footer {
   background-color: #9e9da2;
-  height: 8vh;
-  vertical-align: middle; }
+  height: 39px; }
   #hero-section .hero-footer .register-link-text {
     font-family: futura;
     font-weight: normal;
@@ -317,59 +405,58 @@ sup {
     letter-spacing: 0.025em;
     text-transform: uppercase;
     color: #232f49;
-    margin-left: 45px; }
-    @media only screen and (max-width: 1023px) {
+    position: relative;
+    top: 7px;
+    margin-left: 60px; }
+    @media only screen and (max-width: 720px) {
       #hero-section .hero-footer .register-link-text {
         margin-left: 20px;
-        font-size: 90%;
-        height: 100%; } }
+        top: 9px;
+        font-size: 14px;
+        letter-spacing: 0.025em; } }
 
 #hero-section .hero-logo {
+  background-image: url("images/hero-section/shiplogo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 110px;
+  height: 0;
+  padding-bottom: 21.63934px;
   display: inline-block;
   position: absolute;
-  top: 5%;
-  left: 3.5%;
-  width: 9.5%; }
-  @media only screen and (max-width: 1023px) {
+  top: 6.5%;
+  left: 4%; }
+  @media only screen and (max-width: 720px) {
     #hero-section .hero-logo {
-      width: 20%; } }
-
-#hero-section .transparent-button {
-  display: inline-block;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  padding: 10px 23px;
-  margin-top: 40px; }
-  @media only screen and (max-width: 1023px) {
-    #hero-section .transparent-button {
-      margin-top: 20px; } }
-  #hero-section .transparent-button .title-white-box-text {
-    font-family: futuraBT;
-    font-weight: normal;
-    font-size: 12px;
-    letter-spacing: 0.05em;
-    color: white;
-    text-align: center; }
-    @media only screen and (max-width: 1023px) {
-      #hero-section .transparent-button .title-white-box-text {
-        font-size: 13px;
-        line-height: 15px; } }
+      width: 65px;
+      padding-bottom: 12.78689px;
+      top: 4%;
+      left: 5%; } }
 
 #nav-menu {
   font-family: futura;
   color: white;
   text-align: right;
-  position: absolute;
-  right: 4%;
-  top: 0;
-  width: 3%;
-  height: auto;
-  cursor: pointer;
   /* * * * * * * * * * * * * *
-   * Text styles
-   * * * * * * * * * * * * * */ }
-  @media only screen and (max-width: 1023px) {
-    #nav-menu {
-      width: 5%; } }
+  * Text styles
+  * * * * * * * * * * * * * */ }
+  #nav-menu #nav-menu-image {
+    background-image: url("images/hero-section/navmenubutton.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 0;
+    padding-bottom: 18.75px;
+    position: absolute;
+    top: 7%;
+    right: 4%;
+    cursor: pointer; }
+    @media only screen and (max-width: 720px) {
+      #nav-menu #nav-menu-image {
+        width: 16px;
+        padding-bottom: 12px;
+        top: 3.5%;
+        right: 5.5%; } }
   #nav-menu .menu-title-text {
     text-decoration: underline; }
   #nav-menu .page-link-menu-text {
@@ -380,16 +467,12 @@ sup {
     padding-left: 10px;
     padding-right: 20px;
     white-space: nowrap; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 720px) {
       #nav-menu .page-link-menu-text {
         padding-right: 30px;
         font-size: 19px; } }
   #nav-menu .second-level {
     color: #9e9da2; }
-  #nav-menu .language-menu-text {
-    font-size: 17px;
-    padding-left: 5px;
-    padding-right: 5px; }
   #nav-menu a {
     text-decoration: none;
     color: white; }
@@ -414,15 +497,10 @@ sup {
         display: none; }
         #nav-menu #nav-menu-content li ul li {
           height: 2em; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 720px) {
       #nav-menu #nav-menu-content {
         height: 100vh;
         padding-top: 15px; } }
-  #nav-menu #nav-menu-image {
-    top: 5vh;
-    position: relative;
-    width: 90%;
-    height: auto; }
   #nav-menu #nav-cross {
     background-image: url("images/nav-menu/navmenubuttons_cross.png");
     background-size: 100% 100%;
@@ -433,7 +511,7 @@ sup {
     height: 40px;
     float: right;
     margin-bottom: 40px; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 720px) {
       #nav-menu #nav-cross {
         margin-bottom: 45px; } }
     #nav-menu #nav-cross:after {
@@ -455,7 +533,7 @@ sup {
     right: 6px;
     z-index: 2;
     top: 83vh; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 720px) {
       #nav-menu #nav-bottom-menu {
         top: 88vh; } }
   #nav-menu #nav-sound {
@@ -476,6 +554,10 @@ sup {
     height: 40px; }
     #nav-menu #lang-toolbar li {
       display: inline; }
+    #nav-menu #lang-toolbar a {
+      font-size: 17px;
+      padding-left: 5px;
+      padding-right: 5px; }
 
 #clubhouse-section {
   position: relative;
@@ -491,7 +573,7 @@ sup {
     letter-spacing: 0.025em;
     line-height: 33px;
     text-transform: uppercase; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 720px) {
       #clubhouse-section .club-title-text {
         line-height: 28px;
         font-size: 20px; } }
@@ -501,7 +583,7 @@ sup {
     font-size: 13px;
     letter-spacing: 0.025em;
     line-height: 25px; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 720px) {
       #clubhouse-section .club-description-text {
         line-height: 18px;
         font-size: 12px; } }
@@ -511,12 +593,13 @@ sup {
     font-size: 17px;
     letter-spacing: 0.025em;
     text-align: center;
-    margin: 2px;
+    margin: 6px;
     margin-left: 5px;
-    padding-right: 12px; }
-    @media only screen and (max-width: 1023px) {
+    padding-right: 60px; }
+    @media only screen and (max-width: 720px) {
       #clubhouse-section .link-text {
         padding-top: 2px;
+        padding-right: 2px;
         line-height: 20px;
         font-size: 18px; } }
     #clubhouse-section .link-text .the-text {
@@ -524,26 +607,24 @@ sup {
   #clubhouse-section .link-menu {
     position: absolute;
     border-bottom: 1px solid white;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     right: 0;
-    bottom: 80px; }
-    @media only screen and (max-width: 1023px) {
+    bottom: 41px; }
+    @media only screen and (max-width: 720px) {
       #clubhouse-section .link-menu {
         bottom: 33px; } }
   #clubhouse-section .clubhouse-image-container {
-    min-height: 750px;
-    height: 96vh;
-    max-height: 850px;
+    height: 669px;
     background-image: url("./images/clubhouse-section/club1.jpg");
     background-position: left;
     background-size: cover;
     position: relative;
     float: right;
-    width: 64.5%; }
-    @media only screen and (min-width: 1024px) {
+    width: 75%; }
+    @media only screen and (min-width: 721px) and (max-width: 1199px) {
       #clubhouse-section .clubhouse-image-container {
-        width: 64%; } }
-    @media only screen and (max-width: 1023px) {
+        width: 60%; } }
+    @media only screen and (max-width: 720px) {
       #clubhouse-section .clubhouse-image-container {
         background-position: left;
         top: 11.5vh;
@@ -556,10 +637,12 @@ sup {
   #clubhouse-section .clubhouse-blue-box-container {
     overflow-y: visible;
     float: left;
-    padding-bottom: 79px;
-    padding-top: 65px;
-    width: 35.5%; }
-    @media only screen and (max-width: 1023px) {
+    padding-top: 54px;
+    width: 25%; }
+    @media only screen and (min-width: 721px) and (max-width: 1199px) {
+      #clubhouse-section .clubhouse-blue-box-container {
+        width: 40%; } }
+    @media only screen and (max-width: 720px) {
       #clubhouse-section .clubhouse-blue-box-container {
         width: 0;
         top: 0;
@@ -567,15 +650,18 @@ sup {
         padding-bottom: 0; } }
   #clubhouse-section .clubhouse-blue-box {
     position: relative;
-    padding: 40px;
-    padding-top: 30px;
-    left: calc(100% - 404px);
-    width: 460px; }
+    padding: 60px 40px;
+    left: calc(100% - 286px);
+    width: 337px;
+    height: 452px; }
     #clubhouse-section .clubhouse-blue-box .white-line {
-      left: -469px;
-      margin-top: 14px;
-      margin-bottom: 38px; }
-    @media only screen and (max-width: 1023px) {
+      left: -250px;
+      margin-top: 23px;
+      margin-bottom: 23px; }
+    @media only screen and (min-width: 721px) and (max-width: 1199px) {
+      #clubhouse-section .clubhouse-blue-box {
+        left: calc(100% - 276px); } }
+    @media only screen and (max-width: 720px) {
       #clubhouse-section .clubhouse-blue-box {
         left: 0;
         top: 0;
@@ -589,33 +675,33 @@ sup {
           left: -8vw;
           width: 90%; } }
   #clubhouse-section .scroll-textbox-area {
-    height: 373px;
+    height: 225px;
     overflow-y: auto;
     margin-right: -300px;
     padding-right: 300px; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 720px) {
       #clubhouse-section .scroll-textbox-area {
         height: 240px; } }
   #clubhouse-section .hide-scroll {
-    height: 373px;
+    height: 225px;
     overflow: hidden; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 720px) {
       #clubhouse-section .hide-scroll {
         height: 240px; } }
   #clubhouse-section .wheelbutton-container {
     width: 100px;
     float: right;
-    padding-left: 100px;
-    margin-top: -127px; }
-    @media only screen and (max-width: 1023px) {
+    padding-left: 75px;
+    margin-top: -2px; }
+    @media only screen and (max-width: 720px) {
       #clubhouse-section .wheelbutton-container {
         padding-left: 90px;
         margin-top: -28px; } }
   #clubhouse-section .next-prev-wheelbutton {
-    height: 125px;
-    width: 125px;
+    height: 100px;
+    width: 100px;
     background-color: black; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 720px) {
       #clubhouse-section .next-prev-wheelbutton {
         height: 85px;
         width: 85px; } }
@@ -625,38 +711,40 @@ sup {
   text-align: center; }
   #companyinfo-section .companyinfo-body-container {
     background-color: #232f49;
-    width: 95vw;
+    width: 92%;
     position: relative;
-    margin: 0 auto auto auto;
+    margin: 0 auto 105px auto;
     text-align: center; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 720px) {
       #companyinfo-section .companyinfo-body-container {
         width: 100%; } }
   #companyinfo-section .company-logo {
     display: inline-block;
     vertical-align: top;
-    padding: 40px;
-    margin-bottom: 20px; }
+    padding-top: 96px;
+    padding-right: 155px;
+    padding-left: 155px; }
     #companyinfo-section .company-logo .description {
       font-family: futura;
       font-weight: normal;
       font-size: 15px;
       letter-spacing: 0.025em;
       line-height: 26px; }
-      @media only screen and (max-width: 1023px) {
+      @media only screen and (max-width: 720px) {
         #companyinfo-section .company-logo .description {
           line-height: 30px;
           font-size: 15px; } }
     #companyinfo-section .company-logo .image {
-      width: 200px;
-      height: 100px;
-      background-color: black;
+      top: 35px;
+      height: 42px;
+      width: auto;
       position: relative;
-      margin: auto; }
+      margin: auto;
+      margin-bottom: 40px; }
   #companyinfo-section .disclaimer {
     position: relative;
-    padding: 40px 30px; }
-    @media only screen and (max-width: 1023px) {
+    padding: 40px 80px; }
+    @media only screen and (max-width: 720px) {
       #companyinfo-section .disclaimer {
         padding: 40px 0; } }
     #companyinfo-section .disclaimer .title {
@@ -665,8 +753,10 @@ sup {
       font-size: 21px;
       letter-spacing: 0.025em;
       line-height: 26px;
-      text-transform: uppercase; }
-      @media only screen and (max-width: 1023px) {
+      text-transform: uppercase;
+      margin-top: 30px;
+      margin-bottom: 20px; }
+      @media only screen and (max-width: 720px) {
         #companyinfo-section .disclaimer .title {
           line-height: 30px;
           font-size: 15px; } }
@@ -678,46 +768,47 @@ sup {
       line-height: 25px;
       position: relative;
       margin: 0; }
-      @media only screen and (max-width: 1023px) {
+      @media only screen and (max-width: 720px) {
         #companyinfo-section .disclaimer p {
           line-height: 30px;
           font-size: 15px; } }
 
 #designerprofile-section .yacht {
   background-image: url("images/designerprofile-section/bg.jpg");
-  padding-bottom: 756px; }
-  @media only screen and (max-width: 1023px) {
+  padding-bottom: 666px; }
+  @media only screen and (max-width: 720px) {
     #designerprofile-section .yacht {
       padding-bottom: 70%; } }
 
 #designerprofile-section .description-grey-box {
   position: relative;
-  margin: 0 50px;
-  margin-top: -135px;
+  margin: 0 60px;
+  margin-top: -46px;
   background-color: #dfdfe1;
   overflow: visible;
-  min-height: 750px; }
-  @media only screen and (max-width: 1023px) {
+  min-height: 446px;
+  margin-bottom: 82px; }
+  @media only screen and (max-width: 720px) {
     #designerprofile-section .description-grey-box {
       min-height: initial;
       margin: 0 0 0 20px;
       margin-top: 0px; } }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 720px) {
   #designerprofile-section .blue-box-container {
     padding-right: 20%; } }
 
 #designerprofile-section .profile-blue-box {
   float: left;
   color: #dfdfe1;
-  margin-left: 70px;
-  margin-top: -90px;
-  width: 465px;
-  height: 735px;
+  margin-left: 30px;
+  margin-top: -117px;
+  width: 337px;
+  height: 516px;
   align-content: center;
-  padding: 40px;
+  padding: 60px;
   text-align: center; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 720px) {
     #designerprofile-section .profile-blue-box {
       padding: calc(3% + 20px) 30px;
       margin-left: -20px;
@@ -726,9 +817,9 @@ sup {
       width: 100%; } }
   #designerprofile-section .profile-blue-box .white-line {
     margin: 15px 0;
-    left: -120px;
+    left: -200px;
     width: 441px; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 720px) {
       #designerprofile-section .profile-blue-box .white-line {
         margin: 10px auto;
         width: 1000px;
@@ -741,7 +832,7 @@ sup {
     letter-spacing: 0.025em;
     line-height: 31px;
     text-transform: uppercase; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 720px) {
       #designerprofile-section .profile-blue-box .designer-title {
         line-height: 30px;
         font-size: 24px; } }
@@ -750,28 +841,34 @@ sup {
     font-weight: normal;
     font-size: 17px;
     letter-spacing: 0.025em; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 720px) {
       #designerprofile-section .profile-blue-box .designer-info {
         font-size: 17px;
         line-height: 17px;
         font-weight: bold; } }
-    #designerprofile-section .profile-blue-box .designer-info .designer-name {
-      text-transform: uppercase; }
+  #designerprofile-section .profile-blue-box .name {
+    text-transform: uppercase; }
 
 #designerprofile-section .designer-photo {
-  background-image: url("images/designerprofile-section/designer.png"); }
-  @media only screen and (min-width: 1024px) {
+  background-image: url("images/designerprofile-section/designer.png");
+  height: 221px;
+  margin-top: 21px;
+  margin-bottom: 31px; }
+  @media only screen and (min-width: 721px) and (max-width: 1199px) {
     #designerprofile-section .designer-photo {
-      height: 270px; } }
-  @media only screen and (max-width: 1023px) {
+      height: 180px;
+      margin-top: 15;
+      margin-bottom: 15; } }
+  @media only screen and (max-width: 720px) {
     #designerprofile-section .designer-photo {
       padding-bottom: calc(120px + 20%);
       margin: 20px 0; } }
 
 #designerprofile-section .designer-description-text {
   float: right;
-  width: calc(100% - 465px - 70px);
-  padding: 100px 65px;
+  width: calc(100% - 337px - 30px);
+  padding: 88px 80px;
+  padding-left: 55px;
   padding-bottom: 170px;
   vertical-align: top;
   position: relative; }
@@ -787,7 +884,7 @@ sup {
     letter-spacing: 0.025em;
     line-height: 25px;
     margin-bottom: 20px; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 720px) {
     #designerprofile-section .designer-description-text {
       width: auto;
       padding: calc(5% + 15px) 30px; } }
@@ -803,19 +900,19 @@ sup {
     color: black;
     padding-bottom: 2px;
     border-bottom: 1px solid black; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 720px) {
       #designerprofile-section .designer-video-link a {
         font-size: 24px;
         line-height: 30px; } }
 
 #designerprofile-section .next-prev-wheelbutton {
   background: black;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   position: absolute;
-  bottom: 55px;
-  right: -35px; }
-  @media only screen and (max-width: 1023px) {
+  bottom: -33px;
+  right: -33px; }
+  @media only screen and (max-width: 720px) {
     #designerprofile-section .next-prev-wheelbutton {
       display: none; } }
   #designerprofile-section .next-prev-wheelbutton.mobile {
@@ -824,42 +921,43 @@ sup {
     right: -60px;
     bottom: 20px;
     display: none; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 720px) {
       #designerprofile-section .next-prev-wheelbutton.mobile {
         display: block; } }
 
 #map-section {
   color: white; }
   #map-section .map-container {
-    height: 950px;
+    height: 669px;
     display: inline-block;
     vertical-align: top;
     background-color: #dfdfe1;
-    width: 65%;
+    width: 59%;
     min-width: 400px; }
-    @media only screen and (min-width: 1024px) {
+    @media only screen and (min-width: 721px) and (max-width: 1199px) {
       #map-section .map-container {
-        height: 900px; } }
-    @media only screen and (max-width: 1023px) {
+        height: 640px; } }
+    @media only screen and (max-width: 720px) {
       #map-section .map-container {
         width: 100%;
-        height: 60vh;
+        height: 357px;
         min-height: 60vh; } }
   #map-section .map-info {
-    height: 950px;
+    height: 669px;
     display: inline-block;
     vertical-align: top;
-    width: 35%;
+    width: 41%;
     background-color: #232f49;
-    padding-left: 60px;
-    padding-bottom: 60px; }
-    @media only screen and (min-width: 1024px) {
+    padding-left: 70px;
+    padding-bottom: 60px;
+    padding-top: 30px; }
+    @media only screen and (min-width: 721px) and (max-width: 1199px) {
       #map-section .map-info {
-        height: 900px; } }
-    @media only screen and (max-width: 1023px) {
+        height: 640px; } }
+    @media only screen and (max-width: 720px) {
       #map-section .map-info {
         width: 100%;
-        height: auto;
+        height: 440px;
         min-height: 60vh; } }
     #map-section .map-info .white-line {
       width: 100%; }
@@ -867,20 +965,29 @@ sup {
     padding-right: 20px;
     font-family: futura;
     font-weight: normal;
-    letter-spacing: 0.025em; }
+    letter-spacing: 0.025em;
+    width: 380px; }
+    @media only screen and (min-width: 721px) and (max-width: 1199px) {
+      #map-section .map-info-text {
+        width: 100%; } }
     #map-section .map-info-text .title {
       font-size: 21px;
-      line-height: 41px;
+      line-height: 38px;
       text-transform: uppercase;
-      margin-top: 70px; }
-      @media only screen and (max-width: 1023px) {
+      margin-top: 42px; }
+      @media only screen and (min-width: 721px) and (max-width: 1199px) {
+        #map-section .map-info-text .title {
+          font-size: 18px;
+          line-height: 32px; } }
+      @media only screen and (max-width: 720px) {
         #map-section .map-info-text .title {
           font-size: 24px;
           line-height: 30px; } }
     #map-section .map-info-text .content {
+      margin-top: 5px;
       font-size: 13px;
-      line-height: 33px; }
-      @media only screen and (max-width: 1023px) {
+      line-height: 23px; }
+      @media only screen and (max-width: 720px) {
         #map-section .map-info-text .content {
           line-height: 30px;
           font-size: 15px; } }
@@ -891,10 +998,29 @@ sup {
       width: 100%;
       box-sizing: border-box;
       letter-spacing: .5px; }
-      @media only screen and (max-width: 1023px) {
+      @media only screen and (max-width: 720px) {
         #map-section .map-info-text .explanation {
           font-size: 13px;
           line-height: 15px; } }
+
+#panorama-section .panorama-image-container {
+  background-image: url("images/panorama-section/pano_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 663px; }
+  @media only screen and (max-width: 720px) {
+    #panorama-section .panorama-image-container {
+      height: 576px; } }
+
+#panorama-section .panorama-content {
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  width: 100%; }
+  @media only screen and (max-width: 720px) {
+    #panorama-section .panorama-content {
+      top: 37%; } }
 
 #panorama-section .title-center {
   position: relative;
@@ -906,76 +1032,69 @@ sup {
     letter-spacing: 0.025em;
     line-height: 46px;
     text-transform: uppercase; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 720px) {
       #panorama-section .title-center p {
         line-height: 35px;
         font-size: 24px; } }
-
-#panorama-section .panorama-image-container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  overflow: hidden; }
 
 #panorama-section .panorama-background-image {
   flex: none;
   height: 100vh;
   width: 100%; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 720px) {
     #panorama-section .panorama-background-image {
       width: auto; } }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 720px) {
     #panorama-section .panorama-background-image {
       height: 100%;
       width: auto; } }
 
-#panorama-section .panorama-content {
-  position: absolute;
-  text-align: center;
-  top: 40%;
-  width: 100%; }
-
 #panorama-section .button-group {
   position: relative;
   text-align: center;
-  margin: auto;
-  margin-top: 40px; }
+  margin: auto; }
 
 #panorama-section .button {
   display: inline-block;
   background-color: white;
+  margin: 20px 20px;
   padding: 10px;
-  margin: 2%;
-  min-width: 180px;
+  min-width: 140px;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   filter: alpha(opacity=50);
   -moz-opacity: 0.5;
   -khtml-opacity: 0.5;
   opacity: 0.5; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 720px) {
     #panorama-section .button {
-      padding: 2px;
-      margin: auto;
+      padding: 8px 2px;
+      margin: 25px 8px;
       min-width: 100px; } }
+  @media only screen and (max-width: 320px) {
+    #panorama-section .button {
+      padding: 8px 2px;
+      margin: 25px 8px;
+      min-width: 80px; } }
   #panorama-section .button p {
     font-family: futuraBT;
     font-weight: normal;
     font-size: 14px;
     letter-spacing: 0.05em;
     text-align: center; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 720px) {
       #panorama-section .button p {
-        line-height: 30px;
-        font-size: 15px; } }
+        font-size: 13px; } }
 
 #portfolio-section .portfolio-header {
   height: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 18px;
+  padding-bottom: 18px;
   text-align: center;
   background-color: #232f49; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 720px) {
     #portfolio-section .portfolio-header {
+      padding-top: 7px;
+      padding-bottom: 7px;
       margin-top: 2px; } }
   #portfolio-section .portfolio-header div {
     font-family: futura;
@@ -983,59 +1102,64 @@ sup {
     font-size: 24px;
     letter-spacing: 0.025em;
     color: white;
-    margin-top: 1.5vh;
-    margin-bottom: 1.5vh;
     text-transform: uppercase; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 720px) {
       #portfolio-section .portfolio-header div {
-        font-size: 24px;
-        line-height: 30px; } }
+        font-size: 13px; } }
 
 #portfolio-section .portfolio-image-container {
   text-align: center;
-  padding-top: 2px; }
-  @media only screen and (max-width: 1023px) {
+  padding-top: 3px;
+  margin-bottom: 3px;
+  width: auto;
+  white-space: nowrap;
+  overflow: auto; }
+  @media only screen and (max-width: 720px) {
     #portfolio-section .portfolio-image-container {
-      padding-bottom: 2px; } }
+      padding-top: 1px;
+      padding-bottom: 2px;
+      height: 286px; } }
 
 #portfolio-section .portfolio-image {
-  width: 33.3%;
-  height: 60vw;
   display: inline-block;
-  vertical-align: top; }
-
-#portfolio-section .portfolio-image:first-child {
-  left: 0; }
-
-#portfolio-section .portfolio-image:last-child {
-  right: 0; }
+  width: 33.3%;
+  vertical-align: top;
+  height: 674px; }
+  @media only screen and (min-width: 721px) and (max-width: 1199px) {
+    #portfolio-section .portfolio-image {
+      height: 450px; } }
+  @media only screen and (max-width: 720px) {
+    #portfolio-section .portfolio-image {
+      height: 286px;
+      width: 50%; } }
 
 #register-section {
+  height: 245px;
+  padding-top: 65px;
   background-color: #9e9da2;
   font-family: futura;
   font-weight: normal;
   font-size: 17px;
   letter-spacing: 0.025em;
-  text-align: center;
-  padding: 20px; }
-  @media only screen and (max-width: 1023px) {
+  text-align: center; }
+  @media only screen and (max-width: 720px) {
     #register-section {
       padding: 20px 20px; } }
   #register-section p {
     color: white;
     margin-top: 10px;
     margin-bottom: 10px; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 720px) {
       #register-section p {
         line-height: 30px;
         font-size: 15px; } }
   #register-section .register-button {
-    border: 1px solid white;
+    border: 2px solid white;
+    margin-top: 15px;
     padding-right: 40px;
     padding-left: 40px;
-    display: inline-block;
-    margin: auto auto 30px auto; }
-    @media only screen and (max-width: 1023px) {
+    display: inline-block; }
+    @media only screen and (max-width: 720px) {
       #register-section .register-button {
         padding-right: 5px;
         padding-left: 5px; } }
@@ -1044,7 +1168,7 @@ sup {
       text-transform: uppercase;
       margin-top: 10px;
       margin-bottom: 10px; }
-      @media only screen and (max-width: 1023px) {
+      @media only screen and (max-width: 720px) {
         #register-section .register-button p {
           line-height: 30px;
           font-size: 15px; } }

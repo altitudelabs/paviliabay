@@ -1,13 +1,19 @@
 #portfolio-section {
 
+  $image-height: 674px;
+  $image-height-transition: 450px;
+  $image-height-mobile: 286px;
+
   .portfolio-header {
     height: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 18px;
+    padding-bottom: 18px;
     text-align: center;
     background-color: $dark-blue;
 
     @include responsive(mobile){
+      padding-top: 7px;
+      padding-bottom: 7px;
       margin-top: 2px;
     }
 
@@ -17,39 +23,44 @@
       font-size: 24px;
       letter-spacing: 0.025em;
       color: white;
-      margin-top: 1.5vh;
-      margin-bottom: 1.5vh;
       text-transform: uppercase;
 
       @include responsive(mobile) {
-        font-size: 24px;
-        line-height: 30px;
+        font-size: 13px;
       }
     }
   }
 
   .portfolio-image-container {
+    @extend .grid;
     text-align: center;
-    padding-top: 2px;
+    padding-top: 3px;
+    margin-bottom: 3px;
+    width: auto;
+    white-space: nowrap;
+    overflow: auto;
 
-    @include responsive(mobile){
+    @include responsive(mobile) {
+      padding-top: 1px;
       padding-bottom: 2px;
+      height: $image-height-mobile;
     }
   }
 
   .portfolio-image {
-    width: 33.3%;
-    height: 60vw;
     display: inline-block;
+    width: 33.3%;
     vertical-align: top;
-  }
+    height: $image-height;
 
-  .portfolio-image:first-child {
-    left: 0;
-  }
+    @include responsive(transition) {
+      height: $image-height-transition;
+    }
 
-  .portfolio-image:last-child {
-    right: 0;
+    @include responsive(mobile) {
+      height: $image-height-mobile;
+      width: 50%;
+    }
   }
 
 }
