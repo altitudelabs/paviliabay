@@ -34,4 +34,18 @@ $(document).ready(function(){
     gracefulFailure: false,
   });
 
+  $(window).scroll(function(){
+    var winTop = $(window).scrollTop();
+    var docHeight = $(document).height();
+    var winHeight = $(window).height();
+    var scrollTrigger = 0.95;
+
+    var scrolled = winTop / (docHeight - winHeight);
+    $('#left-scroll .bar').css('top', (winHeight * 0.8) * scrolled);
+
+    if  ((winTop/(docHeight-winHeight)) > scrollTrigger) {
+     console.log('scroll bottom');
+    }
+  });
+
 });

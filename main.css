@@ -1180,3 +1180,16 @@ sup {
     @media only screen and (max-width: 320px) {
       #register-section .add-br {
         display: block; } }
+
+#left-scroll {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 8px;
+  background-color: grey; }
+  #left-scroll .bar {
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    height: 20%; }
