@@ -30,5 +30,8 @@ $(document).ready(function(){
       $(this).parent().children('ul').css('display', 'block');
     }
   });
+  $('.panorama-image-container').paver({
+    gracefulFailure: false,
+  });
 
 });

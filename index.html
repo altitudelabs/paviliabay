@@ -10,9 +10,7 @@
     >
     <title></title>
     <link rel="stylesheet" type="text/css" href="main.css">
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="./js/animation.js"></script>
+    <link rel="stylesheet" type="text/css" href="lib/paver-master/dist/css/paver.min.css">
   </head>
 
   <body>
@@ -199,7 +197,9 @@
 
     <!-- PANORAMA SECTION -->
     <section class="section-container" id="panorama-section">
-      <div class="panorama-image-container"></div>
+      <div class="panorama-image-container">
+        <img src="images/panorama-demo.jpg" alt="" title="" />
+      </div>
       <div class="panorama-content">
         <div class="title-center">
           <p> Explore
@@ -277,30 +277,36 @@
           <img class="image" src="images/companyinfo-section/logo_nwd.png"/>
         </div><!--
         --><div class="company-logo">
-        <p class="description">
-          Indirect shareholder of the Vendor
-          <br>
-          (Person so engaged) Ultimate Vantage Limited:
-        </p>
-        <img class="image" src="images/companyinfo-section/logo_vanke.png"/>
+          <p class="description">
+            Indirect shareholder of the Vendor
+            <br>
+            (Person so engaged) Ultimate Vantage Limited:
+          </p>
+          <img class="image" src="images/companyinfo-section/logo_vanke.png"/>
+        </div>
+        <br>
+        <br>
+        <div class="disclaimer">
+          <div class="title"> Disclaimer </div>
+          <p>
+            The photographs, images, drawings or sketches shown in this
+            advertisement/ promotional material represent an artist's
+            impression of the development concerned only. They are not
+            drawn to scale and/or may have been edited and processed with
+            computerized imaging techniques. Prospective purchasers should
+            make reference to the sales brochure for details of the development.
+            The vendor also advises prospective purchasers to conduct an on-site
+            visit for a better understanding of the development site, its
+            surrounding environment and the public facilities nearby.
+          </p>
+        </div>
       </div>
-      <br>
-      <br>
-      <div class="disclaimer">
-        <div class="title"> Disclaimer </div>
-        <p>
-          The photographs, images, drawings or sketches shown in this
-          advertisement/ promotional material represent an artist's
-          impression of the development concerned only. They are not
-          drawn to scale and/or may have been edited and processed with
-          computerized imaging techniques. Prospective purchasers should
-          make reference to the sales brochure for details of the development.
-          The vendor also advises prospective purchasers to conduct an on-site
-          visit for a better understanding of the development site, its
-          surrounding environment and the public facilities nearby.
-        </p>
-      </div>
-    </div>
-  </section>
+    </section>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/animation.js"></script>
+    <script type="text/javascript" src="lib/paver-master/dist/js/jquery.ba-throttle-debounce.min.js"></script>
+    <script type="text/javascript" src="lib/paver-master/dist/js/jquery.paver.min.js"></script>
+
   </body>
 </html>

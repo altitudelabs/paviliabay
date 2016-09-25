@@ -1004,22 +1004,25 @@ sup {
           line-height: 15px; } }
 
 #panorama-section .panorama-image-container {
-  background-image: url("images/panorama-section/pano_bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 663px; }
+  height: 663px;
+  overflow-y: hidden; }
   @media only screen and (max-width: 720px) {
     #panorama-section .panorama-image-container {
+      overflow-x: scroll;
       height: 576px; } }
+  #panorama-section .panorama-image-container img {
+    height: 100%; }
 
 #panorama-section .panorama-content {
+  z-index: 1;
   position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
   text-align: center;
-  top: 40%;
-  width: 100%; }
+  top: 40%; }
   @media only screen and (max-width: 720px) {
     #panorama-section .panorama-content {
+      width: 100%;
       top: 37%; } }
 
 #panorama-section .title-center {
