@@ -1,0 +1,39 @@
+.wheelbutton-container {
+  animation-name: rotate;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  &:hover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+}
+
+.next-prev-wheelbutton {
+  @extend .background-contain;
+  cursor: pointer;
+  background-image: url("./images/wheel-button/nextprev_eng_black_2x.png");
+  box-sizing: content-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 300ms;
+  padding: 10%;
+  .next, .prev {
+    text-align: center;
+    vertical-align: middle;
+    height: 50%;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

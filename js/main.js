@@ -48,4 +48,16 @@ $(document).ready(function(){
     }
   });
 
+
+  $('.next-prev-wheelbutton').click(function(e) {
+    var isNext = $(e.target).hasClass('next');
+    var target = $(this).data('target');
+    console.log(target);
+    console.log(typeof target);
+    if (isNext) {
+      alert('clicked next of ' + target);
+      return;
+    }
+    alert('clicked prev of ' + target);
+  });
 });

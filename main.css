@@ -97,14 +97,14 @@ sup {
 .clearfix:after, .fixer-float-container:after, #clubhouse-section:after, #designerprofile-section .description-grey-box:after {
   clear: both; }
 
-.background-image, .background-cover, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, .background-contain, #designerprofile-section .designer-photo {
+.background-image, .background-cover, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, .background-contain, #designerprofile-section .designer-photo, .next-prev-wheelbutton {
   background-position: center center;
   background-repeat: no-repeat; }
 
 .background-cover, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht {
   background-size: cover; }
 
-.background-contain, #designerprofile-section .designer-photo {
+.background-contain, #designerprofile-section .designer-photo, .next-prev-wheelbutton {
   background-size: contain; }
 
 /*animation element*/
@@ -905,25 +905,34 @@ sup {
         font-size: 24px;
         line-height: 30px; } }
 
-#designerprofile-section .next-prev-wheelbutton {
-  background: black;
-  width: 100px;
-  height: 100px;
+#designerprofile-section .wheelbutton-container {
   position: absolute;
-  bottom: -33px;
-  right: -33px; }
+  bottom: 17px;
+  right: 17px;
+  display: block; }
   @media only screen and (max-width: 720px) {
-    #designerprofile-section .next-prev-wheelbutton {
+    #designerprofile-section .wheelbutton-container {
       display: none; } }
-  #designerprofile-section .next-prev-wheelbutton.mobile {
-    width: 75px;
-    height: 75px;
+  #designerprofile-section .wheelbutton-container.mobile {
     right: -60px;
     bottom: 20px;
     display: none; }
     @media only screen and (max-width: 720px) {
-      #designerprofile-section .next-prev-wheelbutton.mobile {
+      #designerprofile-section .wheelbutton-container.mobile {
         display: block; } }
+
+#designerprofile-section .next-prev-wheelbutton {
+  width: 100px;
+  height: 100px; }
+  #designerprofile-section .next-prev-wheelbutton:hover {
+    width: 120px;
+    height: 120px; }
+  #designerprofile-section .next-prev-wheelbutton.mobile {
+    width: 75px;
+    height: 75px; }
+    #designerprofile-section .next-prev-wheelbutton.mobile:hover {
+      width: 90px;
+      height: 90px; }
 
 #map-section {
   color: white; }
@@ -1193,3 +1202,35 @@ sup {
     background-color: black;
     position: absolute;
     height: 20%; }
+
+.wheelbutton-container {
+  animation-name: rotate;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; }
+  .wheelbutton-container:hover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused; }
+
+.next-prev-wheelbutton {
+  cursor: pointer;
+  background-image: url("./images/wheel-button/nextprev_eng_black_2x.png");
+  box-sizing: content-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 300ms;
+  padding: 10%; }
+  .next-prev-wheelbutton .next, .next-prev-wheelbutton .prev {
+    text-align: center;
+    vertical-align: middle;
+    height: 50%; }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }

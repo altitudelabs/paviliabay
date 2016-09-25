@@ -207,30 +207,44 @@
     }
   }
 
-  .next-prev-wheelbutton {
-    background: black;
-    width: $next-prev-width;
-    height: $next-prev-height;
+  .wheelbutton-container {
     position: absolute;
-    bottom: $next-prev-width - 133px;
-    right: $next-prev-width - 125px - $side-scroll-width;
+    bottom: $next-prev-width - 83px;
+    right: $next-prev-width - 75px - $side-scroll-width;
+
+    display: block;
+
     @include responsive(mobile) {
       display: none;
-      // right: auto;
-      // bottom: auto;
-      // right: 15%;
-      // top: 40px;
+    }
+
+    &.mobile {
+      right: 15px - $next-prev-width-mobile;
+      bottom: 20px;
+      display: none;
+
+      @include responsive(mobile) {
+        display: block;
+      }
+    }
+
+  }
+  .next-prev-wheelbutton {
+    width: $next-prev-width;
+    height: $next-prev-height;
+
+    &:hover {
+      width: $next-prev-width * 1.2;
+      height: $next-prev-height * 1.2;
     }
 
     &.mobile {
       width: $next-prev-width-mobile;
       height: $next-prev-height-mobile;
-      right: 15px - $next-prev-width-mobile;
-      bottom: 20px;
 
-      display: none;
-      @include responsive(mobile) {
-        display: block;
+      &:hover {
+        width: $next-prev-width-mobile * 1.2;
+        height: $next-prev-height-mobile * 1.2;
       }
     }
   }
