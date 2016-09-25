@@ -116,11 +116,11 @@
               </p>
             </div>
           </div>
-          <div class="wheelbutton-container">
-            <div class="next-prev-wheelbutton"></div>
-          </div>
         </div>
+        <div class="wheelbutton-container">
+          <div class="next-prev-wheelbutton white"></div>
         </div>
+      </div>
 
       <div class="link-menu animation-element slide-right">
         <p class="link-text">
@@ -152,12 +152,12 @@
             <div class="designer-info">
               Vitruvius Yachts Ltd
             </div>
-            <div class="wheelbutton-container mobile">
+            <!-- <div class="wheelbutton-container mobile">
               <div class="next-prev-wheelbutton" data-target="#designerprofile-section">
                 <div class="next"></div>
                 <div class="prev"></div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="designer-description-text">
@@ -196,12 +196,12 @@
       <div class="portfolio-header">
         <div> Portfolio </div>
       </div>
-      <div class="main-float-container">
-        <div class="portfolio-image-container fixer-float-container">
-          <img class="portfolio-image" src="images/portfolio-section/portfolio3.jpg"/><!--
-          --><img class="portfolio-image" src="images/portfolio-section/portfolio2.jpg"/><!--
-        --><img class="portfolio-image" src="images/portfolio-section/portfolio1.jpg"/>
+      <div class="portfolio-image-container">
+        <div class="portfolio-image" style="background-image: url('images/portfolio-section/portfolio3.jpg');"></div><!--
+        --><div class="portfolio-image" style="background-image: url('images/portfolio-section/portfolio2.jpg');"></div><!--
+        --><div class="portfolio-image" style="background-image: url('images/portfolio-section/portfolio1.jpg');"></div>
       </div>
+      <div class="main-float-container">
       </div>
     </section>
 
@@ -216,7 +216,7 @@
             <br> The Neighborhood
           </p>
         </div>
-        <div class="button-group">
+        <div class="button-group grid">
           <div class="button">
             <p> Day View </p>
           </div>
@@ -231,47 +231,52 @@
     </section>
 
     <!-- MAP SECTION -->
-    <section class="section-container" id="map-section">
-      <div class="map-container"></div><!--
-      --><div class="map-info">
-        <div class="map-info-text">
+    <section class="section-container clearfix" id="map-section">
+      <div class="map-container"></div>
+      <div class="map-info">
+        <section class="map-info-text">
           <div class="title"> Property <br> Information </div>
-        </div>
-        <div class="white-line"></div>
-        <div class="map-info-text">
+          <div class="white-line"></div>
           <p class="content">
             District: Tsuen Wan
             <br>
             Name of the street and the street number (provisional):
             51 Wing Shun Street
           </p>
-          <br>
+        </section>
+        <section class="map-info-text">
           <div class="title">sales <br> gallery</div>
-        </div>
-        <div class="white-line"></div>
-        <div class="map-info-text">
+          <div class="white-line"></div>
           <p class="content">
             Address: Shop 3016 & 3017, Level 3, D&middot;PARK,
             <br>Tsuen Wan, Hong Kong
           </p>
+        </section>
+        <section class="map-info-text">
           <div class="title">Contact<br>info</div>
-        </div>
-        <div class="white-line"></div>
-        <div class="map-info-text">
+          <div class="white-line"></div>
           <p class="content">
             Email: sales@nwd.com.hk
             <br>
             Enquiry hotline: (852) 8339 3838
           </p>
-        </div>
+        </section>
       </div>
     </section>
 
     <!-- REGISTER SECTION -->
     <section class="section-container" id="register-section">
-      <p> To receive information of <br class="add-br"> THE PAVILIA BAY, </p>
-      <div class="register-button">
-        <p>register for sales gallery preview</p>
+      <div class="section-container">
+        <p> To receive information of <br class="add-br"> THE PAVILIA BAY, </p>
+        <div class="register-button">
+          <p>register for sales gallery preview</p>
+        </div>
+      </div>
+      <div class="section-container fixed">
+        <p> To receive information of <br class="add-br"> THE PAVILIA BAY, </p>
+        <div class="register-button">
+          <p>register for sales gallery preview</p>
+        </div>
       </div>
     </section>
 

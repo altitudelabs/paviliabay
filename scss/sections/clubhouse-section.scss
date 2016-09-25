@@ -41,8 +41,8 @@
     text-transform: uppercase;
 
     @include responsive(mobile) {
-      line-height: 28px;
-      font-size: 20px;
+      line-height: 33px;
+      font-size: 19px;
     }
   }
 
@@ -54,7 +54,7 @@
     line-height: 25px;
 
     @include responsive(mobile) {
-      line-height: 18px;
+      line-height: 22px;
       font-size: 12px;
     }
   }
@@ -152,7 +152,6 @@
     width: 337px;
     height: $bluebox-height;
 
-
     .white-line {
       left: $white-line-left;
       margin-top: 23px;
@@ -163,16 +162,17 @@
       left: $bluebox-image-overlap-trans;
     }
 
-    @include responsive(mobile){
+    @include responsive(mobile) {
       left: 0;
       top: 0;
-      padding: 30px 20px 20px 24px;
+      padding: 30px 20px;
       margin-left: 0px;
       margin-top: 0px;
-      max-height: 400px;
-      width: 250px;
+      max-height: 380px;
+      width: 240px;
 
       .white-line {
+        margin-top: 8px;
         margin-bottom: 22px;
         left: -8vw;
         width: 90%;
@@ -181,45 +181,23 @@
   }
 
   .scroll-textbox-area {
-    height: $text-area-height;
+    height: 100%;
     overflow-y: auto;
     margin-right: -300px;
     padding-right: 300px;
 
-    @include responsive(mobile) {
-      height: 240px;
-    }
   }
 
-  .hide-scroll{
+  .hide-scroll {
     height: $text-area-height;
     overflow: hidden;
-
-    @include responsive(mobile) {
-      height: 240px;
-    }
   }
 
   .wheelbutton-container {
-    width: 100px;
-    float: right;
-    padding-left: 75px;
-    margin-top: -2px;
-
+    position: absolute;
     @include responsive(mobile) {
-      padding-left: 90px;
-      margin-top: -28px;
-    }
-  }
-
-  .next-prev-wheelbutton {
-    height: 100px;
-    width: 100px;
-    background-color: black;
-
-    @include responsive(mobile) {
-      height: 85px;
-      width: 85px;
+      left: 260px;
+      top: 360px;
     }
   }
 }

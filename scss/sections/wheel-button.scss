@@ -1,8 +1,17 @@
 .wheelbutton-container {
+
+  $next-prev-height: 100px;
+  $next-prev-width: 100px;
+  $next-prev-height-mobile: 85px;
+  $next-prev-width-mobile: 85px;
+
   animation-name: rotate;
   animation-duration: 12s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+
+  transition: top 300ms, right 300ms, bottom 300ms, left 300ms;
+
 
   &:hover {
     -webkit-animation-play-state: paused;
@@ -10,25 +19,52 @@
     -o-animation-play-state: paused;
     animation-play-state: paused;
   }
-}
 
-.next-prev-wheelbutton {
-  @extend .background-contain;
-  cursor: pointer;
-  background-image: url("./images/wheel-button/nextprev_eng_black_2x.png");
-  box-sizing: content-box;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 300ms;
-  padding: 10%;
-  .next, .prev {
-    text-align: center;
-    vertical-align: middle;
-    height: 50%;
+  .next-prev-wheelbutton {
+    @extend .background-contain;
+    width: $next-prev-width;
+    height: $next-prev-height;
+    cursor: pointer;
+    background-image: url("./images/wheel-button/nextprev_eng_black_2x.png");
+    box-sizing: content-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 300ms;
+    padding: 10%;
+
+    .next, .prev {
+      text-align: center;
+      vertical-align: middle;
+      height: 50%;
+    }
+
+    &.white {
+      background-image: url("./images/wheel-button/nextprev_eng_white_2x.png");
+    }
+
+    &:hover {
+      width: $next-prev-width * 1.2;
+      height: $next-prev-height * 1.2;
+    }
+  }
+
+  @include responsive(mobile) {
+    .next-prev-wheelbutton {
+      width: $next-prev-width-mobile;
+      height: $next-prev-height-mobile;
+    }
+
+    &:hover {
+      .next-prev-wheelbutton {
+        width: $next-prev-width-mobile * 1.2;
+        height: $next-prev-height-mobile * 1.2;
+      }
+    }
   }
 }
+
 @keyframes rotate {
   0% {
     transform: rotate(0);

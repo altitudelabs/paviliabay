@@ -45,8 +45,8 @@
       text-transform: uppercase;
 
       @include responsive(mobile){
-        line-height: 35px;
-        font-size: 24px;
+        line-height: 37px;
+        font-size: 21px;
       }
     }
   }
@@ -76,21 +76,18 @@
   .button {
     display: inline-block;
     background-color: white;
-    margin: 20px 20px;
-    padding: 10px;
-    min-width: 140px;
+    margin: 20px;
+    padding: 10px 20px;
     @include opacity(.5);
 
     @include responsive(mobile) {
-      padding: 8px 2px;
-      margin: 25px 8px;
-      min-width: 100px;
+      padding: 8px;
+      margin: 25px 6px;
     }
 
     @include responsive(smallmobile) {
-      padding: 8px 2px;
+      padding: 8px;
       margin: 25px 8px;
-      min-width: 80px;
     }
 
     p {
@@ -99,11 +96,6 @@
       font-size: 14px;
       letter-spacing: 0.05em;
       text-align: center;
-
-
-      @include responsive(mobile){
-        font-size: 13px;
-      }
     }
   }
 }
