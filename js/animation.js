@@ -60,6 +60,25 @@ $('.clubhouse-blue-box').on('webkitTransitionEnd otransitionend oTransitionEnd m
 });
 
 var changeClubhouseContent = function (currentSection) {
+  // $.ajax({
+  //   url : ajax_object.ajax_url,
+  //   type : 'GET',
+  //   data: { 
+  //     action: "my_action_callback",
+  //     current: currentSection
+  //   },
+  //   success : function(response) {
+  //     $('.club-title-text').html(response.titleText);
+  //     $('.club-description-text').text(response.contentText);
+  //     // $('.clubhouse-image-container').css('background-image', 'url(response.image)');
+  //     // $('#clubImage').attr('src','images/clubhouse-section/6_facade1.jpg');
+  //     $('.link-text').text(response.linkText);
+  //     $('#clubhouse-section').data('id', response.titleText)
+  //   },
+  //   error: function(error){
+  //       alert(error);
+  //   }
+  // });
   var clubhouseText = ['Blue Pavilion - Hong Kong\'s first residential clubhouse ',
     'embodied with distinctive superyacht features. The pioneering Blue Pavilia is designed ',
     'by the international renowned superyacht designer Philippe Briand. ',
