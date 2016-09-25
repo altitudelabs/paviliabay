@@ -3,6 +3,18 @@ $(document).ready(function() {
 var $animation_elements = $('.animation-element');
 var $window = $(window);
 
+//initialize map
+function initMap() {
+  mapboxgl.accessToken = 'pk.eyJ1IjoiaW5kaWN1YmUiLCJhIjoiY2lqc2JjN21oMGhiNHZhbHh5MjRkNGh3ayJ9.mziNQDmuq5Y2jyFZDhVudg';
+  var map = new mapboxgl.Map({
+  container: 'map', // container id
+  style: 'mapbox://styles/indicube/ciq80ty8u009obem5szhpb45t', //stylesheet location
+  center: [114.112, 22.365], // starting position
+  zoom: 16 // starting zoom
+  });
+};
+initMap();
+
 // check if element is in view and then apply animation
 function check_if_in_view() {
   var window_height = $window.height();
