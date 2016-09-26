@@ -47,7 +47,7 @@
     }
 
     .register-button {
-      border: 2px solid white;
+      position: relative;
       margin-top: 15px;
       padding-right: 40px;
       padding-left: 40px;
@@ -80,7 +80,57 @@
       }
     }
 
+    .border {
+      background-color: white;
+      position: absolute;
+    }
+    .top, .bottom {
+      height: 2px;
+    }
+    .right, .left {
+      width: 2px;
+    }
+    .top {
+      transition: right 1000ms;
+      top: 0;
+      left: 0;
+      right: 100%;
+    }
+    .right {
+      transition: bottom 1000ms;
+      right: 0;
+      top: 0;
+      bottom: 100%;
+    }
+    .bottom {
+      transition: left 1000ms;
+      bottom: 0;
+      right: 0;
+      left: 100%;
+    }
+    .left {
+      transition: top 1000ms;
+      left: 0;
+      bottom: 0;
+      top: 100%;
+    }
+
+    &.active {
+      .top {
+        right: 0;
+      }
+      .right {
+        bottom: 0;
+      }
+      .bottom {
+        left: 0;
+      }
+      .left {
+        top: 0;
+      }
+    }
   }
+
 
 
 }
