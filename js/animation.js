@@ -7,15 +7,18 @@ var $window = $(window);
 function initMap() {
   mapboxgl.accessToken = 'pk.eyJ1IjoiaW5kaWN1YmUiLCJhIjoiY2lqc2JjN21oMGhiNHZhbHh5MjRkNGh3ayJ9.mziNQDmuq5Y2jyFZDhVudg';
   var map = new mapboxgl.Map({
-  container: 'map', // container id
-  style: 'mapbox://styles/indicube/ciq80ty8u009obem5szhpb45t', //stylesheet location
-  center: [114.112, 22.365], // starting position
-  zoom: 16 // starting zoom
+    container: 'map', // container id
+    style: 'mapbox://styles/indicube/ciq80ty8u009obem5szhpb45t', //stylesheet location
+    center: [114.112, 22.365], // starting position
+    zoom: 16 // starting zoom
   });
   map.scrollZoom.disable();
-  var marker = new mapboxgl.Marker()
-  .setLngLat([114.112, 22.365])
-  .addTo(map);
+
+  new mapboxgl.Marker($('#marker')[0], {
+    offset: [-75 , -60]
+  })
+  .setLngLat([114.113393, 22.365400])
+  .addTo(map)
 };
 initMap();
 

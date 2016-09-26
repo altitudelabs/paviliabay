@@ -14,3 +14,10 @@
 @import './sections/register-section.scss';
 @import './sections/left-scroll.scss';
 @import './sections/wheel-button.scss';
+
+
+.marker {
+  width: 100px !important;
+  height: 100px !important;
+  background: black !important;
+}
