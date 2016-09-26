@@ -118,6 +118,15 @@ sup {
   opacity: 1;
   @include transition((all 1s linear));
 }
+.animation-element.fade-button {
+  opacity: 0;
+  @include transition((all 800ms linear));
+}
+
+.animation-element.fade-button.in-view {
+  opacity: 0.5;
+  @include transition((all 800ms linear));
+}
 
 /* IMAGE MODAL */
 
