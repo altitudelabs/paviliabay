@@ -31,6 +31,20 @@ $(document).ready(function(){
     }
   });
 
+  // TODO: Mute / unmute video
+  $('#sound').on('click', function(){
+    if ($(this).hasClass('sound-off')){
+      $(this).addClass('sound-on').removeClass('sound-off');
+      console.log("Change to sound-on");
+    } else {
+      $(this).addClass('sound-off').removeClass('sound-on');
+      console.log("Change to sound-off");
+    }
+  });
+
+  $('.panorama-image-container').paver({
+    gracefulFailure: false,
+  });
 
   $(window).scroll(function(){
     var winTop = $(window).scrollTop();
@@ -69,9 +83,6 @@ $(document).ready(function(){
     .paver({ gracefulFailure: false });
   });
 });
-
-
-
 
 var source = '<img src="{{photoPath}}" alt="" title="" />';
 var template = Handlebars.compile(source);

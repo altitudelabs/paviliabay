@@ -190,9 +190,8 @@
     padding-bottom: 93 / 105 * $arrow-width;
   }
 
-  #nav-sound {
+  .nav-sound {
     vertical-align:middle;
-    background-image: url('images/nav-menu/navmenubuttons_off.png');
     @extend .background-contain;
 
     border: 0;
@@ -201,5 +200,15 @@
     padding-bottom: $sound-width;
     display: inline-block;
     margin-right: 35px;
+  }
+
+  .sound-off {
+    background-image: url('images/nav-menu/navmenubuttons_off.png');
+    @extend .nav-sound;
+  }
+
+  .sound-on {
+    background-image: url('images/nav-menu/navmenubuttons_on.png');
+    @extend .nav-sound;
   }
 }
