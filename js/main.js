@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  
+
   $('#nav-menu-content').hide();
   /* * * * * * * * * * * * * * *
    * Toggle nav menu content
@@ -55,8 +55,16 @@ $(document).ready(function(){
     var scrolled = winTop / (docHeight - winHeight);
     $('#left-scroll .bar').css('top', (winHeight * 0.8) * scrolled);
 
-    if  ((winTop/(docHeight-winHeight)) > scrollTrigger) {
-      $('#register-section .section-container').addClass('active');
+    //register
+    var registerTop = $('#register-section').offset().top;
+    var registerBottom = $('#register-section').offset().top + $('#register-section').innerHeight();
+
+    if (winTop + winHeight > registerBottom) {
+      $('#register-section').addClass('active');
+      $('#companyinfo-section').addClass('active');
+    } else {
+      $('#register-section').removeClass('active');
+      $('#companyinfo-section').removeClass('active');
     }
   });
 
