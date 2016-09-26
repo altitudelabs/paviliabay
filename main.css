@@ -754,11 +754,16 @@ sup {
     height: 225px;
     overflow: hidden; }
   #clubhouse-section .wheelbutton-container {
-    position: absolute; }
+    position: absolute;
+    top: 490px;
+    left: 29%; }
+    @media only screen and (min-width: 721px) and (max-width: 1199px) {
+      #clubhouse-section .wheelbutton-container {
+        left: 46%; } }
     @media only screen and (max-width: 720px) {
       #clubhouse-section .wheelbutton-container {
-        left: 260px;
-        top: 360px; } }
+        top: 360px;
+        left: 260px; } }
 
 #companyinfo-section {
   color: white;
