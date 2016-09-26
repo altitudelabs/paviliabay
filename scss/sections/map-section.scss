@@ -115,3 +115,9 @@
     }
   }
 }
+
+#marker {
+  @extend .background-contain;
+  width: 150px;
+  height: 60px;
+}
