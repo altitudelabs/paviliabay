@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+  
   $('#nav-menu-content').hide();
   /* * * * * * * * * * * * * * *
    * Toggle nav menu content
