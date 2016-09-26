@@ -659,7 +659,7 @@ sup {
       #clubhouse-section .club-description-text {
         line-height: 22px;
         font-size: 12px; } }
-  #clubhouse-section .link-text {
+  #clubhouse-section .link-text, #clubhouse-section .link-text-overlay {
     font-family: futuraLTProLight;
     font-weight: lighter;
     font-size: 17px;
@@ -669,12 +669,12 @@ sup {
     margin-left: 5px;
     padding-right: 60px; }
     @media only screen and (max-width: 720px) {
-      #clubhouse-section .link-text {
+      #clubhouse-section .link-text, #clubhouse-section .link-text-overlay {
         padding-top: 2px;
         padding-right: 2px;
         line-height: 20px;
         font-size: 18px; } }
-    #clubhouse-section .link-text .the-text {
+    #clubhouse-section .link-text .the-text, #clubhouse-section .link-text-overlay .the-text {
       font-style: italic; }
   #clubhouse-section .link-menu {
     position: absolute;
