@@ -52,17 +52,20 @@ $(document).ready(function(){
   $window.on('scroll resize', check_if_in_view);
   $window.trigger('scroll');
 
-  $('#nav-menu-content').hide();
   /* * * * * * * * * * * * * * *
    * Toggle nav menu content
    * * * * * * * * * * * * * * */
+
+
   $('#nav-menu-image').on("click", function() {
-    $('#nav-menu-content').toggle();
+    console.log("nav image clicked");
+    $('#nav-menu-content').addClass('in-view');
+    $('#nav-menu-content').css('visibility', 'visible');
   });
 
   $('#nav-cross').on("click", function(){
-    $('#nav-menu-content').toggle();
-    $('#nav-menu-content li').children('ul').css('display', 'none');
+    $('#nav-menu-content').removeClass('in-view');
+    $('#nav-menu-content').css('visibility', 'hidden');
   });
 
   /* * * * * * * * * * * * * * *
@@ -87,7 +90,7 @@ $(document).ready(function(){
   /* * * * * * * * * * * * * * *
   * Video
   * * * * * * * * * * * * * * */
-  // 
+  //
   // var video = $('video');
   //
   // $('#hero-section .wheelbutton-container').on("click", function() {
@@ -118,6 +121,7 @@ $(document).ready(function(){
     $('.hero-logo').css('visibility', 'visible');
     $('#nav-menu').css('visibility', 'visible');
     $('#hero-section .wheelbutton-container').css('visibility', 'visible');
+    $('#nav-menu-content').removeClass('in-view');
   });
 
   // TODO: Mute / unmute audio
@@ -243,7 +247,7 @@ $(document).ready(function(){
       $('body').animate({ scrollTop: 0 }, 500);
       return;
     }
-    
+
     var isNext = $(e.target).hasClass('next');
     if (isNext) {
       if (target == '#clubhouse-section') {
@@ -304,7 +308,7 @@ $(document).ready(function(){
     //     }
     //     currentImage = currentImage - 1;
     //     $('.full-section-view').css('background-image','url('+imageArray[currentImage]+')');
-    //   } 
+    //   }
     // };
     if (target == '#designerprofile-section') {
       var currentText = $('.designer-description-text').data('id');
@@ -334,7 +338,7 @@ $(document).ready(function(){
   var defaultText = ['Led by the globally acclaimed French super yacht designer Philippe Briand, London based Vitruvius Yachts Limited is a strong team of award-winning designers and naval architects. The beauty of each Vitruvius Yacht is derived from her optimal proportions, balance and efficiency. Philippe believes the superyacht flourished from the exclusive combination of science, through naval architecture, and art.'];
   var passionText = ['Philippe  was  raised  in  a  family  where  racing  is  a  long-established  tradition. Inspired by his father, an Olympian sailor, he began his career in France as a dinghy sailor at the tender age of 9. Philippe’s first sailing yacht was designed when  he  was  only 16 years  old.  By  the  age  of  22,  his  first  series  of  yacht  was developed.  During  the  1980s,  he  engaged  in  yacht  racing  and  claimed the title of world championships twice. His enthusiasm in racing has equipped him to become a qualified naval architect and one of the world’s leading yacht designers.'];
   var designText = ['Philippe  specializes  in  designing  super  yachts  ranging  from  30  meters  to  105 meters,  both  Sailing  and  Motor  yachts.  His  yacht  is  characterized by  quality design and attention to details with features such as teak flooring, tinted glass, carbon  fiber  and  underwater  lights.  With  over  12,000  boats  built  to  date, Philippe’s  experience  in  naval  architecture  and  his  reputation  in  the  field make him the ideal candidate to design and engineer the perfect yacht.'];
-  
+
   $('.profile-blue-box').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
     function(e) {
       $('.animation-text').addClass('fade');
@@ -396,4 +400,3 @@ $(document).ready(function(){
     return template(data);
   }
 });
-

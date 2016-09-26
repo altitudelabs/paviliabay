@@ -551,6 +551,7 @@ sup {
   #nav-menu ul {
     list-style-type: none; }
   #nav-menu #nav-menu-content {
+    visibility: hidden;
     z-index: 10;
     position: absolute;
     top: 0;
