@@ -73,11 +73,10 @@ $window.trigger('scroll');
 // CLUBHOUSE SECTION
 $('.clubhouse-blue-box').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
   function(e) {
-
-  $('.animation-text').addClass('fade');
-  $('.clubhouse-image-container').addClass('fade');
-
-});
+    $('.animation-text').addClass('fade');
+    $('.clubhouse-image-container').addClass('fade');
+  }
+);
 
 var changeClubhouseContent = function (currentSection) {
   var clubhouseText = ['Blue Pavilion - Hong Kong\'s first residential clubhouse ',
@@ -133,51 +132,44 @@ $('.link-text').on('click', function() {
 // DESIGNER SECTION
 $('.profile-blue-box').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
   function(e) {
-
-  $('.animation-text').addClass('fade');
-
-});
+    $('.animation-text').addClass('fade');
+  }
+);
 
 // PORTFOLIO SECTION
 $('#portfolio-section').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
   function(e) {
-
-  $('.animation-text').addClass('fade');
-
-});
+    $('.animation-text').addClass('fade');
+  }
+);
 
 // PANORAMA SECTION
 $('#panorama-section').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
   function(e) {
-
-  $('.text-order-1').addClass('fade');
-
-});
-$('.text-order-1').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+    $('.first-animation').addClass('fade-button');
+  }
+);
+$('.first-animation').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
   function(e) {
-
-  $('.text-order-2').addClass('fade');
-
-});
-$('.text-order-2').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+    $('.second-animation').addClass('fade-button');
+  }
+);
+$('.second-animation').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
   function(e) {
-
-  $('.text-order-3').addClass('fade');
-
-});
-$('.text-order-3').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+    $('.third-animation').addClass('fade-button');
+  }
+);
+$('.third-animation').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
   function(e) {
-
-  $('.text-order-4').addClass('fade');
-
-});
+    $('.fourth-animation').addClass('fade-button');
+  }
+);
 
 // PORTFOLIO SECTION
 $('.map-info').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
   function(e) {
-
-  $('.animation-text').addClass('fade');
-
-});
+    $('.animation-text').addClass('fade');
+  }
+);
 
 });
