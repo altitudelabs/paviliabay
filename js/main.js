@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  
+
   $('#nav-menu-content').hide();
   /* * * * * * * * * * * * * * *
    * Toggle nav menu content
@@ -41,6 +41,26 @@ $(document).ready(function(){
       console.log("Change to sound-off");
     }
   });
+
+  // portfolio
+  var arrow_left = $('#portfolio-section .arrow-left');
+  var arrow_right = $('#portfolio-section .arrow-right');
+  var container = $('.portfolio-image-container');
+  var step = 1 / 3 * $(window).width();
+
+  arrow_left.click(function(){
+    container.animate({
+      scrollLeft: '-=' + step
+    }, 'slow');
+  });
+
+  arrow_right.click(function(){
+    console.log(step);
+    container.animate({
+      scrollLeft: '+=' + step
+    }, 'slow');
+  });
+
 
   $('.panorama-image-container').paver({
     gracefulFailure: false,
