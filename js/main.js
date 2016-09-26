@@ -30,9 +30,7 @@ $(document).ready(function(){
       $(this).parent().children('ul').css('display', 'block');
     }
   });
-  $('.panorama-image-container').paver({
-    gracefulFailure: false,
-  });
+
 
   $(window).scroll(function(){
     var winTop = $(window).scrollTop();
@@ -59,13 +57,25 @@ $(document).ready(function(){
     console.log('clicked prev of ' + target);
   });
 
-  //
-  // var topofDiv = $("#register-section").offset().top;
-  // var height = $("#register-section").outerHeight();
-  // $(window).scroll(function(e) {
-  //   if ($(window).scrollTop() > (topofDiv + height)) {
-  //     return $("#register-section").addClass('drop');
-  //   }
-  //   $("#register-section").removeClass('drop');
-  // });
+  // var panorama = $('.panorama-image-container')
+  // .html(renderPanoramaImageContainer(''))
+  // .paver({ gracefulFailure: false });
+  var panorama;
+  $('.panorama-content .button-group .button').click(function(e) {
+    var target = $(this).data('target');
+    panorama ? panorama.trigger('destroy') : null;
+    panorama = $('.panorama-image-container')
+    .html(renderPanoramaImageContainer(target))
+    .paver({ gracefulFailure: false });
+  });
 });
+
+
+
+
+var source = '<img src="{{photoPath}}" alt="" title="" />';
+var template = Handlebars.compile(source);
+function renderPanoramaImageContainer(path) {
+  var data = { photoPath: 'images/panorama-section/pano_' + path + '.jpg' };
+  return template(data);
+}
