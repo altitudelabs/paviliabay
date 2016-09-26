@@ -42,7 +42,7 @@ $(document).ready(function(){
     $('#left-scroll .bar').css('top', (winHeight * 0.8) * scrolled);
 
     if  ((winTop/(docHeight-winHeight)) > scrollTrigger) {
-     console.log('scroll bottom');
+      $('#register-section .section-container').addClass('active');
     }
   });
 
