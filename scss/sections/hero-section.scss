@@ -5,7 +5,7 @@
 
   $footer-height: 39px;
   $footer-height-mobile: 45px;
-
+  
   $register-link-left: 52px + $side-scroll-width;
   $register-link-left-trans: 12px + $side-scroll-width;
 
@@ -14,12 +14,6 @@
 
   $logo-width: 110px;
   $logo-width-mobile: 65px;
-
-  $wheelbutton-right: 70px;
-  $wheelbutton-right-mobile: 42px;
-
-  $wheelbutton-bottom: 50px;
-  $wheelbutton-bottom-mobile: 60px;
 
   .title-container {
     position: absolute;
@@ -101,55 +95,15 @@
   .video-container {
     height: $video-height;
     width: 100%;
-    overflow: hidden;
 
     @include responsive(mobile) {
       height: $video-height-mobile;
     }
   }
 
-  video {
-    display: none;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    min-height: $video-height;
-    width: auto;
-    height: auto;
-    @include transform((translateX(-50%) translateY(-50%)));
-  }
-
-  #hero-body-text {
-    font-family: futuraBT;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 21px;
-
-    visibility: hidden;
+  .video {
     width: 100%;
-    margin-top: 8%;
-    text-align: center;
-    position: absolute;
-    background-color: transparent;
-    top: 0;
-    z-index: 2;
-
-    @include responsive(mobile){
-      font-size: 15px;
-      line-height: 17px;
-      margin-top: 16%;
-    }
-
-    .bold {
-      font-weight: bold;
-    }
-  }
-
-  #cover-image {
     height: 100%;
-    width: 100%;
-    background-image: url("images/hero-section/coverimage.jpg");
-    @extend .background-cover;
   }
 
   .hero-footer {
@@ -179,7 +133,6 @@
   }
 
   .hero-logo {
-    visibility: hidden;
     background-image: url("images/hero-section/shiplogo.png"); // 244 x 48
     background-size: contain;
     background-repeat: no-repeat;
@@ -198,20 +151,5 @@
       top: 4%;
       left: 5%;
     }
-  }
-
-  .wheelbutton-container {
-    position: absolute;
-    right: $wheelbutton-right;
-    bottom: $wheelbutton-bottom;
-
-    @include responsive(mobile) {
-      right: $wheelbutton-right-mobile;
-      bottom: $wheelbutton-bottom-mobile;
-    }
-  }
-
-  .one-fifth-opacity {
-    @include opacity(.2);
   }
 }

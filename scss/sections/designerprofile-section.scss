@@ -4,7 +4,6 @@
   $yacht-greybox-gutter: 46px;
 
   $greybox-horizontal-gutter: 52px;
-  $greybox-bottom-gutter: 82px;
   $greybox-bluebox-offset-x: 30px;
   $greybox-bluebox-offset-y: -117px;
 
@@ -23,8 +22,6 @@
   $bluebox-height-mobile: auto;
   $bluebox-width-mobile: 240px;
 
-  $wheelbutton-top-mobile: 60px;
-
   .yacht {
     @extend .background-cover;
     background-image: url("images/designerprofile-section/bg.jpg");
@@ -34,8 +31,6 @@
     }
   }
 
-
-
   .description-grey-box {
     @extend .clearfix;
     position: relative;
@@ -44,7 +39,7 @@
     background-color: $light-gray;
     overflow: visible;
     min-height: 446px;
-    margin-bottom: $greybox-bottom-gutter;
+    margin-bottom: 82px;
 
     @include responsive(mobile) {
       min-height: initial;
@@ -54,7 +49,6 @@
   }
 
   .profile-blue-box {
-    z-index: 0;
     @extend .blue-box;
     float: left;
     color: $light-gray;
@@ -204,33 +198,14 @@
     }
   }
 
-  .white-container {
-    width: 0;
-    height: 0;
-    overflow: visible;
-    position: absolute;
-    z-index: 100;
-    bottom: $greybox-bottom-gutter;
-    right: $greybox-horizontal-gutter;
-
-    @include responsive(mobile) {
-      position: relative;
-      bottom: 0;
-      right: 0;
-    }
-  }
-
   .wheelbutton-container {
-    z-index: 100;
-    position: relative;
-
+    position: absolute;
+    top: 240px;
+    left: 220px;
 
     @include responsive(mobile) {
-      position: relative;
-      top: $wheelbutton-top-mobile;
-      left: $bluebox-width-mobile;
-      bottom: auto;
-      right: auto;
+      top: 65px;
+      left: 230px;
     }
 
     // @include responsive(mobile) {
