@@ -15,7 +15,7 @@ $(document).ready(function(){
     map.scrollZoom.disable();
 
     new mapboxgl.Marker($('#marker')[0], {
-      offset: [-75 , -60]
+      offset: [-120 , -60]
     })
     .setLngLat([114.113393, 22.365400])
     .addTo(map)
@@ -246,10 +246,8 @@ $(document).ready(function(){
       $('body').animate({ scrollTop: 0 }, 500);
       return;
     }
-    console.log("clicked");
     
     var isNext = $(e.target).hasClass('next');
-    console.log(isNext);
     if (isNext) {
       if (target == '#clubhouse-section') {
         // $('#clubWheel').animate({right: 75, top: 525}, 1000);
@@ -281,16 +279,22 @@ $(document).ready(function(){
       if (target == '#designerprofile-section') {
         var currentText = $('.designer-description-text').data('id');
         if (currentText == 'default') {
-          $('.quote').html('<strong>His Passion</strong>');
-          $('.description').text(passionText);
+          $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
+            $('.description').text(passionText)
+            $('.quote').html('<strong>His Passion</strong>');
+          }).delay(1000).animate({'opacity': 1}, 1500);
           $('.designer-description-text').data('id','passion');
         } else if (currentText == 'passion') {
-          $('.quote').html('<strong>His Design</strong>');
-          $('.description').text(designText);
+          $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
+            $('.quote').html('<strong>His Design</strong>');
+            $('.description').text(designText);
+          }).delay(1000).animate({'opacity': 1}, 1500);
           $('.designer-description-text').data('id','design');
         } else {
-          $('.quote').html('<em>"A yacht is to always please the eye and be the pride of her owner."</em>');
-          $('.description').text(defaultText);
+          $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
+            $('.quote').html('<em>"A yacht is to always please the eye and be the pride of her owner."</em>');
+            $('.description').text(defaultText);
+          }).delay(1000).animate({'opacity': 1}, 1500);
           $('.designer-description-text').data('id','default');
         }
       };
@@ -306,6 +310,28 @@ $(document).ready(function(){
     //     $('.full-section-view').css('background-image','url('+imageArray[currentImage]+')');
     //   } 
     // };
+    if (target == '#designerprofile-section') {
+      var currentText = $('.designer-description-text').data('id');
+      if (currentText == 'default') {
+        $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
+          $('.quote').html('<strong>His Design</strong>');
+          $('.description').text(designText);
+        }).delay(1000).animate({'opacity': 1}, 1500);
+        $('.designer-description-text').data('id','design');
+      } else if (currentText == 'passion') {
+        $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
+          $('.quote').html('<em>"A yacht is to always please the eye and be the pride of her owner."</em>');
+          $('.description').text(defaultText);
+        }).delay(1000).animate({'opacity': 1}, 1500);
+        $('.designer-description-text').data('id','default');
+      } else {
+        $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
+          $('.quote').html('<strong>His Passion</strong>');
+          $('.description').text(passionText);
+        }).delay(1000).animate({'opacity': 1}, 1500);
+        $('.designer-description-text').data('id','passion');
+      }
+    };
   });
 
   // DESIGNER SECTION
