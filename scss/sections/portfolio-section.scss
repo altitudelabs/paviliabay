@@ -65,4 +65,35 @@
     }
   }
 
+  .arrow-left {
+    background-image: url('images/portfolio-section/arrows-left.svg');
+    background-position: center;
+
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    bottom: 39%;
+    left: 33px;
+    cursor: pointer;
+
+    @include responsive(mobile) {
+      display: none;
+    }
+  }
+
+  .arrow-right {
+    background-image: url('images/portfolio-section/arrows-right.svg');
+    @extend .background-contain;
+
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    right: 23px;
+    bottom: 38%;
+    cursor: pointer;
+
+    @include responsive(mobile) {
+      display: none;
+    }
+  }
 }
