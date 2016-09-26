@@ -1,8 +1,34 @@
 #nav-menu {
+  $section-height: 705px;
+  $section-height-mobile: 576px;
+
+  $footer-height: 39px;
+  $footer-height-mobile: 45px;
+
   $nav-content-width: 310px;
+  $nav-content-right: 30px;
+  $nav-content-right-mobile: 0;
+  $nav-content-height: $section-height - $footer-height;
+  $nav-content-height-mobile: $section-height-mobile;
+  $nav-content-paddingtop: 35px;
+  $nav-content-paddingtop-mobile: 30px;
+  $nav-content-paddingright: 20px;
+  $nav-content-paddingright-mobile: 30px;
 
   $nav-image-width: 25px;
   $nav-image-width-mobile: 16px;
+
+  // images
+  $cross-width: 15px;
+  $cross-width-mobile: 12px;
+  $arrow-width: 10px;
+  $sound-width: 15px;
+
+  // bottom menus
+  $bottom-menu-top: 590px;
+  $bottom-menu-top-mobile: 520px;
+
+
   font-family: futura;
   color: white;
   text-align: right;
@@ -41,11 +67,9 @@
     line-height: 35px;
     font-weight: 700;
     padding-left: 10px;
-    padding-right: 20px;
     white-space: nowrap;
 
     @include responsive(mobile) {
-      padding-right: 30px;
       font-size: 19px;
     }
   }
@@ -65,20 +89,29 @@
 
   #nav-menu-content {
     z-index: 1;
-    box-sizing: border-box;
-    top: 0;
-    right: -15px;
-    height: 92vh;
-    left: auto;
     position: absolute;
-    padding-top: 35px;
+    top: 0;
+    right: $nav-content-right;
+    height: $nav-content-height;
+    width: $nav-content-width;
     background-color: $dark-blue;
+    padding-top: $nav-content-paddingtop;
+    padding-right: $nav-content-paddingright;
 
+    @include responsive(mobile) {
+      height: $nav-content-height-mobile;
+      right: $nav-content-right-mobile;
+      padding-top: $nav-content-paddingtop-mobile;
+      padding-right: $nav-content-paddingright-mobile;
+    }
+  }
+
+  #nav-menu-links {
+    clear: right;
     /* First level */
     li {
       display: inline-block;
-      width: $nav-content-width;
-
+      width: 100%;
       /* Second level */
       ul {
         display: none;
@@ -92,48 +125,6 @@
       // }
     }
 
-    @include responsive(mobile) {
-      height: 100vh;
-      padding-top: 15px;
-    }
-  }
-
-
-
-
-  #nav-cross {
-    background-image: url('images/nav-menu/navmenubuttons_cross.png');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-
-
-    display: block;
-    margin-right: 20px;
-    width: 12%;
-    height: 40px;
-    float: right;
-    margin-bottom: 40px;
-
-    @include responsive(mobile) {
-      margin-bottom: 45px;
-    }
-
-    &:after {
-      clear: both;
-      content: " ";
-      display: block;
-    }
-  }
-
-  #nav-arrow {
-    background-image: url('images/nav-menu/navmenubuttons_arrow.png');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-
-    display: inline-block;
-    bottom: 0;
-    width: 6%;
-    height: 17px;
   }
 
   #nav-bottom-menu {
@@ -142,24 +133,11 @@
     width: $nav-content-width;
     right: 6px;
     z-index: 2;
-    top: 83vh;
+    top: $bottom-menu-top;
 
     @include responsive(mobile) {
-      top: 88vh;
+      top: $bottom-menu-top-mobile;
     }
-  }
-
-  #nav-sound {
-    vertical-align: top;
-    background-image: url('images/nav-menu/navmenubuttons_off.png');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    border: 0;
-
-    display: inline-block;
-    margin-right: 5px;
-    width: 40px;
-    height: 35px;
   }
 
   #lang-toolbar {
@@ -174,9 +152,54 @@
     }
 
     a {
-      font-size: 17px;
+      font-size: 14px;
       padding-left: 5px;
       padding-right: 5px;
     }
+  }
+
+  /* * * * * * * * * * * * * *
+  * Images
+  * * * * * * * * * * * * * */
+
+  #nav-cross { // 28 x 35
+    background-image: url('images/nav-menu/navmenubuttons_cross.png');
+    @extend .background-contain;
+
+    display: block;
+    width: $cross-width;
+    height: 0;
+    padding-bottom: 35 / 28 * $cross-width;
+    float: right;
+    margin-bottom: 47px;
+
+    @include responsive(mobile) {
+      width: $cross-width-mobile;
+      margin-bottom: 45px;
+    }
+  }
+
+  #nav-arrow { // 105 x 93
+    background-image: url('images/nav-menu/navmenubuttons_arrow.png');
+    @extend .background-contain;
+
+    display: inline-block;
+    bottom: 0;
+    width: $arrow-width;
+    height: 0;
+    padding-bottom: 93 / 105 * $arrow-width;
+  }
+
+  #nav-sound {
+    vertical-align:middle;
+    background-image: url('images/nav-menu/navmenubuttons_off.png');
+    @extend .background-contain;
+
+    border: 0;
+    width: $sound-width;
+    height: 0;
+    padding-bottom: $sound-width;
+    display: inline-block;
+    margin-right: 35px;
   }
 }
