@@ -33,7 +33,8 @@
     transform: translate(-50%, -50%);
     transition: all 300ms;
     padding: 10%;
-
+    width: 80px;
+    height: 80px;
     .next, .prev {
       text-align: center;
       vertical-align: middle;
@@ -48,6 +49,12 @@
       width: $next-prev-width * 1.2;
       height: $next-prev-height * 1.2;
     }
+  }
+
+  &.scroll-top {
+    position: fixed;
+    right: 50px;
+    bottom: 100px;
   }
 
   @include responsive(mobile) {
