@@ -97,11 +97,11 @@ sup {
 .clearfix:after, .fixer-float-container:after, #clubhouse-section:after, #designerprofile-section .description-grey-box:after {
   clear: both; }
 
-.background-image, .background-cover, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #panorama-section, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image, .background-contain, #nav-menu #nav-cross, #nav-menu #nav-arrow, #nav-menu .nav-sound, #nav-menu .sound-off, #nav-menu .sound-on, #designerprofile-section .designer-photo, #marker, #portfolio-section .arrow-right, .wheelbutton-container .next-prev-wheelbutton {
+.background-image, .background-cover, #hero-section #cover-image, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #panorama-section, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image, .background-contain, #nav-menu #nav-cross, #nav-menu #nav-arrow, #nav-menu .nav-sound, #nav-menu .sound-off, #nav-menu .sound-on, #designerprofile-section .designer-photo, #marker, #portfolio-section .arrow-right, .wheelbutton-container .next-prev-wheelbutton {
   background-position: center center;
   background-repeat: no-repeat; }
 
-.background-cover, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #panorama-section, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image {
+.background-cover, #hero-section #cover-image, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #panorama-section, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image {
   background-size: cover; }
 
 .background-contain, #nav-menu #nav-cross, #nav-menu #nav-arrow, #nav-menu .nav-sound, #nav-menu .sound-off, #nav-menu .sound-on, #designerprofile-section .designer-photo, #marker, #portfolio-section .arrow-right, .wheelbutton-container .next-prev-wheelbutton {
@@ -400,14 +400,51 @@ sup {
 
 #hero-section .video-container {
   height: 666px;
-  width: 100%; }
+  width: 100%;
+  overflow: hidden; }
   @media only screen and (max-width: 720px) {
     #hero-section .video-container {
       height: 531px; } }
 
-#hero-section .video {
+#hero-section video {
+  display: none;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  min-height: 666px;
+  width: auto;
+  height: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%); }
+
+#hero-section #hero-body-text {
+  font-family: futuraBT;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 21px;
+  visibility: hidden;
   width: 100%;
-  height: 100%; }
+  margin-top: 8%;
+  text-align: center;
+  position: absolute;
+  background-color: transparent;
+  top: 0;
+  z-index: 2; }
+  @media only screen and (max-width: 720px) {
+    #hero-section #hero-body-text {
+      font-size: 15px;
+      line-height: 17px;
+      margin-top: 16%; } }
+  #hero-section #hero-body-text .bold {
+    font-weight: bold; }
+
+#hero-section #cover-image {
+  height: 100%;
+  width: 100%;
+  background-image: url("images/hero-section/coverimage.jpg"); }
 
 #hero-section .hero-footer {
   background-color: #9e9da2;
@@ -430,6 +467,7 @@ sup {
         letter-spacing: 0.025em; } }
 
 #hero-section .hero-logo {
+  visibility: hidden;
   background-image: url("images/hero-section/shiplogo.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -447,7 +485,24 @@ sup {
       top: 4%;
       left: 5%; } }
 
+#hero-section .wheelbutton-container {
+  position: absolute;
+  right: 70px;
+  bottom: 50px; }
+  @media only screen and (max-width: 720px) {
+    #hero-section .wheelbutton-container {
+      right: 42px;
+      bottom: 60px; } }
+
+#hero-section .one-fifth-opacity {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+  -moz-opacity: 0.2;
+  -khtml-opacity: 0.2;
+  opacity: 0.2; }
+
 #nav-menu {
+  visibility: hidden;
   font-family: futura;
   color: white;
   text-align: right;
@@ -494,7 +549,7 @@ sup {
   #nav-menu ul {
     list-style-type: none; }
   #nav-menu #nav-menu-content {
-    z-index: 1;
+    z-index: 10;
     position: absolute;
     top: 0;
     right: 30px;
@@ -699,11 +754,16 @@ sup {
     height: 225px;
     overflow: hidden; }
   #clubhouse-section .wheelbutton-container {
-    position: absolute; }
+    position: absolute;
+    top: 490px;
+    left: 29%; }
+    @media only screen and (min-width: 721px) and (max-width: 1199px) {
+      #clubhouse-section .wheelbutton-container {
+        left: 46%; } }
     @media only screen and (max-width: 720px) {
       #clubhouse-section .wheelbutton-container {
-        left: 260px;
-        top: 360px; } }
+        top: 360px;
+        left: 260px; } }
 
 #companyinfo-section {
   color: white;
@@ -805,6 +865,7 @@ sup {
       margin-top: 0px; } }
 
 #designerprofile-section .profile-blue-box {
+  z-index: 0;
   float: left;
   color: #dfdfe1;
   margin-left: 30px;
@@ -913,14 +974,30 @@ sup {
         font-size: 24px;
         line-height: 30px; } }
 
-#designerprofile-section .wheelbutton-container {
+#designerprofile-section .white-container {
+  width: 0;
+  height: 0;
+  overflow: visible;
   position: absolute;
-  top: 240px;
-  left: 220px; }
+  z-index: 100;
+  bottom: 82px;
+  right: 52px; }
+  @media only screen and (max-width: 720px) {
+    #designerprofile-section .white-container {
+      position: relative;
+      bottom: 0;
+      right: 0; } }
+
+#designerprofile-section .wheelbutton-container {
+  z-index: 100;
+  position: relative; }
   @media only screen and (max-width: 720px) {
     #designerprofile-section .wheelbutton-container {
-      top: 65px;
-      left: 230px; } }
+      position: relative;
+      top: 60px;
+      left: 240px;
+      bottom: auto;
+      right: auto; } }
 
 #map-section {
   color: white; }
