@@ -97,14 +97,14 @@ sup {
 .clearfix:after, .fixer-float-container:after, #clubhouse-section:after, #designerprofile-section .description-grey-box:after {
   clear: both; }
 
-.background-image, .background-cover, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #panorama-section, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image, .background-contain, #designerprofile-section .designer-photo, .wheelbutton-container .next-prev-wheelbutton {
+.background-image, .background-cover, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #panorama-section, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image, .background-contain, #nav-menu #nav-cross, #nav-menu #nav-arrow, #nav-menu .nav-sound, #nav-menu .sound-off, #nav-menu .sound-on, #designerprofile-section .designer-photo, .wheelbutton-container .next-prev-wheelbutton {
   background-position: center center;
   background-repeat: no-repeat; }
 
 .background-cover, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #panorama-section, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image {
   background-size: cover; }
 
-.background-contain, #designerprofile-section .designer-photo, .wheelbutton-container .next-prev-wheelbutton {
+.background-contain, #nav-menu #nav-cross, #nav-menu #nav-arrow, #nav-menu .nav-sound, #nav-menu .sound-off, #nav-menu .sound-on, #designerprofile-section .designer-photo, .wheelbutton-container .next-prev-wheelbutton {
   background-size: contain; }
 
 /*animation element*/
@@ -439,6 +439,9 @@ sup {
   text-align: right;
   /* * * * * * * * * * * * * *
   * Text styles
+  * * * * * * * * * * * * * */
+  /* * * * * * * * * * * * * *
+  * Images
   * * * * * * * * * * * * * */ }
   #nav-menu #nav-menu-image {
     background-image: url("images/hero-section/navmenubutton.png");
@@ -465,11 +468,9 @@ sup {
     line-height: 35px;
     font-weight: 700;
     padding-left: 10px;
-    padding-right: 20px;
     white-space: nowrap; }
     @media only screen and (max-width: 720px) {
       #nav-menu .page-link-menu-text {
-        padding-right: 30px;
         font-size: 19px; } }
   #nav-menu .second-level {
     color: #9e9da2; }
@@ -480,72 +481,41 @@ sup {
     list-style-type: none; }
   #nav-menu #nav-menu-content {
     z-index: 1;
-    box-sizing: border-box;
-    top: 0;
-    right: -15px;
-    height: 92vh;
-    left: auto;
     position: absolute;
-    padding-top: 35px;
+    top: 0;
+    right: 30px;
+    height: 666px;
+    width: 310px;
     background-color: #232f49;
-    /* First level */ }
-    #nav-menu #nav-menu-content li {
-      display: inline-block;
-      width: 310px;
-      /* Second level */ }
-      #nav-menu #nav-menu-content li ul {
-        display: none; }
-        #nav-menu #nav-menu-content li ul li {
-          height: 2em; }
+    padding-top: 35px;
+    padding-right: 20px; }
     @media only screen and (max-width: 720px) {
       #nav-menu #nav-menu-content {
-        height: 100vh;
-        padding-top: 15px; } }
-  #nav-menu #nav-cross {
-    background-image: url("images/nav-menu/navmenubuttons_cross.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    display: block;
-    margin-right: 20px;
-    width: 12%;
-    height: 40px;
-    float: right;
-    margin-bottom: 40px; }
-    @media only screen and (max-width: 720px) {
-      #nav-menu #nav-cross {
-        margin-bottom: 45px; } }
-    #nav-menu #nav-cross:after {
-      clear: both;
-      content: " ";
-      display: block; }
-  #nav-menu #nav-arrow {
-    background-image: url("images/nav-menu/navmenubuttons_arrow.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    display: inline-block;
-    bottom: 0;
-    width: 6%;
-    height: 17px; }
+        height: 576px;
+        right: 0;
+        padding-top: 30px;
+        padding-right: 30px; } }
+  #nav-menu #nav-menu-links {
+    clear: right;
+    /* First level */ }
+    #nav-menu #nav-menu-links li {
+      display: inline-block;
+      width: 100%;
+      /* Second level */ }
+      #nav-menu #nav-menu-links li ul {
+        display: none; }
+        #nav-menu #nav-menu-links li ul li {
+          height: 2em; }
   #nav-menu #nav-bottom-menu {
     position: absolute;
     height: 40px;
     width: 310px;
     right: 6px;
     z-index: 2;
-    top: 83vh; }
+    top: 590px; }
     @media only screen and (max-width: 720px) {
       #nav-menu #nav-bottom-menu {
-        top: 88vh; } }
-  #nav-menu #nav-sound {
-    vertical-align: top;
-    background-image: url("images/nav-menu/navmenubuttons_off.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    border: 0;
-    display: inline-block;
-    margin-right: 5px;
-    width: 40px;
-    height: 35px; }
+        top: 520px; } }
   #nav-menu #lang-toolbar {
     visibility: inherit;
     vertical-align: top;
@@ -555,9 +525,40 @@ sup {
     #nav-menu #lang-toolbar li {
       display: inline; }
     #nav-menu #lang-toolbar a {
-      font-size: 17px;
+      font-size: 14px;
       padding-left: 5px;
       padding-right: 5px; }
+  #nav-menu #nav-cross {
+    background-image: url("images/nav-menu/navmenubuttons_cross.png");
+    display: block;
+    width: 15px;
+    height: 0;
+    padding-bottom: 18.75px;
+    float: right;
+    margin-bottom: 47px; }
+    @media only screen and (max-width: 720px) {
+      #nav-menu #nav-cross {
+        width: 12px;
+        margin-bottom: 45px; } }
+  #nav-menu #nav-arrow {
+    background-image: url("images/nav-menu/navmenubuttons_arrow.png");
+    display: inline-block;
+    bottom: 0;
+    width: 10px;
+    height: 0;
+    padding-bottom: 8.85714px; }
+  #nav-menu .nav-sound, #nav-menu .sound-off, #nav-menu .sound-on {
+    vertical-align: middle;
+    border: 0;
+    width: 15px;
+    height: 0;
+    padding-bottom: 15px;
+    display: inline-block;
+    margin-right: 35px; }
+  #nav-menu .sound-off {
+    background-image: url("images/nav-menu/navmenubuttons_off.png"); }
+  #nav-menu .sound-on {
+    background-image: url("images/nav-menu/navmenubuttons_on.png"); }
 
 #clubhouse-section {
   position: relative;
