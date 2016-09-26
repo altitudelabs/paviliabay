@@ -12,6 +12,10 @@ function initMap() {
   center: [114.112, 22.365], // starting position
   zoom: 16 // starting zoom
   });
+  map.scrollZoom.disable();
+  var marker = new mapboxgl.Marker()
+  .setLngLat([114.112, 22.365])
+  .addTo(map);
 };
 initMap();
 
