@@ -1,5 +1,5 @@
 .wheelbutton-container {
-
+  z-index: 100;
   $next-prev-height: 100px;
   $next-prev-width: 100px;
   $next-prev-height-mobile: 85px;
@@ -52,7 +52,7 @@
   }
 
   &.scroll-top {
-    position: fixed;
+    position: absolute;
     right: 50px;
     bottom: 100px;
   }

@@ -137,7 +137,15 @@
   </section>
 
   <!-- CLUBHOUSE SECTION -->
-    <section class="section-container" id="clubhouse-section" data-id='clubhouse'>
+    <section class="section-container" id="clubhouse-section" data-id="clubhouse">
+      <div class="full-section-view">
+        <div class="link-menu animation-element slide-right">
+          <p class="link-text-overlay">
+            <span class="the-text">The</span>
+            Facade >
+          </p>
+        </div>
+      </div>
       <div class="clubhouse-image-container animation-element fade">
       </div>
       <div class="clubhouse-blue-box-container">
@@ -159,8 +167,11 @@
             </div>
           </div>
         </div>
-        <div class="wheelbutton-container">
-          <div class="next-prev-wheelbutton white"></div>
+        <div id="clubWheel" class="wheelbutton-container">
+          <div class="next-prev-wheelbutton white " data-target="#clubhouse-section">
+            <div class="next"></div>
+            <div class="prev"></div>
+          </div>
         </div>
       </div>
 
@@ -170,15 +181,6 @@
           Facade >
         </p>
       </div>
-
-      <!-- Image Modal -->
-      <!-- <div id="imageModal" class="modal"> -->
-        <!-- Close Button -->
-        <!-- <span class="close" onclick="document.getElementById('imageModal').style.display='none'">&times;</span> -->
-        <!-- Modal Content (The Image) -->
-        <!-- <img class="modal-content" id="modalContent"> -->
-      <!-- </div> -->
-
     </section>
 
     <!-- DESIGNERPROFILE SECTION -->
@@ -211,7 +213,7 @@
           </div> -->
           </div>
         </div>
-        <div class="designer-description-text">
+        <div class="designer-description-text" data-id="default">
         <p class="quote animation-text animation-element">
           <em>
             "A yacht is to always please the eye and be the pride of her owner."
@@ -390,9 +392,8 @@
     <script type="text/javascript" src="lib/paver-master/dist/js/jquery.paver.min.js"></script>
     <script src="https://api.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.js"></script>
 
-    <script type="text/javascript" src="node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script type="text/javascript" src="js/handlebars.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/animation.js"></script>
 
 
   </body>
