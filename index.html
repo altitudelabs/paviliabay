@@ -206,9 +206,8 @@
     </section>
 
     <!-- PANORAMA SECTION -->
-    <section class="section-container" id="panorama-section">
+    <section class="section-container" id="panorama-section" style="background-image: url('images/panorama-section/pano_bg.jpg')">
       <div class="panorama-image-container">
-        <img src="images/panorama-demo.jpg" alt="" title="" />
       </div>
       <div class="panorama-content">
         <div class="title-center">
@@ -216,14 +215,14 @@
             <br> The Neighborhood
           </p>
         </div>
-        <div class="button-group grid">
-          <div class="button">
+        <div class="button-group">
+          <div class="button" data-target="day">
             <p> Day View </p>
           </div>
-          <div class="button">
+          <div class="button" data-target="magic">
             <p> Magic View </p>
           </div>
-          <div class="button">
+          <div class="button" data-target="night">
             <p> Night View </p>
           </div>
         </div>
@@ -321,11 +320,16 @@
       <div class="bar"></div>
     </div>
 
+    <!--  paver dependency -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/paver-master/dist/js/jquery.ba-throttle-debounce.min.js"></script>
+
+    <script type="text/javascript" src="lib/paver-master/dist/js/jquery.paver.min.js"></script>
+
+    <script type="text/javascript" src="node_modules/handlebars/dist/handlebars.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/animation.js"></script>
-    <script type="text/javascript" src="lib/paver-master/dist/js/jquery.ba-throttle-debounce.min.js"></script>
-    <script type="text/javascript" src="lib/paver-master/dist/js/jquery.paver.min.js"></script>
+
 
   </body>
 </html>
