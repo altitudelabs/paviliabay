@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-  <meta charset="UTF-8" />
-  <!-- Use minimum-scale=1 to enable GPU rasterization -->
-  <meta
-  name="viewport"
-  content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1, minimum-scale=1"
-  >
-  <title></title>
-  <link rel="stylesheet" type="text/css" href="main.css">
-  <link rel="stylesheet" type="text/css" href="lib/paver-master/dist/css/paver.min.css">
-</head>
+    <meta charset="UTF-8" />
+    <!-- Use minimum-scale=1 to enable GPU rasterization -->
+    <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1, minimum-scale=1"
+    >
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="lib/paver-master/dist/css/paver.min.css">
+    <link rel='stylesheet' type="text/css" href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.css' />
+  </head>
 
 <body>
 
@@ -232,7 +232,7 @@
 
     <!-- MAP SECTION -->
     <section class="section-container clearfix" id="map-section">
-      <div class="map-container"></div>
+      <div id="map" class="map-container"></div>
       <div class="map-info">
         <section class="map-info-text">
           <div class="title"> Property <br> Information </div>
@@ -337,6 +337,7 @@
     <script type="text/javascript" src="lib/paver-master/dist/js/jquery.ba-throttle-debounce.min.js"></script>
 
     <script type="text/javascript" src="lib/paver-master/dist/js/jquery.paver.min.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.js'></script>
 
     <script type="text/javascript" src="node_modules/handlebars/dist/handlebars.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
