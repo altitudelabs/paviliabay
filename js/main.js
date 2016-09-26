@@ -120,7 +120,7 @@ $(document).ready(function(){
     }
   });
 
-var clubhouseImages = ['./images/clubhouse-section/club1.jpg','./images/clubhouse-section/2_club2.jpg',
+var clubhouseImages = ['./images/clubhouse-section/2_club2.jpg',
   './images/clubhouse-section/3_club3.jpg','./images/clubhouse-section/4_club4.jpg','./images/clubhouse-section/5_club5.jpg'];
 var facadeImages = ['./images/clubhouse-section/6_facade1.jpg','./images/clubhouse-section/7_facade2.jpg'];
 var interiorImages = ['./images/clubhouse-section/8_interior1.jpg', './images/clubhouse-section/9_interior2.jpg',
@@ -140,16 +140,18 @@ var currentImage = 0;
     var isNext = $(e.target).hasClass('next');
     if (isNext) {
       if (target == '#clubhouse-section') {
+        $('#clubWheel').animate({right: 75, bottom: 140}, 1000);
         var currentCategory = $('#clubhouse-section').data('id');
 
-        if (currentCategory = 'clubhouse') {
+        if (currentCategory == 'clubhouse') {
           imageArray = clubhouseImages;
-        } else if (currentCategory = 'facade') {
+        } else if (currentCategory == 'facade') {
           imageArray = facadeImages;
         } else {
           imageArray = interiorImages;
         }
         if (currentImage == imageArray.length) {
+          $('#clubWheel').animate({left: 75, bottom: 140}, 1000);
           $('.full-section-view').removeClass('fade-in-view');
           $('.link-text').click();
           currentImage = 0;
