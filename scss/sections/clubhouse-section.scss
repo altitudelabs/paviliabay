@@ -23,13 +23,6 @@
 
   $white-line-left: -250px;
 
-  // wheelbutton
-  $wheelbutton-top: 490px;
-  $wheelbutton-top-mobile: 360px;
-  $wheelbutton-left: $bluebox-container-width + 4%;
-  $wheelbutton-left-trans: $bluebox-container-width-trans + 6%;
-  $wheelbutton-left-mobile: 260px;
-
   @extend .clearfix;
   position: relative;
   color: $light-gray;
@@ -202,16 +195,9 @@
 
   .wheelbutton-container {
     position: absolute;
-    top: $wheelbutton-top;
-    left: $wheelbutton-left;
-
-    @include responsive(transition) {
-      left: $wheelbutton-left-trans;
-    }
-
     @include responsive(mobile) {
-      top: $wheelbutton-top-mobile;
-      left: $wheelbutton-left-mobile;
+      left: 260px;
+      top: 360px;
     }
   }
 }
