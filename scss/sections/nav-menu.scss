@@ -1,4 +1,5 @@
 #nav-menu {
+  visibility: hidden;
   $section-height: 705px;
   $section-height-mobile: 576px;
 
@@ -88,7 +89,7 @@
   }
 
   #nav-menu-content {
-    z-index: 1;
+    z-index: 10;
     position: absolute;
     top: 0;
     right: $nav-content-right;
