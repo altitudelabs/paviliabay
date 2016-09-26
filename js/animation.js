@@ -125,6 +125,7 @@ var changeClubhouseContent = function (currentSection) {
 $('.link-text').on('click', function() {
   $animation_elements.removeClass('in-view');
   $('#clubhouse-section').find('.animation-element').removeClass('fade');
+  $('.full-section-view').removeClass('fade-in-view');
   setTimeout(function() {
     changeClubhouseContent($('#clubhouse-section').data('id'));
       $window.trigger('scroll');

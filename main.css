@@ -60,7 +60,9 @@
   box-sizing: border-box; }
 
 html, body {
-  height: 100%;
+  position: relative;
+  height: auto;
+  min-height: 100%;
   width: 100%; }
 
 div {
@@ -97,11 +99,11 @@ sup {
 .clearfix:after, .fixer-float-container:after, #clubhouse-section:after, #designerprofile-section .description-grey-box:after {
   clear: both; }
 
-.background-image, .background-cover, #hero-section #cover-image, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #panorama-section, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image, .background-contain, #nav-menu #nav-cross, #nav-menu #nav-arrow, #nav-menu .nav-sound, #nav-menu .sound-off, #nav-menu .sound-on, #designerprofile-section .designer-photo, #marker, #portfolio-section .arrow-right, .wheelbutton-container .next-prev-wheelbutton {
+.background-image, .background-cover, #hero-section #cover-image, #clubhouse-section .full-section-view, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #panorama-section, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image, .background-contain, #nav-menu #nav-cross, #nav-menu #nav-arrow, #nav-menu .nav-sound, #nav-menu .sound-off, #nav-menu .sound-on, #designerprofile-section .designer-photo, #marker, #portfolio-section .arrow-right, .wheelbutton-container .next-prev-wheelbutton {
   background-position: center center;
   background-repeat: no-repeat; }
 
-.background-cover, #hero-section #cover-image, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #panorama-section, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image {
+.background-cover, #hero-section #cover-image, #clubhouse-section .full-section-view, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #panorama-section, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image {
   background-size: cover; }
 
 .background-contain, #nav-menu #nav-cross, #nav-menu #nav-arrow, #nav-menu .nav-sound, #nav-menu .sound-off, #nav-menu .sound-on, #designerprofile-section .designer-photo, #marker, #portfolio-section .arrow-right, .wheelbutton-container .next-prev-wheelbutton {
@@ -683,6 +685,39 @@ sup {
     @media only screen and (max-width: 720px) {
       #clubhouse-section .link-menu {
         bottom: 33px; } }
+  #clubhouse-section .full-section-view {
+    opacity: 0;
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 0;
+    background-image: url("./images/clubhouse-section/2_club2.jpg");
+    background-position: center;
+    background-size: cover;
+    /*    @include responsive(transition){
+      width: $image-container-width-trans;
+    }
+
+    @include responsive(mobile){
+      background-position: left;
+      top: 11.5vh;
+      min-height: 570px;
+      height: 570px;
+      width: 100%;
+    }*/ }
+  #clubhouse-section .full-section-view.fade-in-view {
+    opacity: 1;
+    z-index: 50;
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear; }
   #clubhouse-section .clubhouse-image-container {
     height: 669px;
     background-image: url("./images/clubhouse-section/club1.jpg");
@@ -1351,7 +1386,8 @@ sup {
   bottom: 0;
   left: 0;
   width: 8px;
-  background-color: grey; }
+  background-color: grey;
+  z-index: 1; }
   #left-scroll .bar {
     width: 100%;
     background-color: black;
@@ -1359,6 +1395,7 @@ sup {
     height: 20%; }
 
 .wheelbutton-container {
+  z-index: 100;
   animation-name: rotate;
   animation-duration: 12s;
   animation-timing-function: linear;
@@ -1393,7 +1430,7 @@ sup {
       width: 120px;
       height: 120px; }
   .wheelbutton-container.scroll-top {
-    position: fixed;
+    position: absolute;
     right: 50px;
     bottom: 100px; }
   @media only screen and (max-width: 720px) {

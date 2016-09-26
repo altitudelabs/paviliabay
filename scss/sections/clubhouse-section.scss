@@ -103,6 +103,39 @@
     }
   }
 
+  .full-section-view {
+    opacity: 0;
+    @include transition((all 1s linear));
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 0;
+    @extend .background-cover;
+    background-image: url("./images/clubhouse-section/2_club2.jpg");
+    background-position: center;
+    background-size: cover;
+
+/*    @include responsive(transition){
+      width: $image-container-width-trans;
+    }
+
+    @include responsive(mobile){
+      background-position: left;
+      top: 11.5vh;
+      min-height: 570px;
+      height: 570px;
+      width: 100%;
+    }*/
+  }
+
+  .full-section-view.fade-in-view {
+    opacity: 1;
+    z-index: 50;
+    @include transition((all 1s linear));
+  }
+
   .clubhouse-image-container {
     height: $image-container-height;
 
