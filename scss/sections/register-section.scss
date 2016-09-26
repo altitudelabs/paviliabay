@@ -1,26 +1,15 @@
 #register-section {
   overflow: visible;
   position: relative;
-  background-color: $dark-gray;
 
   .section-container {
     height: 245px;
     padding-top: 65px;
-    background-color: $dark-gray;
     font-family: futura;
     font-weight: normal;
     font-size: 17px;
     letter-spacing: 0.025em;
     text-align: center;
-
-    &.fixed {
-      visibility: hidden;
-      transition: bottom 300ms, top 300ms;
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 100%;
-    }
 
     @include responsive(mobile) {
       padding: 20px 20px 60px 20px;
@@ -69,7 +58,6 @@
           font-size: 14px;
         }
       }
-
     }
 
     .add-br {
@@ -79,6 +67,8 @@
         display: block;
       }
     }
+
+
 
     .border {
       background-color: white;
@@ -91,46 +81,79 @@
       width: 2px;
     }
     .top {
-      transition: right 1000ms;
+      transition: right 1200ms;
+      transition-delay: 200ms;
       top: 0;
       left: 0;
       right: 100%;
     }
     .right {
-      transition: bottom 1000ms;
+      transition: bottom 1200ms;
+      transition-delay: 200ms;
       right: 0;
       top: 0;
       bottom: 100%;
     }
     .bottom {
-      transition: left 1000ms;
+      transition: left 1200ms;
+      transition-delay: 200ms;
       bottom: 0;
       right: 0;
       left: 100%;
     }
     .left {
-      transition: top 1000ms;
+      transition: top 1200ms;
+      transition-delay: 200ms;
       left: 0;
       bottom: 0;
       top: 100%;
     }
 
-    &.active {
-      .top {
-        right: 0;
-      }
-      .right {
-        bottom: 0;
-      }
-      .bottom {
-        left: 0;
-      }
-      .left {
-        top: 0;
-      }
+  }
+  &.active {
+    .background {
+      bottom: 0;
+      transition-delay: 0ms;
+    }
+    .section-container {
+      opacity: 1;
+      transition-delay: 0ms;
+    }
+    .top {
+      right: 0;
+      transition-delay: 800ms;
+
+    }
+    .right {
+      bottom: 0;
+      transition-delay: 800ms;
+
+    }
+    .bottom {
+      left: 0;
+      transition-delay: 800ms;
+
+    }
+    .left {
+      top: 0;
+      transition-delay: 800ms;
     }
   }
 
+  .section-container {
+    transition: opacity 500ms;
+    transition-delay: 1500ms;
+    opacity: 0;
+  }
 
-
+  .background {
+    background-color: $dark-gray;
+    transition: bottom 1300ms;
+    transition-delay: 1500ms;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 100%;
+  }
 }

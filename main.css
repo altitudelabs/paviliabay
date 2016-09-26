@@ -708,8 +708,19 @@ sup {
 #companyinfo-section {
   color: white;
   text-align: center; }
-  #companyinfo-section .companyinfo-body-container {
+  #companyinfo-section .background {
     background-color: #232f49;
+    transition: bottom 1500ms;
+    transition-delay: 0ms;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 100%; }
+  #companyinfo-section.active .background {
+    transition-delay: 1000ms;
+    bottom: 0; }
+  #companyinfo-section .companyinfo-body-container {
     width: 92%;
     position: relative;
     margin: 0 auto 105px auto;
@@ -1147,24 +1158,15 @@ sup {
 
 #register-section {
   overflow: visible;
-  position: relative;
-  background-color: #9e9da2; }
+  position: relative; }
   #register-section .section-container {
     height: 245px;
     padding-top: 65px;
-    background-color: #9e9da2;
     font-family: futura;
     font-weight: normal;
     font-size: 17px;
     letter-spacing: 0.025em;
     text-align: center; }
-    #register-section .section-container.fixed {
-      visibility: hidden;
-      transition: bottom 300ms, top 300ms;
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 100%; }
     @media only screen and (max-width: 720px) {
       #register-section .section-container {
         padding: 20px 20px 60px 20px; } }
@@ -1211,33 +1213,60 @@ sup {
   #register-section .section-container .right, #register-section .section-container .left {
     width: 2px; }
   #register-section .section-container .top {
-    transition: right 1000ms;
+    transition: right 1200ms;
+    transition-delay: 200ms;
     top: 0;
     left: 0;
     right: 100%; }
   #register-section .section-container .right {
-    transition: bottom 1000ms;
+    transition: bottom 1200ms;
+    transition-delay: 200ms;
     right: 0;
     top: 0;
     bottom: 100%; }
   #register-section .section-container .bottom {
-    transition: left 1000ms;
+    transition: left 1200ms;
+    transition-delay: 200ms;
     bottom: 0;
     right: 0;
     left: 100%; }
   #register-section .section-container .left {
-    transition: top 1000ms;
+    transition: top 1200ms;
+    transition-delay: 200ms;
     left: 0;
     bottom: 0;
     top: 100%; }
-  #register-section .section-container.active .top {
-    right: 0; }
-  #register-section .section-container.active .right {
-    bottom: 0; }
-  #register-section .section-container.active .bottom {
-    left: 0; }
-  #register-section .section-container.active .left {
-    top: 0; }
+  #register-section.active .background {
+    bottom: 0;
+    transition-delay: 0ms; }
+  #register-section.active .section-container {
+    opacity: 1;
+    transition-delay: 0ms; }
+  #register-section.active .top {
+    right: 0;
+    transition-delay: 800ms; }
+  #register-section.active .right {
+    bottom: 0;
+    transition-delay: 800ms; }
+  #register-section.active .bottom {
+    left: 0;
+    transition-delay: 800ms; }
+  #register-section.active .left {
+    top: 0;
+    transition-delay: 800ms; }
+  #register-section .section-container {
+    transition: opacity 500ms;
+    transition-delay: 1500ms;
+    opacity: 0; }
+  #register-section .background {
+    background-color: #9e9da2;
+    transition: bottom 1300ms;
+    transition-delay: 1500ms;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 100%; }
 
 #left-scroll {
   position: fixed;

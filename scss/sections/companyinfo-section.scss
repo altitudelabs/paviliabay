@@ -2,8 +2,26 @@
   color: white;
   text-align: center;
 
-  .companyinfo-body-container {
+  .background {
     background-color: $dark-blue;
+    transition: bottom 1500ms;
+    transition-delay: 0ms;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 100%;
+
+  }
+
+  &.active {
+    .background {
+      transition-delay: 1000ms;
+      bottom: 0;
+    }
+  }
+
+  .companyinfo-body-container {
     width: 92%;
     position: relative;
     margin: 0 auto 105px auto;
