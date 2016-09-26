@@ -48,8 +48,16 @@ $(document).ready(function(){
 
 
   $('.next-prev-wheelbutton').click(function(e) {
-    var isNext = $(e.target).hasClass('next');
     var target = $(this).data('target');
+    if (target === 'scrollTop') {
+      console.log('hello');
+      $('body').animate({ scrollTop: 0 }, 500);
+      return;
+    }
+
+
+
+    var isNext = $(e.target).hasClass('next');
     if (isNext) {
       console.log('clicked next of ' + target);
       return;
