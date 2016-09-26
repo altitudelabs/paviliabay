@@ -97,11 +97,11 @@ sup {
 .clearfix:after, .fixer-float-container:after, #clubhouse-section:after, #designerprofile-section .description-grey-box:after {
   clear: both; }
 
-.background-image, .background-cover, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #panorama-section, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image, .background-contain, #nav-menu #nav-cross, #nav-menu #nav-arrow, #nav-menu .nav-sound, #nav-menu .sound-off, #nav-menu .sound-on, #designerprofile-section .designer-photo, #marker, #portfolio-section .arrow-right, .wheelbutton-container .next-prev-wheelbutton {
+.background-image, .background-cover, #hero-section #cover-image, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #panorama-section, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image, .background-contain, #nav-menu #nav-cross, #nav-menu #nav-arrow, #nav-menu .nav-sound, #nav-menu .sound-off, #nav-menu .sound-on, #designerprofile-section .designer-photo, #marker, #portfolio-section .arrow-right, .wheelbutton-container .next-prev-wheelbutton {
   background-position: center center;
   background-repeat: no-repeat; }
 
-.background-cover, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #panorama-section, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image {
+.background-cover, #hero-section #cover-image, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #panorama-section, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image {
   background-size: cover; }
 
 .background-contain, #nav-menu #nav-cross, #nav-menu #nav-arrow, #nav-menu .nav-sound, #nav-menu .sound-off, #nav-menu .sound-on, #designerprofile-section .designer-photo, #marker, #portfolio-section .arrow-right, .wheelbutton-container .next-prev-wheelbutton {
@@ -400,14 +400,51 @@ sup {
 
 #hero-section .video-container {
   height: 666px;
-  width: 100%; }
+  width: 100%;
+  overflow: hidden; }
   @media only screen and (max-width: 720px) {
     #hero-section .video-container {
       height: 531px; } }
 
-#hero-section .video {
+#hero-section video {
+  display: none;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  min-height: 666px;
+  width: auto;
+  height: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%); }
+
+#hero-section #hero-body-text {
+  font-family: futuraBT;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 21px;
+  visibility: hidden;
   width: 100%;
-  height: 100%; }
+  margin-top: 8%;
+  text-align: center;
+  position: absolute;
+  background-color: transparent;
+  top: 0;
+  z-index: 2; }
+  @media only screen and (max-width: 720px) {
+    #hero-section #hero-body-text {
+      font-size: 15px;
+      line-height: 17px;
+      margin-top: 16%; } }
+  #hero-section #hero-body-text .bold {
+    font-weight: bold; }
+
+#hero-section #cover-image {
+  height: 100%;
+  width: 100%;
+  background-image: url("images/hero-section/coverimage.jpg"); }
 
 #hero-section .hero-footer {
   background-color: #9e9da2;
@@ -430,6 +467,7 @@ sup {
         letter-spacing: 0.025em; } }
 
 #hero-section .hero-logo {
+  visibility: hidden;
   background-image: url("images/hero-section/shiplogo.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -446,6 +484,22 @@ sup {
       padding-bottom: 12.78689px;
       top: 4%;
       left: 5%; } }
+
+#hero-section .wheelbutton-container {
+  position: absolute;
+  right: 70px;
+  bottom: 50px; }
+  @media only screen and (max-width: 720px) {
+    #hero-section .wheelbutton-container {
+      right: 42px;
+      bottom: 60px; } }
+
+#hero-section .one-fifth-opacity {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+  -moz-opacity: 0.2;
+  -khtml-opacity: 0.2;
+  opacity: 0.2; }
 
 #nav-menu {
   visibility: hidden;
