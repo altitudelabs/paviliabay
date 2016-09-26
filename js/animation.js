@@ -37,7 +37,11 @@ function check_if_in_view() {
       $element.addClass('in-view');
     } else {
       $element.removeClass('in-view');
-      $element.find('.clubhouse-text').removeClass('fade');
+      $element.find('.animation-text').removeClass('fade');
+      $element.find('.text-order-1').removeClass('fade');
+      $element.find('.text-order-2').removeClass('fade');
+      $element.find('.text-order-3').removeClass('fade');
+      $element.find('.text-order-4').removeClass('fade');
     }
   });
 }
@@ -48,15 +52,15 @@ $window.trigger('scroll');
 
 
 // MODAL
-var modal = document.getElementById('imageModal');
+// var modal = document.getElementById('imageModal');
 
-// Get the image and insert it inside the modal
-var img = $('.image');
-var modalImg = document.getElementById("modalContent");
-img.on('click', function(){
-  modal.style.display = "block";
-  modalImg.src = this.src;
-});
+// // Get the image and insert it inside the modal
+// var img = $('.image');
+// var modalImg = document.getElementById("modalContent");
+// img.on('click', function(){
+//   modal.style.display = "block";
+//   modalImg.src = this.src;
+// });
 
 // // Get the <span> element that closes the modal
 // var span = document.getElementsByClassName("close")[0];
@@ -70,7 +74,7 @@ img.on('click', function(){
 $('.clubhouse-blue-box').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
   function(e) {
 
-  $('.clubhouse-text').addClass('fade');
+  $('.animation-text').addClass('fade');
   $('.clubhouse-image-container').addClass('fade');
 
 });
@@ -118,11 +122,62 @@ var changeClubhouseContent = function (currentSection) {
 // On click, change section title, text, image and link
 $('.link-text').on('click', function() {
   $animation_elements.removeClass('in-view');
-  $animation_elements.removeClass('fade');
+  $('#clubhouse-section').find('.animation-element').removeClass('fade');
   setTimeout(function() {
     changeClubhouseContent($('#clubhouse-section').data('id'));
       $window.trigger('scroll');
   }, 700);
+});
+
+
+// DESIGNER SECTION
+$('.profile-blue-box').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+  function(e) {
+
+  $('.animation-text').addClass('fade');
+
+});
+
+// PORTFOLIO SECTION
+$('#portfolio-section').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+  function(e) {
+
+  $('.animation-text').addClass('fade');
+
+});
+
+// PANORAMA SECTION
+$('#panorama-section').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+  function(e) {
+
+  $('.text-order-1').addClass('fade');
+
+});
+$('.text-order-1').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+  function(e) {
+
+  $('.text-order-2').addClass('fade');
+
+});
+$('.text-order-2').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+  function(e) {
+
+  $('.text-order-3').addClass('fade');
+
+});
+$('.text-order-3').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+  function(e) {
+
+  $('.text-order-4').addClass('fade');
+
+});
+
+// PORTFOLIO SECTION
+$('.map-info').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+  function(e) {
+
+  $('.animation-text').addClass('fade');
+
 });
 
 });
