@@ -30,5 +30,42 @@ $(document).ready(function(){
       $(this).parent().children('ul').css('display', 'block');
     }
   });
+  $('.panorama-image-container').paver({
+    gracefulFailure: false,
+  });
 
+  $(window).scroll(function(){
+    var winTop = $(window).scrollTop();
+    var docHeight = $(document).height();
+    var winHeight = $(window).height();
+    var scrollTrigger = 0.95;
+
+    var scrolled = winTop / (docHeight - winHeight);
+    $('#left-scroll .bar').css('top', (winHeight * 0.8) * scrolled);
+
+    if  ((winTop/(docHeight-winHeight)) > scrollTrigger) {
+     console.log('scroll bottom');
+    }
+  });
+
+
+  $('.next-prev-wheelbutton').click(function(e) {
+    var isNext = $(e.target).hasClass('next');
+    var target = $(this).data('target');
+    if (isNext) {
+      console.log('clicked next of ' + target);
+      return;
+    }
+    console.log('clicked prev of ' + target);
+  });
+
+  //
+  // var topofDiv = $("#register-section").offset().top;
+  // var height = $("#register-section").outerHeight();
+  // $(window).scroll(function(e) {
+  //   if ($(window).scrollTop() > (topofDiv + height)) {
+  //     return $("#register-section").addClass('drop');
+  //   }
+  //   $("#register-section").removeClass('drop');
+  // });
 });

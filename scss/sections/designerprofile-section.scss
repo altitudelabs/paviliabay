@@ -3,29 +3,24 @@
   $yacht-height: 666px;
   $yacht-greybox-gutter: 46px;
 
-  $greybox-horizontal-gutter: 52px + $side-scroll-width;
+  $greybox-horizontal-gutter: 52px;
   $greybox-bluebox-offset-x: 30px;
   $greybox-bluebox-offset-y: -117px;
 
   $bluebox-width: 337px;
   $bluebox-height: 516px;
 
-  $next-prev-height: 100px;
-  $next-prev-width: 100px;
-
   // mobile
   $yacht-height-mobile: 70%;
   $yacht-greybox-gutter-mobile: 0px;
 
   $greybox-horizontal-gutter-mobile: 20px;
+
   $greybox-bluebox-offset-x-mobile: -20px;
-  $greybox-bluebox-offset-y-mobile: calc(-10% - 180px);
+  $greybox-bluebox-offset-y-mobile: -220px;
 
   $bluebox-height-mobile: auto;
-  $bluebox-width-mobile: 100%;
-
-  $next-prev-height-mobile: 75px;
-  $next-prev-width-mobile: 75px;
+  $bluebox-width-mobile: 240px;
 
   .yacht {
     @extend .background-cover;
@@ -53,12 +48,6 @@
     }
   }
 
-  .blue-box-container {
-    @include responsive(mobile) {
-      padding-right: 20%;
-    }
-  }
-
   .profile-blue-box {
     @extend .blue-box;
     float: left;
@@ -72,7 +61,7 @@
     text-align: center;
 
     @include responsive(mobile) {
-      padding: calc(3% + 20px) 30px;
+      padding: 30px 0;
       margin-left: $greybox-bluebox-offset-x-mobile;
       margin-top: $greybox-bluebox-offset-y-mobile;
       height: $bluebox-height-mobile;
@@ -84,10 +73,11 @@
       left: -200px;
       width: 441px;
       @include responsive(mobile) {
-        margin: 10px auto;
-        width: 1000px;
-        right: 0px;
-        left: calc(50% - 927px);
+        left: auto;
+        width: 100%;
+        right: 52px;
+        margin-top: 7px;
+        margin-bottom: 8px;
       }
     }
 
@@ -100,26 +90,26 @@
       text-transform: uppercase;
 
       @include responsive(mobile) {
-        line-height: 30px;
-        font-size: 24px;
+        line-height: 33px;
+        font-size: 19px;
       }
     }
 
     .designer-info {
       font-family: futura;
-      font-weight: normal;
       font-size: 17px;
       letter-spacing: 0.025em;
 
       @include responsive(mobile) {
-        font-size: 17px;
-        line-height: 17px;
-        font-weight: bold;
+        font-size: 12px;
       }
     }
 
     .name {
       text-transform: uppercase;
+      @include responsive(mobile) {
+        font-size: 14px;
+      }
     }
   }
 
@@ -135,8 +125,9 @@
       margin-bottom: 15;
     }
     @include responsive(mobile) {
-      padding-bottom: calc(120px + 20%);
-      margin: 20px 0;
+      padding-bottom: 55%;
+      height: 0px;
+      margin: 15px 0px;
     }
   }
 
@@ -182,7 +173,7 @@
 
     @include responsive (mobile){
       width: auto;
-      padding: calc(5% + 15px) 30px;
+      padding: 35px 30px;
     }
   }
 
@@ -207,32 +198,29 @@
     }
   }
 
-  .next-prev-wheelbutton {
-    background: black;
-    width: $next-prev-width;
-    height: $next-prev-height;
+  .wheelbutton-container {
     position: absolute;
-    bottom: $next-prev-width - 133px;
-    right: $next-prev-width - 125px - $side-scroll-width;
+    top: 240px;
+    left: 220px;
+
     @include responsive(mobile) {
-      display: none;
-      // right: auto;
-      // bottom: auto;
-      // right: 15%;
-      // top: 40px;
+      top: 65px;
+      left: 230px;
     }
 
-    &.mobile {
-      width: $next-prev-width-mobile;
-      height: $next-prev-height-mobile;
-      right: 15px - $next-prev-width-mobile;
-      bottom: 20px;
+    // @include responsive(mobile) {
+    //   display: none;
+    // }
+    //
+    // &.mobile {
+    //   right: -70px;
+    //   bottom: 20px;
+    //   display: none;
+    //
+    //   @include responsive(mobile) {
+    //     display: block;
+    //   }
+    // }
 
-      display: none;
-      @include responsive(mobile) {
-        display: block;
-      }
-    }
   }
-
 }

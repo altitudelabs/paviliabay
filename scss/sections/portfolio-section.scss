@@ -32,7 +32,8 @@
   }
 
   .portfolio-image-container {
-    @extend .grid;
+    @extend .background-cover;
+    position: relative;
     text-align: center;
     padding-top: 3px;
     margin-bottom: 3px;
@@ -43,23 +44,24 @@
     @include responsive(mobile) {
       padding-top: 1px;
       padding-bottom: 2px;
-      height: $image-height-mobile;
     }
   }
 
   .portfolio-image {
+    @extend .background-cover;
+    position: relative;
     display: inline-block;
     width: 33.3%;
     vertical-align: top;
-    height: $image-height;
+    padding-bottom: 50%;
 
     @include responsive(transition) {
-      height: $image-height-transition;
+      // height: $image-height-transition;
     }
 
     @include responsive(mobile) {
-      height: $image-height-mobile;
       width: 50%;
+      padding-bottom: 75%;
     }
   }
 

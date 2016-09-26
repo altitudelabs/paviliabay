@@ -1,66 +1,87 @@
 #register-section {
-  height: 245px;
-  padding-top: 65px;
-
+  overflow: visible;
+  z-index: 1;
+  position: relative;
   background-color: $dark-gray;
-  font-family: futura;
-  font-weight: normal;
-  font-size: 17px;
-  letter-spacing: 0.025em;
-  text-align: center;
 
-  @include responsive(mobile) {
-    padding: 20px 20px;
-  }
+  .section-container {
+    height: 245px;
+    padding-top: 65px;
+    background-color: $dark-gray;
+    font-family: futura;
+    font-weight: normal;
+    font-size: 17px;
+    letter-spacing: 0.025em;
+    text-align: center;
 
-  p {
-    color: white;
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-    @include responsive(mobile){
-      line-height: 30px;
-      font-size: 15px;
+    &.fixed {
+      visibility: hidden;
+      transition: bottom 300ms, top 300ms;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 100%;
     }
-  }
-
-  .register-button {
-    border: 2px solid white;
-    margin-top: 15px;
-    padding-right: 40px;
-    padding-left: 40px;
-    display: inline-block;
 
     @include responsive(mobile) {
-      padding-right: 5px;
-      padding-left: 5px;
+      padding: 20px 20px 60px 20px;
     }
+  }
 
+  &.drop {
+    .section-container.fixed {
+      visibility: visible;
+      bottom: 0px;
+      top: auto;
+    }
+  }
+
+  .section-container {
     p {
-      color: $dark-blue;
-      text-transform: uppercase;
+      color: white;
       margin-top: 10px;
       margin-bottom: 10px;
 
-      // @include responsive(transition){
-      //     line-height: 35px;
-      //     font-size: 22px;
-      // }
-
       @include responsive(mobile){
-        line-height: 30px;
-        font-size: 15px;
+        font-size: 14px;
+      }
+    }
+
+    .register-button {
+      border: 2px solid white;
+      margin-top: 15px;
+      padding-right: 40px;
+      padding-left: 40px;
+      display: inline-block;
+
+      @include responsive(mobile) {
+        padding-right: 5px;
+        padding-left: 5px;
+      }
+
+      p {
+        color: $dark-blue;
+        text-transform: uppercase;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        @include responsive(mobile){
+          line-height: 30px;
+          font-size: 14px;
+        }
+      }
+
+    }
+
+    .add-br {
+      display: none;
+
+      @include responsive(smallmobile){
+        display: block;
       }
     }
 
   }
 
-  .add-br {
-    display: none;
-
-    @include responsive(smallmobile){
-      display: block;
-    }
-  }
 
 }
