@@ -59,13 +59,13 @@ $(document).ready(function(){
     console.log('clicked prev of ' + target);
   });
 
-
-  var topofDiv = $("#register-section").offset().top;
-  var height = $("#register-section").outerHeight();
-  $(window).scroll(function(e) {
-    if ($(window).scrollTop() > (topofDiv + height)) {
-      return $("#register-section").addClass('drop');
-    }
-    $("#register-section").removeClass('drop');
-  });
+  //
+  // var topofDiv = $("#register-section").offset().top;
+  // var height = $("#register-section").outerHeight();
+  // $(window).scroll(function(e) {
+  //   if ($(window).scrollTop() > (topofDiv + height)) {
+  //     return $("#register-section").addClass('drop');
+  //   }
+  //   $("#register-section").removeClass('drop');
+  // });
 });
