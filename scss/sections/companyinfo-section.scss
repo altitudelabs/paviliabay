@@ -3,6 +3,7 @@
   text-align: center;
 
   .background {
+    z-index: -1;
     background-color: $dark-blue;
     transition: bottom 1500ms;
     transition-delay: 0ms;

@@ -805,6 +805,7 @@ sup {
   color: white;
   text-align: center; }
   #companyinfo-section .background {
+    z-index: -1;
     background-color: #232f49;
     transition: bottom 1500ms;
     transition-delay: 0ms;
