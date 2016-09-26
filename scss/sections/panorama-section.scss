@@ -1,11 +1,12 @@
 #panorama-section {
-
+  @extend .background-cover;
   $section-height: 663px;
   $section-height-mobile: 576px;
 
   $panorama-content-top: 40%;
 
   .panorama-image-container {
+    // display: none;
     height: $section-height;
     overflow-y: hidden;
     @include responsive(mobile) {
@@ -17,6 +18,13 @@
       height: 100%;
     }
   }
+
+  // &.day .day,
+  // &.magic .magic,
+  // &.night .night,
+  // &.default .default {
+  //   display: block;
+  // }
 
   .panorama-content {
     z-index: 1;
@@ -74,6 +82,7 @@
   }
 
   .button {
+    cursor: pointer;
     display: inline-block;
     background-color: white;
     margin: 20px;

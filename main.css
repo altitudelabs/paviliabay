@@ -97,11 +97,11 @@ sup {
 .clearfix:after, .fixer-float-container:after, #clubhouse-section:after, #designerprofile-section .description-grey-box:after {
   clear: both; }
 
-.background-image, .background-cover, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image, .background-contain, #designerprofile-section .designer-photo, .wheelbutton-container .next-prev-wheelbutton {
+.background-image, .background-cover, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #panorama-section, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image, .background-contain, #designerprofile-section .designer-photo, .wheelbutton-container .next-prev-wheelbutton {
   background-position: center center;
   background-repeat: no-repeat; }
 
-.background-cover, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image {
+.background-cover, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #panorama-section, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image {
   background-size: cover; }
 
 .background-contain, #designerprofile-section .designer-photo, .wheelbutton-container .next-prev-wheelbutton {
@@ -1035,6 +1035,7 @@ sup {
   margin: auto; }
 
 #panorama-section .button {
+  cursor: pointer;
   display: inline-block;
   background-color: white;
   margin: 20px;
