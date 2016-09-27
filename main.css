@@ -27,7 +27,8 @@
 
 @font-face {
   font-family: futuraBT;
-  src: url("./fonts/english/futurabt-book-opentype.otf") format("opentype");
+  src: url("./fonts/english/futurabt/futurabt-book-opentype.eot");
+  src: url("./fonts/english/futurabt/futurabt-book-opentype.eot?#iefix") format("embedded-opentype"), url("./fonts/english/futurabt/futurabt-book-opentype.ttf") format("truetype"), url("./fonts/english/futurabt/futurabt-book-opentype.otf") format("opentype");
   font-weight: normal;
   font-style: normal; }
 
