@@ -70,7 +70,6 @@
 
     .transparent-button {
       display: inline-block;
-      border: 1px solid rgba(255, 255, 255, .5);
       padding: 10px 23px;
       margin-top: 12px;
 
@@ -95,8 +94,57 @@
           letter-spacing: 0.02em;
         }
       }
+      
+      .border {
+        background-color: white;
+        position: absolute;
+        transition: top 500ms, right 500ms, bottom 500ms, left 500ms;
+      }
+      .top, .bottom {
+        height: 1px;
+      }
+      .right, .left {
+        width: 1px;
+      }
+      .top {
+        top: 0;
+        left: 0;
+        right: 100%;
+      }
+      .right {
+        right: 0;
+        top: 0;
+        bottom: 100%;
+      }
+      .bottom {
+        bottom: 0;
+        right: 0;
+        left: 100%;
+      }
+      .left {
+        left: 0;
+        bottom: 0;
+        top: 100%;
+      }
+      &.active {
+        .top {
+          right: 0;
+        }
+        .right {
+          bottom: 0;
+        }
+        .bottom {
+          left: 0;
+        }
+        .left {
+          top: 0;
+        }
+      }
     }
+    
   }
+
+  
 
   .video-container {
     height: $video-height;
