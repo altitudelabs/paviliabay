@@ -1,6 +1,6 @@
 #companyinfo-section {
 
-  $side-padding: 155px;
+  $side-padding: 100px;
   $side-padding-mobile: 10px;
 
 
@@ -35,6 +35,7 @@
 
     @include responsive(mobile) {
       width: 100%;
+      margin-bottom: 0;
     }
   }
 
@@ -87,7 +88,7 @@
 
     @include responsive(mobile) {
       padding: 0;
-      padding-bottom: 20px;
+      padding-bottom: 80px;
     }
 
     .title {

@@ -332,6 +332,16 @@ $(document).ready(function(){
     };
   });
 
+  $('.back-top-wheelbutton').click(function(e) {
+    e.preventDefault();
+    var target = $(this).data('target');
+    if (target === 'scrollTop') {
+      console.log('hello');
+      $('body').animate({ scrollTop: 0 }, 500);
+      return;
+    }
+  });
+
   // DESIGNER SECTION
   var defaultText = ['Led by the globally acclaimed French super yacht designer Philippe Briand, London based Vitruvius Yachts Limited is a strong team of award-winning designers and naval architects. The beauty of each Vitruvius Yacht is derived from her optimal proportions, balance and efficiency. Philippe believes the superyacht flourished from the exclusive combination of science, through naval architecture, and art.'];
   var passionText = ['Philippe  was  raised  in  a  family  where  racing  is  a  long-established  tradition. Inspired by his father, an Olympian sailor, he began his career in France as a dinghy sailor at the tender age of 9. Philippe’s first sailing yacht was designed when  he  was  only 16 years  old.  By  the  age  of  22,  his  first  series  of  yacht  was developed.  During  the  1980s,  he  engaged  in  yacht  racing  and  claimed the title of world championships twice. His enthusiasm in racing has equipped him to become a qualified naval architect and one of the world’s leading yacht designers.'];
