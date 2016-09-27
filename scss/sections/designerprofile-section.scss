@@ -7,6 +7,8 @@
   $greybox-bottom-gutter: 82px;
   $greybox-bluebox-offset-x: 30px;
   $greybox-bluebox-offset-y: -117px;
+  $greybox-minheight: 446px;
+  $greybox-minheight-mobile: 600px;
 
   $bluebox-width: 337px;
   $bluebox-height: 516px;
@@ -43,11 +45,11 @@
     margin-top: -$yacht-greybox-gutter;
     background-color: $light-gray;
     overflow: visible;
-    min-height: 446px;
+    min-height: $greybox-minheight;
     margin-bottom: $greybox-bottom-gutter;
 
     @include responsive(mobile) {
-      min-height: initial;
+      min-height: $greybox-minheight-mobile;
       margin: 0 0 0 $greybox-horizontal-gutter-mobile;
       margin-top: -$yacht-greybox-gutter-mobile;
     }
@@ -142,7 +144,7 @@
     width: calc(100% - #{$bluebox-width} - #{$greybox-bluebox-offset-x});
     padding: 88px 80px;
     padding-left: 55px;
-    padding-bottom: 170px;
+    padding-bottom: 50px;
     vertical-align: top;
     position: relative;
 
