@@ -551,6 +551,7 @@ sup {
   #nav-menu ul {
     list-style-type: none; }
   #nav-menu #nav-menu-content {
+    visibility: hidden;
     z-index: 10;
     position: absolute;
     top: 0;
@@ -804,6 +805,7 @@ sup {
   color: white;
   text-align: center; }
   #companyinfo-section .background {
+    z-index: -1;
     background-color: #232f49;
     transition: bottom 1500ms;
     transition-delay: 0ms;
@@ -829,16 +831,21 @@ sup {
     padding-top: 96px;
     padding-right: 155px;
     padding-left: 155px; }
-    #companyinfo-section .company-logo .description {
+    @media only screen and (max-width: 720px) {
+      #companyinfo-section .company-logo {
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-top: 37px; } }
+    #companyinfo-section .company-logo p {
       font-family: futura;
       font-weight: normal;
       font-size: 15px;
       letter-spacing: 0.025em;
       line-height: 26px; }
       @media only screen and (max-width: 720px) {
-        #companyinfo-section .company-logo .description {
-          line-height: 30px;
-          font-size: 15px; } }
+        #companyinfo-section .company-logo p {
+          line-height: 14px;
+          font-size: 11px; } }
     #companyinfo-section .company-logo .image {
       top: 35px;
       height: 42px;
@@ -846,12 +853,19 @@ sup {
       position: relative;
       margin: auto;
       margin-bottom: 40px; }
+      @media only screen and (max-width: 720px) {
+        #companyinfo-section .company-logo .image {
+          top: 22px;
+          height: 20px;
+          width: auto;
+          margin-bottom: 25px; } }
   #companyinfo-section .disclaimer {
     position: relative;
     padding: 40px 80px; }
     @media only screen and (max-width: 720px) {
       #companyinfo-section .disclaimer {
-        padding: 40px 0; } }
+        padding: 0;
+        padding-bottom: 20px; } }
     #companyinfo-section .disclaimer .title {
       font-family: futura;
       font-weight: normal;
@@ -863,8 +877,8 @@ sup {
       margin-bottom: 20px; }
       @media only screen and (max-width: 720px) {
         #companyinfo-section .disclaimer .title {
-          line-height: 30px;
-          font-size: 15px; } }
+          font-size: 10px;
+          margin-bottom: 0; } }
     #companyinfo-section .disclaimer p {
       font-family: futuraBT;
       font-weight: normal;
@@ -875,8 +889,9 @@ sup {
       margin: 0; }
       @media only screen and (max-width: 720px) {
         #companyinfo-section .disclaimer p {
-          line-height: 30px;
-          font-size: 15px; } }
+          line-height: 14px;
+          font-size: 11px;
+          padding: 20px; } }
 
 #designerprofile-section .yacht {
   background-image: url("images/designerprofile-section/bg.jpg");
@@ -895,7 +910,7 @@ sup {
   margin-bottom: 82px; }
   @media only screen and (max-width: 720px) {
     #designerprofile-section .description-grey-box {
-      min-height: initial;
+      min-height: 600px;
       margin: 0 0 0 20px;
       margin-top: 0px; } }
 
@@ -973,7 +988,7 @@ sup {
   width: calc(100% - 337px - 30px);
   padding: 88px 80px;
   padding-left: 55px;
-  padding-bottom: 170px;
+  padding-bottom: 50px;
   vertical-align: top;
   position: relative; }
   #designerprofile-section .designer-description-text p {
