@@ -1,5 +1,6 @@
 #panorama-section {
   @extend .background-cover;
+  max-width: 100%;
   $section-height: 663px;
   $section-height-mobile: 576px;
 
@@ -41,8 +42,8 @@
   }
 
 .text-order-2, .text-order-3, .text-order-4, {
-  
-} 
+
+}
 
   .title-center {
     position: relative;
