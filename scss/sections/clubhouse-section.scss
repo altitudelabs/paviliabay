@@ -23,12 +23,17 @@
 
   $white-line-left: -250px;
 
-  // wheelbutton
-  $wheelbutton-top: 490px;
-  $wheelbutton-top-mobile: 360px;
-  $wheelbutton-left: $bluebox-container-width + 4%;
-  $wheelbutton-left-trans: $bluebox-container-width-trans + 6%;
-  $wheelbutton-left-mobile: 260px;
+/*  // wheelbutton
+  // $wheelbutton-top: 490px;
+  // $wheelbutton-top-mobile: 360px;
+  // $wheelbutton-left: $bluebox-container-width + 4%;
+  // $wheelbutton-left-trans: $bluebox-container-width-trans + 6%;
+  // $wheelbutton-left-mobile: 260px;*/
+  $wheelbutton-bottom: 130px;
+  $wheelbutton-bottom-mobile: 115px;
+  $wheelbutton-right: 80px;
+  $wheelbutton-right-trans: 90px;
+  $wheelbutton-right-mobile: 55px;
 
   @extend .clearfix;
   position: relative;
@@ -39,7 +44,7 @@
   * Text styles
   * * * * * * * * * * * * * * * */
 
-  .club-title-text {
+  .club-title-text, .fixed-the {
     font-family: futura;
     font-weight: normal;
     font-size: 24px;
@@ -66,7 +71,7 @@
     }
   }
 
-  .link-text, .link-text-overlay {
+  .link-text, .link-text-overlay, .link-the {
     font-family: futuraLTProLight;
     font-weight: lighter;
     font-size: 17px;
@@ -224,31 +229,31 @@
 
   .wheelbutton-container {
     position: absolute;
-    top: $wheelbutton-top;
-    left: $wheelbutton-left;
-    transition: top 300ms,
+    bottom: $wheelbutton-bottom;
+    right: $wheelbutton-right;
+/*    transition: top 300ms,
                 right 300ms,
                 bottom 300ms,
-                left 300ms;
+                left 300ms;*/
 
     @include responsive(transition) {
-      left: $wheelbutton-left-trans;
+      right: $wheelbutton-right-trans;
     }
 
     @include responsive(mobile) {
-      top: $wheelbutton-top-mobile;
-      left: $wheelbutton-left-mobile;
+      bottom: $wheelbutton-bottom-mobile;
+      right: $wheelbutton-right-mobile;
     }
   }
 
-  &.full-screen .wheelbutton-container {
+/*  &.full-screen .wheelbutton-container {
     @include responsive(mobile) {
-    top: calc(100% - 130px);
-    left: calc(100% - 55px);
+    bottom: calc(100% - 130px);
+    right: calc(100% - 55px);
     }
     top: calc(100% - 160px);
     left: calc(100% - 95px);
-  }
+  }*/
 
 
 }

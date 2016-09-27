@@ -1,7 +1,7 @@
 #panorama-section {
   @extend .background-cover;
-  $section-height: 663px;
-  $section-height-mobile: 576px;
+  $section-height: 100vh;
+  $section-height-mobile: 100vh;
 
   $panorama-content-bottom: 35%;
 
