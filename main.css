@@ -733,19 +733,8 @@ sup {
     z-index: 0;
     background-image: url("./images/clubhouse-section/2_club2.jpg");
     background-position: center;
-    background-size: cover;
-    /*    @include responsive(transition){
-      width: $image-container-width-trans;
-    }
-
-    @include responsive(mobile){
-      background-position: left;
-      top: 11.5vh;
-      min-height: 570px;
-      height: 570px;
-      width: 100%;
-    }*/ }
-  #clubhouse-section .full-section-view.fade-in-view {
+    background-size: cover; }
+  #clubhouse-section.full-screen .full-section-view {
     opacity: 1;
     z-index: 50;
     -webkit-transition: all 1s linear;
@@ -755,8 +744,6 @@ sup {
   #clubhouse-section .clubhouse-image-container {
     height: 669px;
     background-image: url("./images/clubhouse-section/club1.jpg");
-    background-position: left;
-    background-size: cover;
     position: relative;
     float: right;
     width: 75%; }
@@ -825,7 +812,8 @@ sup {
   #clubhouse-section .wheelbutton-container {
     position: absolute;
     top: 490px;
-    left: 29%; }
+    left: 29%;
+    transition: top 300ms, right 300ms, bottom 300ms, left 300ms; }
     @media only screen and (min-width: 721px) and (max-width: 1199px) {
       #clubhouse-section .wheelbutton-container {
         left: 46%; } }
@@ -833,6 +821,13 @@ sup {
       #clubhouse-section .wheelbutton-container {
         top: 360px;
         left: 260px; } }
+  #clubhouse-section.full-screen .wheelbutton-container {
+    top: calc(100% - 160px);
+    left: calc(100% - 95px); }
+    @media only screen and (max-width: 720px) {
+      #clubhouse-section.full-screen .wheelbutton-container {
+        top: calc(100% - 130px);
+        left: calc(100% - 55px); } }
 
 #companyinfo-section {
   color: white;

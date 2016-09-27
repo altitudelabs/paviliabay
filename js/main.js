@@ -78,7 +78,7 @@ $(document).ready(function(){
   // });
 
   $('#nav-menu-content li a').on('click', function(){
-    if ($(this).parent().children('ul').css('display') == 'block') {
+    if ($(this).parent().children('ul').css('display') === 'block') {
       $(this).parent().children('ul').css('display', 'none');
     }
     else {
@@ -175,29 +175,7 @@ $(document).ready(function(){
       $('#companyinfo-section').removeClass('active');
     }
   });
-
   // CLUBHOUSE SECTION
-  var clubhouseText = ['Blue Pavilion - Hong Kong\'s first residential clubhouse ',
-    'embodied with distinctive superyacht features. The pioneering Blue Pavilia is designed ',
-    'by the international renowned superyacht designer Philippe Briand. ',
-    'It features a swimming pool, a kids pool, three jacuzzis, three saunas, ',
-    'a Multi- Intelligence Playscape, a gym, a Billiard room and two function rooms.'].join('');
-  var facadeText = ['Inspired by the optimal proportion of hull and superstructure of superyacht ',
-    'the two buildings are embodied with curtain walls and constructed with sleek and clean outlines. ',
-    'The distinctive design idea of the buidling\'s roof comes from the mainsail of a sailing yacht ',
-    'during its wind propulsion, creating a prominent figure among the others.'].join('');
-  var interiorText = ['THE PAVILIA BAY comprises 983 units of residences and features a range ',
-    'of layouts to suit residents\' needs, varying from studio to 4-bedroom units. Exquisite residences ',
-    'range in saleable area from 306 sq. ft. to 1,366 sq. ft.. The bathrooms and kitchens are well-equipped ',
-    'with a selection of international renowned appliances to provide the bespoke settings with ',
-    'contempporary design '].join('');
-  var clubhouseImages = ['./images/clubhouse-section/2_club2.jpg',
-    './images/clubhouse-section/3_club3.jpg','./images/clubhouse-section/4_club4.jpg','./images/clubhouse-section/5_club5.jpg'];
-  var facadeImages = ['./images/clubhouse-section/7_facade2.jpg'];
-  var interiorImages = ['./images/clubhouse-section/9_interior2.jpg',
-    './images/clubhouse-section/10_interior3.jpg','./images/clubhouse-section/11_interior4.jpg','./images/clubhouse-section/12_interior5.jpg'];
-  var currentImage = 0;
-
   $('.clubhouse-blue-box').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
     function(e) {
       $('.animation-text').addClass('fade');
@@ -205,42 +183,82 @@ $(document).ready(function(){
     }
   );
 
-  var changeClubhouseContent = function (currentSection) {
+  var CLUBHOUSE_DATA = $('#clubhouse-section').data('categories');
 
-    if (currentSection == 'clubhouse') {
-      $('.club-title-text').html('the <br> facade');
-      $('.club-description-text').text(facadeText);
-      $('.clubhouse-image-container').css('background-image', 'url(images/clubhouse-section/6_facade1.jpg)');
-      $('.link-text').text('The Interior >');
-      $('#clubhouse-section').data('id', 'facade')
-    } else if (currentSection == 'facade') {
-      $('.club-title-text').html('the <br> interior');
-      $('.club-description-text').text(interiorText);
-      $('.clubhouse-image-container').css('background-image', 'url(images/clubhouse-section/8_interior1.jpg)');
-      $('.link-text').text('The Clubhouse >');
-      $('#clubhouse-section').data('id', 'interior')
-    } else {
-      $('.club-title-text').html('the <br> clubhouse');
-      $('.club-description-text').text(clubhouseText);
-      $('.clubhouse-image-container').css('background-image', 'url(images/clubhouse-section/club1.jpg)');
-      $('.link-text').text('The Facade >');
-      $('#clubhouse-section').data('id', 'clubhouse')
+  var slideCloubHouseSection = $.throttle(1100, (function() {
+    var section = '#clubhouse-section';
+    var categoryIndex = 0;
+    var nextCategoryIndex = 1;
+    var imageIndex = 0;
+
+    var updateIndex = function(isNext, nextSection) {
+      console.log(nextSection);
+      if (!nextSection) {
+        if (isNext) {
+          imageIndex++;
+          if (imageIndex >= CLUBHOUSE_DATA[categoryIndex].images.length) {
+            categoryIndex++;
+
+            imageIndex = 0;
+            if (categoryIndex >= CLUBHOUSE_DATA.length) {
+              categoryIndex = 0;
+            }
+          }
+        } else {
+          imageIndex--;
+          if (imageIndex < 0) {
+            categoryIndex--;
+            if (categoryIndex < 0) {
+              categoryIndex = CLUBHOUSE_DATA.length - 1;
+            }
+            imageIndex = CLUBHOUSE_DATA[categoryIndex].images.length - 1;
+          }
+        }
+      } else {
+        categoryIndex++;
+        imageIndex = 0;
+        if (categoryIndex >= CLUBHOUSE_DATA.length) {
+          categoryIndex = 0;
+        }
+      }
+
+      nextCategoryIndex = categoryIndex + 1;
+      if (nextCategoryIndex >= CLUBHOUSE_DATA.length) {
+        nextCategoryIndex = 0;
+      }
     }
-  }
+    return function(e, isNext, nextSection) {
+      updateIndex(isNext, nextSection);
+      var imageUrl = CLUBHOUSE_DATA[categoryIndex].images[imageIndex];
+      var title = CLUBHOUSE_DATA[categoryIndex].title;
+      var desc = CLUBHOUSE_DATA[categoryIndex].desc;
+
+      $('.link-text, .link-text-overlay').text(CLUBHOUSE_DATA[nextCategoryIndex].title + ' >');
+
+      if (imageIndex === 0) {
+        $(section).removeClass('full-screen');
+        $('.clubhouse-blue-box .club-description-text').html(desc);
+        $('.clubhouse-blue-box .club-title-text').html(title);
+        $('.clubhouse-image-container').css('background-image', 'url(' + imageUrl + ')');
+
+        return;
+      }
+
+      $(section).addClass('full-screen');
+      $('.full-section-view').css(
+        'background-image',
+        'url(' + imageUrl + ')'
+      );
+    };
+  })());
 
   // On click, change section title, text, image and link
-  $('.link-text, .link-text-overlay').on('click', function() {
-    currentImage = 0;
-    $animation_elements.removeClass('in-view');
-    $('#clubhouse-section').find('.animation-element').removeClass('fade');
-    $('.full-section-view').removeClass('fade-in-view');
-    setTimeout(function() {
-      changeClubhouseContent($('#clubhouse-section').data('id'));
-        $window.trigger('scroll');
-    }, 700);
+  $('.link-text, .link-text-overlay').on('click', function(e) {
+    slideCloubHouseSection.apply(this, [e, false, true]);
   });
 
   $('.next-prev-wheelbutton').click(function(e) {
+    e.preventDefault();
     var target = $(this).data('target');
     if (target === 'scrollTop') {
       console.log('hello');
@@ -249,42 +267,21 @@ $(document).ready(function(){
     }
 
     var isNext = $(e.target).hasClass('next');
-    if (isNext) {
-      if (target == '#clubhouse-section') {
-        $('#clubWheel').animate({right: 80, bottom: 120}, 1000).css('left', 'auto');
-        var currentCategory = $('#clubhouse-section').data('id');
 
-        if (currentCategory == 'clubhouse') {
-          imageArray = clubhouseImages;
-        } else if (currentCategory == 'facade') {
-          imageArray = facadeImages;
-        } else {
-          imageArray = interiorImages;
-        }
-        if (currentImage == imageArray.length) {
-          $('.full-section-view').removeClass('fade-in-view');
-          $('.link-text-overlay').click();
-          currentImage = 0;
-          return;
-        }
-        if (!$('.full-section-view').hasClass('fade-in-view')) {
-          $('.full-section-view').css('background-image','url('+imageArray[currentImage]+')');
-          $('.full-section-view').addClass('fade-in-view');
-          currentImage = currentImage + 1;
-        } else {
-          $('.full-section-view').css('background-image','url('+imageArray[currentImage]+')');
-          currentImage = currentImage +1;
-        }
-      }
-      if (target == '#designerprofile-section') {
+    if (target === '#clubhouse-section') {
+      return slideCloubHouseSection.apply(this, [e, isNext]);
+    }
+
+    if (isNext) {
+      if (target === '#designerprofile-section') {
         var currentText = $('.designer-description-text').data('id');
-        if (currentText == 'default') {
+        if (currentText === 'default') {
           $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
             $('.description').text(passionText)
             $('.quote').html('<strong>His Passion</strong>');
           }).delay(1000).animate({'opacity': 1}, 1500);
           $('.designer-description-text').data('id','passion');
-        } else if (currentText == 'passion') {
+        } else if (currentText === 'passion') {
           $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
             $('.quote').html('<strong>His Design</strong>');
             $('.description').text(designText);
@@ -300,9 +297,10 @@ $(document).ready(function(){
       };
       return;
     } // if is previous
-    // if (target == '#clubhouse-section') {
+
+    // if (target === '#clubhouse-section') {
     //   if ($('.full-section-view').hasClass('fade-in-view')) {
-    //     if (currentImage == 0) {
+    //     if (currentImage === 0) {
     //       $('.full-section-view').removeClass('fade-in-view');
     //       return;
     //     }
@@ -310,15 +308,15 @@ $(document).ready(function(){
     //     $('.full-section-view').css('background-image','url('+imageArray[currentImage]+')');
     //   }
     // };
-    if (target == '#designerprofile-section') {
+    if (target === '#designerprofile-section') {
       var currentText = $('.designer-description-text').data('id');
-      if (currentText == 'default') {
+      if (currentText === 'default') {
         $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
           $('.quote').html('<strong>His Design</strong>');
           $('.description').text(designText);
         }).delay(1000).animate({'opacity': 1}, 1500);
         $('.designer-description-text').data('id','design');
-      } else if (currentText == 'passion') {
+      } else if (currentText === 'passion') {
         $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
           $('.quote').html('<em>"A yacht is to always please the eye and be the pride of her owner."</em>');
           $('.description').text(defaultText);
