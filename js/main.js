@@ -15,9 +15,9 @@ $(document).ready(function(){
     map.scrollZoom.disable();
 
     new mapboxgl.Marker($('#marker')[0], {
-      offset: [-120 , -60]
+      offset: [-75, -60]
     })
-    .setLngLat([114.113393, 22.365400])
+    .setLngLat([114.112723, 22.365542])
     .addTo(map)
   };
   initMap();
