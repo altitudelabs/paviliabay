@@ -63,7 +63,8 @@ html, body {
   position: relative;
   height: auto;
   min-height: 100%;
-  width: 100%; }
+  width: 100%;
+  overflow-x: hidden; }
 
 div {
   box-sizing: border-box; }
