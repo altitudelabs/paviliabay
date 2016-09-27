@@ -29,7 +29,7 @@
   .panorama-content {
     z-index: 1;
     position: absolute;
-    transform: translateX(-50%);
+    @include transform(translateX(-50%));
     left: 50%;
     text-align: center;
     top: $panorama-content-top;

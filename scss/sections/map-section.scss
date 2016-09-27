@@ -24,6 +24,7 @@
 
     @include responsive(mobile){
       width: 100%;
+      min-width: 100%;
       height: $map-height-mobile;
       min-height: 60vh;
     }
