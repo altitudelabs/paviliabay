@@ -89,10 +89,46 @@ sup {
 .animation-element.slide-left {
   opacity: 0;
   @include transition((all 600ms linear));
-  @include transform(translate3d(-100px, 0px, 0px));
+  @include transform(translate3d(-200px, 0px, 0px));
 }
 
 .animation-element.slide-left.in-view {
+  opacity: 1;
+  @include transform(translate3d(0px, 0px, 0px));
+}
+.slide-in {
+  opacity: 0;
+  @include transition((all 600ms linear));
+  @include transform(translate3d(-200px, 0px, 0px));
+}
+.slide-in.active {
+  opacity: 1;
+  @include transform(translate3d(0px, 0px, 0px));
+}
+.slide-in-left {
+  opacity: 0;
+  @include transition((all 600ms linear));
+  @include transform(translate3d(-100px, 0px, 0px));
+}
+.slide-in-left.active {
+  opacity: 1;
+  @include transform(translate3d(0px, 0px, 0px));
+}
+.slide-in-right {
+  opacity: 0;
+  @include transition((all 600ms linear));
+  @include transform(translate3d(100px, 0px, 0px));
+}
+.slide-in-right.active {
+  opacity: 1;
+  @include transform(translate3d(0px, 0px, 0px));
+}
+.slide-in-right-map {
+  opacity: 0;
+  @include transition((all 600ms linear));
+  @include transform(translate3d(300px, 0px, 0px));
+}
+.slide-in-right-map.active {
   opacity: 1;
   @include transform(translate3d(0px, 0px, 0px));
 }
@@ -105,7 +141,7 @@ sup {
   @include transform(translate3d(100px, 0px, 0px));
 }
 
-.animation-element.slide-right.in-view {
+.animation-element.slide-right.activate {
   opacity: 1;
   @include transform(translate3d(0px, 0px, 0px));
 }
@@ -121,23 +157,23 @@ sup {
   opacity: 1;
   @include transition((all 1s linear));
 }
-.animation-element.fade-button {
+.fade-button {
   opacity: 0;
   @include transition((all 800ms linear));
 }
 
-.animation-element.fade-button.in-view {
+.fade-button.active {
   opacity: 0.5;
   @include transition((all 800ms linear));
 }
 
 .hero-fade {
   opacity: 0;
-  @include transition((all 800ms linear));
+  @include transition((all 1s linear));
 }
 .hero-fade.active {
   opacity: 1;
-  @include transition((all 800ms linear));
+  @include transition((all 1s linear));
 }
 
 /* * * * * * * * * * * * * * * * * * * * *
