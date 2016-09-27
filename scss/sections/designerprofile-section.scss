@@ -8,6 +8,7 @@
   $greybox-bluebox-offset-x: 30px;
   $greybox-bluebox-offset-y: -117px;
   $greybox-minheight: 446px;
+  $greybox-minheight-trans: 725px;
   $greybox-minheight-mobile: 600px;
 
   $bluebox-width: 337px;
@@ -47,6 +48,10 @@
     overflow: visible;
     min-height: $greybox-minheight;
     margin-bottom: $greybox-bottom-gutter;
+
+    @include responsive(transition) {
+      min-height: $greybox-minheight-trans;
+    }
 
     @include responsive(mobile) {
       min-height: $greybox-minheight-mobile;
@@ -157,26 +162,17 @@
     .quote {
       font-style: italic;
       font-size: 17px;
-
-      // @include responsive(transition) {
-      //   font-style: italic;
-      //   line-height: 38px;
-      //   font-size: 25px;
-      // }
     }
     .description {
       font-size: 13px;
       letter-spacing: 0.025em;
       line-height: 25px;
-
-
-      // @include responsive(transition) {
-      //   line-height: 33px;
-      //   font-size: 23px;
-      //   margin-bottom: 40px;
-      //   min-height: 200px;
-      // }
       margin-bottom: 20px;
+    }
+
+    @include responsive (transition) {
+      width: auto;
+      padding: 35px 30px;
     }
 
     @include responsive (mobile){
