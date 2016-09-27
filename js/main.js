@@ -123,6 +123,37 @@ $(document).ready(function(){
     $('#hero-section .wheelbutton-container').css('visibility', 'visible');
     $('#nav-menu-content').removeClass('in-view');
   });
+  setTimeout(function(){
+    $('#cover-image').addClass('active');
+  }, 500);
+  $('#cover-image').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+    function(e) {
+      $('.title-eng-text').addClass('active');
+    }
+  );
+  $('.title-eng-text').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+    function(e) {
+      $('.title-chi-text').addClass('active');
+    }
+  );
+  $('.title-chi-text').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+    function(e) {
+      $('.title-white-box-text').addClass('active');
+      $('.transparent-button').addClass('active');
+    }
+  );
+  $('.title-white-box-text').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+    function(e) {
+      $('.hero-footer').addClass('active');
+      $('#hero-wheel').addClass('active');
+    }
+  );
+  $('.hero-footer').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+    function(e) {
+      $('.register-link-text').addClass('active');
+    }
+  );
+  
 
   // TODO: Mute / unmute audio
   $('#sound').on('click', function(){
