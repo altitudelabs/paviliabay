@@ -78,7 +78,7 @@ $(document).ready(function(){
   // });
 
   $('#nav-menu-content li a').on('click', function(){
-    if ($(this).parent().children('ul').css('display') == 'block') {
+    if ($(this).parent().children('ul').css('display') === 'block') {
       $(this).parent().children('ul').css('display', 'none');
     }
     else {
@@ -207,13 +207,13 @@ $(document).ready(function(){
 
   var changeClubhouseContent = function (currentSection) {
 
-    if (currentSection == 'clubhouse') {
+    if (currentSection === 'clubhouse') {
       $('.club-title-text').html('the <br> facade');
       $('.club-description-text').text(facadeText);
       $('.clubhouse-image-container').css('background-image', 'url(images/clubhouse-section/6_facade1.jpg)');
       $('.link-text').text('The Interior >');
       $('#clubhouse-section').data('id', 'facade')
-    } else if (currentSection == 'facade') {
+    } else if (currentSection === 'facade') {
       $('.club-title-text').html('the <br> interior');
       $('.club-description-text').text(interiorText);
       $('.clubhouse-image-container').css('background-image', 'url(images/clubhouse-section/8_interior1.jpg)');
@@ -233,58 +233,80 @@ $(document).ready(function(){
     currentImage = 0;
     $animation_elements.removeClass('in-view');
     $('#clubhouse-section').find('.animation-element').removeClass('fade');
-    $('.full-section-view').removeClass('fade-in-view');
+    $('.full-section-view').removeClass('full-screen');
     setTimeout(function() {
       changeClubhouseContent($('#clubhouse-section').data('id'));
         $window.trigger('scroll');
     }, 700);
   });
 
+  $('.full-section-view').css('background-image','url('+clubhouseImages[0]+')');
+  var current = 0;
+  $('#test').click(function(e) {
+    var target = $(this).data('target');
+    var isNext = $(e.target).hasClass('next');
+    if (!$(target).hasClass('full-screen')) {
+      $(target).addClass('full-screen');
+    } 
+    if (isNext) {
+      current++;
+      $('.full-section-view').css('background-image', 'url('+clubhouseImages[current]+')');
+      return;
+    }
+    if (current < 1) { return; }
+    current--;
+
+    $('.full-section-view').css('background-image', 'url('+clubhouseImages[current]+')');
+  });
+  var imageArray;
   $('.next-prev-wheelbutton').click(function(e) {
+    e.preventDefault();
     var target = $(this).data('target');
     if (target === 'scrollTop') {
       console.log('hello');
       $('body').animate({ scrollTop: 0 }, 500);
       return;
     }
-
+    console.log('clicked');
     var isNext = $(e.target).hasClass('next');
     if (isNext) {
-      if (target == '#clubhouse-section') {
-        $('#clubWheel').animate({right: 80, bottom: 120}, 1000).css('left', 'auto');
+      if (target === '#clubhouse-section') {
         var currentCategory = $('#clubhouse-section').data('id');
 
-        if (currentCategory == 'clubhouse') {
+        if (currentCategory === 'clubhouse') {
           imageArray = clubhouseImages;
-        } else if (currentCategory == 'facade') {
+        } else if (currentCategory === 'facade') {
           imageArray = facadeImages;
         } else {
           imageArray = interiorImages;
         }
-        if (currentImage == imageArray.length) {
-          $('.full-section-view').removeClass('fade-in-view');
+        if (currentImage === imageArray.length) {
+          $(target).removeClass('full-screen');
           $('.link-text-overlay').click();
           currentImage = 0;
           return;
         }
-        if (!$('.full-section-view').hasClass('fade-in-view')) {
+        // console.log(imageArray);
+        // console.log(currentImage);
+        // debugger;
+        if (!$(target).hasClass('full-screen')) {
           $('.full-section-view').css('background-image','url('+imageArray[currentImage]+')');
-          $('.full-section-view').addClass('fade-in-view');
+          $(target).addClass('full-screen');
           currentImage = currentImage + 1;
         } else {
           $('.full-section-view').css('background-image','url('+imageArray[currentImage]+')');
           currentImage = currentImage +1;
         }
       }
-      if (target == '#designerprofile-section') {
+      if (target === '#designerprofile-section') {
         var currentText = $('.designer-description-text').data('id');
-        if (currentText == 'default') {
+        if (currentText === 'default') {
           $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
             $('.description').text(passionText)
             $('.quote').html('<strong>His Passion</strong>');
           }).delay(1000).animate({'opacity': 1}, 1500);
           $('.designer-description-text').data('id','passion');
-        } else if (currentText == 'passion') {
+        } else if (currentText === 'passion') {
           $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
             $('.quote').html('<strong>His Design</strong>');
             $('.description').text(designText);
@@ -300,25 +322,25 @@ $(document).ready(function(){
       };
       return;
     } // if is previous
-    // if (target == '#clubhouse-section') {
-    //   if ($('.full-section-view').hasClass('fade-in-view')) {
-    //     if (currentImage == 0) {
-    //       $('.full-section-view').removeClass('fade-in-view');
-    //       return;
-    //     }
-    //     currentImage = currentImage - 1;
-    //     $('.full-section-view').css('background-image','url('+imageArray[currentImage]+')');
-    //   }
-    // };
-    if (target == '#designerprofile-section') {
+    if (target === '#clubhouse-section') {
+      if ($(target).hasClass('full-screen')) {
+        if (currentImage === 0) {
+          $('.full-section-view').removeClass('full-screen');
+          return;
+        }
+        currentImage = currentImage - 1;
+        $('.full-section-view').css('background-image', 'url('+imageArray[currentImage]+')');
+      }
+    };
+    if (target === '#designerprofile-section') {
       var currentText = $('.designer-description-text').data('id');
-      if (currentText == 'default') {
+      if (currentText === 'default') {
         $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
           $('.quote').html('<strong>His Design</strong>');
           $('.description').text(designText);
         }).delay(1000).animate({'opacity': 1}, 1500);
         $('.designer-description-text').data('id','design');
-      } else if (currentText == 'passion') {
+      } else if (currentText === 'passion') {
         $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
           $('.quote').html('<em>"A yacht is to always please the eye and be the pride of her owner."</em>');
           $('.description').text(defaultText);

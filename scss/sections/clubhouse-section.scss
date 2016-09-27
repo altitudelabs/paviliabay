@@ -130,10 +130,12 @@
     }*/
   }
 
-  .full-section-view.fade-in-view {
-    opacity: 1;
-    z-index: 50;
-    @include transition((all 1s linear));
+  &.full-screen {
+    .full-section-view {
+      opacity: 1;
+      z-index: 50;
+      @include transition((all 1s linear));
+    }
   }
 
   .clubhouse-image-container {
@@ -237,6 +239,10 @@
     position: absolute;
     top: $wheelbutton-top;
     left: $wheelbutton-left;
+    transition: top 300ms,
+                right 300ms,
+                bottom 300ms,
+                left 300ms;
 
     @include responsive(transition) {
       left: $wheelbutton-left-trans;
@@ -247,4 +253,15 @@
       left: $wheelbutton-left-mobile;
     }
   }
+
+  &.full-screen .wheelbutton-container {
+    @include responsive(mobile) {
+    top: calc(100% - 130px);
+    left: calc(100% - 55px);
+    }
+    top: calc(100% - 160px);
+    left: calc(100% - 95px);
+  }
+
+
 }
