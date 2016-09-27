@@ -1218,10 +1218,12 @@ sup {
       width: 100%;
       top: 37%; } }
 
-#panorama-section.active .panorama-content {
-  bottom: 50px; }
-  #panorama-section.active .panorama-content .title-center {
-    opacity: 0; }
+#panorama-section.active {
+  background: none !important; }
+  #panorama-section.active .panorama-content {
+    bottom: 50px; }
+    #panorama-section.active .panorama-content .title-center {
+      opacity: 0; }
 
 #panorama-section .title-center {
   transition: opacity 500ms;

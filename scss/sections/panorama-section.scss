@@ -40,6 +40,7 @@
   }
 
   &.active {
+    background: none !important;
     .panorama-content {
       bottom: 50px;
       .title-center {
