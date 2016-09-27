@@ -831,16 +831,21 @@ sup {
     padding-top: 96px;
     padding-right: 155px;
     padding-left: 155px; }
-    #companyinfo-section .company-logo .description {
+    @media only screen and (max-width: 720px) {
+      #companyinfo-section .company-logo {
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-top: 37px; } }
+    #companyinfo-section .company-logo p {
       font-family: futura;
       font-weight: normal;
       font-size: 15px;
       letter-spacing: 0.025em;
       line-height: 26px; }
       @media only screen and (max-width: 720px) {
-        #companyinfo-section .company-logo .description {
-          line-height: 30px;
-          font-size: 15px; } }
+        #companyinfo-section .company-logo p {
+          line-height: 14px;
+          font-size: 11px; } }
     #companyinfo-section .company-logo .image {
       top: 35px;
       height: 42px;
@@ -848,12 +853,19 @@ sup {
       position: relative;
       margin: auto;
       margin-bottom: 40px; }
+      @media only screen and (max-width: 720px) {
+        #companyinfo-section .company-logo .image {
+          top: 22px;
+          height: 20px;
+          width: auto;
+          margin-bottom: 25px; } }
   #companyinfo-section .disclaimer {
     position: relative;
     padding: 40px 80px; }
     @media only screen and (max-width: 720px) {
       #companyinfo-section .disclaimer {
-        padding: 40px 0; } }
+        padding: 0;
+        padding-bottom: 20px; } }
     #companyinfo-section .disclaimer .title {
       font-family: futura;
       font-weight: normal;
@@ -865,8 +877,8 @@ sup {
       margin-bottom: 20px; }
       @media only screen and (max-width: 720px) {
         #companyinfo-section .disclaimer .title {
-          line-height: 30px;
-          font-size: 15px; } }
+          font-size: 10px;
+          margin-bottom: 0; } }
     #companyinfo-section .disclaimer p {
       font-family: futuraBT;
       font-weight: normal;
@@ -877,8 +889,9 @@ sup {
       margin: 0; }
       @media only screen and (max-width: 720px) {
         #companyinfo-section .disclaimer p {
-          line-height: 30px;
-          font-size: 15px; } }
+          line-height: 14px;
+          font-size: 11px;
+          padding: 20px; } }
 
 #designerprofile-section .yacht {
   background-image: url("images/designerprofile-section/bg.jpg");

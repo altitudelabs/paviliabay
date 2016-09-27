@@ -1,4 +1,9 @@
 #companyinfo-section {
+
+  $side-padding: 155px;
+  $side-padding-mobile: 10px;
+
+
   color: white;
   text-align: center;
 
@@ -37,10 +42,16 @@
     display: inline-block;
     vertical-align: top;
     padding-top: 96px;
-    padding-right: 155px;
-    padding-left: 155px;
+    padding-right: $side-padding;
+    padding-left: $side-padding;
 
-    .description {
+    @include responsive(mobile) {
+      padding-right: $side-padding-mobile;
+      padding-left: $side-padding-mobile;
+      padding-top: 37px;
+    }
+
+    p {
       font-family: futura;
       font-weight: normal;
       font-size: 15px;
@@ -48,8 +59,8 @@
       line-height: 26px;
 
       @include responsive(mobile){
-        line-height: 30px;
-        font-size: 15px;
+        line-height: 14px;
+        font-size: 11px;
       }
     }
 
@@ -60,6 +71,13 @@
       position: relative;
       margin: auto;
       margin-bottom: 40px;
+
+      @include responsive(mobile) {
+        top: 22px;
+        height: 20px;
+        width: auto;
+        margin-bottom: 25px;
+      }
     }
   }
 
@@ -68,7 +86,8 @@
     padding: 40px 80px;
 
     @include responsive(mobile) {
-      padding: 40px 0;
+      padding: 0;
+      padding-bottom: 20px;
     }
 
     .title {
@@ -87,8 +106,8 @@
       // }
 
       @include responsive(mobile){
-        line-height: 30px;
-        font-size: 15px;
+        font-size: 10px;
+        margin-bottom: 0;
       }
     }
 
@@ -106,8 +125,9 @@
       //   font-size: 22px;
       // }
       @include responsive(mobile) {
-        line-height: 30px;
-        font-size: 15px;
+        line-height: 14px;
+        font-size: 11px;
+        padding: 20px;
       }
     }
   }
