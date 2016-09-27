@@ -132,14 +132,14 @@ sup {
 .clearfix:after, .fixer-float-container:after, #clubhouse-section:after, #designerprofile-section .description-grey-box:after {
   clear: both; }
 
-.background-image, .background-cover, #hero-section #cover-image, #clubhouse-section .full-section-view, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #panorama-section, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image, .background-contain, #nav-menu #nav-cross, #nav-menu #nav-arrow, #nav-menu .nav-sound, #nav-menu .sound-off, #nav-menu .sound-on, #designerprofile-section .designer-photo, #marker, #portfolio-section .arrow-right, .wheelbutton-container .next-prev-wheelbutton {
+.background-image, .background-cover, #hero-section #cover-image, #clubhouse-section .full-section-view, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #panorama-section, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image, .background-contain, #nav-menu #nav-cross, #nav-menu #nav-arrow, #nav-menu .nav-sound, #nav-menu .sound-off, #nav-menu .sound-on, #designerprofile-section .designer-photo, #marker .image, #portfolio-section .arrow-right, .wheelbutton-container .next-prev-wheelbutton {
   background-position: center center;
   background-repeat: no-repeat; }
 
 .background-cover, #hero-section #cover-image, #clubhouse-section .full-section-view, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #panorama-section, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image {
   background-size: cover; }
 
-.background-contain, #nav-menu #nav-cross, #nav-menu #nav-arrow, #nav-menu .nav-sound, #nav-menu .sound-off, #nav-menu .sound-on, #designerprofile-section .designer-photo, #marker, #portfolio-section .arrow-right, .wheelbutton-container .next-prev-wheelbutton {
+.background-contain, #nav-menu #nav-cross, #nav-menu #nav-arrow, #nav-menu .nav-sound, #nav-menu .sound-off, #nav-menu .sound-on, #designerprofile-section .designer-photo, #marker .image, #portfolio-section .arrow-right, .wheelbutton-container .next-prev-wheelbutton {
   background-size: contain; }
 
 /*animation element*/
@@ -1177,6 +1177,24 @@ sup {
 #marker {
   width: 150px;
   height: 60px; }
+  #marker .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite; }
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0%); }
+  50% {
+    transform: translateY(15%); }
+  100% {
+    transform: translateY(0%); } }
 
 #panorama-section .panorama-image-container {
   height: 663px;
