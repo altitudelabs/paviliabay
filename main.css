@@ -857,8 +857,8 @@ sup {
     display: inline-block;
     vertical-align: top;
     padding-top: 96px;
-    padding-right: 155px;
-    padding-left: 155px; }
+    padding-right: 100px;
+    padding-left: 100px; }
     @media only screen and (max-width: 720px) {
       #companyinfo-section .company-logo {
         padding-right: 10px;
