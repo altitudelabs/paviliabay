@@ -51,10 +51,23 @@
     }
   }
 
+  .back-top-wheelbutton {
+    @extend .next-prev-wheelbutton;
+    background-image: url("./images/wheel-button/back_eng_black_2x.png");
+
+    @include responsive(mobile) {
+      background-image: url("./images/wheel-button/back_eng_white_2x.png");
+    }
+  }
+
   &.scroll-top {
     position: absolute;
     right: 50px;
     bottom: 100px;
+
+    @include responsive(mobile) {
+      bottom: 50px;
+    }
   }
 
   @include responsive(mobile) {

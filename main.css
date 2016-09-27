@@ -132,14 +132,14 @@ sup {
 .clearfix:after, .fixer-float-container:after, #clubhouse-section:after, #designerprofile-section .description-grey-box:after {
   clear: both; }
 
-.background-image, .background-cover, #hero-section #cover-image, #clubhouse-section .full-section-view, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #panorama-section, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image, .background-contain, #nav-menu #nav-cross, #nav-menu #nav-arrow, #nav-menu .nav-sound, #nav-menu .sound-off, #nav-menu .sound-on, #designerprofile-section .designer-photo, #marker .image, #portfolio-section .arrow-right, .wheelbutton-container .next-prev-wheelbutton {
+.background-image, .background-cover, #hero-section #cover-image, #clubhouse-section .full-section-view, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #panorama-section, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image, .background-contain, #nav-menu #nav-cross, #nav-menu #nav-arrow, #nav-menu .nav-sound, #nav-menu .sound-off, #nav-menu .sound-on, #designerprofile-section .designer-photo, #marker .image, #portfolio-section .arrow-right, .wheelbutton-container .next-prev-wheelbutton, .wheelbutton-container .back-top-wheelbutton {
   background-position: center center;
   background-repeat: no-repeat; }
 
 .background-cover, #hero-section #cover-image, #clubhouse-section .full-section-view, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #panorama-section, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image {
   background-size: cover; }
 
-.background-contain, #nav-menu #nav-cross, #nav-menu #nav-arrow, #nav-menu .nav-sound, #nav-menu .sound-off, #nav-menu .sound-on, #designerprofile-section .designer-photo, #marker .image, #portfolio-section .arrow-right, .wheelbutton-container .next-prev-wheelbutton {
+.background-contain, #nav-menu #nav-cross, #nav-menu #nav-arrow, #nav-menu .nav-sound, #nav-menu .sound-off, #nav-menu .sound-on, #designerprofile-section .designer-photo, #marker .image, #portfolio-section .arrow-right, .wheelbutton-container .next-prev-wheelbutton, .wheelbutton-container .back-top-wheelbutton {
   background-size: contain; }
 
 /*animation element*/
@@ -852,7 +852,8 @@ sup {
     text-align: center; }
     @media only screen and (max-width: 720px) {
       #companyinfo-section .companyinfo-body-container {
-        width: 100%; } }
+        width: 100%;
+        margin-bottom: 0; } }
   #companyinfo-section .company-logo {
     display: inline-block;
     vertical-align: top;
@@ -893,7 +894,7 @@ sup {
     @media only screen and (max-width: 720px) {
       #companyinfo-section .disclaimer {
         padding: 0;
-        padding-bottom: 20px; } }
+        padding-bottom: 80px; } }
     #companyinfo-section .disclaimer .title {
       font-family: futura;
       font-weight: normal;
@@ -1487,7 +1488,7 @@ sup {
     -moz-animation-play-state: paused;
     -o-animation-play-state: paused;
     animation-play-state: paused; }
-  .wheelbutton-container .next-prev-wheelbutton {
+  .wheelbutton-container .next-prev-wheelbutton, .wheelbutton-container .back-top-wheelbutton {
     width: 100px;
     height: 100px;
     cursor: pointer;
@@ -1501,24 +1502,32 @@ sup {
     padding: 10%;
     width: 80px;
     height: 80px; }
-    .wheelbutton-container .next-prev-wheelbutton .next, .wheelbutton-container .next-prev-wheelbutton .prev {
+    .wheelbutton-container .next-prev-wheelbutton .next, .wheelbutton-container .back-top-wheelbutton .next, .wheelbutton-container .next-prev-wheelbutton .prev, .wheelbutton-container .back-top-wheelbutton .prev {
       text-align: center;
       vertical-align: middle;
       height: 50%; }
-    .wheelbutton-container .next-prev-wheelbutton.white {
+    .wheelbutton-container .next-prev-wheelbutton.white, .wheelbutton-container .white.back-top-wheelbutton {
       background-image: url("./images/wheel-button/nextprev_eng_white_2x.png"); }
-    .wheelbutton-container .next-prev-wheelbutton:hover {
+    .wheelbutton-container .next-prev-wheelbutton:hover, .wheelbutton-container .back-top-wheelbutton:hover {
       width: 120px;
       height: 120px; }
+  .wheelbutton-container .back-top-wheelbutton {
+    background-image: url("./images/wheel-button/back_eng_black_2x.png"); }
+    @media only screen and (max-width: 720px) {
+      .wheelbutton-container .back-top-wheelbutton {
+        background-image: url("./images/wheel-button/back_eng_white_2x.png"); } }
   .wheelbutton-container.scroll-top {
     position: absolute;
     right: 50px;
     bottom: 100px; }
+    @media only screen and (max-width: 720px) {
+      .wheelbutton-container.scroll-top {
+        bottom: 50px; } }
   @media only screen and (max-width: 720px) {
-    .wheelbutton-container .next-prev-wheelbutton {
+    .wheelbutton-container .next-prev-wheelbutton, .wheelbutton-container .back-top-wheelbutton {
       width: 85px;
       height: 85px; }
-    .wheelbutton-container:hover .next-prev-wheelbutton {
+    .wheelbutton-container:hover .next-prev-wheelbutton, .wheelbutton-container:hover .back-top-wheelbutton {
       width: 102px;
       height: 102px; } }
 
