@@ -3,7 +3,7 @@
   $section-height: 663px;
   $section-height-mobile: 576px;
 
-  $panorama-content-top: 40%;
+  $panorama-content-bottom: 35%;
 
   .panorama-image-container {
     // display: none;
@@ -18,13 +18,11 @@
       height: 100%;
     }
   }
-
-  // &.day .day,
-  // &.magic .magic,
-  // &.night .night,
-  // &.default .default {
-  //   display: block;
-  // }
+  &.day [data-target="day"],
+  &.magic [data-target="magic"],
+  &.night [data-target="night"] {
+    // color: white;
+  }
 
   .panorama-content {
     z-index: 1;
@@ -32,7 +30,8 @@
     @include transform(translateX(-50%));
     left: 50%;
     text-align: center;
-    top: $panorama-content-top;
+    bottom: $panorama-content-bottom;
+    transition: bottom 500ms;
 
     @include responsive(mobile) {
       width:100%;
@@ -40,11 +39,17 @@
     }
   }
 
-.text-order-2, .text-order-3, .text-order-4, {
-
-}
+  &.active {
+    .panorama-content {
+      bottom: 50px;
+      .title-center {
+        opacity: 0;
+      }
+    }
+  }
 
   .title-center {
+    transition: opacity 500ms;
     position: relative;
     margin: auto;
 

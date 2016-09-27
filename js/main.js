@@ -385,6 +385,8 @@ $(document).ready(function(){
   var panorama;
   $('.panorama-content .button-group .button').click(function(e) {
     var target = $(this).data('target');
+    $('#panorama-section').removeClass('active day magic night');
+    $('#panorama-section').addClass('active ' + target);
     panorama ? panorama.trigger('destroy') : null;
     panorama = $('.panorama-image-container')
     .html(renderPanoramaImageContainer(target))
