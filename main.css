@@ -700,18 +700,7 @@ sup {
     z-index: 0;
     background-image: url("./images/clubhouse-section/2_club2.jpg");
     background-position: center;
-    background-size: cover;
-    /*    @include responsive(transition){
-      width: $image-container-width-trans;
-    }
-
-    @include responsive(mobile){
-      background-position: left;
-      top: 11.5vh;
-      min-height: 570px;
-      height: 570px;
-      width: 100%;
-    }*/ }
+    background-size: cover; }
   #clubhouse-section.full-screen .full-section-view {
     opacity: 1;
     z-index: 50;
@@ -722,8 +711,6 @@ sup {
   #clubhouse-section .clubhouse-image-container {
     height: 669px;
     background-image: url("./images/clubhouse-section/club1.jpg");
-    background-position: left;
-    background-size: cover;
     position: relative;
     float: right;
     width: 75%; }
