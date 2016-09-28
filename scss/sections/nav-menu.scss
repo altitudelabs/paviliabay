@@ -7,6 +7,7 @@
   $footer-height-mobile: 45px;
 
   $nav-content-width: 310px;
+  $nav-content-width-mobile: 280px;
   $nav-content-right: 30px;
   $nav-content-right-mobile: 0;
   $nav-content-height: $section-height - $footer-height;
@@ -64,14 +65,15 @@
 
   .page-link-menu-text {
     color: white;
-    font-size: 21px;
-    line-height: 35px;
+    font-size: 15px;
+    line-height: 32px;
     font-weight: 700;
     padding-left: 10px;
     white-space: nowrap;
 
     @include responsive(mobile) {
-      font-size: 19px;
+      font-size: 14px;
+      line-height: 27px;
     }
   }
 
@@ -105,6 +107,7 @@
       right: $nav-content-right-mobile;
       padding-top: $nav-content-paddingtop-mobile;
       padding-right: $nav-content-paddingright-mobile;
+      width: $nav-content-width-mobile;
     }
   }
 

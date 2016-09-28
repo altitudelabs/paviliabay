@@ -511,7 +511,7 @@ sup {
   z-index: 2; }
   @media only screen and (max-width: 720px) {
     #hero-section #hero-body-text {
-      font-size: 15px;
+      font-size: 13px;
       line-height: 17px;
       margin-top: 16%; } }
   #hero-section #hero-body-text .bold {
@@ -562,12 +562,13 @@ sup {
       left: 5%; } }
 
 #hero-section .wheelbutton-container {
+  z-index: 5;
   position: absolute;
   right: 70px;
   bottom: 50px; }
   @media only screen and (max-width: 720px) {
     #hero-section .wheelbutton-container {
-      right: 42px;
+      right: 50px;
       bottom: 60px; } }
 
 #hero-section .one-fifth-opacity {
@@ -609,14 +610,15 @@ sup {
     text-decoration: underline; }
   #nav-menu .page-link-menu-text {
     color: white;
-    font-size: 21px;
-    line-height: 35px;
+    font-size: 15px;
+    line-height: 32px;
     font-weight: 700;
     padding-left: 10px;
     white-space: nowrap; }
     @media only screen and (max-width: 720px) {
       #nav-menu .page-link-menu-text {
-        font-size: 19px; } }
+        font-size: 14px;
+        line-height: 27px; } }
   #nav-menu .second-level {
     color: #9e9da2; }
   #nav-menu a {
@@ -640,7 +642,8 @@ sup {
         height: 576px;
         right: 0;
         padding-top: 30px;
-        padding-right: 30px; } }
+        padding-right: 30px;
+        width: 280px; } }
   #nav-menu #nav-menu-links {
     clear: right;
     /* First level */ }
@@ -928,7 +931,7 @@ sup {
           font-size: 11px; } }
     #companyinfo-section .company-logo .image {
       top: 35px;
-      height: 42px;
+      height: 28px;
       width: auto;
       position: relative;
       margin: auto;
@@ -1543,8 +1546,8 @@ sup {
     -o-animation-play-state: paused;
     animation-play-state: paused; }
   .wheelbutton-container .next-prev-wheelbutton, .wheelbutton-container .back-top-wheelbutton {
-    width: 100px;
-    height: 100px;
+    width: 96px;
+    height: 96px;
     cursor: pointer;
     background-image: url("./images/wheel-button/nextprev_eng_black_2x.png");
     box-sizing: content-box;
@@ -1553,9 +1556,7 @@ sup {
     top: 50%;
     transform: translate(-50%, -50%);
     transition: all 300ms;
-    padding: 10%;
-    width: 80px;
-    height: 80px; }
+    padding: 10%; }
     .wheelbutton-container .next-prev-wheelbutton .next, .wheelbutton-container .back-top-wheelbutton .next, .wheelbutton-container .next-prev-wheelbutton .prev, .wheelbutton-container .back-top-wheelbutton .prev {
       text-align: center;
       vertical-align: middle;
@@ -1563,8 +1564,8 @@ sup {
     .wheelbutton-container .next-prev-wheelbutton.white, .wheelbutton-container .white.back-top-wheelbutton {
       background-image: url("./images/wheel-button/nextprev_eng_white_2x.png"); }
     .wheelbutton-container .next-prev-wheelbutton:hover, .wheelbutton-container .back-top-wheelbutton:hover {
-      width: 120px;
-      height: 120px; }
+      width: 105.6px;
+      height: 105.6px; }
   .wheelbutton-container .back-top-wheelbutton {
     background-image: url("./images/wheel-button/back_eng_black_2x.png"); }
     @media only screen and (max-width: 720px) {
@@ -1579,11 +1580,11 @@ sup {
         bottom: 50px; } }
   @media only screen and (max-width: 720px) {
     .wheelbutton-container .next-prev-wheelbutton, .wheelbutton-container .back-top-wheelbutton {
-      width: 85px;
-      height: 85px; }
-    .wheelbutton-container:hover .next-prev-wheelbutton, .wheelbutton-container:hover .back-top-wheelbutton {
       width: 102px;
-      height: 102px; } }
+      height: 102px; }
+    .wheelbutton-container:hover .next-prev-wheelbutton, .wheelbutton-container:hover .back-top-wheelbutton {
+      width: 112.2px;
+      height: 112.2px; } }
 
 @keyframes rotate {
   0% {

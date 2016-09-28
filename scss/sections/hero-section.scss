@@ -16,7 +16,7 @@
   $logo-width-mobile: 65px;
 
   $wheelbutton-right: 70px;
-  $wheelbutton-right-mobile: 42px;
+  $wheelbutton-right-mobile: 50px;
 
   $wheelbutton-bottom: 50px;
   $wheelbutton-bottom-mobile: 60px;
@@ -94,7 +94,7 @@
           letter-spacing: 0.02em;
         }
       }
-      
+
       .border {
         background-color: white;
         position: absolute;
@@ -141,10 +141,10 @@
         }
       }
     }
-    
+
   }
 
-  
+
 
   .video-container {
     height: $video-height;
@@ -183,7 +183,7 @@
     z-index: 2;
 
     @include responsive(mobile){
-      font-size: 15px;
+      font-size: 13px;
       line-height: 17px;
       margin-top: 16%;
     }
@@ -249,6 +249,7 @@
   }
 
   .wheelbutton-container {
+    z-index: 5;
     position: absolute;
     right: $wheelbutton-right;
     bottom: $wheelbutton-bottom;

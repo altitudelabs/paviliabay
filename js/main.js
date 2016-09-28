@@ -90,41 +90,41 @@ $(document).ready(function(){
   /* * * * * * * * * * * * * * *
   * Video
   * * * * * * * * * * * * * * */
-  //
-  // var video = $('video');
-  //
-  // $('#hero-section .wheelbutton-container').on("click", function() {
-  //   console.log("hero-wheelbutton clicked");
-  //   video.css('display', 'block');
-  //   video.get(0).play();
-  //   $('#cover-image').css('display', 'none');
-  //   $('#hero-section .title-container').addClass('one-fifth-opacity');
-  //   $(this).css('visibility', 'hidden');
-  //   $('.hero-logo').css('visibility', 'hidden');
-  //   $('#nav-menu').css('visibility', 'hidden');
-  //
-  //   $('.hero-logo').css('visibility', 'hidden');
-  //   $('#nav-menu').css('visibility', 'hidden');
-  // });
-  //
-  // video.on('ended', function(){
-  //   $('video').css('display', 'none');
-  //   $('#cover-image').css('display', 'block');
-  //   $('#hero-body-text').css('visibility', 'visible');
-  //   $('#hero-section .title-container').css('visibility', 'hidden');
-  //   $('.hero-logo').css('visibility', 'visible');
-  //   $('#nav-menu').css('visibility', 'visible');
-  //   $('#hero-section .wheelbutton-container').css('visibility', 'visible');
-  // });
+
+  var video = $('video');
 
   $('#hero-section .wheelbutton-container').on("click", function() {
+    console.log("hero-wheelbutton clicked");
+    video.css('display', 'block');
+    video.get(0).play();
+    $('#cover-image').css('display', 'none');
+    $('#hero-section .title-container').addClass('one-fifth-opacity');
+    $(this).css('visibility', 'hidden');
+    $('.hero-logo').css('visibility', 'hidden');
+    $('#nav-menu').css('visibility', 'hidden');
+
+    $('.hero-logo').css('visibility', 'hidden');
+    $('#nav-menu').css('visibility', 'hidden');
+  });
+
+  video.on('ended', function(){
+    $('video').css('display', 'none');
+    $('#cover-image').css('display', 'block');
     $('#hero-body-text').css('visibility', 'visible');
     $('#hero-section .title-container').css('visibility', 'hidden');
     $('.hero-logo').css('visibility', 'visible');
     $('#nav-menu').css('visibility', 'visible');
     $('#hero-section .wheelbutton-container').css('visibility', 'visible');
-    $('#nav-menu-content').removeClass('in-view');
   });
+
+  // $('#hero-section .wheelbutton-container').on("click", function() {
+  //   $('#hero-body-text').css('visibility', 'visible');
+  //   $('#hero-section .title-container').css('visibility', 'hidden');
+  //   $('.hero-logo').css('visibility', 'visible');
+  //   $('#nav-menu').css('visibility', 'visible');
+  //   $('#hero-section .wheelbutton-container').css('visibility', 'visible');
+  //   $('#nav-menu-content').removeClass('in-view');
+  // });
 // hero section animations on site landing
   setTimeout(function(){
     $('#cover-image').addClass('active');
