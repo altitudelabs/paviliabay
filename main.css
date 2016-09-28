@@ -1353,29 +1353,30 @@ sup {
       #portfolio-section .portfolio-header div {
         font-size: 13px; } }
 
+#portfolio-section .bx-wrapper {
+  max-width: 100vw;
+  min-width: 100vw;
+  margin: 0px;
+  border: 0px; }
+  #portfolio-section .bx-wrapper .bx-viewport {
+    border: 0px; }
+
 #portfolio-section .portfolio-image-container {
   position: relative;
   text-align: center;
-  padding-top: 3px;
   /* margin-bottom: 3px; */
   width: auto;
-  white-space: nowrap;
-  overflow: auto; }
+  overflow: auto;
+  height: 50vw; }
   @media only screen and (max-width: 720px) {
     #portfolio-section .portfolio-image-container {
-      padding-top: 1px;
-      padding-bottom: 2px; } }
+      height: 75vw; } }
 
 #portfolio-section .portfolio-image {
   position: relative;
   display: inline-block;
-  width: 33.3%;
   vertical-align: top;
-  padding-bottom: 50%; }
-  @media only screen and (max-width: 720px) {
-    #portfolio-section .portfolio-image {
-      width: 50%;
-      padding-bottom: 75%; } }
+  height: 100%; }
 
 #portfolio-section .arrow-left {
   background-image: url("images/portfolio-section/arrows-left.svg");

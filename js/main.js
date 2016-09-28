@@ -160,18 +160,19 @@ $(document).ready(function(){
   var container = $('.portfolio-image-container');
   var step = 1 / 3 * $(window).width();
 
-  arrow_left.click(function(){
-    container.animate({
-      scrollLeft: '-=' + step
-    }, 'slow');
-  });
+  arrow_left.click($.throttle(600, function(){
+    portfolioSlider.goToPrevSlide();
+    // container.animate({
+    //   scrollLeft: '-=' + step
+    // }, 'slow');
+  }));
 
-  arrow_right.click(function(){
-    console.log(step);
-    container.animate({
-      scrollLeft: '+=' + step
-    }, 'slow');
-  });
+  arrow_right.click($.throttle(600, function(){
+    portfolioSlider.goToNextSlide();
+    // container.animate({
+    //   scrollLeft: '+=' + step
+    // }, 'slow');
+  }));
 
   $(window).scroll(function(){
     var winTop = $(window).scrollTop();
@@ -193,6 +194,10 @@ $(document).ready(function(){
       $('#register-section').removeClass('active');
       $('#companyinfo-section').removeClass('active');
     }
+
+  });
+  $(window).on('resize', function() {
+    portfolioSlider.reloadSlider();
   });
   // CLUBHOUSE SECTION
   // $('.white-line').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
@@ -452,6 +457,15 @@ $(document).ready(function(){
       }
     }
   );
+  var nOfSlides = window.innerWidth > 720 ? 3 : 2;
+  var portfolioSlider = $('#portfolio-section .portfolio-image-container').bxSlider({
+    slideWidth: window.innerWidth / nOfSlides,
+    pager: false,
+    minSlides: nOfSlides,
+    maxSlides: nOfSlides,
+    moveSlides: 1,
+    controls: false,
+  });
 
   // PANORAMA SECTION
   $('#panorama-section').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',

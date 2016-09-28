@@ -22,6 +22,7 @@
     "node-sass": "^3.8.0"
   },
   "dependencies": {
+    "bxslider": "^4.2.6",
     "handlebars": "^4.0.5",
     "tween.js": "^16.3.4"
   }

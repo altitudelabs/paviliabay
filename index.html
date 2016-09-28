@@ -10,6 +10,7 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" type="text/css" href="lib/paver-master/dist/css/paver.min.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/bxslider/dist/jquery.bxslider.min.css">
     <link rel="stylesheet" type="text/css" href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.css" />
   </head>
 
@@ -285,15 +286,13 @@
       <div class="portfolio-header">
         <div class="hero-fade"> Portfolio </div>
       </div>
-      <div class="portfolio-image-container">
-        <div class="portfolio-image" style="background-image: url('images/portfolio-section/portfolio1.jpg');"></div><!--
-        --><div class="portfolio-image" style="background-image: url('images/portfolio-section/portfolio2.jpg');"></div><!--
-        --><div class="portfolio-image" style="background-image: url('images/portfolio-section/portfolio3.jpg');"></div><!--
-        --><div class="portfolio-image" style="background-image: url('images/portfolio-section/portfolio4.jpg');"></div><!--
-        --><div class="portfolio-image" style="background-image: url('images/portfolio-section/portfolio5.jpg');"></div>
-
-
-      </div>
+      <ul class="portfolio-image-container bxslider">
+        <li class="portfolio-image" style="background-image: url('images/portfolio-section/portfolio1.jpg');"></li>
+        <li class="portfolio-image" style="background-image: url('images/portfolio-section/portfolio2.jpg');"></li>
+        <li class="portfolio-image" style="background-image: url('images/portfolio-section/portfolio3.jpg');"></li>
+        <li class="portfolio-image" style="background-image: url('images/portfolio-section/portfolio4.jpg');"></li>
+        <li class="portfolio-image" style="background-image: url('images/portfolio-section/portfolio5.jpg');"></li>
+      </ul>
       <div class="arrow-left slide-in-left"></div>
       <div class="arrow-right slide-in-right"></div>
     </section>
@@ -434,8 +433,9 @@
     <script type="text/javascript" src="lib/paver-master/dist/js/jquery.ba-throttle-debounce.min.js"></script>
 
     <script type="text/javascript" src="lib/paver-master/dist/js/jquery.paver.min.js"></script>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.js"></script>
-    <script type="text/javascript" src="js/prefixfree.min.js"></script>
+    <script type="text/javascript" src="node_modules/bxslider/dist/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="https://api.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.js"></script>
+    <!-- <script type="text/javascript" src="js/prefixfree.min.js"></script> -->
 
     <script type="text/javascript" src="js/handlebars.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
