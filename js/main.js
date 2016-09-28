@@ -93,6 +93,12 @@ $(document).ready(function(){
 
   var video = $('video');
 
+  if ($(window).innerWidth() <= 720) {
+    $('video')[0].src = $('video .hero-vid-mobile').attr('src');
+  } else {
+    $('video')[0].src = $('video .hero-vid-desktop').attr('src');
+  }
+
   $('#hero-section .wheelbutton-container').on("click", function() {
     console.log("hero-wheelbutton clicked");
     video.css('display', 'block');
