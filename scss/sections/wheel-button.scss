@@ -1,9 +1,11 @@
 .wheelbutton-container {
   z-index: 100;
-  $next-prev-height: 100px;
-  $next-prev-width: 100px;
-  $next-prev-height-mobile: 85px;
-  $next-prev-width-mobile: 85px;
+  $next-prev-height: 96px;
+  $next-prev-width: 96px;
+  $next-prev-height-mobile: 1.2 * 85px;
+  $next-prev-width-mobile: 1.2 * 85px;
+
+  $hover-ratio: 1.1;
 
   animation-name: rotate;
   animation-duration: 12s;
@@ -33,8 +35,6 @@
     transform: translate(-50%, -50%);
     transition: all 300ms;
     padding: 10%;
-    width: 80px;
-    height: 80px;
     .next, .prev {
       text-align: center;
       vertical-align: middle;
@@ -46,8 +46,8 @@
     }
 
     &:hover {
-      width: $next-prev-width * 1.2;
-      height: $next-prev-height * 1.2;
+      width: $next-prev-width * $hover-ratio;
+      height: $next-prev-height * $hover-ratio;
     }
   }
 
@@ -78,8 +78,8 @@
 
     &:hover {
       .next-prev-wheelbutton {
-        width: $next-prev-width-mobile * 1.2;
-        height: $next-prev-height-mobile * 1.2;
+        width: $next-prev-width-mobile * $hover-ratio;
+        height: $next-prev-height-mobile * $hover-ratio;
       }
     }
   }

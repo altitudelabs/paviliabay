@@ -568,7 +568,7 @@ sup {
   bottom: 50px; }
   @media only screen and (max-width: 720px) {
     #hero-section .wheelbutton-container {
-      right: 42px;
+      right: 50px;
       bottom: 60px; } }
 
 #hero-section .one-fifth-opacity {
@@ -1545,8 +1545,8 @@ sup {
     -o-animation-play-state: paused;
     animation-play-state: paused; }
   .wheelbutton-container .next-prev-wheelbutton, .wheelbutton-container .back-top-wheelbutton {
-    width: 100px;
-    height: 100px;
+    width: 96px;
+    height: 96px;
     cursor: pointer;
     background-image: url("./images/wheel-button/nextprev_eng_black_2x.png");
     box-sizing: content-box;
@@ -1555,9 +1555,7 @@ sup {
     top: 50%;
     transform: translate(-50%, -50%);
     transition: all 300ms;
-    padding: 10%;
-    width: 80px;
-    height: 80px; }
+    padding: 10%; }
     .wheelbutton-container .next-prev-wheelbutton .next, .wheelbutton-container .back-top-wheelbutton .next, .wheelbutton-container .next-prev-wheelbutton .prev, .wheelbutton-container .back-top-wheelbutton .prev {
       text-align: center;
       vertical-align: middle;
@@ -1565,8 +1563,8 @@ sup {
     .wheelbutton-container .next-prev-wheelbutton.white, .wheelbutton-container .white.back-top-wheelbutton {
       background-image: url("./images/wheel-button/nextprev_eng_white_2x.png"); }
     .wheelbutton-container .next-prev-wheelbutton:hover, .wheelbutton-container .back-top-wheelbutton:hover {
-      width: 120px;
-      height: 120px; }
+      width: 105.6px;
+      height: 105.6px; }
   .wheelbutton-container .back-top-wheelbutton {
     background-image: url("./images/wheel-button/back_eng_black_2x.png"); }
     @media only screen and (max-width: 720px) {
@@ -1581,11 +1579,11 @@ sup {
         bottom: 50px; } }
   @media only screen and (max-width: 720px) {
     .wheelbutton-container .next-prev-wheelbutton, .wheelbutton-container .back-top-wheelbutton {
-      width: 85px;
-      height: 85px; }
-    .wheelbutton-container:hover .next-prev-wheelbutton, .wheelbutton-container:hover .back-top-wheelbutton {
       width: 102px;
-      height: 102px; } }
+      height: 102px; }
+    .wheelbutton-container:hover .next-prev-wheelbutton, .wheelbutton-container:hover .back-top-wheelbutton {
+      width: 112.2px;
+      height: 112.2px; } }
 
 @keyframes rotate {
   0% {
