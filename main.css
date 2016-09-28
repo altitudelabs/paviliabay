@@ -475,6 +475,7 @@ sup {
       top: 0; }
 
 #hero-section .video-container {
+  background-color: black;
   height: 666px;
   width: 100%;
   overflow: hidden; }
