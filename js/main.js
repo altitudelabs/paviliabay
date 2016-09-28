@@ -104,21 +104,17 @@ $(document).ready(function(){
     video.css('display', 'block');
     video.get(0).play();
     $('#cover-image').css('display', 'none');
-    $('#hero-section .title-container').addClass('one-fifth-opacity');
-    $('.hero-logo').css('visibility', 'hidden');
-    $('#nav-menu').css('visibility', 'hidden');
-
-    $('.hero-logo').css('visibility', 'hidden');
-    $('#nav-menu').css('visibility', 'hidden');
+    $('#hero-section .title-container').css('display', 'none');
+    // $('.hero-logo').css('visibility', 'hidden');
+    // $('#nav-menu').css('visibility', 'hidden');
   });
 
   video.on('ended', function(){
     $('video').css('display', 'none');
     $('#cover-image').css('display', 'block');
     $('#hero-body-text').css('visibility', 'visible');
-    $('#hero-section .title-container').css('visibility', 'hidden');
-    $('.hero-logo').css('visibility', 'visible');
-    $('#nav-menu').css('visibility', 'visible');
+    // $('.hero-logo').css('visibility', 'visible');
+    // $('#nav-menu').css('visibility', 'visible');
   });
 
   // $('#hero-section .wheelbutton-container').on("click", function() {
