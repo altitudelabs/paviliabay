@@ -609,14 +609,15 @@ sup {
     text-decoration: underline; }
   #nav-menu .page-link-menu-text {
     color: white;
-    font-size: 21px;
-    line-height: 35px;
+    font-size: 15px;
+    line-height: 32px;
     font-weight: 700;
     padding-left: 10px;
     white-space: nowrap; }
     @media only screen and (max-width: 720px) {
       #nav-menu .page-link-menu-text {
-        font-size: 19px; } }
+        font-size: 14px;
+        line-height: 27px; } }
   #nav-menu .second-level {
     color: #9e9da2; }
   #nav-menu a {
@@ -640,7 +641,8 @@ sup {
         height: 576px;
         right: 0;
         padding-top: 30px;
-        padding-right: 30px; } }
+        padding-right: 30px;
+        width: 280px; } }
   #nav-menu #nav-menu-links {
     clear: right;
     /* First level */ }
