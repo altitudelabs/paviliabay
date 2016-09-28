@@ -562,6 +562,7 @@ sup {
       left: 5%; } }
 
 #hero-section .wheelbutton-container {
+  z-index: 5;
   position: absolute;
   right: 70px;
   bottom: 50px; }
@@ -1366,7 +1367,6 @@ sup {
 #portfolio-section .portfolio-image-container {
   position: relative;
   text-align: center;
-  /* margin-bottom: 3px; */
   width: auto;
   overflow: auto;
   height: 50vw; }

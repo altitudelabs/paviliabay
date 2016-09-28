@@ -90,26 +90,34 @@ $(document).ready(function(){
   /* * * * * * * * * * * * * * *
   * Video
   * * * * * * * * * * * * * * */
-  //
-  // var video = $('video');
-  //
+
+  var video = $('video');
+
+  $('#hero-section .wheelbutton-container').on("click", function() {
+    console.log("hero-wheelbutton clicked");
+    video.css('display', 'block');
+    video.get(0).play();
+    $('#cover-image').css('display', 'none');
+    $('#hero-section .title-container').addClass('one-fifth-opacity');
+    $(this).css('visibility', 'hidden');
+    $('.hero-logo').css('visibility', 'hidden');
+    $('#nav-menu').css('visibility', 'hidden');
+
+    $('.hero-logo').css('visibility', 'hidden');
+    $('#nav-menu').css('visibility', 'hidden');
+  });
+
+  video.on('ended', function(){
+    $('video').css('display', 'none');
+    $('#cover-image').css('display', 'block');
+    $('#hero-body-text').css('visibility', 'visible');
+    $('#hero-section .title-container').css('visibility', 'hidden');
+    $('.hero-logo').css('visibility', 'visible');
+    $('#nav-menu').css('visibility', 'visible');
+    $('#hero-section .wheelbutton-container').css('visibility', 'visible');
+  });
+
   // $('#hero-section .wheelbutton-container').on("click", function() {
-  //   console.log("hero-wheelbutton clicked");
-  //   video.css('display', 'block');
-  //   video.get(0).play();
-  //   $('#cover-image').css('display', 'none');
-  //   $('#hero-section .title-container').addClass('one-fifth-opacity');
-  //   $(this).css('visibility', 'hidden');
-  //   $('.hero-logo').css('visibility', 'hidden');
-  //   $('#nav-menu').css('visibility', 'hidden');
-  //
-  //   $('.hero-logo').css('visibility', 'hidden');
-  //   $('#nav-menu').css('visibility', 'hidden');
-  // });
-  //
-  // video.on('ended', function(){
-  //   $('video').css('display', 'none');
-  //   $('#cover-image').css('display', 'block');
   //   $('#hero-body-text').css('visibility', 'visible');
   //   $('#hero-section .title-container').css('visibility', 'hidden');
   //   $('.hero-logo').css('visibility', 'visible');
@@ -117,14 +125,6 @@ $(document).ready(function(){
   //   $('#hero-section .wheelbutton-container').css('visibility', 'visible');
   // });
 
-  $('#hero-section .wheelbutton-container').on("click", function() {
-    $('#hero-body-text').css('visibility', 'visible');
-    $('#hero-section .title-container').css('visibility', 'hidden');
-    $('.hero-logo').css('visibility', 'visible');
-    $('#nav-menu').css('visibility', 'visible');
-    $('#hero-section .wheelbutton-container').css('visibility', 'visible');
-    $('#nav-menu-content').removeClass('in-view');
-  });
 // hero section animations on site landing
   setTimeout(function(){
     $('#cover-image').addClass('active');
@@ -160,19 +160,18 @@ $(document).ready(function(){
   var container = $('.portfolio-image-container');
   var step = 1 / 3 * $(window).width();
 
-  arrow_left.click($.throttle(600, function(){
-    portfolioSlider.goToPrevSlide();
-    // container.animate({
-    //   scrollLeft: '-=' + step
-    // }, 'slow');
-  }));
+  arrow_left.click(function(){
+    container.animate({
+      scrollLeft: '-=' + step
+    }, 'slow');
+  });
 
-  arrow_right.click($.throttle(600, function(){
-    portfolioSlider.goToNextSlide();
-    // container.animate({
-    //   scrollLeft: '+=' + step
-    // }, 'slow');
-  }));
+  arrow_right.click(function(){
+    console.log(step);
+    container.animate({
+      scrollLeft: '+=' + step
+    }, 'slow');
+  });
 
   $(window).scroll(function(){
     var winTop = $(window).scrollTop();
@@ -194,10 +193,6 @@ $(document).ready(function(){
       $('#register-section').removeClass('active');
       $('#companyinfo-section').removeClass('active');
     }
-
-  });
-  $(window).on('resize', function() {
-    portfolioSlider.reloadSlider();
   });
   // CLUBHOUSE SECTION
   // $('.white-line').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
@@ -457,15 +452,6 @@ $(document).ready(function(){
       }
     }
   );
-  var nOfSlides = window.innerWidth > 720 ? 3 : 2;
-  var portfolioSlider = $('#portfolio-section .portfolio-image-container').bxSlider({
-    slideWidth: window.innerWidth / nOfSlides,
-    pager: false,
-    minSlides: nOfSlides,
-    maxSlides: nOfSlides,
-    moveSlides: 1,
-    controls: false,
-  });
 
   // PANORAMA SECTION
   $('#panorama-section').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
