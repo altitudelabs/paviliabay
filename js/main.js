@@ -59,12 +59,12 @@ $(document).ready(function(){
 
   $('#nav-menu-image').on("click", function() {
     console.log("nav image clicked");
-    $('#nav-menu-content').addClass('in-view');
+    $('#nav-menu-content').addClass('activate');
     $('#nav-menu-content').css('visibility', 'visible');
   });
 
   $('#nav-cross').on("click", function(){
-    $('#nav-menu-content').removeClass('in-view');
+    $('#nav-menu-content').removeClass('activate');
     $('#nav-menu-content').css('visibility', 'hidden');
   });
 
@@ -222,7 +222,7 @@ $(document).ready(function(){
           $('#clubhouse-section .clubhouse-image-container').removeClass('active');
           $('#clubhouse-section .clubhouse-blue-box').removeClass('active');
           $('#clubhouse-section .white-line').removeClass('active');
-          $('#clubhouse-section .animation-text').removeClass('active');   
+          $('#clubhouse-section .animation-text').removeClass('active');
       }
     }
   );
@@ -410,7 +410,7 @@ $(document).ready(function(){
           $('#designerprofile-section .description-grey-box').removeClass('active');
           $('#designerprofile-section .profile-blue-box').removeClass('active');
           $('#designerprofile-section .white-line').removeClass('active');
-          $('#designerprofile-section .animation-text').removeClass('active');   
+          $('#designerprofile-section .animation-text').removeClass('active');
       }
     }
   );
@@ -468,7 +468,7 @@ $(document).ready(function(){
         }, 1800);
         setTimeout(function(){
           $('.fourth-animation').addClass('active');
-        }, 2400);  
+        }, 2400);
       } else {
         $('.first-animation').removeClass('active');
         $('.second-animation').removeClass('active');
@@ -521,7 +521,7 @@ $(document).ready(function(){
           $('#map').removeClass('active');
           $('#map-section .map-info').removeClass('active');
           $('#map-section .white-line').removeClass('active');
-          $('#map-section .animation-text').removeClass('active');   
+          $('#map-section .animation-text').removeClass('active');
       }
     }
   );
