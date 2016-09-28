@@ -90,7 +90,6 @@ $(document).ready(function(){
   /* * * * * * * * * * * * * * *
   * Video
   * * * * * * * * * * * * * * */
-
   var video = $('video');
 
   $('#hero-section .wheelbutton-container').on("click", function() {

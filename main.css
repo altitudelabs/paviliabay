@@ -511,7 +511,7 @@ sup {
   z-index: 2; }
   @media only screen and (max-width: 720px) {
     #hero-section #hero-body-text {
-      font-size: 15px;
+      font-size: 13px;
       line-height: 17px;
       margin-top: 16%; } }
   #hero-section #hero-body-text .bold {
