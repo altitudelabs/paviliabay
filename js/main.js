@@ -74,19 +74,19 @@ $(document).ready(function(){
       if (isNext) {
         $('#cover-image').css('display', 'block');
         $('#hero-body-text').css('visibility', 'visible');
-        return;  
+        return;
       } else {
         $('#cover-image').css('display', 'block');
         $('#hero-section .title-container').css('display', 'block');
         $('#nav-menu').css('visibility', 'visible');
-        return;  
+        return;
       }
     } else {
         if (isNext) {
           video.css('display', 'block');
           video.get(0).play();
           $('#cover-image').css('display', 'none');
-          $('#hero-section .title-container').css('display', 'none');      
+          $('#hero-section .title-container').css('display', 'none');
         } else {
           video.get(0).pause();
           video.get(0).currentTime = 0;
@@ -319,6 +319,7 @@ $(document).ready(function(){
         nextCategoryIndex = 0;
       }
     }
+
     return function(e, isNext, nextSection) {
       updateIndex(isNext, nextSection);
       var imageUrl = CLUBHOUSE_DATA[categoryIndex].images[imageIndex];
@@ -349,6 +350,75 @@ $(document).ready(function(){
     slideCloubHouseSection.apply(this, [e, false, true]);
   });
 
+  // DESIGNER SECTION
+
+  $('#designerprofile-section').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+    function(e) {
+      if ($('#designerprofile-section').hasClass('in-view')) {
+        setTimeout(function(){
+          $('.description-grey-box').addClass('active');
+        },600);
+        setTimeout(function(){
+          $('.profile-blue-box').addClass('active');
+        },1200);
+        setTimeout(function(){
+          $('.white-line').addClass('active');
+        },1800);
+        setTimeout(function(){
+          $('.animation-text').addClass('active');
+        },2400);
+      } else {
+          $('#designerprofile-section .description-grey-box').removeClass('active');
+          $('#designerprofile-section .profile-blue-box').removeClass('active');
+          $('#designerprofile-section .white-line').removeClass('active');
+          $('#designerprofile-section .animation-text').removeClass('active');
+      }
+    }
+  );
+
+  var DESIGNER_DATA = $('#designerprofile-section').data('categories');
+
+  var slideDesignerSection = $.throttle(1100, (function() {
+    var section = '#designerprofile-section';
+    var categoryIndex = 0;
+    var nextCategoryIndex = 1;
+
+    var updateIndex = function(isNext) {
+      if (isNext) {
+        categoryIndex++;
+
+        if (categoryIndex >= DESIGNER_DATA.length) {
+          categoryIndex = 0;
+        }
+      } else {
+        categoryIndex--;
+        if (categoryIndex < 0) {
+          categoryIndex = DESIGNER_DATA.length - 1;
+        }
+      }
+
+
+      nextCategoryIndex = categoryIndex + 1;
+      if (nextCategoryIndex >= DESIGNER_DATA.length) {
+        nextCategoryIndex = 0;
+      }
+    }
+
+    return function(e, isNext) {
+      updateIndex(isNext);
+      var title = DESIGNER_DATA[categoryIndex].title;
+      var desc = DESIGNER_DATA[categoryIndex].desc;
+      var id = DESIGNER_DATA[categoryIndex].id;
+
+
+        $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
+          $('.quote').html('<strong>'  + title + '</strong>');
+          $('.description').text(desc);
+        }).delay(1000).animate({'opacity': 1}, 1500);
+        $('.designer-description-text').data('id', id);
+    };
+  })());
+
   $('.next-prev-wheelbutton').click(function(e) {
     // e.preventDefault();
     var target = $(this).data('target');
@@ -367,31 +437,35 @@ $(document).ready(function(){
       return displayVideo.apply(this, [e, isNext]);
     }
 
-    if (isNext) {
-      if (target === '#designerprofile-section') {
-        var currentText = $('.designer-description-text').data('id');
-        if (currentText === 'default') {
-          $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
-            $('.description').text(passionText)
-            $('.quote').html('<strong>His Passion</strong>');
-          }).delay(1000).animate({'opacity': 1}, 1500);
-          $('.designer-description-text').data('id','passion');
-        } else if (currentText === 'passion') {
-          $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
-            $('.quote').html('<strong>His Design</strong>');
-            $('.description').text(designText);
-          }).delay(1000).animate({'opacity': 1}, 1500);
-          $('.designer-description-text').data('id','design');
-        } else {
-          $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
-            $('.quote').html('<em>"A yacht is to always please the eye and be the pride of her owner."</em>');
-            $('.description').text(defaultText);
-          }).delay(1000).animate({'opacity': 1}, 1500);
-          $('.designer-description-text').data('id','default');
-        }
-      };
-      return;
-    } // if is previous
+    if (target === '#designerprofile-section') {
+      return slideDesignerSection.apply(this, [e, isNext])
+    }
+
+    // if (isNext) {
+    //   if (target === '#designerprofile-section') {
+    //     var currentText = $('.designer-description-text').data('id');
+    //     if (currentText === 'default') {
+    //       $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
+    //         $('.description').text(passionText)
+    //         $('.quote').html('<strong>His Passion</strong>');
+    //       }).delay(1000).animate({'opacity': 1}, 1500);
+    //       $('.designer-description-text').data('id','passion');
+    //     } else if (currentText === 'passion') {
+    //       $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
+    //         $('.quote').html('<strong>His Design</strong>');
+    //         $('.description').text(designText);
+    //       }).delay(1000).animate({'opacity': 1}, 1500);
+    //       $('.designer-description-text').data('id','design');
+    //     } else {
+    //       $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
+    //         $('.quote').html('<em>"A yacht is to always please the eye and be the pride of her owner."</em>');
+    //         $('.description').text(defaultText);
+    //       }).delay(1000).animate({'opacity': 1}, 1500);
+    //       $('.designer-description-text').data('id','default');
+    //     }
+    //   };
+    //   return;
+    // } // if is previous
 
     // if (target === '#clubhouse-section') {
     //   if ($('.full-section-view').hasClass('fade-in-view')) {
@@ -403,28 +477,28 @@ $(document).ready(function(){
     //     $('.full-section-view').css('background-image','url('+imageArray[currentImage]+')');
     //   }
     // };
-    if (target === '#designerprofile-section') {
-      var currentText = $('.designer-description-text').data('id');
-      if (currentText === 'default') {
-        $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
-          $('.quote').html('<strong>His Design</strong>');
-          $('.description').text(designText);
-        }).delay(1000).animate({'opacity': 1}, 1500);
-        $('.designer-description-text').data('id','design');
-      } else if (currentText === 'passion') {
-        $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
-          $('.quote').html('<em>"A yacht is to always please the eye and be the pride of her owner."</em>');
-          $('.description').text(defaultText);
-        }).delay(1000).animate({'opacity': 1}, 1500);
-        $('.designer-description-text').data('id','default');
-      } else {
-        $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
-          $('.quote').html('<strong>His Passion</strong>');
-          $('.description').text(passionText);
-        }).delay(1000).animate({'opacity': 1}, 1500);
-        $('.designer-description-text').data('id','passion');
-      }
-    };
+    // if (target === '#designerprofile-section') {
+    //   var currentText = $('.designer-description-text').data('id');
+    //   if (currentText === 'default') {
+    //     $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
+    //       $('.quote').html('<strong>His Design</strong>');
+    //       $('.description').text(designText);
+    //     }).delay(1000).animate({'opacity': 1}, 1500);
+    //     $('.designer-description-text').data('id','design');
+    //   } else if (currentText === 'passion') {
+    //     $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
+    //       $('.quote').html('<em>"A yacht is to always please the eye and be the pride of her owner."</em>');
+    //       $('.description').text(defaultText);
+    //     }).delay(1000).animate({'opacity': 1}, 1500);
+    //     $('.designer-description-text').data('id','default');
+    //   } else {
+    //     $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
+    //       $('.quote').html('<strong>His Passion</strong>');
+    //       $('.description').text(passionText);
+    //     }).delay(1000).animate({'opacity': 1}, 1500);
+    //     $('.designer-description-text').data('id','passion');
+    //   }
+    // };
   });
 
   $('.back-top-wheelbutton').click(function(e) {
@@ -437,10 +511,43 @@ $(document).ready(function(){
     }
   });
 
-  // DESIGNER SECTION
-  var defaultText = ['Led by the globally acclaimed French super yacht designer Philippe Briand, London based Vitruvius Yachts Limited is a strong team of award-winning designers and naval architects. The beauty of each Vitruvius Yacht is derived from her optimal proportions, balance and efficiency. Philippe believes the superyacht flourished from the exclusive combination of science, through naval architecture, and art.'];
-  var passionText = ['Philippe  was  raised  in  a  family  where  racing  is  a  long-established  tradition. Inspired by his father, an Olympian sailor, he began his career in France as a dinghy sailor at the tender age of 9. Philippe’s first sailing yacht was designed when  he  was  only 16 years  old.  By  the  age  of  22,  his  first  series  of  yacht  was developed.  During  the  1980s,  he  engaged  in  yacht  racing  and  claimed the title of world championships twice. His enthusiasm in racing has equipped him to become a qualified naval architect and one of the world’s leading yacht designers.'];
-  var designText = ['Philippe  specializes  in  designing  super  yachts  ranging  from  30  meters  to  105 meters,  both  Sailing  and  Motor  yachts.  His  yacht  is  characterized by  quality design and attention to details with features such as teak flooring, tinted glass, carbon  fiber  and  underwater  lights.  With  over  12,000  boats  built  to  date, Philippe’s  experience  in  naval  architecture  and  his  reputation  in  the  field make him the ideal candidate to design and engineer the perfect yacht.'];
+  // $('.description-grey-box').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+  //   function(e) {
+  //     $('.profile-blue-box').addClass('active');
+  //   }
+  // );
+  // $('.profile-blue-box').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+  //   function(e) {
+  //     $('.white-line').addClass('active');
+  //   }
+  // );
+  // $('.white-line').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+  //   function(e) {
+  //     $('.animation-text').addClass('active');
+  //   }
+  // );
+
+  // PORTFOLIO SECTION
+  // $('#portfolio-section').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+  //   function(e) {
+  //     $('.animation-text').addClass('fade');
+  //   }
+  // );
+  $('#portfolio-section').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+    function(e) {
+      if ($('#portfolio-section').hasClass('in-view')) {
+        setTimeout(function(){
+          $('#portfolio-section .hero-fade').addClass('active');
+          $('.arrow-left').addClass('active');
+          $('.arrow-right').addClass('active');
+        }, 600);
+      } else {
+          $('#portfolio-section .hero-fade').removeClass('active');
+          $('.arrow-left').removeClass('active');
+          $('.arrow-right').removeClass('active');
+      }
+    }
+  );
 
   var nOfSlides = window.innerWidth > 720 ? 3 : 2;
   var portfolioSlider = $('#portfolio-section .portfolio-image-container').bxSlider({
