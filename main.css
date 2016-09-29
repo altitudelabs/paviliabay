@@ -542,6 +542,7 @@ sup {
     letter-spacing: 0.025em;
     text-transform: uppercase;
     color: #232f49;
+    text-decoration: underline;
     position: relative;
     top: 7px;
     margin-left: 60px; }
