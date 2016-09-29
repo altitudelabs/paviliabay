@@ -271,6 +271,9 @@
     .description-grey-box {
       opacity: 1;
     }
+    .white-line {
+      @extend .active;
+    }
   }
   &.in-view-full {
     .animation-text {

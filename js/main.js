@@ -2,6 +2,7 @@ $(document).ready(function(){
 
   var $animation_elements = $('.animation-element');
   var $window = $(window);
+  $('.modal').modal('show');
 
   //initialize map
   function initMap() {
@@ -179,20 +180,24 @@ $(document).ready(function(){
     var sectionTop = section.offset().top;
     var sectionHeight = section.innerHeight();
     var sectionBottom = sectionTop + sectionHeight;
+    var windWidth = window.innerWidth;
+    var firstBreak = windWidth > 720 ? 0.4 : 0.2;
+    var secondBreak = windWidth > 720 ? 0.8 : 0.4;
+    var thirdBreak = windWidth > 720 ? 1 : 0.6;
 
-    if (scrollBottom > sectionTop + (sectionHeight * .4)) {
+    if (scrollBottom > sectionTop + (sectionHeight * firstBreak)) {
       section.addClass('in-view-one');
     } else {
       section.removeClass('in-view-one');
     }
 
-    if (scrollBottom > sectionTop + (sectionHeight * .8)) {
+    if (scrollBottom > sectionTop + (sectionHeight * secondBreak)) {
       section.addClass('in-view-two');
     } else {
       section.removeClass('in-view-two');
     }
 
-    if (scrollBottom > sectionTop + (sectionHeight)) {
+    if (scrollBottom > sectionTop + (sectionHeight * thirdBreak)) {
       section.addClass('in-view-full');
     } else {
       section.removeClass('in-view-full');
