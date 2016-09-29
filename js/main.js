@@ -68,15 +68,6 @@ $(document).ready(function(){
     $('#nav-menu-content').css('visibility', 'hidden');
   });
 
-  /* * * * * * * * * * * * * * *
-   * Bind hover so that it's touch friendly
-   *  on mobile device
-   * * * * * * * * * * * * * * */
-  // $('.hover').bind('touchstart touchend', function(e) {
-  //   e.preventDefault;
-  //   $(this).toggleClass('hover_effect');
-  // });
-
   $('#nav-menu-content li a').on('click', function(){
     if ($(this).parent().children('ul').css('display') === 'block') {
       $(this).parent().children('ul').css('display', 'none');
@@ -85,12 +76,12 @@ $(document).ready(function(){
       $(this).parent().children('ul').css('display', 'block');
     }
   });
-//
-//
-//   /* * * * * * * * * * * * * * *
-//   * Video
-//   * * * * * * * * * * * * * * */
-//
+
+
+  /* * * * * * * * * * * * * * *
+  * Video
+  * * * * * * * * * * * * * * */
+
   var video = $('video');
 //
 //   if ($(window).innerWidth() <= 720) {
@@ -298,81 +289,81 @@ $(document).ready(function(){
   $('.link-text, .link-text-overlay').on('click', function(e) {
     slideCloubHouseSection.apply(this, [e, false, true]);
   });
-//
-//   $('.next-prev-wheelbutton').click(function(e) {
-//     e.preventDefault();
-//     var target = $(this).data('target');
-//     if (target === 'scrollTop') {
-//       console.log('hello');
-//       $('body').animate({ scrollTop: 0 }, 500);
-//       return;
-//     }
-//
-//     var isNext = $(e.target).hasClass('next');
-//
-//     if (target === '#clubhouse-section') {
-//       return slideCloubHouseSection.apply(this, [e, isNext]);
-//     }
-//
-//     if (isNext) {
-//       if (target === '#designerprofile-section') {
-//         var currentText = $('.designer-description-text').data('id');
-//         if (currentText === 'default') {
-//           $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
-//             $('.description').text(passionText)
-//             $('.quote').html('<strong>His Passion</strong>');
-//           }).delay(1000).animate({'opacity': 1}, 1500);
-//           $('.designer-description-text').data('id','passion');
-//         } else if (currentText === 'passion') {
-//           $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
-//             $('.quote').html('<strong>His Design</strong>');
-//             $('.description').text(designText);
-//           }).delay(1000).animate({'opacity': 1}, 1500);
-//           $('.designer-description-text').data('id','design');
-//         } else {
-//           $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
-//             $('.quote').html('<em>"A yacht is to always please the eye and be the pride of her owner."</em>');
-//             $('.description').text(defaultText);
-//           }).delay(1000).animate({'opacity': 1}, 1500);
-//           $('.designer-description-text').data('id','default');
-//         }
-//       };
-//       return;
-//     } // if is previous
-//
-//     // if (target === '#clubhouse-section') {
-//     //   if ($('.full-section-view').hasClass('fade-in-view')) {
-//     //     if (currentImage === 0) {
-//     //       $('.full-section-view').removeClass('fade-in-view');
-//     //       return;
-//     //     }
-//     //     currentImage = currentImage - 1;
-//     //     $('.full-section-view').css('background-image','url('+imageArray[currentImage]+')');
-//     //   }
-//     // };
-//     if (target === '#designerprofile-section') {
-//       var currentText = $('.designer-description-text').data('id');
-//       if (currentText === 'default') {
-//         $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
-//           $('.quote').html('<strong>His Design</strong>');
-//           $('.description').text(designText);
-//         }).delay(1000).animate({'opacity': 1}, 1500);
-//         $('.designer-description-text').data('id','design');
-//       } else if (currentText === 'passion') {
-//         $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
-//           $('.quote').html('<em>"A yacht is to always please the eye and be the pride of her owner."</em>');
-//           $('.description').text(defaultText);
-//         }).delay(1000).animate({'opacity': 1}, 1500);
-//         $('.designer-description-text').data('id','default');
-//       } else {
-//         $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
-//           $('.quote').html('<strong>His Passion</strong>');
-//           $('.description').text(passionText);
-//         }).delay(1000).animate({'opacity': 1}, 1500);
-//         $('.designer-description-text').data('id','passion');
-//       }
-//     };
-//   });
+
+  $('.next-prev-wheelbutton').click(function(e) {
+    e.preventDefault();
+    var target = $(this).data('target');
+    if (target === 'scrollTop') {
+      console.log('hello');
+      $('body').animate({ scrollTop: 0 }, 500);
+      return;
+    }
+
+    var isNext = $(e.target).hasClass('next');
+
+    if (target === '#clubhouse-section') {
+      return slideCloubHouseSection.apply(this, [e, isNext]);
+    }
+
+    if (isNext) {
+      if (target === '#designerprofile-section') {
+        var currentText = $('.designer-description-text').data('id');
+        if (currentText === 'default') {
+          $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
+            $('.description').text(passionText)
+            $('.quote').html('<strong>His Passion</strong>');
+          }).delay(1000).animate({'opacity': 1}, 1500);
+          $('.designer-description-text').data('id','passion');
+        } else if (currentText === 'passion') {
+          $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
+            $('.quote').html('<strong>His Design</strong>');
+            $('.description').text(designText);
+          }).delay(1000).animate({'opacity': 1}, 1500);
+          $('.designer-description-text').data('id','design');
+        } else {
+          $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
+            $('.quote').html('<em>"A yacht is to always please the eye and be the pride of her owner."</em>');
+            $('.description').text(defaultText);
+          }).delay(1000).animate({'opacity': 1}, 1500);
+          $('.designer-description-text').data('id','default');
+        }
+      };
+      return;
+    } // if is previous
+
+    // if (target === '#clubhouse-section') {
+    //   if ($('.full-section-view').hasClass('fade-in-view')) {
+    //     if (currentImage === 0) {
+    //       $('.full-section-view').removeClass('fade-in-view');
+    //       return;
+    //     }
+    //     currentImage = currentImage - 1;
+    //     $('.full-section-view').css('background-image','url('+imageArray[currentImage]+')');
+    //   }
+    // };
+    if (target === '#designerprofile-section') {
+      var currentText = $('.designer-description-text').data('id');
+      if (currentText === 'default') {
+        $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
+          $('.quote').html('<strong>His Design</strong>');
+          $('.description').text(designText);
+        }).delay(1000).animate({'opacity': 1}, 1500);
+        $('.designer-description-text').data('id','design');
+      } else if (currentText === 'passion') {
+        $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
+          $('.quote').html('<em>"A yacht is to always please the eye and be the pride of her owner."</em>');
+          $('.description').text(defaultText);
+        }).delay(1000).animate({'opacity': 1}, 1500);
+        $('.designer-description-text').data('id','default');
+      } else {
+        $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
+          $('.quote').html('<strong>His Passion</strong>');
+          $('.description').text(passionText);
+        }).delay(1000).animate({'opacity': 1}, 1500);
+        $('.designer-description-text').data('id','passion');
+      }
+    };
+  });
 //
 //   $('.back-top-wheelbutton').click(function(e) {
 //     e.preventDefault();
@@ -384,34 +375,34 @@ $(document).ready(function(){
 //     }
 //   });
 //
-//   // DESIGNER SECTION
-//   var defaultText = ['Led by the globally acclaimed French super yacht designer Philippe Briand, London based Vitruvius Yachts Limited is a strong team of award-winning designers and naval architects. The beauty of each Vitruvius Yacht is derived from her optimal proportions, balance and efficiency. Philippe believes the superyacht flourished from the exclusive combination of science, through naval architecture, and art.'];
-//   var passionText = ['Philippe  was  raised  in  a  family  where  racing  is  a  long-established  tradition. Inspired by his father, an Olympian sailor, he began his career in France as a dinghy sailor at the tender age of 9. Philippe’s first sailing yacht was designed when  he  was  only 16 years  old.  By  the  age  of  22,  his  first  series  of  yacht  was developed.  During  the  1980s,  he  engaged  in  yacht  racing  and  claimed the title of world championships twice. His enthusiasm in racing has equipped him to become a qualified naval architect and one of the world’s leading yacht designers.'];
-//   var designText = ['Philippe  specializes  in  designing  super  yachts  ranging  from  30  meters  to  105 meters,  both  Sailing  and  Motor  yachts.  His  yacht  is  characterized by  quality design and attention to details with features such as teak flooring, tinted glass, carbon  fiber  and  underwater  lights.  With  over  12,000  boats  built  to  date, Philippe’s  experience  in  naval  architecture  and  his  reputation  in  the  field make him the ideal candidate to design and engineer the perfect yacht.'];
-//
-//   $('#designerprofile-section').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
-//     function(e) {
-//       if ($('#designerprofile-section').hasClass('in-view')) {
-//         setTimeout(function(){
-//           $('.description-grey-box').addClass('active');
-//         },600);
-//         setTimeout(function(){
-//           $('.profile-blue-box').addClass('active');
-//         },1200);
-//         setTimeout(function(){
-//           $('.white-line').addClass('active');
-//         },1800);
-//         setTimeout(function(){
-//           $('.animation-text').addClass('active');
-//         },2400);
-//       } else {
-//           $('#designerprofile-section .description-grey-box').removeClass('active');
-//           $('#designerprofile-section .profile-blue-box').removeClass('active');
-//           $('#designerprofile-section .white-line').removeClass('active');
-//           $('#designerprofile-section .animation-text').removeClass('active');
-//       }
-//     }
-//   );
+  // DESIGNER SECTION
+  var defaultText = ['Led by the globally acclaimed French super yacht designer Philippe Briand, London based Vitruvius Yachts Limited is a strong team of award-winning designers and naval architects. The beauty of each Vitruvius Yacht is derived from her optimal proportions, balance and efficiency. Philippe believes the superyacht flourished from the exclusive combination of science, through naval architecture, and art.'];
+  var passionText = ['Philippe  was  raised  in  a  family  where  racing  is  a  long-established  tradition. Inspired by his father, an Olympian sailor, he began his career in France as a dinghy sailor at the tender age of 9. Philippe’s first sailing yacht was designed when  he  was  only 16 years  old.  By  the  age  of  22,  his  first  series  of  yacht  was developed.  During  the  1980s,  he  engaged  in  yacht  racing  and  claimed the title of world championships twice. His enthusiasm in racing has equipped him to become a qualified naval architect and one of the world’s leading yacht designers.'];
+  var designText = ['Philippe  specializes  in  designing  super  yachts  ranging  from  30  meters  to  105 meters,  both  Sailing  and  Motor  yachts.  His  yacht  is  characterized by  quality design and attention to details with features such as teak flooring, tinted glass, carbon  fiber  and  underwater  lights.  With  over  12,000  boats  built  to  date, Philippe’s  experience  in  naval  architecture  and  his  reputation  in  the  field make him the ideal candidate to design and engineer the perfect yacht.'];
+
+  $('#designerprofile-section').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+    function(e) {
+      if ($('#designerprofile-section').hasClass('in-view')) {
+        setTimeout(function(){
+          $('.description-grey-box').addClass('active');
+        },600);
+        setTimeout(function(){
+          $('.profile-blue-box').addClass('active');
+        },1200);
+        setTimeout(function(){
+          $('.white-line').addClass('active');
+        },1800);
+        setTimeout(function(){
+          $('.animation-text').addClass('active');
+        },2400);
+      } else {
+          $('#designerprofile-section .description-grey-box').removeClass('active');
+          $('#designerprofile-section .profile-blue-box').removeClass('active');
+          $('#designerprofile-section .white-line').removeClass('active');
+          $('#designerprofile-section .animation-text').removeClass('active');
+      }
+    }
+  );
 //
 //   // $('.description-grey-box').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
 //   //   function(e) {
