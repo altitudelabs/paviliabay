@@ -52,39 +52,39 @@ $(document).ready(function(){
 //   $window.on('scroll resize', check_if_in_view);
 //   $window.trigger('scroll');
 //
-//   /* * * * * * * * * * * * * * *
-//    * Toggle nav menu content
-//    * * * * * * * * * * * * * * */
-//
-//
-//   $('#nav-menu-image').on("click", function() {
-//     console.log("nav image clicked");
-//     $('#nav-menu-content').addClass('activate');
-//     $('#nav-menu-content').css('visibility', 'visible');
-//   });
-//
-//   $('#nav-cross').on("click", function(){
-//     $('#nav-menu-content').removeClass('activate');
-//     $('#nav-menu-content').css('visibility', 'hidden');
-//   });
-//
-//   /* * * * * * * * * * * * * * *
-//    * Bind hover so that it's touch friendly
-//    *  on mobile device
-//    * * * * * * * * * * * * * * */
-//   // $('.hover').bind('touchstart touchend', function(e) {
-//   //   e.preventDefault;
-//   //   $(this).toggleClass('hover_effect');
-//   // });
-//
-//   $('#nav-menu-content li a').on('click', function(){
-//     if ($(this).parent().children('ul').css('display') === 'block') {
-//       $(this).parent().children('ul').css('display', 'none');
-//     }
-//     else {
-//       $(this).parent().children('ul').css('display', 'block');
-//     }
-//   });
+  /* * * * * * * * * * * * * * *
+   * Toggle nav menu content
+   * * * * * * * * * * * * * * */
+
+
+  $('#nav-menu-image').on("click", function() {
+    console.log("nav image clicked");
+    $('#nav-menu-content').addClass('activate');
+    $('#nav-menu-content').css('visibility', 'visible');
+  });
+
+  $('#nav-cross').on("click", function(){
+    $('#nav-menu-content').removeClass('activate');
+    $('#nav-menu-content').css('visibility', 'hidden');
+  });
+
+  /* * * * * * * * * * * * * * *
+   * Bind hover so that it's touch friendly
+   *  on mobile device
+   * * * * * * * * * * * * * * */
+  // $('.hover').bind('touchstart touchend', function(e) {
+  //   e.preventDefault;
+  //   $(this).toggleClass('hover_effect');
+  // });
+
+  $('#nav-menu-content li a').on('click', function(){
+    if ($(this).parent().children('ul').css('display') === 'block') {
+      $(this).parent().children('ul').css('display', 'none');
+    }
+    else {
+      $(this).parent().children('ul').css('display', 'block');
+    }
+  });
 //
 //
 //   /* * * * * * * * * * * * * * *
