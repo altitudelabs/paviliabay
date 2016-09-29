@@ -1583,7 +1583,7 @@ sup {
     bottom: 100px; }
     @media only screen and (max-width: 720px) {
       .wheelbutton-container.scroll-top {
-        bottom: 50px; } }
+        bottom: 75px; } }
   @media only screen and (max-width: 720px) {
     .wheelbutton-container .next-prev-wheelbutton, .wheelbutton-container .back-top-wheelbutton {
       width: 102px;

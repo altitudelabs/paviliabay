@@ -280,7 +280,7 @@ $(document).ready(function(){
   });
 
   $('.next-prev-wheelbutton').click(function(e) {
-    e.preventDefault();
+    // e.preventDefault();
     var target = $(this).data('target');
     if (target === 'scrollTop') {
       console.log('hello');
@@ -355,7 +355,7 @@ $(document).ready(function(){
   });
 
   $('.back-top-wheelbutton').click(function(e) {
-    e.preventDefault();
+    // e.preventDefault();
     var target = $(this).data('target');
     if (target === 'scrollTop') {
       console.log('hello');
