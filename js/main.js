@@ -158,28 +158,28 @@ $(document).ready(function(){
 //     // }, 'slow');
 //   }));
 //
-//   $(window).scroll(function(){
-//     var winTop = $(window).scrollTop();
-//     var docHeight = $(document).height();
-//     var winHeight = $(window).height();
-//     var scrollTrigger = 0.95;
-//
-//     var scrolled = winTop / (docHeight - winHeight);
-//     $('#left-scroll .bar').css('top', (winHeight * 0.8) * scrolled);
-//
-//     //register
-//     var registerTop = $('#register-section').offset().top;
-//     var registerBottom = $('#register-section').offset().top + $('#register-section').innerHeight();
-//
-//     if (winTop + winHeight > registerBottom) {
-//       $('#register-section').addClass('active');
-//       $('#companyinfo-section').addClass('active');
-//     } else {
-//       $('#register-section').removeClass('active');
-//       $('#companyinfo-section').removeClass('active');
-//     }
-//
-//   });
+  $(window).scroll(function(){
+    var winTop = $(window).scrollTop();
+    var docHeight = $(document).height();
+    var winHeight = $(window).height();
+    var scrollTrigger = 0.95;
+
+    var scrolled = winTop / (docHeight - winHeight);
+    $('#left-scroll .bar').css('top', (winHeight * 0.8) * scrolled);
+
+    //register
+    var registerTop = $('#register-section').offset().top;
+    var registerBottom = $('#register-section').offset().top + $('#register-section').innerHeight();
+
+    if (winTop + winHeight > registerBottom) {
+      $('#register-section').addClass('active');
+      $('#companyinfo-section').addClass('active');
+    } else {
+      $('#register-section').removeClass('active');
+      $('#companyinfo-section').removeClass('active');
+    }
+
+  });
 //   $(window).on('resize', function() {
 //     portfolioSlider.reloadSlider();
 //   });

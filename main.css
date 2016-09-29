@@ -896,7 +896,7 @@ sup {
     top: 0;
     right: 0;
     left: 0;
-    bottom: 0; }
+    bottom: 100%; }
   #companyinfo-section.active .background {
     transition-delay: 1000ms;
     bottom: 0; }
