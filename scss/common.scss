@@ -18,6 +18,16 @@ html, body {
   overflow-x: hidden;
 }
 
+.modal-body{
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+.modal-content {
+  -webkit-border-radius: 0 !important;
+   -moz-border-radius: 0 !important;
+        border-radius: 0 !important;
+}
+
 div {
   box-sizing: border-box;
 }
