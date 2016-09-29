@@ -1324,7 +1324,7 @@ sup {
   @media only screen and (max-width: 720px) {
     #panorama-section .panorama-content {
       width: 100%;
-      top: 37%; } }
+      bottom: 40%; } }
 
 #panorama-section.active, #clubhouse-section.in-view-half #panorama-section.white-line, #portfolio-section.in-view-half #panorama-section.arrow-right, #portfolio-section.in-view-half #panorama-section.arrow-left {
   background: none !important; }

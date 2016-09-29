@@ -13,6 +13,10 @@ $(document).ready(function(){
       zoom: 16 // starting zoom
     });
     map.scrollZoom.disable();
+    if (window.innerWidth < 720) {
+      map.dragPan.disable();
+      map.doubleClickZoom.disable();
+    }
 
     new mapboxgl.Marker($('#marker')[0], {
       offset: [-75, -60]
@@ -22,7 +26,6 @@ $(document).ready(function(){
   };
   initMap();
 
-  $window.trigger('scroll');
 
   /* * * * * * * * * * * * * * *
    * Toggle nav menu content
@@ -422,21 +425,13 @@ $(document).ready(function(){
       if ($('#panorama-section').hasClass('in-view')) {
         setTimeout(function(){
           $('.first-animation').addClass('active');
-        }, 600);
+        }, 400);
         setTimeout(function(){
           $('.second-animation').addClass('active');
-        }, 1200);
-        setTimeout(function(){
-          $('.third-animation').addClass('active');
-        }, 1800);
-        setTimeout(function(){
-          $('.fourth-animation').addClass('active');
-        }, 2400);
+        }, 1000);
       } else {
         $('.first-animation').removeClass('active');
         $('.second-animation').removeClass('active');
-        $('.third-animation').removeClass('active');
-        $('.fourth-animation').removeClass('active');
       }
     }
   );
@@ -458,4 +453,7 @@ $(document).ready(function(){
     var data = { photoPath: 'images/panorama-section/pano_' + path + '.jpg' };
     return template(data);
   }
+
+  $window.trigger('scroll');
+
 });
