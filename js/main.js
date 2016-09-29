@@ -109,6 +109,7 @@ $(document).ready(function(){
   setTimeout(function(){
     $('#cover-image').addClass('active');
   }, 500);
+
   $('#cover-image').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
     function(e) {
       $('.title-eng-text').addClass('active');
@@ -175,35 +176,63 @@ $(document).ready(function(){
       $('#companyinfo-section').removeClass('active');
     }
 
+    animateClubHouseSection(winTop, winTop + winHeight);
+
   });
   $(window).on('resize', function() {
     portfolioSlider.reloadSlider();
   });
   // CLUBHOUSE SECTION
+  // TODO delete the comment after confirming section animation
+  // $('.white-line').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+  //   function(e) {
+  //     $('.animation-text').addClass('fade');
+  //     // $('.clubhouse-image-container').addClass('fade');
+  //     $('#clubWheel').addClass('fade');
+  //     $('.link-menu').addClass('activate');
+  //   }
+  // );
+  // $('#clubhouse-section').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+  //   function(e) {
+  //     if ($('#clubhouse-section').hasClass('in-view')) {
+  //       setTimeout(function(){
+  //         $('.clubhouse-image-container').addClass('active');
+  //       },600);
+  //       setTimeout(function(){
+  //         $('.clubhouse-blue-box').addClass('active');
+  //       },1200);
+  //       setTimeout(function(){
+  //         $('#clubhouse-section .white-line').addClass('active');
+  //       },1800);
+  //       setTimeout(function(){
+  //         $('.animation-text').addClass('active');
+  //       },2400);
+  //     } else {
+  //         $('#clubhouse-section .clubhouse-image-container').removeClass('active');
+  //         $('#clubhouse-section .clubhouse-blue-box').removeClass('active');
+  //         $('#clubhouse-section .white-line').removeClass('active');
+  //         $('#clubhouse-section .animation-text').removeClass('active');
+  //     }
+  //   }
+  // );
+  function animateClubHouseSection(scrollTop, scrollBottom) {
+    var section = $('#clubhouse-section');
+    var sectionTop = section.offset().top;
+    var sectionHeight = section.innerHeight();
+    var sectionBottom = sectionTop + sectionHeight;
 
-  $('#clubhouse-section').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
-    function(e) {
-      if ($('#clubhouse-section').hasClass('in-view')) {
-        setTimeout(function(){
-          $('.clubhouse-image-container').addClass('active');
-        },600);
-        setTimeout(function(){
-          $('.clubhouse-blue-box').addClass('active');
-        },1200);
-        setTimeout(function(){
-          $('#clubhouse-section .white-line').addClass('active');
-        },1800);
-        setTimeout(function(){
-          $('.animation-text').addClass('active');
-        },2400);
-      } else {
-          $('#clubhouse-section .clubhouse-image-container').removeClass('active');
-          $('#clubhouse-section .clubhouse-blue-box').removeClass('active');
-          $('#clubhouse-section .white-line').removeClass('active');
-          $('#clubhouse-section .animation-text').removeClass('active');
-      }
+    if (scrollBottom > sectionTop + (sectionHeight * .4)) {
+      section.addClass('in-view-half');
+    } else {
+      section.removeClass('in-view-half');
     }
-  );
+
+    if (scrollBottom > sectionTop + (sectionHeight * .7)) {
+      section.addClass('in-view-full');
+    } else {
+      section.removeClass('in-view-full');
+    }
+  }
 
   var CLUBHOUSE_DATA = $('#clubhouse-section').data('categories');
 
