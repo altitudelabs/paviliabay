@@ -23,12 +23,6 @@
 
   $white-line-left: -250px;
 
-/*  // wheelbutton
-  // $wheelbutton-top: 490px;
-  // $wheelbutton-top-mobile: 360px;
-  // $wheelbutton-left: $bluebox-container-width + 4%;
-  // $wheelbutton-left-trans: $bluebox-container-width-trans + 6%;
-  // $wheelbutton-left-mobile: 260px;*/
   $wheelbutton-bottom: 130px;
   $wheelbutton-bottom-mobile: 115px;
   $wheelbutton-right: 80px;
@@ -99,7 +93,7 @@
     position: absolute;
     border-bottom: 1px solid white;
     background-color: rgba(0, 0, 0, .5);
-    right: 0;
+    right: -100px;
 
     bottom: 41px;
 
@@ -134,7 +128,7 @@
 
   .clubhouse-image-container {
     height: $image-container-height;
-
+    @include transition((background 1s linear));
     @extend .background-cover;
     background-image: url("./images/clubhouse-section/club1.jpg");
     position: relative;
@@ -231,10 +225,6 @@
     position: absolute;
     bottom: $wheelbutton-bottom;
     right: $wheelbutton-right;
-/*    transition: top 300ms,
-                right 300ms,
-                bottom 300ms,
-                left 300ms;*/
 
     @include responsive(transition) {
       right: $wheelbutton-right-trans;
@@ -245,15 +235,37 @@
       right: $wheelbutton-right-mobile;
     }
   }
+}
 
-/*  &.full-screen .wheelbutton-container {
-    @include responsive(mobile) {
-    bottom: calc(100% - 130px);
-    right: calc(100% - 55px);
+
+
+//animation
+#clubhouse-section {
+  @include transition((opacity 300ms linear));
+  opacity: 0;
+  .animation-text {
+    @include transition((opacity 600ms linear));
+    opacity: 0;
+  }
+  .link-menu {
+    @include transition((right 600ms linear));
+  }
+
+
+  &.in-view-half {
+    opacity: 1;
+
+    .white-line {
+      @extend .active;
     }
-    top: calc(100% - 160px);
-    left: calc(100% - 95px);
-  }*/
+  }
 
-
+  &.in-view-full {
+    .animation-text {
+      opacity: 1;
+    }
+    .link-menu {
+      right: 0px;
+    }
+  }
 }

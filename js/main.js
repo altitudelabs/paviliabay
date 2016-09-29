@@ -13,6 +13,10 @@ $(document).ready(function(){
       zoom: 16 // starting zoom
     });
     map.scrollZoom.disable();
+    if (window.innerWidth < 720) {
+      map.dragPan.disable();
+      map.doubleClickZoom.disable();
+    }
 
     new mapboxgl.Marker($('#marker')[0], {
       offset: [-75, -60]
@@ -22,35 +26,6 @@ $(document).ready(function(){
   };
   initMap();
 
-  // check if element is in view and then apply animation
-  function check_if_in_view() {
-    var window_height = $window.height();
-    var window_top_position = $window.scrollTop();
-    var window_bottom_position = (window_top_position + window_height);
-
-    $.each($animation_elements, function() {
-      var $element = $(this);
-      var element_height = $element.outerHeight();
-      var element_top_position = $element.offset().top;
-      var element_bottom_position = (element_top_position + element_height);
-
-      //check to see if this current container is within viewport
-      if ((element_bottom_position >= window_top_position) &&
-          (element_top_position + 300 <= window_bottom_position)) {
-        $element.addClass('in-view');
-      } else {
-        $element.removeClass('in-view');
-        // $element.find('.animation-text').removeClass('fade');
-        // $element.find('.text-order-1').removeClass('fade');
-        // $element.find('.text-order-2').removeClass('fade');
-        // $element.find('.text-order-3').removeClass('fade');
-        // $element.find('.text-order-4').removeClass('fade');
-      }
-    });
-  }
-
-  $window.on('scroll resize', check_if_in_view);
-  $window.trigger('scroll');
 
   /* * * * * * * * * * * * * * *
    * Toggle nav menu content
@@ -109,6 +84,7 @@ $(document).ready(function(){
   setTimeout(function(){
     $('#cover-image').addClass('active');
   }, 500);
+
   $('#cover-image').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
     function(e) {
       $('.title-eng-text').addClass('active');
@@ -142,19 +118,13 @@ $(document).ready(function(){
 
   arrow_left.click($.throttle(600, function(){
     portfolioSlider.goToPrevSlide();
-    // container.animate({
-    //   scrollLeft: '-=' + step
-    // }, 'slow');
   }));
 
   arrow_right.click($.throttle(600, function(){
     portfolioSlider.goToNextSlide();
-    // container.animate({
-    //   scrollLeft: '+=' + step
-    // }, 'slow');
   }));
 
-  $(window).scroll(function(){
+  $(window).scroll($.throttle(250, function() {
     var winTop = $(window).scrollTop();
     var docHeight = $(document).height();
     var winHeight = $(window).height();
@@ -175,35 +145,105 @@ $(document).ready(function(){
       $('#companyinfo-section').removeClass('active');
     }
 
-  });
+    animateClubHouseSection(winTop, winTop + winHeight);
+    animateDesignerSection(winTop, winTop + winHeight);
+    animatePortfolioSection(winTop, winTop + winHeight);
+    animateMapSection(winTop, winTop + winHeight);
+    animatePanoramaSection(winTop, winTop + winHeight);
+  }));
+
   $(window).on('resize', function() {
     portfolioSlider.reloadSlider();
   });
-  // CLUBHOUSE SECTION
 
-  $('#clubhouse-section').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
-    function(e) {
-      if ($('#clubhouse-section').hasClass('in-view')) {
-        setTimeout(function(){
-          $('.clubhouse-image-container').addClass('active');
-        },600);
-        setTimeout(function(){
-          $('.clubhouse-blue-box').addClass('active');
-        },1200);
-        setTimeout(function(){
-          $('#clubhouse-section .white-line').addClass('active');
-        },1800);
-        setTimeout(function(){
-          $('.animation-text').addClass('active');
-        },2400);
-      } else {
-          $('#clubhouse-section .clubhouse-image-container').removeClass('active');
-          $('#clubhouse-section .clubhouse-blue-box').removeClass('active');
-          $('#clubhouse-section .white-line').removeClass('active');
-          $('#clubhouse-section .animation-text').removeClass('active');
-      }
+  function animateClubHouseSection(scrollTop, scrollBottom) {
+    var section = $('#clubhouse-section');
+    var sectionTop = section.offset().top;
+    var sectionHeight = section.innerHeight();
+    var sectionBottom = sectionTop + sectionHeight;
+
+    if (scrollBottom > sectionTop + (sectionHeight * .6)) {
+      section.addClass('in-view-half');
+    } else {
+      section.removeClass('in-view-half');
     }
-  );
+
+    if (scrollBottom > sectionTop + (sectionHeight * .8)) {
+      section.addClass('in-view-full');
+    } else {
+      section.removeClass('in-view-full');
+    }
+  }
+  function animateDesignerSection(scrollTop, scrollBottom) {
+    var section = $('#designerprofile-section');
+    var sectionTop = section.offset().top;
+    var sectionHeight = section.innerHeight();
+    var sectionBottom = sectionTop + sectionHeight;
+
+    if (scrollBottom > sectionTop + (sectionHeight * .4)) {
+      section.addClass('in-view-one');
+    } else {
+      section.removeClass('in-view-one');
+    }
+
+    if (scrollBottom > sectionTop + (sectionHeight * .8)) {
+      section.addClass('in-view-two');
+    } else {
+      section.removeClass('in-view-two');
+    }
+
+    if (scrollBottom > sectionTop + (sectionHeight)) {
+      section.addClass('in-view-full');
+    } else {
+      section.removeClass('in-view-full');
+    }
+  }
+  function animatePortfolioSection(scrollTop, scrollBottom) {
+    var section = $('#portfolio-section');
+    var sectionTop = section.offset().top;
+    var sectionHeight = section.innerHeight();
+    var sectionBottom = sectionTop + sectionHeight;
+
+    if (scrollBottom > sectionTop + (sectionHeight * .6)) {
+      section.addClass('in-view-half');
+    } else {
+      section.removeClass('in-view-half');
+    }
+
+    if (scrollBottom > sectionTop + (sectionHeight * .8)) {
+      section.addClass('in-view-full');
+    } else {
+      section.removeClass('in-view-full');
+    }
+  }
+  function animateMapSection(scrollTop, scrollBottom) {
+    var section = $('#map-section');
+    var sectionTop = section.offset().top;
+    var sectionHeight = section.innerHeight();
+    var sectionBottom = sectionTop + sectionHeight;
+
+    if (scrollBottom > sectionTop + (sectionHeight * .6)) {
+      section.addClass('in-view-half');
+    } else {
+      section.removeClass('in-view-half');
+    }
+
+    if (scrollBottom > sectionTop + (sectionHeight * .8)) {
+      section.addClass('in-view-full');
+    } else {
+      section.removeClass('in-view-full');
+    }
+  }
+  function animatePanoramaSection(scrollTop, scrollBottom) {
+    var section = $('#panorama-section');
+    var sectionTop = section.offset().top;
+    var sectionHeight = section.innerHeight();
+    if (scrollBottom > sectionTop + (sectionHeight * .3)) {
+      section.addClass('in-view');
+    } else {
+      section.removeClass('in-view');
+    }
+  }
 
   var CLUBHOUSE_DATA = $('#clubhouse-section').data('categories');
 
@@ -369,67 +409,6 @@ $(document).ready(function(){
   var passionText = ['Philippe  was  raised  in  a  family  where  racing  is  a  long-established  tradition. Inspired by his father, an Olympian sailor, he began his career in France as a dinghy sailor at the tender age of 9. Philippe’s first sailing yacht was designed when  he  was  only 16 years  old.  By  the  age  of  22,  his  first  series  of  yacht  was developed.  During  the  1980s,  he  engaged  in  yacht  racing  and  claimed the title of world championships twice. His enthusiasm in racing has equipped him to become a qualified naval architect and one of the world’s leading yacht designers.'];
   var designText = ['Philippe  specializes  in  designing  super  yachts  ranging  from  30  meters  to  105 meters,  both  Sailing  and  Motor  yachts.  His  yacht  is  characterized by  quality design and attention to details with features such as teak flooring, tinted glass, carbon  fiber  and  underwater  lights.  With  over  12,000  boats  built  to  date, Philippe’s  experience  in  naval  architecture  and  his  reputation  in  the  field make him the ideal candidate to design and engineer the perfect yacht.'];
 
-  $('#designerprofile-section').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
-    function(e) {
-      if ($('#designerprofile-section').hasClass('in-view')) {
-        setTimeout(function(){
-          $('.description-grey-box').addClass('active');
-        },600);
-        setTimeout(function(){
-          $('.profile-blue-box').addClass('active');
-        },1200);
-        setTimeout(function(){
-          $('.white-line').addClass('active');
-        },1800);
-        setTimeout(function(){
-          $('.animation-text').addClass('active');
-        },2400);
-      } else {
-          $('#designerprofile-section .description-grey-box').removeClass('active');
-          $('#designerprofile-section .profile-blue-box').removeClass('active');
-          $('#designerprofile-section .white-line').removeClass('active');
-          $('#designerprofile-section .animation-text').removeClass('active');
-      }
-    }
-  );
-//
-//   // $('.description-grey-box').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
-//   //   function(e) {
-//   //     $('.profile-blue-box').addClass('active');
-//   //   }
-//   // );
-//   // $('.profile-blue-box').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
-//   //   function(e) {
-//   //     $('.white-line').addClass('active');
-//   //   }
-//   // );
-//   // $('.white-line').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
-//   //   function(e) {
-//   //     $('.animation-text').addClass('active');
-//   //   }
-//   // );
-//
-  // PORTFOLIO SECTION
-  // $('#portfolio-section').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
-  //   function(e) {
-  //     $('.animation-text').addClass('fade');
-  //   }
-  // );
-  $('#portfolio-section').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
-    function(e) {
-      if ($('#portfolio-section').hasClass('in-view')) {
-        setTimeout(function(){
-          $('#portfolio-section .hero-fade').addClass('active');
-          $('.arrow-left').addClass('active');
-          $('.arrow-right').addClass('active');
-        }, 600);
-      } else {
-          $('#portfolio-section .hero-fade').removeClass('active');
-          $('.arrow-left').removeClass('active');
-          $('.arrow-right').removeClass('active');
-      }
-    }
-  );
   var nOfSlides = window.innerWidth > 720 ? 3 : 2;
   var portfolioSlider = $('#portfolio-section .portfolio-image-container').bxSlider({
     slideWidth: window.innerWidth / nOfSlides,
@@ -446,56 +425,17 @@ $(document).ready(function(){
       if ($('#panorama-section').hasClass('in-view')) {
         setTimeout(function(){
           $('.first-animation').addClass('active');
-        }, 600);
+        }, 400);
         setTimeout(function(){
           $('.second-animation').addClass('active');
-        }, 1200);
-        setTimeout(function(){
-          $('.third-animation').addClass('active');
-        }, 1800);
-        setTimeout(function(){
-          $('.fourth-animation').addClass('active');
-        }, 2400);
+        }, 1000);
       } else {
         $('.first-animation').removeClass('active');
         $('.second-animation').removeClass('active');
-        $('.third-animation').removeClass('active');
-        $('.fourth-animation').removeClass('active');
       }
     }
   );
 
-  // MAP SECTION
-  // $('.map-info').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
-  //   function(e) {
-  //     $('.animation-text').addClass('fade');
-  //   }
-  // );
-  $('#map-section').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
-    function(e) {
-      if ($('#map-section').hasClass('in-view')) {
-        setTimeout(function(){
-          $('#map').addClass('active');
-          $('.map-info').addClass('active');
-        },600);
-        setTimeout(function(){
-          $('.white-line').addClass('active');
-        },1200);
-        setTimeout(function(){
-          $('.animation-text').addClass('active');
-        },1800);
-      } else {
-          $('#map').removeClass('active');
-          $('#map-section .map-info').removeClass('active');
-          $('#map-section .white-line').removeClass('active');
-          $('#map-section .animation-text').removeClass('active');
-      }
-    }
-  );
-
-  // var panorama = $('.panorama-image-container')
-  // .html(renderPanoramaImageContainer(''))
-  // .paver({ gracefulFailure: false });
   var panorama;
   $('.panorama-content .button-group .button').click(function(e) {
     var target = $(this).data('target');
@@ -513,4 +453,7 @@ $(document).ready(function(){
     var data = { photoPath: 'images/panorama-section/pano_' + path + '.jpg' };
     return template(data);
   }
+
+  $window.trigger('scroll');
+
 });
