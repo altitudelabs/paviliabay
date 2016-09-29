@@ -189,7 +189,7 @@ sup {
   -o-transform: translate3d(-200px, 0px, 0px);
   transform: translate3d(-200px, 0px, 0px); }
 
-.slide-in.active, #clubhouse-section.in-view-half .slide-in.white-line, #portfolio-section.in-view-half .slide-in.arrow-right, #portfolio-section.in-view-half .slide-in.arrow-left {
+.slide-in.active, #clubhouse-section.in-view-half .slide-in.white-line, #designerprofile-section.in-view-two .slide-in.white-line, #portfolio-section.in-view-half .slide-in.arrow-right, #portfolio-section.in-view-half .slide-in.arrow-left {
   opacity: 1;
   -webkit-transform: translate3d(0px, 0px, 0px);
   -moz-transform: translate3d(0px, 0px, 0px);
@@ -209,7 +209,7 @@ sup {
   -o-transform: translate3d(-100px, 0px, 0px);
   transform: translate3d(-100px, 0px, 0px); }
 
-.slide-in-left.active, #clubhouse-section.in-view-half .slide-in-left.white-line, #portfolio-section.in-view-half .slide-in-left.arrow-right, #portfolio-section.in-view-half .slide-in-left.arrow-left {
+.slide-in-left.active, #clubhouse-section.in-view-half .slide-in-left.white-line, #designerprofile-section.in-view-two .slide-in-left.white-line, #portfolio-section.in-view-half .slide-in-left.arrow-right, #portfolio-section.in-view-half .slide-in-left.arrow-left {
   opacity: 1;
   -webkit-transform: translate3d(0px, 0px, 0px);
   -moz-transform: translate3d(0px, 0px, 0px);
@@ -229,7 +229,7 @@ sup {
   -o-transform: translate3d(100px, 0px, 0px);
   transform: translate3d(100px, 0px, 0px); }
 
-.slide-in-right.active, #clubhouse-section.in-view-half .slide-in-right.white-line, #portfolio-section.in-view-half .slide-in-right.arrow-right, #portfolio-section.in-view-half .slide-in-right.arrow-left {
+.slide-in-right.active, #clubhouse-section.in-view-half .slide-in-right.white-line, #designerprofile-section.in-view-two .slide-in-right.white-line, #portfolio-section.in-view-half .slide-in-right.arrow-right, #portfolio-section.in-view-half .slide-in-right.arrow-left {
   opacity: 1;
   -webkit-transform: translate3d(0px, 0px, 0px);
   -moz-transform: translate3d(0px, 0px, 0px);
@@ -249,7 +249,7 @@ sup {
   -o-transform: translate3d(300px, 0px, 0px);
   transform: translate3d(300px, 0px, 0px); }
 
-.slide-in-right-map.active, #clubhouse-section.in-view-half .slide-in-right-map.white-line, #portfolio-section.in-view-half .slide-in-right-map.arrow-right, #portfolio-section.in-view-half .slide-in-right-map.arrow-left {
+.slide-in-right-map.active, #clubhouse-section.in-view-half .slide-in-right-map.white-line, #designerprofile-section.in-view-two .slide-in-right-map.white-line, #portfolio-section.in-view-half .slide-in-right-map.arrow-right, #portfolio-section.in-view-half .slide-in-right-map.arrow-left {
   opacity: 1;
   -webkit-transform: translate3d(0px, 0px, 0px);
   -moz-transform: translate3d(0px, 0px, 0px);
@@ -300,7 +300,7 @@ sup {
   -o-transition: all 800ms linear;
   transition: all 800ms linear; }
 
-.fade-button.active, #clubhouse-section.in-view-half .fade-button.white-line, #portfolio-section.in-view-half .fade-button.arrow-right, #portfolio-section.in-view-half .fade-button.arrow-left {
+.fade-button.active, #clubhouse-section.in-view-half .fade-button.white-line, #designerprofile-section.in-view-two .fade-button.white-line, #portfolio-section.in-view-half .fade-button.arrow-right, #portfolio-section.in-view-half .fade-button.arrow-left {
   opacity: 0.5;
   -webkit-transition: all 800ms linear;
   -moz-transition: all 800ms linear;
@@ -314,7 +314,7 @@ sup {
   -o-transition: all 1s linear;
   transition: all 1s linear; }
 
-.hero-fade.active, #clubhouse-section.in-view-half .hero-fade.white-line, #portfolio-section.in-view-half .hero-fade.arrow-right, #portfolio-section.in-view-half .hero-fade.arrow-left {
+.hero-fade.active, #clubhouse-section.in-view-half .hero-fade.white-line, #designerprofile-section.in-view-two .hero-fade.white-line, #portfolio-section.in-view-half .hero-fade.arrow-right, #portfolio-section.in-view-half .hero-fade.arrow-left {
   opacity: 1;
   -webkit-transition: all 1s linear;
   -moz-transition: all 1s linear;
@@ -474,13 +474,13 @@ sup {
       left: 0;
       bottom: 0;
       top: 100%; }
-    #hero-section .title-container .transparent-button.active .top, #hero-section .title-container #clubhouse-section.in-view-half .transparent-button.white-line .top, #clubhouse-section.in-view-half #hero-section .title-container .transparent-button.white-line .top, #hero-section .title-container #portfolio-section.in-view-half .transparent-button.arrow-right .top, #portfolio-section.in-view-half #hero-section .title-container .transparent-button.arrow-right .top, #hero-section .title-container #portfolio-section.in-view-half .transparent-button.arrow-left .top, #portfolio-section.in-view-half #hero-section .title-container .transparent-button.arrow-left .top {
+    #hero-section .title-container .transparent-button.active .top, #hero-section .title-container #clubhouse-section.in-view-half .transparent-button.white-line .top, #clubhouse-section.in-view-half #hero-section .title-container .transparent-button.white-line .top, #hero-section .title-container #designerprofile-section.in-view-two .transparent-button.white-line .top, #designerprofile-section.in-view-two #hero-section .title-container .transparent-button.white-line .top, #hero-section .title-container #portfolio-section.in-view-half .transparent-button.arrow-right .top, #portfolio-section.in-view-half #hero-section .title-container .transparent-button.arrow-right .top, #hero-section .title-container #portfolio-section.in-view-half .transparent-button.arrow-left .top, #portfolio-section.in-view-half #hero-section .title-container .transparent-button.arrow-left .top {
       right: 0; }
-    #hero-section .title-container .transparent-button.active .right, #hero-section .title-container #clubhouse-section.in-view-half .transparent-button.white-line .right, #clubhouse-section.in-view-half #hero-section .title-container .transparent-button.white-line .right, #hero-section .title-container #portfolio-section.in-view-half .transparent-button.arrow-right .right, #portfolio-section.in-view-half #hero-section .title-container .transparent-button.arrow-right .right, #hero-section .title-container #portfolio-section.in-view-half .transparent-button.arrow-left .right, #portfolio-section.in-view-half #hero-section .title-container .transparent-button.arrow-left .right {
+    #hero-section .title-container .transparent-button.active .right, #hero-section .title-container #clubhouse-section.in-view-half .transparent-button.white-line .right, #clubhouse-section.in-view-half #hero-section .title-container .transparent-button.white-line .right, #hero-section .title-container #designerprofile-section.in-view-two .transparent-button.white-line .right, #designerprofile-section.in-view-two #hero-section .title-container .transparent-button.white-line .right, #hero-section .title-container #portfolio-section.in-view-half .transparent-button.arrow-right .right, #portfolio-section.in-view-half #hero-section .title-container .transparent-button.arrow-right .right, #hero-section .title-container #portfolio-section.in-view-half .transparent-button.arrow-left .right, #portfolio-section.in-view-half #hero-section .title-container .transparent-button.arrow-left .right {
       bottom: 0; }
-    #hero-section .title-container .transparent-button.active .bottom, #hero-section .title-container #clubhouse-section.in-view-half .transparent-button.white-line .bottom, #clubhouse-section.in-view-half #hero-section .title-container .transparent-button.white-line .bottom, #hero-section .title-container #portfolio-section.in-view-half .transparent-button.arrow-right .bottom, #portfolio-section.in-view-half #hero-section .title-container .transparent-button.arrow-right .bottom, #hero-section .title-container #portfolio-section.in-view-half .transparent-button.arrow-left .bottom, #portfolio-section.in-view-half #hero-section .title-container .transparent-button.arrow-left .bottom {
+    #hero-section .title-container .transparent-button.active .bottom, #hero-section .title-container #clubhouse-section.in-view-half .transparent-button.white-line .bottom, #clubhouse-section.in-view-half #hero-section .title-container .transparent-button.white-line .bottom, #hero-section .title-container #designerprofile-section.in-view-two .transparent-button.white-line .bottom, #designerprofile-section.in-view-two #hero-section .title-container .transparent-button.white-line .bottom, #hero-section .title-container #portfolio-section.in-view-half .transparent-button.arrow-right .bottom, #portfolio-section.in-view-half #hero-section .title-container .transparent-button.arrow-right .bottom, #hero-section .title-container #portfolio-section.in-view-half .transparent-button.arrow-left .bottom, #portfolio-section.in-view-half #hero-section .title-container .transparent-button.arrow-left .bottom {
       left: 0; }
-    #hero-section .title-container .transparent-button.active .left, #hero-section .title-container #clubhouse-section.in-view-half .transparent-button.white-line .left, #clubhouse-section.in-view-half #hero-section .title-container .transparent-button.white-line .left, #hero-section .title-container #portfolio-section.in-view-half .transparent-button.arrow-right .left, #portfolio-section.in-view-half #hero-section .title-container .transparent-button.arrow-right .left, #hero-section .title-container #portfolio-section.in-view-half .transparent-button.arrow-left .left, #portfolio-section.in-view-half #hero-section .title-container .transparent-button.arrow-left .left {
+    #hero-section .title-container .transparent-button.active .left, #hero-section .title-container #clubhouse-section.in-view-half .transparent-button.white-line .left, #clubhouse-section.in-view-half #hero-section .title-container .transparent-button.white-line .left, #hero-section .title-container #designerprofile-section.in-view-two .transparent-button.white-line .left, #designerprofile-section.in-view-two #hero-section .title-container .transparent-button.white-line .left, #hero-section .title-container #portfolio-section.in-view-half .transparent-button.arrow-right .left, #portfolio-section.in-view-half #hero-section .title-container .transparent-button.arrow-right .left, #hero-section .title-container #portfolio-section.in-view-half .transparent-button.arrow-left .left, #portfolio-section.in-view-half #hero-section .title-container .transparent-button.arrow-left .left {
       top: 0; }
 
 #hero-section .video-container {
@@ -916,7 +916,7 @@ sup {
     right: 0;
     left: 0;
     bottom: 100%; }
-  #companyinfo-section.active .background, #clubhouse-section.in-view-half #companyinfo-section.white-line .background, #portfolio-section.in-view-half #companyinfo-section.arrow-right .background, #portfolio-section.in-view-half #companyinfo-section.arrow-left .background {
+  #companyinfo-section.active .background, #clubhouse-section.in-view-half #companyinfo-section.white-line .background, #designerprofile-section.in-view-two #companyinfo-section.white-line .background, #portfolio-section.in-view-half #companyinfo-section.arrow-right .background, #portfolio-section.in-view-half #companyinfo-section.arrow-left .background {
     transition-delay: 1000ms;
     bottom: 0; }
   #companyinfo-section .companyinfo-body-container {
@@ -1335,11 +1335,11 @@ sup {
       width: 100%;
       bottom: 40%; } }
 
-#panorama-section.active, #clubhouse-section.in-view-half #panorama-section.white-line, #portfolio-section.in-view-half #panorama-section.arrow-right, #portfolio-section.in-view-half #panorama-section.arrow-left {
+#panorama-section.active, #clubhouse-section.in-view-half #panorama-section.white-line, #designerprofile-section.in-view-two #panorama-section.white-line, #portfolio-section.in-view-half #panorama-section.arrow-right, #portfolio-section.in-view-half #panorama-section.arrow-left {
   background: none !important; }
-  #panorama-section.active .panorama-content, #clubhouse-section.in-view-half #panorama-section.white-line .panorama-content, #portfolio-section.in-view-half #panorama-section.arrow-right .panorama-content, #portfolio-section.in-view-half #panorama-section.arrow-left .panorama-content {
+  #panorama-section.active .panorama-content, #clubhouse-section.in-view-half #panorama-section.white-line .panorama-content, #designerprofile-section.in-view-two #panorama-section.white-line .panorama-content, #portfolio-section.in-view-half #panorama-section.arrow-right .panorama-content, #portfolio-section.in-view-half #panorama-section.arrow-left .panorama-content {
     bottom: 50px; }
-    #panorama-section.active .panorama-content .title-center, #clubhouse-section.in-view-half #panorama-section.white-line .panorama-content .title-center, #portfolio-section.in-view-half #panorama-section.arrow-right .panorama-content .title-center, #portfolio-section.in-view-half #panorama-section.arrow-left .panorama-content .title-center {
+    #panorama-section.active .panorama-content .title-center, #clubhouse-section.in-view-half #panorama-section.white-line .panorama-content .title-center, #designerprofile-section.in-view-two #panorama-section.white-line .panorama-content .title-center, #portfolio-section.in-view-half #panorama-section.arrow-right .panorama-content .title-center, #portfolio-section.in-view-half #panorama-section.arrow-left .panorama-content .title-center {
       opacity: 0; }
 
 #panorama-section .title-center {
@@ -1580,22 +1580,22 @@ sup {
     left: 0;
     bottom: 0;
     top: 100%; }
-  #register-section.active .background, #clubhouse-section.in-view-half #register-section.white-line .background, #portfolio-section.in-view-half #register-section.arrow-right .background, #portfolio-section.in-view-half #register-section.arrow-left .background {
+  #register-section.active .background, #clubhouse-section.in-view-half #register-section.white-line .background, #designerprofile-section.in-view-two #register-section.white-line .background, #portfolio-section.in-view-half #register-section.arrow-right .background, #portfolio-section.in-view-half #register-section.arrow-left .background {
     bottom: 0;
     transition-delay: 0ms; }
-  #register-section.active .section-container, #clubhouse-section.in-view-half #register-section.white-line .section-container, #portfolio-section.in-view-half #register-section.arrow-right .section-container, #portfolio-section.in-view-half #register-section.arrow-left .section-container {
+  #register-section.active .section-container, #clubhouse-section.in-view-half #register-section.white-line .section-container, #designerprofile-section.in-view-two #register-section.white-line .section-container, #portfolio-section.in-view-half #register-section.arrow-right .section-container, #portfolio-section.in-view-half #register-section.arrow-left .section-container {
     opacity: 1;
     transition-delay: 0ms; }
-  #register-section.active .top, #clubhouse-section.in-view-half #register-section.white-line .top, #portfolio-section.in-view-half #register-section.arrow-right .top, #portfolio-section.in-view-half #register-section.arrow-left .top {
+  #register-section.active .top, #clubhouse-section.in-view-half #register-section.white-line .top, #designerprofile-section.in-view-two #register-section.white-line .top, #portfolio-section.in-view-half #register-section.arrow-right .top, #portfolio-section.in-view-half #register-section.arrow-left .top {
     right: 0;
     transition-delay: 800ms; }
-  #register-section.active .right, #clubhouse-section.in-view-half #register-section.white-line .right, #portfolio-section.in-view-half #register-section.arrow-right .right, #portfolio-section.in-view-half #register-section.arrow-left .right {
+  #register-section.active .right, #clubhouse-section.in-view-half #register-section.white-line .right, #designerprofile-section.in-view-two #register-section.white-line .right, #portfolio-section.in-view-half #register-section.arrow-right .right, #portfolio-section.in-view-half #register-section.arrow-left .right {
     bottom: 0;
     transition-delay: 800ms; }
-  #register-section.active .bottom, #clubhouse-section.in-view-half #register-section.white-line .bottom, #portfolio-section.in-view-half #register-section.arrow-right .bottom, #portfolio-section.in-view-half #register-section.arrow-left .bottom {
+  #register-section.active .bottom, #clubhouse-section.in-view-half #register-section.white-line .bottom, #designerprofile-section.in-view-two #register-section.white-line .bottom, #portfolio-section.in-view-half #register-section.arrow-right .bottom, #portfolio-section.in-view-half #register-section.arrow-left .bottom {
     left: 0;
     transition-delay: 800ms; }
-  #register-section.active .left, #clubhouse-section.in-view-half #register-section.white-line .left, #portfolio-section.in-view-half #register-section.arrow-right .left, #portfolio-section.in-view-half #register-section.arrow-left .left {
+  #register-section.active .left, #clubhouse-section.in-view-half #register-section.white-line .left, #designerprofile-section.in-view-two #register-section.white-line .left, #portfolio-section.in-view-half #register-section.arrow-right .left, #portfolio-section.in-view-half #register-section.arrow-left .left {
     top: 0;
     transition-delay: 800ms; }
   #register-section .section-container {
