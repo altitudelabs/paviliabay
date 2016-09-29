@@ -3,6 +3,7 @@ $(document).ready(function(){
   var $animation_elements = $('.animation-element');
   var $window = $(window);
   $('.modal').modal('show');
+<<<<<<< 8f69c30cd8c437ff0528b6b35568fbd4d133e9a1
 
   //initialize map
   function initMap() {
@@ -12,6 +13,53 @@ $(document).ready(function(){
       style: 'mapbox://styles/indicube/ciq80ty8u009obem5szhpb45t', //stylesheet location
       center: [114.112, 22.365], // starting position
       zoom: 16 // starting zoom
+=======
+  
+//
+//   //initialize map
+//   function initMap() {
+//     mapboxgl.accessToken = 'pk.eyJ1IjoiaW5kaWN1YmUiLCJhIjoiY2lqc2JjN21oMGhiNHZhbHh5MjRkNGh3ayJ9.mziNQDmuq5Y2jyFZDhVudg';
+//     var map = new mapboxgl.Map({
+//       container: 'map', // container id
+//       style: 'mapbox://styles/indicube/ciq80ty8u009obem5szhpb45t', //stylesheet location
+//       center: [114.112, 22.365], // starting position
+//       zoom: 16 // starting zoom
+//     });
+//     map.scrollZoom.disable();
+//
+//     new mapboxgl.Marker($('#marker')[0], {
+//       offset: [-75, -60]
+//     })
+//     .setLngLat([114.112723, 22.365542])
+//     .addTo(map)
+//   };
+//   initMap();
+//
+  // check if element is in view and then apply animation
+  function check_if_in_view() {
+    var window_height = $window.height();
+    var window_top_position = $window.scrollTop();
+    var window_bottom_position = (window_top_position + window_height);
+
+    $.each($animation_elements, function() {
+      var $element = $(this);
+      var element_height = $element.outerHeight();
+      var element_top_position = $element.offset().top;
+      var element_bottom_position = (element_top_position + element_height);
+
+      //check to see if this current container is within viewport
+      if ((element_bottom_position >= window_top_position) &&
+          (element_top_position + 300 <= window_bottom_position)) {
+        $element.addClass('in-view');
+      } else {
+        $element.removeClass('in-view');
+        // $element.find('.animation-text').removeClass('fade');
+        // $element.find('.text-order-1').removeClass('fade');
+        // $element.find('.text-order-2').removeClass('fade');
+        // $element.find('.text-order-3').removeClass('fade');
+        // $element.find('.text-order-4').removeClass('fade');
+      }
+>>>>>>> format modal
     });
     map.scrollZoom.disable();
     if (window.innerWidth < 720) {
