@@ -440,65 +440,6 @@ $(document).ready(function(){
     if (target === '#designerprofile-section') {
       return slideDesignerSection.apply(this, [e, isNext])
     }
-
-    // if (isNext) {
-    //   if (target === '#designerprofile-section') {
-    //     var currentText = $('.designer-description-text').data('id');
-    //     if (currentText === 'default') {
-    //       $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
-    //         $('.description').text(passionText)
-    //         $('.quote').html('<strong>His Passion</strong>');
-    //       }).delay(1000).animate({'opacity': 1}, 1500);
-    //       $('.designer-description-text').data('id','passion');
-    //     } else if (currentText === 'passion') {
-    //       $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
-    //         $('.quote').html('<strong>His Design</strong>');
-    //         $('.description').text(designText);
-    //       }).delay(1000).animate({'opacity': 1}, 1500);
-    //       $('.designer-description-text').data('id','design');
-    //     } else {
-    //       $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
-    //         $('.quote').html('<em>"A yacht is to always please the eye and be the pride of her owner."</em>');
-    //         $('.description').text(defaultText);
-    //       }).delay(1000).animate({'opacity': 1}, 1500);
-    //       $('.designer-description-text').data('id','default');
-    //     }
-    //   };
-    //   return;
-    // } // if is previous
-
-    // if (target === '#clubhouse-section') {
-    //   if ($('.full-section-view').hasClass('fade-in-view')) {
-    //     if (currentImage === 0) {
-    //       $('.full-section-view').removeClass('fade-in-view');
-    //       return;
-    //     }
-    //     currentImage = currentImage - 1;
-    //     $('.full-section-view').css('background-image','url('+imageArray[currentImage]+')');
-    //   }
-    // };
-    // if (target === '#designerprofile-section') {
-    //   var currentText = $('.designer-description-text').data('id');
-    //   if (currentText === 'default') {
-    //     $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
-    //       $('.quote').html('<strong>His Design</strong>');
-    //       $('.description').text(designText);
-    //     }).delay(1000).animate({'opacity': 1}, 1500);
-    //     $('.designer-description-text').data('id','design');
-    //   } else if (currentText === 'passion') {
-    //     $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
-    //       $('.quote').html('<em>"A yacht is to always please the eye and be the pride of her owner."</em>');
-    //       $('.description').text(defaultText);
-    //     }).delay(1000).animate({'opacity': 1}, 1500);
-    //     $('.designer-description-text').data('id','default');
-    //   } else {
-    //     $('.designer-description-text').animate({'opacity': 0}, 1000, function () {
-    //       $('.quote').html('<strong>His Passion</strong>');
-    //       $('.description').text(passionText);
-    //     }).delay(1000).animate({'opacity': 1}, 1500);
-    //     $('.designer-description-text').data('id','passion');
-    //   }
-    // };
   });
 
   $('.back-top-wheelbutton').click(function(e) {
