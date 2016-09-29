@@ -247,3 +247,32 @@
 
   }
 }
+
+
+
+// animate
+#designerprofile-section {
+  @include transition((opacity 300ms linear));
+  opacity: 0;
+
+  .description-grey-box {
+    @include transition((opacity 300ms linear));
+    opacity: 0;
+  }
+  .animation-text {
+    @include transition((opacity 600ms linear));
+    opacity: 0;
+  }
+
+  &.in-view-half {
+    opacity: 1;
+  }
+  &.in-view-full {
+    .description-grey-box {
+      opacity: 1;
+    }
+    .animation-text {
+      opacity: 1;
+    }
+  }
+}

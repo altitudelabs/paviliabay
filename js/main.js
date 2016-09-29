@@ -177,7 +177,7 @@ $(document).ready(function(){
     }
 
     animateClubHouseSection(winTop, winTop + winHeight);
-
+    animateDesignerSection(winTop, winTop + winHeight);
   });
   $(window).on('resize', function() {
     portfolioSlider.reloadSlider();
@@ -228,6 +228,24 @@ $(document).ready(function(){
     }
 
     if (scrollBottom > sectionTop + (sectionHeight * .7)) {
+      section.addClass('in-view-full');
+    } else {
+      section.removeClass('in-view-full');
+    }
+  }
+  function animateDesignerSection(scrollTop, scrollBottom) {
+    var section = $('#designerprofile-section');
+    var sectionTop = section.offset().top;
+    var sectionHeight = section.innerHeight();
+    var sectionBottom = sectionTop + sectionHeight;
+
+    if (scrollBottom > sectionTop + (sectionHeight * .4)) {
+      section.addClass('in-view-half');
+    } else {
+      section.removeClass('in-view-half');
+    }
+
+    if (scrollBottom > sectionTop + (sectionHeight * .8)) {
       section.addClass('in-view-full');
     } else {
       section.removeClass('in-view-full');
@@ -400,25 +418,25 @@ $(document).ready(function(){
 
   $('#designerprofile-section').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
     function(e) {
-      if ($('#designerprofile-section').hasClass('in-view')) {
-        setTimeout(function(){
-          $('.description-grey-box').addClass('active');
-        },600);
-        setTimeout(function(){
-          $('.profile-blue-box').addClass('active');
-        },1200);
-        setTimeout(function(){
-          $('.white-line').addClass('active');
-        },1800);
-        setTimeout(function(){
-          $('.animation-text').addClass('active');
-        },2400);
-      } else {
-          $('#designerprofile-section .description-grey-box').removeClass('active');
-          $('#designerprofile-section .profile-blue-box').removeClass('active');
-          $('#designerprofile-section .white-line').removeClass('active');
-          $('#designerprofile-section .animation-text').removeClass('active');
-      }
+      // if ($('#designerprofile-section').hasClass('in-view')) {
+      //   setTimeout(function(){
+      //     $('.description-grey-box').addClass('active');
+      //   },600);
+      //   setTimeout(function(){
+      //     $('.profile-blue-box').addClass('active');
+      //   },1200);
+      //   setTimeout(function(){
+      //     $('.white-line').addClass('active');
+      //   },1800);
+      //   setTimeout(function(){
+      //     $('.animation-text').addClass('active');
+      //   },2400);
+      // } else {
+      //     $('#designerprofile-section .description-grey-box').removeClass('active');
+      //     $('#designerprofile-section .profile-blue-box').removeClass('active');
+      //     $('#designerprofile-section .white-line').removeClass('active');
+      //     $('#designerprofile-section .animation-text').removeClass('active');
+      // }
     }
   );
 //
