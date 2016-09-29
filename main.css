@@ -748,6 +748,7 @@ sup {
         line-height: 22px;
         font-size: 12px; } }
   #clubhouse-section .link-text, #clubhouse-section .link-text-overlay, #clubhouse-section .link-the {
+    text-transform: capitalize;
     font-family: futuraLTProLight;
     font-weight: lighter;
     font-size: 17px;
