@@ -2,6 +2,7 @@ $(document).ready(function(){
 
   var $animation_elements = $('.animation-element');
   var $window = $(window);
+  $('.modal').modal('show');
 
   //initialize map
   function initMap() {
