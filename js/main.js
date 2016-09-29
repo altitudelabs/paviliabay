@@ -117,31 +117,24 @@ $(document).ready(function(){
 //     // $('#nav-menu').css('visibility', 'visible');
 //   });
 //
-//   // $('#hero-section .wheelbutton-container').on("click", function() {
-//   //   $('#hero-body-text').css('visibility', 'visible');
-//   //   $('#hero-section .title-container').css('visibility', 'hidden');
-//   //   $('.hero-logo').css('visibility', 'visible');
-//   //   $('#nav-menu').css('visibility', 'visible');
-//   //   $('#hero-section .wheelbutton-container').css('visibility', 'visible');
-//   //   $('#nav-menu-content').removeClass('in-view');
-//   // });
-// // hero section animations on site landing
-//   setTimeout(function(){
-//     $('#cover-image').addClass('active');
-//   }, 500);
-//   $('#cover-image').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
-//     function(e) {
-//       $('.title-eng-text').addClass('active');
-//       $('.title-chi-text').addClass('active');
-//       $('.title-white-box-text').addClass('active');
-//       $('.transparent-button').addClass('active');
-//       $('.hero-footer').addClass('active');
-//       $('#hero-wheel').addClass('active');
-//       $('.register-link-text').addClass('active');
-//       $('.hero-logo').css('visibility', 'visible');
-//       $('#nav-menu').css('visibility', 'visible');
-//     }
-//   );
+
+// hero section animations on site landing
+  setTimeout(function(){
+    $('#cover-image').addClass('active');
+  }, 500);
+  $('#cover-image').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+    function(e) {
+      $('.title-eng-text').addClass('active');
+      $('.title-chi-text').addClass('active');
+      $('.title-white-box-text').addClass('active');
+      $('.transparent-button').addClass('active');
+      $('.hero-footer').addClass('active');
+      $('#hero-wheel').addClass('active');
+      $('.register-link-text').addClass('active');
+      $('.hero-logo').css('visibility', 'visible');
+      $('#nav-menu').css('visibility', 'visible');
+    }
+  );
 //
 //   // TODO: Mute / unmute audio
 //   $('#sound').on('click', function(){

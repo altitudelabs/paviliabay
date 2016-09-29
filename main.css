@@ -502,6 +502,7 @@ sup {
   font-weight: normal;
   font-size: 15px;
   line-height: 21px;
+  visibility: hidden;
   width: 100%;
   margin-top: 8%;
   text-align: center;
@@ -543,6 +544,7 @@ sup {
         letter-spacing: 0.025em; } }
 
 #hero-section .hero-logo {
+  visibility: hidden;
   background-image: url("images/hero-section/shiplogo.png");
   background-size: contain;
   background-repeat: no-repeat;
