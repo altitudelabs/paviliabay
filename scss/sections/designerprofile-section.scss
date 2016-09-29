@@ -264,13 +264,15 @@
     opacity: 0;
   }
 
-  &.in-view-half {
+  &.in-view-one {
     opacity: 1;
   }
-  &.in-view-full {
+  &.in-view-two {
     .description-grey-box {
       opacity: 1;
     }
+  }
+  &.in-view-full {
     .animation-text {
       opacity: 1;
     }
