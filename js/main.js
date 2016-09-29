@@ -65,13 +65,38 @@ $(document).ready(function(){
     $('video')[0].src = $('video .hero-vid-desktop').attr('src');
   }
 
-  $('#hero-section .wheelbutton-container').on("click", function() {
-    console.log("hero-wheelbutton clicked");
-    video.css('display', 'block');
-    video.get(0).play();
-    $('#cover-image').css('display', 'none');
-    $('#hero-section .title-container').css('display', 'none');
-  });
+  var displayVideo = function (e, isNext) {
+    if (!video.get(0).paused) {
+        video.get(0).pause();
+        video.get(0).currentTime = 0;
+        $('video').css('display', 'none');
+      if (isNext) {
+        $('#cover-image').css('display', 'block');
+        $('#hero-body-text').css('visibility', 'visible');
+        return;  
+      } else {
+        $('#cover-image').css('display', 'block');
+        $('#hero-section .title-container').css('display', 'block');
+        $('#nav-menu').css('visibility', 'visible');
+        return;  
+      }
+    } else {
+        if (isNext) {
+          video.css('display', 'block');
+          video.get(0).play();
+          $('#cover-image').css('display', 'none');
+          $('#hero-section .title-container').css('display', 'none');      
+        } else {
+          video.get(0).pause();
+          video.get(0).currentTime = 0;
+          $('video').css('display', 'none');
+          $('#cover-image').css('display', 'block');
+          $('#hero-section .title-container').css('display', 'block');
+          $('#hero-body-text').css('visibility', 'hidden');
+          $('#nav-menu').css('visibility', 'visible');
+        }
+    }
+  };
 
   video.on('ended', function(){
     $('video').css('display', 'none');
@@ -332,6 +357,9 @@ $(document).ready(function(){
 
     if (target === '#clubhouse-section') {
       return slideCloubHouseSection.apply(this, [e, isNext]);
+    }
+    if (target === '#hero-section') {
+      return displayVideo.apply(this, [e, isNext]);
     }
 
     if (isNext) {
