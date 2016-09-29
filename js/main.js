@@ -96,16 +96,12 @@ $(document).ready(function(){
     video.get(0).play();
     $('#cover-image').css('display', 'none');
     $('#hero-section .title-container').css('display', 'none');
-    // $('.hero-logo').css('visibility', 'hidden');
-    // $('#nav-menu').css('visibility', 'hidden');
   });
 
   video.on('ended', function(){
     $('video').css('display', 'none');
     $('#cover-image').css('display', 'block');
     $('#hero-body-text').css('visibility', 'visible');
-    // $('.hero-logo').css('visibility', 'visible');
-    // $('#nav-menu').css('visibility', 'visible');
   });
 
 
@@ -180,9 +176,9 @@ $(document).ready(function(){
     }
 
   });
-//   $(window).on('resize', function() {
-//     portfolioSlider.reloadSlider();
-//   });
+  $(window).on('resize', function() {
+    portfolioSlider.reloadSlider();
+  });
   // CLUBHOUSE SECTION
 
   $('#clubhouse-section').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
