@@ -141,14 +141,14 @@ sup {
 .clearfix:after, .fixer-float-container:after, #clubhouse-section:after, #designerprofile-section .description-grey-box:after {
   clear: both; }
 
-.background-image, .background-cover, #hero-section #cover-image, #clubhouse-section .full-section-view, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #panorama-section, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image, .background-contain, #nav-menu #nav-cross, #nav-menu #nav-arrow, #nav-menu .nav-sound, #nav-menu .sound-off, #nav-menu .sound-on, #designerprofile-section .designer-photo, #marker .image, #portfolio-section .arrow-right, .wheelbutton-container .next-prev-wheelbutton, .wheelbutton-container .back-top-wheelbutton {
+.background-image, .background-cover, #hero-section #cover-image, #clubhouse-section .full-section-view, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #panorama-section, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image, .background-contain, #nav-menu #nav-cross, #nav-menu #nav-arrow, #nav-menu .nav-sound, #nav-menu .sound-off, #nav-menu .sound-on, #designerprofile-section .designer-photo, #marker .image, #panorama-section #cross, #portfolio-section .arrow-right, .wheelbutton-container .next-prev-wheelbutton, .wheelbutton-container .back-top-wheelbutton {
   background-position: center center;
   background-repeat: no-repeat; }
 
 .background-cover, #hero-section #cover-image, #clubhouse-section .full-section-view, #clubhouse-section .clubhouse-image-container, #designerprofile-section .yacht, #panorama-section, #portfolio-section .portfolio-image-container, #portfolio-section .portfolio-image {
   background-size: cover; }
 
-.background-contain, #nav-menu #nav-cross, #nav-menu #nav-arrow, #nav-menu .nav-sound, #nav-menu .sound-off, #nav-menu .sound-on, #designerprofile-section .designer-photo, #marker .image, #portfolio-section .arrow-right, .wheelbutton-container .next-prev-wheelbutton, .wheelbutton-container .back-top-wheelbutton {
+.background-contain, #nav-menu #nav-cross, #nav-menu #nav-arrow, #nav-menu .nav-sound, #nav-menu .sound-off, #nav-menu .sound-on, #designerprofile-section .designer-photo, #marker .image, #panorama-section #cross, #portfolio-section .arrow-right, .wheelbutton-container .next-prev-wheelbutton, .wheelbutton-container .back-top-wheelbutton {
   background-size: contain; }
 
 /*animation element*/
@@ -1319,6 +1319,20 @@ sup {
       height: 100vh; } }
   #panorama-section .panorama-image-container img {
     height: 100%; }
+
+#panorama-section #cross {
+  background-image: url("images/nav-menu/navmenubuttons_cross.png");
+  position: absolute;
+  display: none;
+  width: 25px;
+  height: 0;
+  padding-bottom: 31.25px;
+  top: 30px;
+  right: 30px;
+  z-index: 100; }
+  @media only screen and (max-width: 720px) {
+    #panorama-section #cross {
+      width: 20px; } }
 
 #panorama-section .panorama-content {
   z-index: 1;
