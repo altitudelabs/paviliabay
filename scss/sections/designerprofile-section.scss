@@ -230,21 +230,23 @@
       bottom: auto;
       right: auto;
     }
+  }
 
-    // @include responsive(mobile) {
-    //   display: none;
-    // }
-    //
-    // &.mobile {
-    //   right: -70px;
-    //   bottom: 20px;
-    //   display: none;
-    //
-    //   @include responsive(mobile) {
-    //     display: block;
-    //   }
-    // }
+  .video-container {
+    position: relative;
+    height: 500px;
+    width: 0;
+    float: left;
 
+    video {
+      display: none;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      width: auto;
+      height: auto;
+      @include transform((translateX(-50%) translateY(-50%)));
+    }
   }
 }
 

@@ -1161,6 +1161,24 @@ sup {
       bottom: auto;
       right: auto; } }
 
+#designerprofile-section .video-container {
+  position: relative;
+  height: 500px;
+  width: 0;
+  float: left; }
+  #designerprofile-section .video-container video {
+    display: none;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%); }
+
 #designerprofile-section {
   -webkit-transition: opacity 300ms linear;
   -moz-transition: opacity 300ms linear;
