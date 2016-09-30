@@ -516,17 +516,35 @@ $(document).ready(function(){
       }
     }
   );
+  var panorama_cross = $('#panorama-section #cross');
 
   var panorama;
   $('.panorama-content .button-group .button').click(function(e) {
+    $('.panorama-image-container').css('opacity', 1);
     var target = $(this).data('target');
     $('#panorama-section').removeClass('active day magic night');
     $('#panorama-section').addClass('active ' + target);
     panorama ? panorama.trigger('destroy') : null;
     panorama = $('.panorama-image-container')
     .html(renderPanoramaImageContainer(target))
-    .paver({ gracefulFailure: false });
+    .paver({ gracefulFailure: false })
+    .trigger('initialPanStart.paver');
+
+    panorama_cross.css('display', 'block');
   });
+
+  panorama_cross.click(function() {
+    // panorama ? panorama.trigger('destroy').html('') : null;
+    $('#panorama-section').removeClass('active day magic night animation-element fade');
+    $('.panorama-image-container')
+    .animate({ opacity: 0 }, function() {
+      panorama ? panorama.trigger('destroy').html('') : null;
+    });
+
+    $('#panorama-section').addClass('animation-element fade');
+    panorama_cross.css('display', 'none');
+  });
+
 
   var source = '<img src="{{photoPath}}" alt="" title="" />';
   var template = Handlebars.compile(source);

@@ -2,6 +2,8 @@
   @extend .background-cover;
   $section-height: 100vh;
   $section-height-mobile: 100vh;
+  $cross-width: 25px;
+  $cross-width-mobile: 20px;
 
   $panorama-content-bottom: 35%;
 
@@ -22,6 +24,25 @@
   &.magic [data-target="magic"],
   &.night [data-target="night"] {
     // color: white;
+  }
+
+  #cross { // 28 x 35
+    background-image: url('images/nav-menu/navmenubuttons_cross.png');
+    @extend .background-contain;
+
+    position: absolute;
+
+    display: none;
+    width: $cross-width;
+    height: 0;
+    padding-bottom: 35 / 28 * $cross-width;
+    top: 30px;
+    right: 30px;
+    z-index: 100;
+
+    @include responsive(mobile) {
+      width: $cross-width-mobile;
+    }
   }
 
   .panorama-content {
