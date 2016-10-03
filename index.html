@@ -8,455 +8,82 @@
     content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1, minimum-scale=1"
     >
     <title></title>
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="stylesheet" type="text/css" href="lib/paver-master/dist/css/paver.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="main.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="lib/paver-master/dist/css/paver.min.css"> -->
     <link rel="stylesheet" type="text/css" href="node_modules/bxslider/dist/jquery.bxslider.min.css">
-    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.css" /> -->
+    <style>
+      html, body {
+        margin: 0;
+      }
+      .header {
+        height: 100vh;
+        position: relative;
+      }
+      .header .bx-wrapper {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 0px;
+      }
+      .header .bx-viewport {
+        height: 100% !important;
+      }
+      .header .bxslider {
+        height: 100%;
+      }
+
+      .bxslider .slide {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+      .other {
+        background-color: transparent;
+        padding-top: 30%;
+      }
+      .banner {
+        padding: 40px;
+        text-align: center;
+        background: white;
+      }
+    </style>
   </head>
 
   <body>
-  <!--MODAL-->
-    <div class="modal fade" data-keyboard="false" data-backdrop="static">
-      <div class="modal-dialog" role="disclaimer">
-        <div class="modal-content">
-          <div class="modal-body">
-            <p>本廣告/宣傳資料內載列的相片、圖像、繪圖或素描顯示純屬畫家對有關發展項目之想像。有關相片、圖像、繪圖或素描並非按照比例繪畫及/或可能經過電腦修飾處理。準買家如欲了解發展項目的詳情，請參閱售樓說明書。賣方亦建議準買家到有關發展地盤作實地考察，以對該發展地盤、其周邊地區環境及附近的公共設施有較佳了解。</p>
-            <p>賣方：荃灣西（六區）物業發展有限公司（作為 “擁有人”）、Ultimate Vantage Limited（作為 “如此聘用的人”）（備註：“擁有人”指發展項目期數的法律上的擁有人或實益擁有人，“如此聘用的人”指擁有人聘用以統籌和監管發展項目期數的設計、規劃、建造、裝置、完成及銷售過程的人士。）。賣方的控權公司：擁有人（荃灣西（六區）物業發展有限公司）的控權公司：西鐵物業發展有限公司；如此聘用的人（Ultimate Vantage Limited）的控權公司：新世界發展有限公司、Ultimate Sail Limited。發展項目期數的認可人士及其以專業身份擔任經營人、董事或僱員的商號或法團：梁黃顧建築師（香港）事務所有限公司的梁鵬程先生。發展項目期數的承建商：協興建築有限公司。就發展項目期數中的住宅物業的出售而代表擁有人行事的律師事務所： 的近律師行、司力達律師樓、高李葉律師行、 貝克‧麥堅時律師事務所。已為發展項目期數的建造提供貸款或已承諾為該項建造提供融資的認可機構：中國銀行（香港）有限公司、法國巴黎銀行香港分行、恒生銀行有限公司、香港上海滙豐銀行有限公司、星展銀行有限公司，香港分行、交通銀行股份有限公司香港分行、上海浦東發展銀行股份有限公司，香港分行。已為發展項目期數的建造提供貸款的任何其他人：新世界金融有限公司、Wkdeveloper Limited。</p>
-            <p>盡賣方所知，本發展項目的預計關鍵日期為2018年8月31日（關鍵日期指根據批地文件的條件就該發展項目期數而獲符合的日期。預計關鍵日期是受到買賣合約所允許的任何延期所規限的。）本網站由「柏傲灣」之賣方發布。 詳情請參閱售樓說明書。</p>
-            <p>The photographs, images, drawings or sketches shown in this advertisement/ promotional material represent an artist’s impression of the development concerned only. They are not drawn to scale and/ or may have been edited and processed with computerized imaging techniques. Prospective purchasers should make reference to the sales brochure for details of the development. The vendor also advises prospective purchasers to conduct an on-site visit for a better understanding of the development site, its surrounding environment and the public facilities nearby.</p>
-            <p>Vendor: Tsuen Wan West TW6 Property Development Limited (as “Owner”), Ultimate Vantage Limited (as “Person so engaged”)(Note: “Owner” means the legal or beneficial owner of the Phase of the Development, and “Person so engaged” means the person who is engaged by the owner to co-ordinate and supervise the process of designing, planning, constructing, fitting out, completing and marketing the Phase of the Development.). Holding company of the Vendor: Holding company of the Owner (Tsuen Wan West TW6 Property Development Limited) West Rail Property Development Limited. Holding company of the Person so engaged (Ultimate Vantage Limited): New World Development Company Limited, Ultimate Sail Limited. Authorized person for the Phase of the Development and the firm or corporation of which the Authorized Person is a proprietor, director or employee in his professional capacity: Mr. Ronald Liang of LWK & Partners (HK) Limited. Building contractor for the Phase of the Development: Hip Hing Construction Company Limited. The firm of solicitors acting for the owner in relation to the sale of the residential properties in the Phase of the Development: Deacons, Slaughter and May, Kao, Lee & Yip, Baker & McKenzie. Any authorized institution that has made a loan, or has undertaken to provide finance, for the construction of the Phase of the Development: Bank of China (Hong Kong) Limited, BNP Paribas Hong Kong Branch, Hang Seng Bank Limited, The Hongkong and Shanghai Banking Corporation Limited, DBS Bank Ltd., Hong Kong Branch, Bank of Communications Co., Ltd. Hong Kong Branch, Shanghai Pudong Development Bank Co., Ltd., Hong Kong Branch. Any other person who has made a loan for the construction of the Phase of the Development: New World Finance Company Limited, Wkdeveloper Limited. </p>
-            <p>To the best of the Vendors’ knowledge, the estimated material date for the Phase of the Development is 31 August 2018 (Material date means the date on which the conditions of the land grant are complied with in respect of the Phase of the Development. The estimated material date is subject to any extension of time that is permitted under the agreement for sale and purchase). This website is published by the Person so engaged with the consent of the Owner. Prospective purchaser is advised to refer to the sales brochure for any information on the Phase of the Development.</p>
-            <p>本广告/宣传资料内载列的相片、图像、绘图或素描显示纯属画家对有关发展项目之想象。有关相片、图像、绘图或素描并非按照比例绘画及/或可能经过电脑修饰处理。准买家如欲了解发展项目的详情，请参阅售楼说明书。卖方亦建议准买家到有关发展地盘作实地考察，以对该发展地盘、其周边地区环境及附近的公共设施有较佳了解。</p>
-            <p>卖方：荃湾西（六区）物业发展有限公司（作为 “拥有人”）、Ultimate Vantage Limited（作为 “如此聘用的人”）（备注：“拥有人”指发展项目期数的法律上的拥有人或实益拥有人，“如此聘用的人”指拥有人聘用以统筹和监管发展项目期数的设计、规划、建造、装置、完成及销售过程的人士。）。卖方的控权公司：拥有人（荃湾西（六区）物业发展有限公司）的控权公司：西铁物业发展有限公司；如此聘用的人（Ultimate Vantage Limited）的控权公司：新世界发展有限公司、Ultimate Sail Limited。发展项目期数的认可人士及其以专业身份担任经营人、董事或雇员的商号或法团：梁黄顾建筑师（香港）事务所有限公司的梁鹏程先生。发展项目期数的承建商：协兴建筑有限公司。就发展项目期数中的住宅物业的出售而代表拥有人行事的律师事务所：的近律师行、司力达律师楼、高李叶律师行、 贝克‧麦坚时律师事务所。已为发展项目期数的建造提供贷款或已承诺为该项建造提供融资的认可机构：中国银行（香港）有限公司、法国巴黎银行香港分行、恒生银行有限公司、香港上海汇丰银行有限公司、星展银行有限公司，香港分行、交通银行股份有限公司香港分行、上海浦东发展银行股份有限公司，香港分行。已为发展项目期数的建造提供贷款的任何其他人：新世界金融有限公司、Wkdeveloper Limited。</p>
-            <p>尽卖方所知，本发展项目的预计关键日期为2018年8月31日（关键日期指根据批地文件的条件就该发展项目期数而获符合的日期。预计关键日期是受到买卖合约所允许的任何延期所规限的。）本网站由「柏傲湾」之卖方发布。卖方建议准买方参阅有关售楼说明书，以了解本发展项目期数的资料。</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Go</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    <!-- HERO SECTION -->
-    <section class="section-container" id="hero-section">
-      <div class="video-container">
-        <div id="hero-body-text">
-            Breathe –
-            <br>
-            Now breathe again.
-            <br> Be awash with energy. At one with the elements.
-            <br> Feel alive.
-            <br><br>
-            Living within the sea’s force and grace.
-            <br>Energetic, thoughtful. Dazzling.
-            <br>And vigour, recalled.
-            <br><br>
-            The power of streams. The architecture of dreams.
-            <br>Shaped to conquer the sea.
-            <br><br>
-            What the city remembers. The ocean forgets.
-            <br>Thoughts of day, materialized tomorrow.
-            <br><br>
-            Shimmering lights call your gaze.
-            <br>Waves of inspiration, under the spell of reflection.
-            <br><br>
-            Function, enthused by form.
-            <br>The indulgence of beauty.
-            <br>The timelessness of elegance.
-            <br><br>
-            <span class="bold">Beyond the Horizon.</span>
-          </div>
-          <!--[if lt IE 9]>
-            <script>
-              document.createElement('video');
-            </script>
-          <![endif]-->
-          <video>
-            <source src="./images/hero-section/video-desktop.mp4" class="hero-vid-desktop" type="video/mp4">
-            <source src="./images/hero-section/video-mobile.mp4" class="hero-vid-mobile" type="video/mp4">
-          </video>
-          <div id="cover-image" class="hero-fade"></div>
-      </div>
-      <div class="hero-logo"></div>
-
-      <!-- navigation menu -->
-      <div id="nav-menu">
-        <div id="nav-menu-image"></div>
-        <div id="nav-menu-content" class="animation-element slide-right">
-          <div id="nav-cross"></div>
-          <ul id="nav-menu-links">
-            <li>
-              <p class="page-link-menu-text menu-title-text">Home</p>
-            </li>
-            <li>
-              <a href="http://cms.nwd.com.hk/html/eng/property_SalesArrangement.aspx?AcLdMfx57y21Wo8hb6id6BHlYwewKenW7FwvRrX8bAA%3d=" class="page-link-menu-text">Sales Arrangement</a>
-            </li>
-            <li>
-              <a href="http://cms.nwd.com.hk/html/eng/property_report2.aspx?AcLdMfx57y21Wo8hb6id6BHlYwewKenW7FwvRrX8bAA%3d=" class="page-link-menu-text">Register of Transactions</a>
-            </li>
-            <li>
-              <a href="#" aria-haspopup="true" class="page-link-menu-text">
-                Residential Property <div id="nav-arrow"></div>
-              </a>
-              <ul>
-                <li><a href="http://cms.nwd.com.hk/html/eng/property_brochure.aspx?AcLdMfx57y21Wo8hb6id6BHlYwewKenW7FwvRrX8bAA%3d=" class="page-link-menu-text second-level">Sales Brochure</a></li>
-                <li><a href="http://cms.nwd.com.hk/html/eng/property_price2.aspx?AcLdMfx57y21Wo8hb6id6BHlYwewKenW7FwvRrX8bAA%3d=" class="page-link-menu-text second-level">Price List</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#" class="page-link-menu-text">
-                Parking Space <div id="nav-arrow"></div>
-              </a>
-              <ul>
-                <li><a href="http://cms.nwd.com.hk/html/eng/property_car_park_brochure.aspx?AcLdMfx57y21Wo8hb6id6BHlYwewKenW7FwvRrX8bAA%3d=" class="page-link-menu-text second-level">Sales Brochure</a></li>
-                <li><a href="http://cms.nwd.com.hk/html/eng/property_car_park_price.aspx?AcLdMfx57y21Wo8hb6id6BHlYwewKenW7FwvRrX8bAA%3d=" class="page-link-menu-text second-level">Price List</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="http://cms.nwd.com.hk/html/eng/property_deed.aspx?AcLdMfx57y21Wo8hb6id6BHlYwewKenW7FwvRrX8bAA%3d=" class="page-link-menu-text">Deed of Mutual Covenant</a>
-            </li>
-            <li>
-              <a href="http://cms.nwd.com.hk/html/eng/property_photo.aspx?AcLdMfx57y21Wo8hb6id6BHlYwewKenW7FwvRrX8bAA%3d=" class="page-link-menu-text">Aerial Photograph</a>
-            </li>
-          </ul>
-
-          <div id="nav-bottom-menu">
-            <div id="sound" class="sound-off">
-            </div>
-            <ul id="lang-toolbar">
-              <li>
-                <a href="#">ENG |</a>
-              </li>
-              <li>
-                <a href="#">繁 |</a>
-              </li>
-              <li>
-                <a href="#">简</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="title-container">
-        <div class="title-eng-text hero-fade"> The Pavilia Bay </div>
-        <div class="chinese-char title-chi-text hero-fade">柏傲灣</div>
-<!--         <div class="transparent-button">
-          <p class="title-white-box-text hero-fade"> Beyond The Horizon </p>
-        </div> -->
-        <div class="transparent-button">
-          <div class="border top"></div>
-          <div class="border right"></div>
-          <div class="border bottom"></div>
-          <div class="border left"></div>
-          <p class="title-white-box-text hero-fade">Beyond The Horizon</p>
-        </div>
-      </div>
-      <div class="hero-footer hero-fade">
-        <a href="" class="register-link-text hero-fade">
-          > Register for sales gallery preview
-        </a>
-      </div>
-      <div id="hero-wheel" class="wheelbutton-container hero-fade">
-        <div class="next-prev-wheelbutton">
-          <div class="next"></div>
-          <div class="prev"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CLUBHOUSE SECTION -->
-    <section
-      class="section-container"
-      id="clubhouse-section"
-      data-id="clubhouse"
-      data-categories='[
-        {
-          "title": "Clubhouse",
-          "desc": "Blue Pavilion - Hong Kong`s first residential clubhouse embodied with distinctive superyacht features. The pioneering Blue Pavilia is designed by the international renowned superyacht designer Philippe Briand. It features a swimming pool, a kids pool, three jacuzzis, three saunas, a Multi- Intelligence Playscape, a gym, a Billiard room and two function rooms.",
-          "images": [
-            "./images/clubhouse-section/club1.jpg",
-            "./images/clubhouse-section/2_club2.jpg",
-            "./images/clubhouse-section/3_club3.jpg",
-            "./images/clubhouse-section/4_club4.jpg",
-            "./images/clubhouse-section/5_club5.jpg"
-          ]
-        },
-        {
-          "title": "Facade",
-          "desc": "Inspired by the optimal proportion of hull and superstructure of superyacht, the two buildings are embodied with curtain walls and constructed with sleek and clean outlines. The distinctive design idea of the buidling`s roof comes from the mainsail of a sailing yacht during its wind propulsion, creating a prominent figure among the others.",
-          "images": [
-            "./images/clubhouse-section/6_facade1.jpg",
-            "./images/clubhouse-section/7_facade2.jpg"
-          ]
-        },
-        {
-          "title": "Interior",
-          "desc": "THE PAVILIA BAY comprises 983 units of residences and features a range of layouts to suit residents` needs, varying from studio to 4-bedroom units. Exquisite residences range in saleable area from 306 sq. ft. to 1,366 sq. ft.. The bathrooms and kitchens are well-equipped with a selection of international renowned appliances to provide the bespoke settings with contemporary design.",
-          "images": [
-            "./images/clubhouse-section/8_interior1.jpg",
-            "./images/clubhouse-section/9_interior2.jpg",
-            "./images/clubhouse-section/10_interior3.jpg",
-            "./images/clubhouse-section/11_interior4.jpg",
-            "./images/clubhouse-section/12_interior5.jpg"
-          ]
-        }
-      ]'
-    >
-      <div class="full-section-view">
-        <div class="link-menu slide-right">
-          <p class="link-text-overlay">
-            The Facade >
-          </p>
-        </div>
-      </div>
-      <div class="clubhouse-image-container">
-      </div>
-      <div class="clubhouse-blue-box-container">
-        <div class="clubhouse-blue-box">
-          <div class="animation-text fixed-the"> the <br><span class="club-title-text">clubhouse</span></div>
-          <div class="white-line slide-in"></div>
-          <div class="hide-scroll">
-            <div class="scroll-textbox-area">
-
-              <p class="animation-text club-description-text">
-                Blue Pavilion - Hong Kong's first residential clubhouse
-                offers distinctive superyacht features. The pioneering
-                Blue Pavilia is designed by the international renowned superyacht
-                designer Philippe Briand.
-                It features a swimming pool, a kids pool, three jacuzzis, three saunas,
-                a Multi-Intelligence Playscape, a gym,
-                a Billiard room and two function rooms.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div id="clubWheel" class="wheelbutton-container animation-text">
-          <div id="test" class="next-prev-wheelbutton white" data-target="#clubhouse-section">
-            <div class="next"></div>
-            <div class="prev"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="link-menu animation-text">
-        <p class="link-text">
-          The
-          Facade >
-        </p>
-      </div>
-    </section>
-
-    <!-- DESIGNERPROFILE SECTION -->
-    <section class="section-container animation-element fade" id="designerprofile-section">
-      <div class="yacht"></div>
-      <div class="white-container">
-        <div class="wheelbutton-container animation-text">
-          <div class="next-prev-wheelbutton" data-target="#designerprofile-section">
-            <div class="next"></div>
-            <div class="prev"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="description-grey-box">
-        <div class="blue-box-container">
-          <div class="profile-blue-box">
-            <div class="designer-title animation-text">clubhouse <br> designer</div>
-            <div class="designer-photo animation-text"></div>
-            <div class="designer-info designer-name animation-text">Philippe Briand</div>
-            <div class="white-line slide-in"></div>
-            <div class="designer-info animation-text hero-fade">
-              Vitruvius Yachts Ltd
-            </div>
-          </div>
-        </div>
-        <div class="designer-description-text" data-id="default">
-          <p class="quote animation-text">
-            <em>
-              "A yacht is to always please the eye and be the pride of her owner."
-            </em>
-          </p>
-          <br>
-          <p class="description animation-text">
-            Led by the globally acclaimed French super yacht designer
-            Philippe Briand, London based Vitruvius Yachts Limited is a
-            strong team of award-winning designers and naval architects.
-            The beauty of each Vitruvius Yacht is derived from her optimal
-            proportions, balance and efficiency.  Philippe believes the
-            superyacht flourished from the exclusive combination of science,
-            through naval architecture, and art.
-          </p>
-          <div class="designer-video-link animation-text">
-            <a href="#" class="video-link-text">
-              Watch Video
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PORTFOLIO SECTION -->
-    <section class="section-container" id="portfolio-section">
-      <div class="portfolio-header">
-        <div> Portfolio </div>
-      </div>
-      <ul class="portfolio-image-container bxslider">
-        <li class="portfolio-image" style="background-image: url('images/portfolio-section/portfolio1.jpg');"><a href="#"></a></li>
-        <li class="portfolio-image" style="background-image: url('images/portfolio-section/portfolio2.jpg');"><a href="#"></a></li>
-        <li class="portfolio-image" style="background-image: url('images/portfolio-section/portfolio3.jpg');"><a href="#"></a></li>
-        <li class="portfolio-image" style="background-image: url('images/portfolio-section/portfolio4.jpg');"><a href="#"></a></li>
-        <li class="portfolio-image" style="background-image: url('images/portfolio-section/portfolio5.jpg');"><a href="#"></a></li>
+    <div class="header">
+      <ul class="bxslider"> <!-- classname bxslider is unique and required! -->
+        <li class="slide" style="background-image: url('images/portfolio-section/portfolio1.jpg');"><a href="#"></a></li>
+        <li class="slide" style="background-image: url('images/portfolio-section/portfolio2.jpg');"><a href="#"></a></li>
+        <li class="slide" style="background-image: url('images/portfolio-section/portfolio3.jpg');"><a href="#"></a></li>
+        <li class="slide" style="background-image: url('images/portfolio-section/portfolio4.jpg');"><a href="#"></a></li>
+        <li class="slide" style="background-image: url('images/portfolio-section/portfolio5.jpg');"><a href="#"></a></li>
       </ul>
-      <div class="arrow-left slide-in-left"></div>
-      <div class="arrow-right slide-in-right"></div>
-    </section>
-
-
-    <!-- PANORAMA SECTION -->
-    <section class="section-container animation-element fade" id="panorama-section" style="background-image: url('images/panorama-section/pano_bg.jpg')">
-      <div class="panorama-image-container">
-      </div>
-      <div class="panorama-content">
-        <div class="title-center first-animation fade-button">
-          <p> Explore
-            <br> The Neighborhood
-          </p>
-        </div>
-        <div class="button-group">
-          <div class="button second-animation fade-button" data-target="day">
-            <p> Day View </p>
-          </div>
-          <div class="button second-animation fade-button" data-target="magic">
-            <p> Magic View </p>
-          </div>
-          <div class="button second-animation fade-button" data-target="night">
-            <p> Night View </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- MAP SECTION -->
-    <section class="section-container clearfix" id="map-section">
-      <div id="map" class="map-container"></div>
-      <div id="marker">
-        <div class="image" style="background-image: url('images/companyinfo-section/mappin.png')"></div>
-      </div>
-      <div class="map-info">
-        <section class="map-info-text">
-          <div class="title animation-text"> Property <br> Information </div>
-          <div class="white-line animation-element slide-in-right-map"></div>
-          <p class="content animation-text">
-            District: Tsuen Wan
-            <br>
-            Name of the street and the street number (provisional):
-            51 Wing Shun Street
-          </p>
-        </section>
-        <section class="map-info-text">
-          <div class="title animation-text">sales <br> gallery</div>
-          <div class="white-line animation-element slide-in-right-map"></div>
-          <p class="content animation-text">
-            Address: Shop 3016 & 3017, Level 3, D&middot;PARK,
-            <br>Tsuen Wan, Hong Kong
-          </p>
-        </section>
-        <section class="map-info-text">
-          <div class="title animation-text">Contact<br>info</div>
-          <div class="white-line animation-element slide-in-right-map"></div>
-          <p class="content animation-text">
-            Email: sales@nwd.com.hk
-            <br>
-            Enquiry hotline: (852) 8339 3838
-          </p>
-        </section>
-      </div>
-    </section>
-
-
-    <!-- REGISTER SECTION -->
-    <section class="section-container" id="register-section">
-      <div class="background"></div>
-      <div class="section-container">
-        <p> To receive information of <br class="add-br"> THE PAVILIA BAY, </p>
-        <div class="register-button">
-          <div class="border top"></div>
-          <div class="border right"></div>
-          <div class="border bottom"></div>
-          <div class="border left"></div>
-          <p>register for sales gallery preview</p>
-        </div>
-      </div>
-      <!-- <div class="section-container fixed">
-        <p> To receive information of <br class="add-br"> THE PAVILIA BAY, </p>
-        <div class="register-button">
-          <p>register for sales gallery preview</p>
-        </div>
-      </div> -->
-    </section>
-
-    <!-- COMPANYINFO / DISCLAIMER SECTION -->
-    <section class="section-container" id="companyinfo-section">
-      <div class="companyinfo-body-container">
-        <div class="background"></div>
-        <div class="company-logo">
-          <p>
-            One of the holding companies of the Vendor
-            <br>
-            (Person so engaged) Ultimate Vantage Limited:
-          </p>
-          <img class="image" src="images/companyinfo-section/logo_nwd.png"/>
-        </div><!--
-        --><div class="company-logo">
-          <p>
-            Indirect shareholder of the Vendor
-            <br>
-            (Person so engaged) Ultimate Vantage Limited:
-          </p>
-          <img class="image" src="images/companyinfo-section/logo_vanke.png"/>
-        </div>
-        <br>
-        <br>
-        <div class="disclaimer">
-          <div class="title"> Disclaimer </div>
-          <p>
-            The photographs, images, drawings or sketches shown in this
-            advertisement/ promotional material represent an artist's
-            impression of the development concerned only. They are not
-            drawn to scale and/or may have been edited and processed with
-            computerized imaging techniques. Prospective purchasers should
-            make reference to the sales brochure for details of the development.
-            The vendor also advises prospective purchasers to conduct an on-site
-            visit for a better understanding of the development site, its
-            surrounding environment and the public facilities nearby.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <div class="wheelbutton-container scroll-top">
-      <div class="back-top-wheelbutton" data-target="scrollTop">
-      </div>
+      <div class="other">
+        <div class="banner">Banner! background is white for display purpose only</div>
+      <div>
     </div>
 
-    <div id="left-scroll">
-      <div class="bar"></div>
-    </div>
 
     <!--  paver dependency -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="lib/paver-master/dist/js/jquery.ba-throttle-debounce.min.js"></script>
-
-    <script type="text/javascript" src="lib/paver-master/dist/js/jquery.paver.min.js"></script>
     <script type="text/javascript" src="node_modules/bxslider/dist/jquery.bxslider.min.js"></script>
-    <script type="text/javascript" src="https://api.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.js"></script>
-    <!-- <script type="text/javascript" src="js/prefixfree.min.js"></script> -->
-
-    <script type="text/javascript" src="js/handlebars.min.js"></script>
-    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+      $('.header .bxslider').bxSlider({
+        pager: false,
+        minSlides: 1,
+        maxSlides: 1,
+        moveSlides: 1,
+        controls: false,
+        auto: true,
+        autoDelay: 500
+      });
+    </script>
   </body>
 </html>
