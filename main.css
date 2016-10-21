@@ -1169,15 +1169,8 @@ sup {
   #designerprofile-section .video-container video {
     display: none;
     position: relative;
-    top: 50%;
-    left: 50%;
     width: auto;
-    height: auto;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -o-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%); }
+    height: 100%; }
 
 #designerprofile-section {
   -webkit-transition: opacity 300ms linear;
